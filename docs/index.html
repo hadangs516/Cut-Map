@@ -25,8 +25,19 @@
 *{box-sizing:border-box}
 html,body{height:100%;margin:0}
 body{font-family:var(--font);background:var(--bg);color:var(--ink);display:flex;flex-direction:column}
-header{padding:10px 16px 8px;padding-top:calc(10px + env(safe-area-inset-top));background:var(--surface);border-bottom:1px solid var(--line)}
-header h1{margin:0;font-size:18px;font-weight:700;line-height:1.3}
+header{position:relative;z-index:1100;padding:10px 16px 8px;padding-top:calc(10px + env(safe-area-inset-top));background:var(--surface);border-bottom:1px solid var(--line)}
+.hrow{display:flex;align-items:center;gap:10px}
+header h1{flex:none;margin:0;font-size:18px;font-weight:700;line-height:1.3}
+#q{flex:1;min-width:0;height:36px;padding:0 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit;font-size:14px}
+#q:focus{outline:2px solid var(--accent);outline-offset:-1px}
+#results{position:absolute;left:12px;right:12px;z-index:1200;max-height:min(340px,calc(100vh - 150px));max-height:min(340px,calc(100dvh - 150px));overflow:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface);box-shadow:0 8px 24px rgba(0,0,0,.22)}
+#results[hidden]{display:none}
+#results .none{padding:12px 14px;font-size:13.5px;color:var(--muted)}
+#results .item{display:block;width:100%;padding:8px 14px;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink);font:inherit;text-align:left;cursor:pointer}
+#results .item:last-child{border-bottom:0}
+#results .item:hover,#results .item:focus{background:var(--accent-bg);outline:none}
+#results .item .nm{display:block;font-size:14px;font-weight:600;line-height:1.35}
+#results .item .sub{display:block;font-size:12px;color:var(--muted);line-height:1.35}
 #prov{margin:6px 0 0;padding:6px 10px;border-radius:8px;background:var(--warn-bg);color:var(--warn-ink);font-size:13px;line-height:1.4}
 #prov[hidden]{display:none}
 #chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
@@ -65,6 +76,11 @@ main{position:relative;flex:1;min-height:0}
 .pu dt{color:var(--muted)}
 .pu dd{margin:0}
 .pu .msg{margin:6px 0 0;padding-top:6px;border-top:1px solid var(--line)}
+.pu dd.addr{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center}
+.pu .addr .txt{flex:1 1 130px;overflow-wrap:anywhere}
+.pu .addr .none{color:var(--muted)}
+.pu .cp{flex:none;padding:3px 9px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);font:inherit;font-size:12px;cursor:pointer}
+.pu .copied{flex-basis:100%;font-size:12px;color:var(--accent)}
 
 /* 오류 제보 (공통) */
 .rep{display:flex;flex-direction:column;align-items:flex-start;gap:2px}
@@ -90,10 +106,14 @@ main{position:relative;flex:1;min-height:0}
 </head>
 <body>
 <header>
-  <h1>컷맵 대학맵</h1>
+  <div class="hrow">
+    <h1>컷맵 대학맵</h1>
+    <input id="q" type="search" placeholder="학교명·캠퍼스명 검색" aria-label="학교명 또는 캠퍼스명 검색" autocomplete="off" enterkeyhint="search">
+  </div>
   <p id="prov" hidden>IT 유무는 잠정값입니다</p>
   <div id="chips" role="group" aria-label="마커 상태 필터"></div>
   <div id="count" aria-live="polite"></div>
+  <div id="results" role="listbox" aria-label="검색 결과" hidden></div>
 </header>
 <main><div id="map"></div></main>
 <footer id="note">
@@ -187,8 +207,46 @@ function markNoticeSeen(){
   try { ok.focus(); } catch(e) {}
 })();
 
+function nk(s){ return String(s == null ? '' : s).replace(/\s+/g, '').toLowerCase(); }
+
 var map, layers = {}, counts = {}, total = 0, active = {};
 STATUS.forEach(function(s){ active[s.key] = s.on; layers[s.key] = L.layerGroup(); counts[s.key] = 0; });
+
+function selectText(node){
+  var sel = window.getSelection(), r = document.createRange();
+  r.selectNodeContents(node);
+  sel.removeAllRanges();
+  sel.addRange(r);
+}
+function addrNode(addr){
+  var dd = el('dd', 'addr');
+  if(!addr){ dd.appendChild(el('span', 'none', '주소 정보 없음')); return dd; }
+  var txt = el('span', 'txt', addr);
+  var btn = el('button', 'cp', '주소 복사');
+  btn.type = 'button';
+  var note = el('span', 'copied');
+  note.setAttribute('aria-live', 'polite');
+  var timer = null;
+  function flash(msg){
+    note.textContent = msg;
+    clearTimeout(timer);
+    timer = setTimeout(function(){ note.textContent = ''; }, 1800);
+  }
+  function manual(){
+    selectText(txt);
+    flash('자동 복사가 안 되어 주소를 선택했습니다. 직접 복사해 주세요');
+  }
+  btn.addEventListener('click', function(){
+    try {
+      if(!navigator.clipboard || !navigator.clipboard.writeText){ manual(); return; }
+      navigator.clipboard.writeText(addr).then(function(){ flash('복사됨'); }, manual);
+    } catch(e) { manual(); }
+  });
+  dd.appendChild(txt);
+  dd.appendChild(btn);
+  dd.appendChild(note);
+  return dd;
+}
 
 function popupNode(m, st){
   var box = el('div', 'pu');
@@ -198,18 +256,22 @@ function popupNode(m, st){
     dl.appendChild(el('dt', '', r[0]));
     dl.appendChild(el('dd', '', r[1]));
   });
+  dl.appendChild(el('dt', '', '주소'));
+  dl.appendChild(addrNode(m.address));
   box.appendChild(dl);
   if(st.msg) box.appendChild(el('p', 'msg', st.msg));
   box.appendChild(reportBlock());
   return box;
 }
 
+var entries = [];
 function addMarker(m, st){
   var icon = L.divIcon({className:'', iconSize:[0,0],
     html:'<span class="mk ' + st.cls + '">' + shapeSVG(st.cls) + '</span>'});
   var mk = L.marker([m.lat, m.lon], {icon:icon, title:m.campus, keyboard:true, riseOnHover:true});
   mk.bindPopup(function(){ return popupNode(m, st); }, {autoPanPadding:[12,12]});
   layers[st.key].addLayer(mk);
+  entries.push({m:m, st:st, mk:mk, nu:nk(m.univ), nc:nk(m.campus)});
 }
 
 function updateCount(){
@@ -236,6 +298,64 @@ function buildChips(){
       updateCount();
     });
     box.appendChild(b);
+  });
+}
+
+/* 검색: 학교명·캠퍼스명 일부, 띄어쓰기·대소문자 무시. 상태 칩으로 숨긴 마커도 포함 */
+var tempEntry = null;
+function dropTemp(){
+  if(tempEntry && !active[tempEntry.st.key]) map.removeLayer(tempEntry.mk);
+  tempEntry = null;
+}
+function goTo(e){
+  dropTemp();
+  var hidden = !active[e.st.key];
+  if(hidden){
+    e.mk.addTo(map);
+    tempEntry = e;
+    e.mk.once('popupclose', function(){ if(tempEntry === e) dropTemp(); });
+  }
+  var opened = false;
+  function open(){ if(opened) return; opened = true; e.mk.openPopup(); }
+  map.once('moveend', open);
+  map.setView([e.m.lat, e.m.lon], Math.max(map.getZoom(), 12));
+  setTimeout(open, 700);
+}
+function initSearch(){
+  var q = $('#q'), box = $('#results'), row = $('.hrow');
+  function hide(){ box.hidden = true; box.textContent = ''; }
+  function render(){
+    var v = nk(q.value);
+    if(!v){ hide(); return; }
+    var hits = entries.filter(function(e){ return e.nu.indexOf(v) >= 0 || e.nc.indexOf(v) >= 0; });
+    hits.sort(function(a, b){
+      var pa = a.nu.indexOf(v) === 0 || a.nc.indexOf(v) === 0 ? 0 : 1;
+      var pb = b.nu.indexOf(v) === 0 || b.nc.indexOf(v) === 0 ? 0 : 1;
+      return pa - pb || a.m.campus.localeCompare(b.m.campus, 'ko');
+    });
+    box.textContent = '';
+    if(!hits.length){
+      box.appendChild(el('div', 'none', '검색 결과가 없습니다'));
+    } else {
+      hits.forEach(function(e){
+        var b = el('button', 'item');
+        b.type = 'button';
+        b.setAttribute('role', 'option');
+        b.appendChild(el('span', 'nm', e.m.campus));
+        b.appendChild(el('span', 'sub', e.m.region + ' · ' + e.st.label + (active[e.st.key] ? '' : ' · 필터로 숨김')));
+        b.addEventListener('click', function(){ hide(); q.blur(); goTo(e); });
+        box.appendChild(b);
+      });
+    }
+    box.style.top = (row.offsetTop + row.offsetHeight + 4) + 'px';
+    box.hidden = false;
+    map.closePopup();
+  }
+  q.addEventListener('input', render);
+  q.addEventListener('focus', render);
+  q.addEventListener('keydown', function(ev){ if(ev.key === 'Escape'){ q.value = ''; hide(); } });
+  document.addEventListener('click', function(ev){
+    if(!box.hidden && ev.target !== q && !box.contains(ev.target)) hide();
   });
 }
 
@@ -289,7 +409,8 @@ Promise.all([getJSON('data/markers.json'), getJSON('data/geo_prov.json'), getJSO
   $('#prov').hidden = !provisional;
   buildChips();
   updateCount();
-  window.__cutmap = {total:total, counts:counts, unknown:unknown};
+  initSearch();
+  window.__cutmap = {total:total, counts:counts, unknown:unknown, entries:entries.length};
 })
 .catch(function(e){
   console.error(e);
