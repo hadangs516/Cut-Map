@@ -1,0 +1,221 @@
+{
+ "version": 1,
+ "note": [
+  "지도 데이터(data.py)와 catalog.json을 학교 이름으로 연결한 표.",
+  "공백·괄호 차이만 허용했다. 이름이 다르면 추측으로 잇지 않고 실패로 남긴다.",
+  "카탈로그 CSV가 잘린 파일이라 '파일에 학교 자체가 없음'이 나올 수 있다."
+ ],
+ "pairs": [
+  {
+   "mapId": "uos",
+   "mapName": "서울시립대학교",
+   "catalogName": "서울시립대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "hongik",
+   "mapName": "홍익대학교",
+   "catalogName": "홍익대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "konkuk",
+   "mapName": "건국대학교",
+   "catalogName": "건국대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "ssu",
+   "mapName": "숭실대학교",
+   "catalogName": "숭실대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "sejong",
+   "mapName": "세종대학교",
+   "catalogName": "세종대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "hanyang",
+   "mapName": "한양대학교",
+   "catalogName": "한양대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "sogang",
+   "mapName": "서강대학교",
+   "catalogName": "서강대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "cau",
+   "mapName": "중앙대학교",
+   "catalogName": "중앙대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "kookmin",
+   "mapName": "국민대학교",
+   "catalogName": "국민대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "kw",
+   "mapName": "광운대학교",
+   "catalogName": "광운대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "seoultech",
+   "mapName": "서울과학기술대학교",
+   "catalogName": "서울과학기술대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "smu",
+   "mapName": "상명대학교",
+   "catalogName": "상명대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "mju-s",
+   "mapName": "명지대학교",
+   "catalogName": "명지대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "mju-y",
+   "mapName": "명지대학교",
+   "catalogName": "명지대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "hansung",
+   "mapName": "한성대학교",
+   "catalogName": "한성대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "syu",
+   "mapName": "삼육대학교",
+   "catalogName": "삼육대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "catholic",
+   "mapName": "가톨릭대학교",
+   "catalogName": "가톨릭대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "inha",
+   "mapName": "인하대학교",
+   "catalogName": "인하대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "inu",
+   "mapName": "인천대학교",
+   "catalogName": "인천대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "ajou",
+   "mapName": "아주대학교",
+   "catalogName": "아주대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "gachon",
+   "mapName": "가천대학교",
+   "catalogName": "가천대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "kyonggi",
+   "mapName": "경기대학교",
+   "catalogName": "경기대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "erica",
+   "mapName": "한양대학교 ERICA",
+   "catalogName": "한양대학교(ERICA)",
+   "how": "공백·괄호만 다름"
+  },
+  {
+   "mapId": "hufs",
+   "mapName": "한국외국어대학교",
+   "catalogName": "한국외국어대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "kau",
+   "mapName": "한국항공대학교",
+   "catalogName": "한국항공대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "khu",
+   "mapName": "경희대학교",
+   "catalogName": "경희대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "skku",
+   "mapName": "성균관대학교",
+   "catalogName": "성균관대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "ewha",
+   "mapName": "이화여자대학교",
+   "catalogName": "이화여자대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "sookmyung",
+   "mapName": "숙명여자대학교",
+   "catalogName": "숙명여자대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "sungshin",
+   "mapName": "성신여자대학교",
+   "catalogName": "성신여자대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "swu",
+   "mapName": "서울여자대학교",
+   "catalogName": "서울여자대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "dongduk",
+   "mapName": "동덕여자대학교",
+   "catalogName": "동덕여자대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "korea",
+   "mapName": "고려대학교",
+   "catalogName": "고려대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "dongguk",
+   "mapName": "동국대학교",
+   "catalogName": "동국대학교",
+   "how": "exact"
+  },
+  {
+   "mapId": "snu",
+   "mapName": "서울대학교",
+   "catalogName": "서울대학교",
+   "how": "exact"
+  }
+ ],
+ "fails": []
+}

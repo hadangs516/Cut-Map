@@ -1,0 +1,38 @@
+# 컷맵 .gitignore (2026-09-29, #0929-09 결정 반영)
+
+# 비밀값 (API 키)
+.env
+
+# 파이썬 캐시
+__pycache__/
+*.pyc
+
+# 백업·보관 폴더
+backup_*/
+archive/
+
+# 로컬 도구 설정
+.claude/
+
+# 50MB 초과 또는 올리지 않기로 한 대용량 데이터
+univ_major_full.json
+univ_major_dedup.json
+# univ_major_scope.json은 48.6MB로 20MB 기준을 넘어 올리지 않음
+univ_major_scope.json
+# 잘린 공공데이터 표준데이터 CSV (50,000행에서 잘림)
+전국대학별학과정보표준데이터.csv
+
+# 내려받은 입결 원본 (Cowork 다운로드 포함)
+*.pdf
+*.hwp
+*.hwpx
+*.xls
+*.xlsx
+*.zip
+*.docx
+*.doc
+# 예외: KEDI 2026 고등교육통계 학교별 현황은 올림
+!2026년 고등 학교별 학과수 입학정원 지원 입학 학생 외국학생 졸업 교직원_260826H.xlsx
+
+# 점검 산출물
+audit_repo_files.json

@@ -1,0 +1,339 @@
+{
+ "meta": {
+  "purpose": "2028학년도 대학별 전공연계·권장과목(IT 관련 모집단위 우선)",
+  "basis_year": 2028,
+  "note_2029": "사용자 학년의 2029학년도 권장과목 발표분은 이번 조사에서 찾지 못함(미확인). 아래는 2028 기준.",
+  "collected_kst": "2026-09-19",
+  "confidence_scale": {
+   "high": "대학 공식 문서를 직접 열어 확인",
+   "medium": "언론 보도(원문 미확인)",
+   "low": "블로그 등 2차 인용, 재확인 필수"
+  },
+  "schema_note": "대학·모집단위는 이름 문자열 키. 대학/모집단위 ID는 스키마 확정 후 매핑.",
+  "official_bulk_source": {
+   "name": "대입정보포털 어디가 '2028학년도 권역별 대학별 권장과목(반영과목).xlsx' 및 '2028 모집단위별 반영과목 및 대학별 권장과목 자료집.pdf'",
+   "url": "https://www.adiga.kr/uct/ces/archiveView.do?menuId=PCUCTCES1000&prtlBbsId=3219",
+   "status": "자동 접근 차단으로 미수집. 45개 대학 수록(2026-02-20 공개, 대학 2025-09-30 발표자료 기반)."
+  }
+ },
+ "entries": [
+  {
+   "univ": "연세대학교",
+   "unit": "컴퓨터과학과",
+   "math_career": [
+    "기하",
+    "미적분Ⅱ"
+   ],
+   "science_general": "자율선택(물리학·화학·생명과학·지구과학 중)",
+   "science_career": "3과목 이상",
+   "confidence": "high",
+   "source": "https://www2.yonsei.ac.kr/entrance/plan/2028_guide.pdf",
+   "source_date": "2026-04"
+  },
+  {
+   "univ": "연세대학교",
+   "unit": "인공지능학과",
+   "math_career": [
+    "기하",
+    "미적분Ⅱ"
+   ],
+   "science_general": "자율선택",
+   "science_career": "3과목 이상",
+   "confidence": "high",
+   "source": "https://www2.yonsei.ac.kr/entrance/plan/2028_guide.pdf",
+   "source_date": "2026-04"
+  },
+  {
+   "univ": "연세대학교",
+   "unit": "인공지능시스템학과",
+   "math_career": [
+    "기하",
+    "미적분Ⅱ"
+   ],
+   "science_general": "자율선택",
+   "science_career": "3과목 이상",
+   "confidence": "high",
+   "source": "https://www2.yonsei.ac.kr/entrance/plan/2028_guide.pdf",
+   "source_date": "2026-04"
+  },
+  {
+   "univ": "연세대학교",
+   "unit": "IT융합공학전공",
+   "math_career": [
+    "기하",
+    "미적분Ⅱ"
+   ],
+   "science_general": "자율선택",
+   "science_career": "3과목 이상",
+   "confidence": "high",
+   "source": "https://www2.yonsei.ac.kr/entrance/plan/2028_guide.pdf",
+   "source_date": "2026-04"
+  },
+  {
+   "univ": "연세대학교",
+   "unit": "지능형반도체전공",
+   "math_career": [
+    "기하",
+    "미적분Ⅱ"
+   ],
+   "science_general": "자율선택",
+   "science_career": "3과목 이상",
+   "confidence": "high",
+   "source": "https://www2.yonsei.ac.kr/entrance/plan/2028_guide.pdf",
+   "source_date": "2026-04"
+  },
+  {
+   "univ": "연세대학교",
+   "unit": "모빌리티시스템전공",
+   "math_career": [
+    "기하",
+    "미적분Ⅱ"
+   ],
+   "science_general": "자율선택",
+   "science_career": "3과목 이상",
+   "confidence": "high",
+   "source": "https://www2.yonsei.ac.kr/entrance/plan/2028_guide.pdf",
+   "source_date": "2026-04"
+  },
+  {
+   "univ": "연세대학교",
+   "unit": "전기전자공학부",
+   "math_career": [
+    "기하",
+    "미적분Ⅱ"
+   ],
+   "science_general": "물리학",
+   "science_career": "3과목 이상",
+   "confidence": "high",
+   "source": "https://www2.yonsei.ac.kr/entrance/plan/2028_guide.pdf",
+   "source_date": "2026-04"
+  },
+  {
+   "univ": "연세대학교",
+   "unit": "시스템반도체공학과",
+   "math_career": [
+    "기하",
+    "미적분Ⅱ"
+   ],
+   "science_general": "물리학",
+   "science_career": "3과목 이상",
+   "confidence": "high",
+   "source": "https://www2.yonsei.ac.kr/entrance/plan/2028_guide.pdf",
+   "source_date": "2026-04"
+  },
+  {
+   "univ": "연세대학교",
+   "unit": "산업공학과",
+   "math_career": [
+    "기하",
+    "미적분Ⅱ"
+   ],
+   "science_general": "자율선택",
+   "science_career": "3과목 이상",
+   "confidence": "high",
+   "source": "https://www2.yonsei.ac.kr/entrance/plan/2028_guide.pdf",
+   "source_date": "2026-04"
+  },
+  {
+   "univ": "중앙대학교",
+   "unit": "소프트웨어학부",
+   "math_career": [
+    "미적분Ⅱ",
+    "기하"
+   ],
+   "science_general": [
+    "물리학"
+   ],
+   "science_career": [
+    "역학과 에너지",
+    "전자기와 양자"
+   ],
+   "confidence": "high",
+   "caveat": "PDF 표의 병합 셀을 텍스트 추출 순서로 해석함. 소프트웨어학부와 AI학과의 과학 칸 소속은 원본 표에서 재확인 필요.",
+   "source": "https://admission.cau.ac.kr/files/2026/CAU_2028_subjects.pdf",
+   "source_date": "2025-08"
+  },
+  {
+   "univ": "중앙대학교",
+   "unit": "AI학과",
+   "math_career": [
+    "미적분Ⅱ",
+    "기하"
+   ],
+   "science_general": null,
+   "science_career": null,
+   "confidence": "high",
+   "caveat": "위와 동일. 과학 칸이 '-'(권장 없음)으로 읽힘. 재확인 필요.",
+   "source": "https://admission.cau.ac.kr/files/2026/CAU_2028_subjects.pdf",
+   "source_date": "2025-08"
+  },
+  {
+   "univ": "중앙대학교",
+   "unit": "전자전기공학부",
+   "math_career": [
+    "미적분Ⅱ",
+    "기하"
+   ],
+   "science_general": [
+    "물리학",
+    "화학"
+   ],
+   "science_career": [
+    "역학과 에너지",
+    "전자기와 양자"
+   ],
+   "confidence": "high",
+   "source": "https://admission.cau.ac.kr/files/2026/CAU_2028_subjects.pdf",
+   "source_date": "2025-08"
+  },
+  {
+   "univ": "중앙대학교",
+   "unit": "지능형반도체공학과",
+   "math_career": [
+    "미적분Ⅱ",
+    "기하"
+   ],
+   "science_general": [
+    "물리학",
+    "화학"
+   ],
+   "science_career": [
+    "역학과 에너지",
+    "전자기와 양자"
+   ],
+   "confidence": "high",
+   "source": "https://admission.cau.ac.kr/files/2026/CAU_2028_subjects.pdf",
+   "source_date": "2025-08"
+  },
+  {
+   "univ": "중앙대학교",
+   "unit": "산업보안학과(자연)",
+   "math_career": [
+    "미적분Ⅱ",
+    "기하"
+   ],
+   "science_general": null,
+   "science_career": null,
+   "confidence": "high",
+   "caveat": "병합 셀 해석 재확인 필요.",
+   "source": "https://admission.cau.ac.kr/files/2026/CAU_2028_subjects.pdf",
+   "source_date": "2025-08"
+  },
+  {
+   "univ": "부산대학교",
+   "unit": "정보컴퓨터공학부(컴퓨터공학전공·인공지능전공·디자인테크놀로지전공)",
+   "math_career": "확률과 통계·기하·미적분Ⅱ 중 2과목 이상",
+   "science_general": null,
+   "science_career": null,
+   "confidence": "medium",
+   "source": "https://www.kyobit.com/news/articleView.html?idxno=1381",
+   "source_date": "2025-08",
+   "caveat": "언론 보도 기준. 부산대 공식 '2028학년도 입학생 대상 고교 과목 선택 가이드' 원문 미확인(해당 사본은 접근 차단)."
+  },
+  {
+   "univ": "서울대학교",
+   "unit": "자연계 모집단위(유형②) 공통 규칙",
+   "math_career": [
+    "기하",
+    "미적분Ⅱ"
+   ],
+   "science_general": "일부 모집단위에서 물리학·화학·생명과학·지구과학 중 특정 과목 우선 권장",
+   "science_career": "3과목 이상",
+   "confidence": "high",
+   "source": "https://www.snu.ac.kr/snunow/press?md=v&bbsidx=156226",
+   "source_date": "2025-06-30",
+   "caveat": "컴퓨터공학부 등 개별 모집단위의 일반선택 지정 여부는 입학본부 공지 첨부파일에 있어 미확인. 서울대는 권장과목이 지원자격과 무관하며 수시 서류평가·정시 교과역량평가에 반영된다고 밝힘."
+  },
+  {
+   "univ": "한양대학교",
+   "unit": "자연계 전 모집단위(공통 보도 내용)",
+   "math_career": "기하 또는 미적분Ⅱ 중 1과목",
+   "science_general": null,
+   "science_career": null,
+   "confidence": "medium",
+   "source": "https://www.jinron.kr/news/articleView.html?idxno=2875",
+   "source_date": "2025-09",
+   "caveat": "종로학원 분석 보도. IT 학과별 세부와 과학 권장은 미확인."
+  },
+  {
+   "univ": "경희대학교",
+   "unit": "컴퓨터공학과·소프트웨어융합학과",
+   "math_career": "대수·미적분Ⅰ·미적분Ⅱ·확률과통계·기하·인공지능수학 등 다양한 수학 과목 권장",
+   "science_general": null,
+   "science_career": null,
+   "confidence": "medium",
+   "source": "https://v.daum.net/v/20250928135138605",
+   "source_date": "2025-09",
+   "caveat": "종로학원 분석 보도. 핵심/권장 구분과 과학 권장은 미확인."
+  },
+  {
+   "univ": "고려대학교",
+   "unit": "인공지능·데이터 관련 학과",
+   "math_career": "기하만 권장(보도)",
+   "science_general": "언급 없음(보도)",
+   "science_career": null,
+   "confidence": "low",
+   "source": "https://formmira.com/entry/%EA%B3%A0%EB%A0%A4%EB%8C%80-2028-%EB%8C%80%EC%9E%85-%EA%B6%8C%EC%9E%A5%EA%B3%BC%EB%AA%A9-%EB%B6%84%EC%84%9D-3%EA%B0%80%EC%A7%80-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8%EC%9C%BC%EB%A1%9C-%EC%99%84%EB%B2%BD-%EC%A0%95%EB%A6%AC",
+   "source_date": "2025-08",
+   "caveat": "블로그 인용. 고려대 공식 문서로 반드시 재확인. 종로학원 분석에서는 고려대가 과학 필수 지정과목을 두지 않았다고 함."
+  },
+  {
+   "univ": "성균관대학교",
+   "unit": "자연계 전반",
+   "math_career": "지정과목 없음(2025-09 시점 보도)",
+   "science_general": "지정과목 없음",
+   "science_career": null,
+   "confidence": "medium",
+   "source": "https://www.jinron.kr/news/articleView.html?idxno=2875",
+   "source_date": "2025-09",
+   "caveat": "이후 개정 여부 미확인."
+  },
+  {
+   "univ": "서강대학교",
+   "unit": "자연계 전반",
+   "math_career": "지정과목 없음(2025-09 시점 보도)",
+   "science_general": "지정과목 없음",
+   "science_career": null,
+   "confidence": "medium",
+   "source": "https://www.jinron.kr/news/articleView.html?idxno=2875",
+   "source_date": "2025-09",
+   "caveat": "이후 개정 여부 미확인."
+  }
+ ],
+ "not_collected": [
+  "서울대 개별 모집단위",
+  "건국대",
+  "동국대",
+  "숙명여대",
+  "이화여대",
+  "한국외대",
+  "홍익대",
+  "세종대",
+  "숭실대",
+  "서울시립대",
+  "광운대",
+  "국민대",
+  "서울과기대",
+  "아주대",
+  "인하대",
+  "가천대",
+  "경기대",
+  "단국대",
+  "한국항공대",
+  "한양대(ERICA)",
+  "경북대",
+  "충남대",
+  "전남대",
+  "전북대",
+  "충북대",
+  "강원대",
+  "KAIST·POSTECH·GIST·DGIST·UNIST"
+ ],
+ "expected_9grade_from_5grade_only": {
+  "1": 1.6,
+  "2": 3.42,
+  "3": 5.0,
+  "4": 6.58,
+  "5": 8.4
+ }
+}

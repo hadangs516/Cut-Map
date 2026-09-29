@@ -1,0 +1,191 @@
+/* ===== 성적 관리 시스템 ===== */
+
+/* 지도 탭바의 '성적 관리' 칸. 다른 탭과 달리 화면이 통째로 넘어가서 색으로 구분한다. */
+.views button[data-view="grades"]{color:var(--accent)}
+.views button[data-view="grades"]::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin:0 5px 2px 0;vertical-align:middle}
+
+.gv{position:fixed;inset:0;z-index:2000;display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
+.gv[hidden]{display:none}
+.gv-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px 8px;padding-top:calc(10px + env(safe-area-inset-top));background:var(--surface)}
+.gv-brand{margin:0;font-size:18px;font-weight:700;letter-spacing:-.01em;line-height:1.3}
+.gv-exit{border:1px solid var(--line);background:var(--surface-2);color:var(--ink);border-radius:10px;padding:7px 11px;font:inherit;font-size:13px;font-weight:600;line-height:1.2;cursor:pointer;flex:none}
+.gv-exit:hover{border-color:var(--accent)}
+.gv-dday{display:flex;align-items:center;gap:9px;width:100%;margin:0;padding:8px 14px;background:var(--surface);border:0;border-top:1px solid var(--line);font:inherit;color:inherit;text-align:left;cursor:pointer}
+.gv-dday[disabled]{cursor:default}
+.gv-dday .gd-num{font-size:17px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;flex:none}
+.gv-dday .gd-name{font-size:13px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0}
+.gv-dday .gd-date{font-size:11.5px;color:var(--muted);flex:none}
+.gv-dday .gd-more{font-size:11.5px;color:var(--accent);flex:none}
+.gv-dday .gd-none{font-size:12.5px;color:var(--muted)}
+.gd-row{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid var(--line);font-size:13px}
+.gd-row span:last-child{color:var(--muted);flex:none;font-variant-numeric:tabular-nums}
+.gv-tabs{display:flex;gap:4px;padding:6px 10px 8px;background:var(--surface);border-bottom:1px solid var(--line)}
+.gv-tabs button{flex:1;border:0;background:transparent;padding:7px 0 6px;border-radius:10px;font-size:14.5px;font-weight:600;color:var(--muted);cursor:pointer;line-height:1.25}
+.gv-tabs button[aria-selected="true"]{background:var(--accent-bg);color:var(--accent)}
+.gv-tabs button[disabled]{opacity:.55;cursor:default}
+.gv-tabs button span{display:block;font-size:10.5px;font-weight:500}
+.gv-sub{display:flex;align-items:center;gap:9px;padding:8px 14px;background:var(--surface);border-bottom:1px solid var(--line)}
+.gv-sub[hidden]{display:none}
+.gv-back{border:1px solid var(--line);background:var(--surface-2);color:var(--ink);border-radius:9px;padding:5px 10px;font:inherit;font-size:13px;font-weight:600;cursor:pointer;flex:none}
+.gv-back:hover{border-color:var(--accent)}
+.gv-crumb{font-size:14px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gv-body{flex:1;min-height:0;overflow:auto;-webkit-overflow-scrolling:touch;padding:14px 14px calc(34px + env(safe-area-inset-bottom))}
+
+/* ===== 공통 조각 ===== */
+.gx-warn{margin:0 0 12px;padding:9px 11px;border-radius:10px;background:var(--fit-bg);color:var(--fit-ink);font-size:12.5px;line-height:1.5}
+.gx-lead{margin:0 0 12px;font-size:13.5px;color:var(--ink-2);line-height:1.6}
+.gx-note{margin:10px 0 0;font-size:12.5px;color:var(--muted);line-height:1.55}
+.gx-h{margin:18px 0 8px;font-size:15px;font-weight:700}
+.gx-h:first-child{margin-top:0}
+.gx-list{display:flex;flex-direction:column;gap:8px;margin:0 0 14px}
+.gx-row{display:flex;align-items:center;gap:10px;width:100%;text-align:left;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:11px 12px;font:inherit;color:inherit;cursor:pointer}
+.gx-row:hover{border-color:var(--accent)}
+.gx-row[disabled]{opacity:.5;cursor:default}
+.gx-row[disabled]:hover{border-color:var(--line)}
+.gx-row.now{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+.gx-main{flex:1;min-width:0}
+.gx-name{font-size:14.5px;font-weight:600;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.gx-meta{margin-top:2px;font-size:12px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap}
+.gx-arrow{color:var(--muted);font-size:15px;flex:none}
+.gx-badge{font-size:10.5px;font-weight:600;color:var(--accent);background:var(--accent-bg);border-radius:6px;padding:1px 5px;line-height:1.5;flex:none}
+.gx-flag{font-size:10.5px;font-weight:600;color:var(--out-ink);background:var(--out-bg);border-radius:6px;padding:1px 5px;line-height:1.5;flex:none}
+.gx-now{font-size:10.5px;font-weight:700;color:var(--on-accent);background:var(--accent);border-radius:6px;padding:1px 6px;line-height:1.6;flex:none}
+.gx-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:0 0 14px}
+.gx-tile{border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:14px 12px;font:inherit;color:inherit;font-size:15px;font-weight:600;cursor:pointer;text-align:left}
+.gx-tile:hover{border-color:var(--accent)}
+.gx-tile.on{border-color:var(--accent);background:var(--accent-bg);color:var(--accent)}
+.gx-tile b{display:block;font-size:11.5px;font-weight:500;color:var(--muted);margin-top:2px}
+.gx-tile.on b{color:var(--accent)}
+.gx-acts{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 4px}
+.gx-sum{margin:14px 0 0;padding:11px 12px;border-radius:10px;background:var(--surface-2);border:1px solid var(--line);font-size:12.5px;color:var(--ink-2)}
+.gx-empty{margin:0 0 14px;padding:22px 14px;border:1px dashed var(--line);border-radius:12px;text-align:center;color:var(--muted);font-size:13.5px}
+.gx-field{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:var(--surface);margin-bottom:8px}
+.gx-field label{font-size:14px;font-weight:600}
+.gx-field p{margin:2px 0 0;font-size:12px;color:var(--muted);font-weight:400;line-height:1.5}
+.gx-field input[type=number],.gx-field input[type=text]{width:88px;border:1px solid var(--line);background:var(--surface-2);color:var(--ink);border-radius:8px;padding:7px 8px;font:inherit;font-size:14px;font-variant-numeric:tabular-nums;text-align:right}
+.gx-field input[type=checkbox]{width:20px;height:20px;accent-color:var(--accent);flex:none}
+/* 되돌릴 수 없는 항목. 위험 버튼(.gx-danger)과 같은 색 토큰을 쓴다. */
+.gx-row[data-danger] .gx-name{color:var(--reach-ink)}
+.gx-row[data-danger]:hover{border-color:var(--reach)}
+.gx-ack{display:flex;align-items:center;gap:9px;margin:14px 0 10px;font-size:14px;font-weight:600;cursor:pointer}
+.gx-ack input{width:20px;height:20px;accent-color:var(--accent);flex:none}
+.gx-danger{border:1px solid var(--line);background:var(--surface);color:var(--reach-ink);border-radius:10px;padding:9px 12px;font:inherit;font-size:13.5px;font-weight:600;cursor:pointer;width:100%;margin-top:6px}
+.gx-danger:hover{border-color:var(--reach)}
+.gx-danger[disabled]{opacity:.45;cursor:default}
+.gx-danger[disabled]:hover{border-color:var(--line)}
+.gx-add{display:flex;gap:8px;margin:0 0 14px}
+.gx-add input[type=text]{flex:1;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:10px;padding:9px 10px;font:inherit;font-size:14px}
+.gx-kv{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--surface);margin-bottom:8px;font-size:13.5px}
+.gx-kv span:first-child{color:var(--muted)}
+.gx-kv span:last-child{font-weight:600;text-align:right}
+.gx-alert{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 12px;padding:10px 12px;border-radius:12px;background:var(--fit-bg);color:var(--fit-ink);font-size:12.5px;line-height:1.5}
+.gx-alert-btns{display:flex;align-items:center;gap:6px;margin-left:auto}
+.gdel-x{border:0;background:transparent;color:var(--muted);cursor:pointer;font-size:17px;line-height:1;padding:2px 6px;flex:none}
+.gdel-x:hover{color:var(--reach-ink)}
+.gx-sel{border:1px solid var(--line);background:var(--surface-2);color:var(--ink);border-radius:8px;padding:7px 8px;font:inherit;font-size:14px;min-width:132px}
+
+/* 성적 입력 */
+.sc-list{display:flex;flex-direction:column;gap:10px;margin:12px 0 0}
+.sc-card{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:10px 11px}
+.sc-top{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.sc-nm{font-size:14px;font-weight:600;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sc-g{font-size:13px;font-weight:700;color:var(--accent);background:var(--accent-bg);border-radius:7px;padding:2px 8px;flex:none}
+.sc-g.off{color:var(--muted);background:var(--out-bg)}
+.sc-anm{flex:1;min-width:0;border:1px solid var(--line);background:var(--surface-2);color:var(--ink);border-radius:8px;padding:5px 7px;font:inherit;font-size:13.5px;font-weight:600}
+.sc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}
+.sc-grid label{display:flex;flex-direction:column;gap:3px;font-size:11px;color:var(--muted)}
+.sc-grid input,.sc-grid select{border:1px solid var(--line);background:var(--surface-2);color:var(--ink);border-radius:8px;padding:6px 7px;font:inherit;font-size:13.5px;font-variant-numeric:tabular-nums;width:100%}
+.sc-orig{margin:8px 0 0;font-size:11.5px;color:var(--muted)}
+.sc-orig[hidden]{display:none}
+.sc-man[hidden]{display:none}
+.sc-save{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:16px 0 0;padding-top:14px;border-top:1px solid var(--line)}
+.sc-savebtn{padding:10px 20px;font-size:14.5px;background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.sc-save .gx-note{margin:0;color:var(--fit-ink)}
+.sc-save .gx-note[hidden]{display:none}
+/* 시험 목록에서 지필과 모의고사를 색으로 구분한다. */
+.gx-row[data-kind="mock"]{background:var(--accent-bg);border-color:var(--accent-bg)}
+.gx-row[data-kind="mock"] .gx-name{color:var(--accent)}
+.gx-row[data-kind="mock"]:hover{border-color:var(--accent)}
+
+/* 성적 분석 */
+.an-seg{display:flex;gap:6px;margin:0 0 12px}
+.an-seg button{flex:1;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);border-radius:10px;padding:7px 0;font:inherit;font-size:13.5px;font-weight:600;cursor:pointer}
+.an-seg button.on{background:var(--accent-bg);border-color:var(--accent);color:var(--accent)}
+.an-g{border:1px solid var(--line);border-radius:14px;background:var(--surface-2);padding:13px 14px;margin:0 0 14px}
+.an-g-top{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12.5px;color:var(--muted)}
+.an-core{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--ink-2);cursor:pointer}
+.an-core input{width:16px;height:16px;accent-color:var(--accent)}
+.an-g-v{font-size:32px;font-weight:700;line-height:1.2;font-variant-numeric:tabular-nums;margin-top:4px}
+.an-g-v.off{color:var(--muted)}
+.an-g-m{font-size:12px;color:var(--ink-2)}
+.an-pick{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin:0 0 10px}
+.an-pick button{flex:none;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);border-radius:999px;padding:6px 11px;font:inherit;font-size:12.5px;cursor:pointer;white-space:nowrap}
+.an-pick button.on{background:var(--accent-bg);border-color:var(--accent);color:var(--accent);font-weight:600}
+.an-rows{display:flex;flex-direction:column;gap:8px}
+.an-row{display:flex;align-items:center;gap:9px}
+.an-nm{font-size:13px;width:33%;min-width:84px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.an-bar{flex:1;height:9px;border-radius:999px;background:var(--out-bg);overflow:hidden}
+.an-bar i{display:block;height:100%;background:var(--accent);border-radius:999px}
+.an-v{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;flex:none;min-width:74px;text-align:right}
+.an-v b{color:var(--ink)}
+/* 등급 표시 단위 스위치 */
+.sc-scale{display:flex;align-items:center;gap:8px;margin:0 0 12px;padding:9px 11px;border:1px solid var(--line);border-radius:12px;background:var(--surface);font-size:13.5px;font-weight:600;cursor:pointer}
+.sc-scale input{width:18px;height:18px;accent-color:var(--accent);flex:none}
+
+/* 그래프 */
+.ag{width:100%;height:auto;display:block;margin:6px 0 4px}
+.ag-grid{stroke:var(--line);stroke-width:1}
+.ag-label{fill:var(--muted);font-size:9px;font-family:var(--font)}
+.ag-line{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.ag-line.s1{stroke:var(--accent)}
+.ag-line.s2{stroke:var(--safe-ink);stroke-dasharray:4 3}
+.ag-dot{stroke-width:1.5}
+.ag-dot.s1{fill:var(--accent);stroke:var(--surface)}
+.ag-dot.s2{fill:var(--safe-ink);stroke:var(--surface)}
+.ag-dot.pred{fill:var(--surface)}
+.ag-dot.pred.s1{stroke:var(--accent)}
+.ag-dot.pred.s2{stroke:var(--safe-ink)}
+.ag-leg{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:11.5px;color:var(--muted);margin:2px 0 0}
+.ag-key{width:14px;height:3px;border-radius:2px;background:var(--accent);flex:none;margin-left:6px}
+.ag-key:first-child{margin-left:0}
+.ag-key.s2{background:var(--safe-ink)}
+.ag-key.pred{width:9px;height:9px;border-radius:2px;background:var(--surface);border:1.5px solid var(--accent)}
+
+.gx-toast{position:fixed;left:50%;bottom:76px;transform:translateX(-50%);z-index:2400;background:var(--ink);color:var(--bg);padding:9px 15px;border-radius:999px;font-size:13px;font-weight:600;box-shadow:var(--shadow);max-width:calc(100% - 28px)}
+
+/* ===== 앱 버전 표기 ===== */
+/* 지도 우하단에는 Leaflet 저작권 표시가 있어서 그 위로 올린다. */
+.app-ver{position:fixed;right:8px;bottom:24px;bottom:calc(24px + env(safe-area-inset-bottom));z-index:2200;font-size:10.5px;font-variant-numeric:tabular-nums;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:1px 6px;pointer-events:none;opacity:.9}
+
+/* ===== 시스템 전환 로딩 ===== */
+.gx-load{position:fixed;inset:0;z-index:3000;display:flex;align-items:center;justify-content:center;background:var(--bg);opacity:0;transition:opacity .22s ease}
+.gx-load[hidden]{display:none}
+.gx-load.on{opacity:1}
+.gx-load-in{display:flex;flex-direction:column;align-items:center;gap:14px;transform:translateY(6px);transition:transform .22s ease}
+.gx-load.on .gx-load-in{transform:translateY(0)}
+.gx-load-in p{margin:0;font-size:14.5px;font-weight:600;color:var(--ink-2)}
+.gx-load-dots{display:flex;gap:7px}
+.gx-load-dots i{width:9px;height:9px;border-radius:50%;background:var(--accent);opacity:.35;animation:gxdot 1s infinite ease-in-out}
+.gx-load-dots i:nth-child(2){animation-delay:.15s}
+.gx-load-dots i:nth-child(3){animation-delay:.3s}
+@keyframes gxdot{0%,100%{opacity:.3;transform:translateY(0)}40%{opacity:1;transform:translateY(-5px)}}
+
+/* ===== 확인 대화창 ===== */
+.gx-modal{position:fixed;inset:0;z-index:2600;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(12,17,23,.45)}
+.gx-modal[hidden]{display:none}
+.gx-modal-in{background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:18px;width:100%;max-width:380px;max-height:80vh;overflow:auto}
+.gx-modal-in h3{margin:0 0 8px;font-size:16.5px}
+.gx-modal-in p{margin:6px 0;font-size:13.5px;color:var(--ink-2);line-height:1.6}
+.gx-modal-btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.gx-modal-btns button{flex:1;min-width:92px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:10px;padding:9px 10px;font:inherit;font-size:13.5px;font-weight:600;cursor:pointer}
+.gx-modal-btns button.main{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.gx-modal-btns button[disabled]{opacity:.45;cursor:default}
+
+@media (prefers-reduced-motion: reduce){
+  .gx-load,.gx-load-in{transition:none}
+  .gx-load-dots i{animation:none}
+}
+@media (min-width:620px){
+  .gv-body{padding-left:max(14px,calc((100% - 620px)/2));padding-right:max(14px,calc((100% - 620px)/2))}
+  .gx-grid{grid-template-columns:repeat(3,1fr)}
+}

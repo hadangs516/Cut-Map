@@ -1,0 +1,38 @@
+<!-- 성적 관리 시스템. 지도 위에 겹치는 패널이 아니라 화면 전체를 덮는 별도 시스템이다. -->
+<section class="gv" id="gradesView" hidden role="dialog" aria-modal="true" aria-label="성적 관리">
+  <header class="gv-top">
+    <h2 class="gv-brand">성적 관리</h2>
+    <button class="gv-exit" type="button" data-gexit>지도로 돌아가기</button>
+  </header>
+  <button type="button" class="gv-dday" id="gvDday" data-gdday aria-label="다가오는 일정 보기"></button>
+  <nav class="gv-tabs" role="tablist" aria-label="성적 관리 탭">
+    <button role="tab" type="button" data-gtab="my" aria-selected="true">마이</button>
+    <button role="tab" type="button" data-gtab="score" aria-selected="false">성적 입력</button>
+    <button role="tab" type="button" data-gtab="analysis" aria-selected="false">성적 분석</button>
+  </nav>
+  <div class="gv-sub" id="gvSub" hidden>
+    <button class="gv-back" type="button" id="gvBack">← 뒤로</button>
+    <span class="gv-crumb" id="gvCrumb"></span>
+  </div>
+  <div class="gv-body" id="gvBody"></div>
+</section>
+
+<!-- 앱 버전. 지도와 성적 관리 양쪽에서 항상 보인다. -->
+<div class="app-ver" id="appVer"></div>
+
+<!-- 시스템 전환 연출. 목적과 길이 규칙은 grades/00_core.js의 TRANSITION_MS 주석 참고. -->
+<div class="gx-load" id="gxLoad" hidden aria-live="polite">
+  <div class="gx-load-in">
+    <div class="gx-load-dots"><i></i><i></i><i></i></div>
+    <p id="gxLoadMsg"></p>
+  </div>
+</div>
+
+<!-- 확인 대화창 (학기 전환, 초기화, 백업 가져오기) -->
+<div class="gx-modal" id="gxModal" hidden role="dialog" aria-modal="true" aria-labelledby="gxModalTitle">
+  <div class="gx-modal-in">
+    <h3 id="gxModalTitle"></h3>
+    <div id="gxModalBody"></div>
+    <div class="gx-modal-btns" id="gxModalBtns"></div>
+  </div>
+</div>

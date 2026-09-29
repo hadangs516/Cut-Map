@@ -1,0 +1,160 @@
+/* ===== 화면 테마 =====
+   기본 테마는 이 파일에 없다. 기본은 template.html의 :root와 OS 다크 규칙을 그대로 쓴다.
+   여기 규칙은 기존 다크 규칙(@media prefers-color-scheme: dark의 :root:not([data-theme="light"]))보다
+   뒤에 와야 한다. 두 선택자의 우선순위가 (0,2,0)으로 같아서 나중에 쓴 쪽이 이긴다.
+   그래서 build.py가 이 파일을 grades/style.css 다음, 스타일 블록 맨 끝에 넣는다.
+
+   각 테마는 선택자를 두 개 쓴다.
+     :root[data-skin="x"]  -> 앱 전체에 적용
+     [data-skin="x"]       -> 테마 고르기 화면의 미리보기 카드에 적용 (카드 안쪽만 그 테마 색)
+   카드는 :root가 아니라서 OS 다크 규칙과 겹치지 않고, 직접 지정이 상속을 이기므로 섞이지 않는다.
+
+   토큰은 28개 + --on-accent, --map-pattern, --bg-pattern을 빠짐없이 적는다.
+   하나라도 빠지면 OS 다크 값이 새어 들어온다. */
+
+/* ---------- 고양이 ---------- */
+:root[data-skin="cat"], [data-skin="cat"]{
+  --on-accent:#FFF7EC;
+  --map-pattern:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='%238A6A44' fill-opacity='0.14'%3E%3Cellipse cx='20' cy='26' rx='7' ry='5.5'/%3E%3Ccircle cx='13' cy='17' r='2.6'/%3E%3Ccircle cx='19' cy='14' r='2.8'/%3E%3Ccircle cx='25.5' cy='15.5' r='2.6'/%3E%3Ccircle cx='29.5' cy='20.5' r='2.2'/%3E%3C/g%3E%3C/svg%3E");
+  --bg-pattern:none;
+  --bg:#F3E8D7;--surface:#FFF9F0;--surface-2:#F0E4D2;--ink:#33241A;--ink-2:#54402F;--muted:#87705C;--line:#E2D2BA;
+  --accent:#5B3A22;--accent-bg:#EFDFCB;
+  --sea:#E3D2BC;--land:#FFF9F0;--land-metro:#FFFFFF;--prov-line:#C2AB8A;--gu-line:#E6DAC6;--map-label:#6F5B46;
+  --reach:#BD2F5C;--reach-ink:#8A1440;--reach-bg:#FADCE6;
+  --fit:#B2650B;--fit-ink:#7E4400;--fit-bg:#F9E6CB;
+  --safe:#127553;--safe-ink:#08543A;--safe-bg:#D7EFE3;
+  --out:#998772;--out-ink:#5B4C3E;--out-bg:#EDE2D3;
+  --shadow:0 10px 30px rgba(70,48,28,.18);
+}
+
+/* ---------- 펭귄 ---------- */
+:root[data-skin="penguin"], [data-skin="penguin"]{
+  --on-accent:#FFFFFF;
+  --map-pattern:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='28' viewBox='0 0 64 28'%3E%3Cpath d='M0 14 q8 -7 16 0 t16 0 t16 0 t16 0' fill='none' stroke='%232C6E92' stroke-opacity='0.16' stroke-width='1.6'/%3E%3C/svg%3E");
+  --bg-pattern:none;
+  --bg:#E9F1F7;--surface:#FFFFFF;--surface-2:#F0F6FA;--ink:#15212D;--ink-2:#394857;--muted:#74838D;--line:#D5E2EB;
+  --accent:#1F2E44;--accent-bg:#DBE5EF;
+  --sea:#CFE5F1;--land:#FFFFFF;--land-metro:#FFFFFF;--prov-line:#A5C1D3;--gu-line:#DBE7EF;--map-label:#667986;
+  --reach:#BE2E5A;--reach-ink:#8D1343;--reach-bg:#FADBE6;
+  --fit:#B06409;--fit-ink:#7D4300;--fit-bg:#FAE7CD;
+  --safe:#0E7154;--safe-ink:#06513B;--safe-bg:#D5EFE5;
+  --out:#8C9BA5;--out-ink:#53626C;--out-bg:#E6EDF2;
+  --shadow:0 10px 30px rgba(22,44,64,.16);
+}
+
+/* ---------- 벚꽃 ---------- */
+:root[data-skin="sakura"], [data-skin="sakura"]{
+  --on-accent:#FFFFFF;
+  --map-pattern:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='52' viewBox='0 0 52 52'%3E%3Cg fill='%23C4638C' fill-opacity='0.17'%3E%3Cellipse cx='14' cy='12' rx='4.6' ry='3' transform='rotate(-24 14 12)'/%3E%3Cellipse cx='36' cy='30' rx='4.2' ry='2.7' transform='rotate(38 36 30)'/%3E%3Cellipse cx='24' cy='44' rx='3.6' ry='2.4' transform='rotate(-8 24 44)'/%3E%3C/g%3E%3C/svg%3E");
+  --bg-pattern:none;
+  --bg:#FAEEF2;--surface:#FFFAFC;--surface-2:#F7E6ED;--ink:#33232E;--ink-2:#55404F;--muted:#8A7280;--line:#EED7E2;
+  --accent:#44557E;--accent-bg:#E0E6F1;
+  --sea:#F2DAE4;--land:#FFFAFC;--land-metro:#FFFFFF;--prov-line:#D9B9CA;--gu-line:#EEDAE3;--map-label:#7B6675;
+  --reach:#AE0E45;--reach-ink:#7C0331;--reach-bg:#F9D2E0;
+  --fit:#AD5F06;--fit-ink:#7B4000;--fit-bg:#F9E4C8;
+  --safe:#0D6F4E;--safe-ink:#064F37;--safe-bg:#D4EEE2;
+  --out:#968491;--out-ink:#594A54;--out-bg:#EDE2E8;
+  --shadow:0 10px 30px rgba(70,34,52,.16);
+}
+
+/* ---------- 방안지 ---------- */
+:root[data-skin="grid"], [data-skin="grid"]{
+  --on-accent:#FFFFFF;
+  --map-pattern:repeating-linear-gradient(0deg, rgba(60,80,120,.15) 0 1px, transparent 1px 16px), repeating-linear-gradient(90deg, rgba(60,80,120,.15) 0 1px, transparent 1px 16px);
+  --bg-pattern:none;
+  --bg:#F6F2E7;--surface:#FFFDF5;--surface-2:#F1ECDD;--ink:#292822;--ink-2:#4B4940;--muted:#7F7C6B;--line:#E1DBC7;
+  --accent:#1E4FA3;--accent-bg:#DDE6F4;
+  --sea:#E9E3D1;--land:#FFFDF5;--land-metro:#FFFFFF;--prov-line:#C2BBA2;--gu-line:#E4DECB;--map-label:#726E5B;
+  --reach:#B92C57;--reach-ink:#88123D;--reach-bg:#F7DAE3;
+  --fit:#AE6109;--fit-ink:#7C4200;--fit-bg:#F7E5C9;
+  --safe:#11704E;--safe-ink:#085038;--safe-bg:#D5EDE0;
+  --out:#93907F;--out-ink:#575343;--out-bg:#E9E5D7;
+  --shadow:0 10px 30px rgba(60,56,36,.15);
+}
+
+/* ---------- 모노 잉크 ---------- */
+:root[data-skin="mono"], [data-skin="mono"]{
+  --on-accent:#FFFFFF;
+  --map-pattern:none;
+  --bg-pattern:none;
+  --bg:#F1F1F1;--surface:#FFFFFF;--surface-2:#F6F6F6;--ink:#111111;--ink-2:#393939;--muted:#6B6B6B;--line:#D7D7D7;
+  --accent:#1A1A1A;--accent-bg:#E5E5E5;
+  --sea:#E3E3E3;--land:#FFFFFF;--land-metro:#FFFFFF;--prov-line:#B2B2B2;--gu-line:#DBDBDB;--map-label:#5C5C5C;
+  --reach:#C4003B;--reach-ink:#8D002A;--reach-bg:#FFDCE5;
+  --fit:#B35400;--fit-ink:#7F3C00;--fit-bg:#FFE8D0;
+  --safe:#00704A;--safe-ink:#005034;--safe-bg:#D2F0E0;
+  --out:#8A8A8A;--out-ink:#4C4C4C;--out-bg:#E7E7E7;
+  --shadow:0 10px 30px rgba(0,0,0,.16);
+}
+
+/* ---------- 우주 ---------- */
+:root[data-skin="space"], [data-skin="space"]{
+  --on-accent:#06121F;
+  --map-pattern:radial-gradient(1.4px 1.4px at 18% 24%, rgba(255,255,255,.55) 50%, transparent 52%), radial-gradient(1.2px 1.2px at 62% 12%, rgba(255,255,255,.4) 50%, transparent 52%), radial-gradient(1.6px 1.6px at 78% 58%, rgba(255,255,255,.5) 50%, transparent 52%), radial-gradient(1.1px 1.1px at 34% 74%, rgba(255,255,255,.38) 50%, transparent 52%), radial-gradient(1.3px 1.3px at 88% 86%, rgba(255,255,255,.42) 50%, transparent 52%);
+  --bg-pattern:none;
+  --bg:#080D1A;--surface:#121A2E;--surface-2:#18223A;--ink:#E9EFF9;--ink-2:#B8C4DA;--muted:#8697B0;--line:#273252;
+  --accent:#6FC3FF;--accent-bg:#14304C;
+  --sea:#060A14;--land:#151E34;--land-metro:#1B2542;--prov-line:#3A4870;--gu-line:#27324F;--map-label:#8492B0;
+  --reach:#FF74A3;--reach-ink:#FFAECA;--reach-bg:#3B1627;
+  --fit:#FFB44F;--fit-ink:#FFD190;--fit-bg:#3A2710;
+  --safe:#49D9A6;--safe-ink:#8CECC8;--safe-bg:#0F3327;
+  --out:#76839D;--out-ink:#AEB8CC;--out-bg:#1E2740;
+  --shadow:0 10px 30px rgba(0,0,0,.5);
+}
+
+/* ---------- 황혼 ---------- */
+:root[data-skin="dusk"], [data-skin="dusk"]{
+  --on-accent:#180F28;
+  --map-pattern:linear-gradient(160deg, rgba(86,72,168,.42) 0%, rgba(120,70,150,.30) 45%, rgba(158,84,138,.34) 100%);
+  --bg-pattern:none;
+  --bg:#140F22;--surface:#1E1832;--surface-2:#261E3E;--ink:#F0EAF9;--ink-2:#C6BBDC;--muted:#968CB0;--line:#362C54;
+  --accent:#C4A7F0;--accent-bg:#2E2350;
+  --sea:#1B1430;--land:#241C3C;--land-metro:#2A2146;--prov-line:#483B64;--gu-line:#342B50;--map-label:#958BAF;
+  --reach:#FF7FA8;--reach-ink:#FFB4CD;--reach-bg:#3E1A2C;
+  --fit:#FFBC63;--fit-ink:#FFD79E;--fit-bg:#3C2A12;
+  --safe:#4FDCAA;--safe-ink:#92EECB;--safe-bg:#10352A;
+  --out:#7F769B;--out-ink:#B6AECB;--out-bg:#262040;
+  --shadow:0 10px 30px rgba(0,0,0,.5);
+}
+
+/* ---------- 패턴 붙이는 곳 ----------
+   기존 background 단축 속성 뒤에 background-image만 따로 얹는다.
+   기본 테마는 none이라 지금 화면과 완전히 같다.
+   땅(path.prov), 마커, 라벨 뒤에는 깔지 않는다. */
+#map, .leaflet-container{ background-image:var(--map-pattern); }
+body{ background-image:var(--bg-pattern); }
+
+/* 목록 탭 별표 */
+.rrow-wrap{display:flex;align-items:stretch;gap:6px}
+.rrow-wrap .rrow{flex:1;min-width:0}
+.rstar{border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:12px;width:40px;flex:none;font-size:17px;cursor:pointer;line-height:1}
+.rstar.on{color:var(--accent);border-color:var(--accent)}
+.rstar:hover{border-color:var(--accent)}
+
+/* ---------- 테마 고르기 화면 ---------- */
+.sk-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:0 0 14px}
+.sk-card{display:flex;flex-direction:column;gap:0;border:2px solid var(--line);background:var(--surface);border-radius:14px;padding:0;overflow:hidden;cursor:pointer;font:inherit;color:inherit;text-align:left}
+.sk-card:hover{border-color:var(--accent)}
+.sk-card[aria-checked="true"]{border-color:var(--accent)}
+.sk-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.sk-foot{display:flex;align-items:center;gap:6px;padding:7px 9px;background:var(--surface);border-top:1px solid var(--line)}
+.sk-nm{font-size:13px;font-weight:600;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sk-os{font-size:10px;color:var(--muted);flex:none}
+.sk-chk{width:16px;height:16px;border-radius:50%;border:1px solid var(--line);flex:none;position:relative}
+.sk-card[aria-checked="true"] .sk-chk{background:var(--accent);border-color:var(--accent)}
+.sk-card[aria-checked="true"] .sk-chk::after{content:"";position:absolute;left:5px;top:2px;width:4px;height:8px;border:solid var(--on-accent);border-width:0 2px 2px 0;transform:rotate(45deg)}
+
+/* 미리보기. 안쪽 색은 카드에 붙은 data-skin 토큰만 쓴다. JS에 색을 따로 두지 않는다. */
+.sk-prev{position:relative;aspect-ratio:5/6;background-color:var(--sea);background-image:var(--map-pattern);overflow:hidden}
+.sk-land{position:absolute;background:var(--land);border:1px solid var(--prov-line)}
+.sk-l1{left:-16%;top:6%;width:54%;height:34%;border-radius:38% 52% 44% 60%}
+.sk-l2{right:-12%;top:26%;width:46%;height:30%;border-radius:56% 40% 60% 44%}
+.sk-l3{left:18%;bottom:30%;width:38%;height:22%;border-radius:48% 58% 40% 52%}
+.sk-dot{position:absolute;width:9px;height:9px;border-radius:50%;background:var(--surface);border:3px solid var(--out);box-shadow:0 1px 2px rgba(0,0,0,.28)}
+.sk-d1{left:20%;top:18%;border-color:var(--reach)}
+.sk-d2{left:54%;top:36%;border-color:var(--fit)}
+.sk-d3{left:30%;top:54%;border-color:var(--safe)}
+.sk-sheet{position:absolute;left:6%;right:6%;bottom:5%;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 9px}
+.sk-bar{display:block;width:38%;height:5px;border-radius:3px;background:var(--accent);margin-bottom:6px}
+.sk-line{display:block;height:4px;border-radius:2px;background:var(--ink-2);opacity:.55;margin-bottom:4px}
+.sk-line.s{width:58%;background:var(--muted);opacity:.75;margin-bottom:0}

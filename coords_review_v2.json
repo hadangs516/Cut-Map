@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "date": "2026-09-24",
+  "generatedBy": "apply_decisions_v3.py",
+  "note": "후보가 여러 개라 자동 확정하지 않은 행. 후보 좌표는 판단용이며 마커에 넣지 않음.",
+  "count": 0,
+  "items": []
+}

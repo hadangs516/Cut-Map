@@ -1,0 +1,688 @@
+{
+  "version": 0,
+  "status": "provisional",
+  "sourced": false,
+  "label": "임시 데이터",
+  "note": [
+    "이 파일은 아직 원자료로 검증되지 않았다. 2022 개정 교육과정 보통교과 과목 안내자료 원문을 확보하지 못했다.",
+    "source 필드로 근거를 구분한다. spec-2-1 = SPEC_성적관리시스템.md 2-1의 공통과목 표를 그대로 옮긴 것. draft = 근거 없이 적어둔 임시 과목이며 화면에 '미검증'으로 표시된다.",
+    "credits가 null인 과목은 학점이 [미확인]이라 값을 넣지 않은 것이다. 앱은 비워두고 사용자가 직접 입력하게 한다. 임의로 채우지 말 것.",
+    "draft 과목의 credits: SPEC 2-1의 일반 규칙(선택과목 기본 4학점, 체육·예술·교양 3학점)을 기계적으로 적용한 값이다. 과목별 실제 학점을 확인한 것이 아니다.",
+    "gradeType: SPEC 2-1이 이름을 댄 것(체육·예술·교양 교과, 과학탐구실험)만 achievement로 두었다. SPEC은 '사회·과학 융합선택 9과목'도 등급 미산출이라고 적었으나 그 9과목의 이름이 SPEC에 없어서 이 파일에서는 전부 rank로 들어가 있다. 실제 데이터 교체 시 반드시 고칠 것.",
+    "공통과목 불러오기는 이 파일의 term 필드가 아니라 과목 이름 끝의 1·2로 학기를 가른다(SPEC 2-1, 사용자 지시).",
+    "areas: 고시상 보통 교과의 교과(군)는 국어/수학/영어/사회/과학/체육/예술 + '기술·가정/정보/제2외국어/한문/교양' 묶음이다. 여기서 마지막 묶음을 5개로 쪼개고 한국사를 사회에서 분리한 것은 앱 편의를 위한 설계이며 고시 구분과 다르다.",
+    "group: 화면에 바로 보이는 8칸은 main 7개 + '그 외' 1칸이고, etc 6개는 '그 외'를 눌렀을 때 나온다."
+  ],
+  "areas": [
+    {
+      "id": "korean",
+      "name": "국어",
+      "group": "main"
+    },
+    {
+      "id": "math",
+      "name": "수학",
+      "group": "main"
+    },
+    {
+      "id": "english",
+      "name": "영어",
+      "group": "main"
+    },
+    {
+      "id": "social",
+      "name": "사회",
+      "group": "main"
+    },
+    {
+      "id": "history",
+      "name": "한국사",
+      "group": "main"
+    },
+    {
+      "id": "science",
+      "name": "과학",
+      "group": "main"
+    },
+    {
+      "id": "info",
+      "name": "정보",
+      "group": "main"
+    },
+    {
+      "id": "pe",
+      "name": "체육",
+      "group": "etc"
+    },
+    {
+      "id": "art",
+      "name": "예술",
+      "group": "etc"
+    },
+    {
+      "id": "tech",
+      "name": "기술·가정",
+      "group": "etc"
+    },
+    {
+      "id": "lang2",
+      "name": "제2외국어",
+      "group": "etc"
+    },
+    {
+      "id": "hanmun",
+      "name": "한문",
+      "group": "etc"
+    },
+    {
+      "id": "liberal",
+      "name": "교양",
+      "group": "etc"
+    }
+  ],
+  "types": [
+    {
+      "id": "common",
+      "badge": "공통"
+    },
+    {
+      "id": "general",
+      "badge": "일반"
+    },
+    {
+      "id": "career",
+      "badge": "진로"
+    },
+    {
+      "id": "fusion",
+      "badge": "융합"
+    }
+  ],
+  "courses": [
+    {
+      "code": "kor-01",
+      "name": "공통국어1",
+      "area": "korean",
+      "type": "common",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "spec-2-1"
+    },
+    {
+      "code": "kor-02",
+      "name": "공통국어2",
+      "area": "korean",
+      "type": "common",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "spec-2-1"
+    },
+    {
+      "code": "kor-03",
+      "name": "화법과 언어",
+      "area": "korean",
+      "type": "general",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "kor-04",
+      "name": "독서와 작문",
+      "area": "korean",
+      "type": "general",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "kor-05",
+      "name": "문학",
+      "area": "korean",
+      "type": "general",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "kor-06",
+      "name": "주제 탐구 독서",
+      "area": "korean",
+      "type": "career",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "mat-01",
+      "name": "공통수학1",
+      "area": "math",
+      "type": "common",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "spec-2-1"
+    },
+    {
+      "code": "mat-02",
+      "name": "공통수학2",
+      "area": "math",
+      "type": "common",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "spec-2-1"
+    },
+    {
+      "code": "mat-03",
+      "name": "대수",
+      "area": "math",
+      "type": "general",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "mat-04",
+      "name": "미적분Ⅰ",
+      "area": "math",
+      "type": "general",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "mat-05",
+      "name": "확률과 통계",
+      "area": "math",
+      "type": "general",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "mat-06",
+      "name": "기하",
+      "area": "math",
+      "type": "career",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "mat-07",
+      "name": "미적분Ⅱ",
+      "area": "math",
+      "type": "career",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "mat-08",
+      "name": "인공지능 수학",
+      "area": "math",
+      "type": "career",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "mat-09",
+      "name": "수학과제 탐구",
+      "area": "math",
+      "type": "fusion",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "eng-01",
+      "name": "공통영어1",
+      "area": "english",
+      "type": "common",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "spec-2-1"
+    },
+    {
+      "code": "eng-02",
+      "name": "공통영어2",
+      "area": "english",
+      "type": "common",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "spec-2-1"
+    },
+    {
+      "code": "eng-03",
+      "name": "영어Ⅰ",
+      "area": "english",
+      "type": "general",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "eng-04",
+      "name": "영어Ⅱ",
+      "area": "english",
+      "type": "general",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "eng-05",
+      "name": "영어 독해와 작문",
+      "area": "english",
+      "type": "general",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "eng-06",
+      "name": "영미 문학 읽기",
+      "area": "english",
+      "type": "career",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "soc-01",
+      "name": "통합사회1",
+      "area": "social",
+      "type": "common",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "spec-2-1"
+    },
+    {
+      "code": "soc-02",
+      "name": "통합사회2",
+      "area": "social",
+      "type": "common",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "spec-2-1"
+    },
+    {
+      "code": "soc-03",
+      "name": "세계시민과 지리",
+      "area": "social",
+      "type": "general",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "soc-04",
+      "name": "사회와 문화",
+      "area": "social",
+      "type": "general",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "soc-05",
+      "name": "현대사회와 윤리",
+      "area": "social",
+      "type": "general",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "soc-06",
+      "name": "법과 사회",
+      "area": "social",
+      "type": "career",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "soc-07",
+      "name": "경제",
+      "area": "social",
+      "type": "career",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "soc-08",
+      "name": "사회문제 탐구",
+      "area": "social",
+      "type": "fusion",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "his-01",
+      "name": "한국사1",
+      "area": "history",
+      "type": "common",
+      "credits": 3,
+      "gradeType": "rank",
+      "source": "spec-2-1"
+    },
+    {
+      "code": "his-02",
+      "name": "한국사2",
+      "area": "history",
+      "type": "common",
+      "credits": 3,
+      "gradeType": "rank",
+      "source": "spec-2-1"
+    },
+    {
+      "code": "sci-01",
+      "name": "통합과학1",
+      "area": "science",
+      "type": "common",
+      "credits": null,
+      "gradeType": "rank",
+      "source": "spec-2-1"
+    },
+    {
+      "code": "sci-02",
+      "name": "통합과학2",
+      "area": "science",
+      "type": "common",
+      "credits": null,
+      "gradeType": "rank",
+      "source": "spec-2-1"
+    },
+    {
+      "code": "sci-03",
+      "name": "과학탐구실험1",
+      "area": "science",
+      "type": "common",
+      "credits": null,
+      "gradeType": "achievement",
+      "source": "spec-2-1"
+    },
+    {
+      "code": "sci-04",
+      "name": "과학탐구실험2",
+      "area": "science",
+      "type": "common",
+      "credits": null,
+      "gradeType": "achievement",
+      "source": "spec-2-1"
+    },
+    {
+      "code": "sci-05",
+      "name": "물리학",
+      "area": "science",
+      "type": "general",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "sci-06",
+      "name": "화학",
+      "area": "science",
+      "type": "general",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "sci-07",
+      "name": "생명과학",
+      "area": "science",
+      "type": "general",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "sci-08",
+      "name": "지구과학",
+      "area": "science",
+      "type": "general",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "sci-09",
+      "name": "역학과 에너지",
+      "area": "science",
+      "type": "career",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "sci-10",
+      "name": "기후변화와 환경생태",
+      "area": "science",
+      "type": "fusion",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "inf-01",
+      "name": "정보",
+      "area": "info",
+      "type": "general",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "inf-02",
+      "name": "인공지능 기초",
+      "area": "info",
+      "type": "career",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "inf-03",
+      "name": "데이터 과학",
+      "area": "info",
+      "type": "career",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "inf-04",
+      "name": "소프트웨어와 생활",
+      "area": "info",
+      "type": "fusion",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "pe-01",
+      "name": "체육1",
+      "area": "pe",
+      "type": "general",
+      "credits": 3,
+      "gradeType": "achievement",
+      "source": "draft"
+    },
+    {
+      "code": "pe-02",
+      "name": "체육2",
+      "area": "pe",
+      "type": "general",
+      "credits": 3,
+      "gradeType": "achievement",
+      "source": "draft"
+    },
+    {
+      "code": "pe-03",
+      "name": "운동과 건강",
+      "area": "pe",
+      "type": "career",
+      "credits": 3,
+      "gradeType": "achievement",
+      "source": "draft"
+    },
+    {
+      "code": "pe-04",
+      "name": "스포츠 생활1",
+      "area": "pe",
+      "type": "career",
+      "credits": 3,
+      "gradeType": "achievement",
+      "source": "draft"
+    },
+    {
+      "code": "art-01",
+      "name": "음악",
+      "area": "art",
+      "type": "general",
+      "credits": 3,
+      "gradeType": "achievement",
+      "source": "draft"
+    },
+    {
+      "code": "art-02",
+      "name": "미술",
+      "area": "art",
+      "type": "general",
+      "credits": 3,
+      "gradeType": "achievement",
+      "source": "draft"
+    },
+    {
+      "code": "art-03",
+      "name": "음악 연주와 창작",
+      "area": "art",
+      "type": "career",
+      "credits": 3,
+      "gradeType": "achievement",
+      "source": "draft"
+    },
+    {
+      "code": "art-04",
+      "name": "미술 창작",
+      "area": "art",
+      "type": "career",
+      "credits": 3,
+      "gradeType": "achievement",
+      "source": "draft"
+    },
+    {
+      "code": "tec-01",
+      "name": "기술·가정",
+      "area": "tech",
+      "type": "general",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "tec-02",
+      "name": "로봇과 공학세계",
+      "area": "tech",
+      "type": "career",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "tec-03",
+      "name": "생활과학 탐구",
+      "area": "tech",
+      "type": "fusion",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "lan-01",
+      "name": "일본어",
+      "area": "lang2",
+      "type": "general",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "lan-02",
+      "name": "중국어",
+      "area": "lang2",
+      "type": "general",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "lan-03",
+      "name": "일본어 회화",
+      "area": "lang2",
+      "type": "career",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "han-01",
+      "name": "한문",
+      "area": "hanmun",
+      "type": "general",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "han-02",
+      "name": "한문 고전 읽기",
+      "area": "hanmun",
+      "type": "career",
+      "credits": 4,
+      "gradeType": "rank",
+      "source": "draft"
+    },
+    {
+      "code": "lib-01",
+      "name": "진로와 직업",
+      "area": "liberal",
+      "type": "general",
+      "credits": 3,
+      "gradeType": "achievement",
+      "source": "draft"
+    },
+    {
+      "code": "lib-02",
+      "name": "생태와 환경",
+      "area": "liberal",
+      "type": "general",
+      "credits": 3,
+      "gradeType": "achievement",
+      "source": "draft"
+    },
+    {
+      "code": "lib-03",
+      "name": "논리와 사고",
+      "area": "liberal",
+      "type": "career",
+      "credits": 3,
+      "gradeType": "achievement",
+      "source": "draft"
+    },
+    {
+      "code": "lib-04",
+      "name": "인간과 철학",
+      "area": "liberal",
+      "type": "career",
+      "credits": 3,
+      "gradeType": "achievement",
+      "source": "draft"
+    }
+  ]
+}
