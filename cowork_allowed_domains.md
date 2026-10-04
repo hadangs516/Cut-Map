@@ -631,3 +631,12 @@ KEDI 홈페이지 도메인에는 없던 입학처 도메인을 추가함. 5장 
   - 경상남도교육청 CSV: sgu.ac.kr은 "신경대학교(화성)"(경기 화성시 남양중앙로 400-5)의 홈페이지이고, 신경주대가 아님. 같은 CSV에서 gu.ac.kr은 "경주대학교(경주)".
   - API 수집본(json 파일들)에는 홈페이지 필드에 sgu.ac.kr 값이 없음.
   - sgu.ac.kr이 신경주대 입시자료실 주소로 적힌 곳은 컷맵_입결위치조사 v3·v4 문서와 cowork_20260929_06.md뿐이며 공식 자료가 아님. 사용자·Cowork의 공식 페이지 직접 연결 확인이 필요함.
+
+## 8. 보류 (작업 44, #0929-58, 2026-10-05)
+
+- 남서울대학교 namseoul.net: **보류(추가하지 않음)**. Cowork(cowork_20260930_31.md)가 허용 도메인 nsu.ac.kr 접속 시 https://www.namseoul.net/ 으로 자동 이동한다고 기록했으나, 폴더 안 공식 자료에서 namseoul.net이 확인되지 않음.
+  - KEDI 2026 xlsx: 남서울대학교 홈페이지 http://www.nsu.ac.kr (대학원·특수대학원 행은 gr.nsu.ac.kr, www.nsu.ac.kr). 파일 안에 namseoul 문자열 없음.
+  - 경상남도교육청 CSV: 남서울대학교(천안) 홈페이지 https://www.nsu.ac.kr/.
+  - API 수집본(json 파일들), univ_coords.json, 폴더 안 다른 자료: namseoul.net 값 없음.
+  - namseoul.net이 적힌 곳은 컷맵_입결위치조사 문서(조사 문서, 공식 자료 아님)와 Cowork 결과 31번뿐임.
+  - 조건: 허용 도메인(nsu.ac.kr)의 공식 페이지에서 namseoul.net으로 직접 연결되는 것을 폴더 안 공식 자료나 이후 Cowork 재확인으로 확인하면 SPEC 13번에 따라 추가할 수 있음.
