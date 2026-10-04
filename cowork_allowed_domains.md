@@ -341,7 +341,7 @@ KEDI 값이 없어 다른 자료로 보충한 행과 보류한 행. 보충 도�
 
 - 충청 / 호서대학교: www.hoseo.ac.kr, www.hoseo.ac.rk -> ac.rk
 
-## 5. 허용 도메인 전체 (중복 제거, 271개)
+## 5. 허용 도메인 전체 (중복 제거, 272개)
 
 - ajou.ac.kr
 - ansan.ac.kr
@@ -528,6 +528,7 @@ KEDI 값이 없어 다른 자료로 보충한 행과 보류한 행. 보충 도�
 - motor.ac.kr
 - msu.ac.kr
 - nambu.ac.kr
+- namseoul.net
 - nsu.ac.kr
 - ok.ac.kr
 - osan.ac.kr
@@ -617,12 +618,13 @@ KEDI 값이 없어 다른 자료로 보충한 행과 보류한 행. 보충 도�
 
 ## 6. 추가 허용 도메인 (작업 22, #0929-20, 2026-09-29)
 
-KEDI 홈페이지 도메인에는 없던 입학처 도메인을 추가함. 5장 전체 목록(271개)에 포함됨.
+KEDI 홈페이지 도메인에는 없던 입학처 도메인을 추가함. 5장 전체 목록(272개)에 포함됨.
 
 | 대학 | 추가 도메인 | 근거 |
 |---|---|---|
 | 아주대학교 | iajou.ac.kr | 공식 홈페이지 입학처 메뉴에서 직접 연결(Cowork 확인, 2026-09-29) |
 | 계명대학교 | gokmu.ac.kr | 공식 홈페이지 입학처 메뉴에서 직접 연결(Cowork 확인, 2026-09-29) |
+| 남서울대학교 | namseoul.net | cowork_results 31번에 www.nsu.ac.kr에서 namseoul.net으로 이동한 기록 있음, SPEC 13번 직접 연결 입학처 도메인 조항 적용 (#1005-04 작업 50, 2026-10-05) |
 
 ## 7. 보류 (작업 22, #0929-20)
 
@@ -634,7 +636,7 @@ KEDI 홈페이지 도메인에는 없던 입학처 도메인을 추가함. 5장 
 
 ## 8. 보류 (작업 44, #0929-58, 2026-10-05)
 
-- 남서울대학교 namseoul.net: **보류(추가하지 않음)**. Cowork(cowork_20260930_31.md)가 허용 도메인 nsu.ac.kr 접속 시 https://www.namseoul.net/ 으로 자동 이동한다고 기록했으나, 폴더 안 공식 자료에서 namseoul.net이 확인되지 않음.
+- 남서울대학교 namseoul.net: **(2026-10-05 #1005-04 작업 50으로 허용 목록에 추가됨. 아래는 #0929-58 당시 보류 기록)** 보류(추가하지 않음). Cowork(cowork_20260930_31.md)가 허용 도메인 nsu.ac.kr 접속 시 https://www.namseoul.net/ 으로 자동 이동한다고 기록했으나, 폴더 안 공식 자료에서 namseoul.net이 확인되지 않음.
   - KEDI 2026 xlsx: 남서울대학교 홈페이지 http://www.nsu.ac.kr (대학원·특수대학원 행은 gr.nsu.ac.kr, www.nsu.ac.kr). 파일 안에 namseoul 문자열 없음.
   - 경상남도교육청 CSV: 남서울대학교(천안) 홈페이지 https://www.nsu.ac.kr/.
   - API 수집본(json 파일들), univ_coords.json, 폴더 안 다른 자료: namseoul.net 값 없음.
