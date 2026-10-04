@@ -1,0 +1,3686 @@
+{
+ "version": 1,
+ "note": [
+  "대학알리미 공시 xlsx 두 개를 scripts/add_academyinfo.py 가 읽어 마커 이름과 정확히 일치하는 항목에만 값을 붙였다.",
+  "이름이 정확히 같은 항목이 1개로 정해지지 않거나 값이 하나로 정해지지 않으면 값을 넣지 않았다. 매칭 못 한 목록은 academyinfo_review.md."
+ ],
+ "sources": {
+  "tuition": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)",
+  "dorm": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+ },
+ "years": {
+  "tuition": 2026,
+  "dorm": 2025
+ },
+ "license": "공공누리 제1유형",
+ "stats": {
+  "markers": 306,
+  "tuitionMatched": 168,
+  "dormMatched": 163,
+  "noneMatched": 137
+ },
+ "markers": [
+  {
+   "univ": "건국대학교",
+   "campus": "건국대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 8985986.4,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "건국대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 17.1,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "건국대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "고려대학교",
+   "campus": "고려대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 9091429.8,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "고려대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 11.5,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "고려대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "광운대학교",
+   "campus": "광운대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 8595586.5,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "광운대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 12.3,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "광운대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "국민대학교",
+   "campus": "국민대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 8616796.8,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "국민대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 13.3,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "국민대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "덕성여자대학교",
+   "campus": "덕성여자대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 7810760.7,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "덕성여자대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 15.3,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "덕성여자대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "동국대학교",
+   "campus": "동국대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 8656274.3,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "동국대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 13.7,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "동국대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "동덕여자대학교",
+   "campus": "동덕여자대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 8126346.6,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "동덕여자대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 12.7,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "동덕여자대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "삼육대학교",
+   "campus": "삼육대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 8537542.9,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "삼육대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 21.1,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "삼육대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "서강대학교",
+   "campus": "서강대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 8698676.8,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "서강대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 11.3,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "서강대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "서경대학교",
+   "campus": "서경대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 8688695.9,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "서경대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 12.2,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "서경대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "서울과학기술대학교",
+   "campus": "서울과학기술대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 5494477.2,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "서울과학기술대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 22.7,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "서울과학기술대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "서울기독대학교",
+   "campus": "서울기독대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 8139117.6,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "서울기독대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 6.3,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "서울기독대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "서울대학교",
+   "campus": "서울대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 6091815.7,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "서울대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 22.7,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "서울대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "서울시립대학교",
+   "campus": "서울시립대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 2531600.4,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "서울시립대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 11.1,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "서울시립대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "서울여자대학교",
+   "campus": "서울여자대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 8244464.4,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "서울여자대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 11.6,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "서울여자대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "성공회대학교",
+   "campus": "성공회대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 7626671.5,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "성공회대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 19.4,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "성공회대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "성균관대학교",
+   "campus": "성균관대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 9145523.9,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "성균관대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 20.2,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "성균관대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "성신여자대학교",
+   "campus": "성신여자대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 8437832.3,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "성신여자대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 10.2,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "성신여자대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "세종대학교",
+   "campus": "세종대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 8651037.4,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "세종대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 11.4,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "세종대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "숙명여자대학교",
+   "campus": "숙명여자대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 8825485.2,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "숙명여자대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 12.0,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "숙명여자대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "숭실대학교",
+   "campus": "숭실대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 8643438.3,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "숭실대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 11.6,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "숭실대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "연세대학교",
+   "campus": "연세대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 9957805.4,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "연세대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 35.0,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "연세대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "이화여자대학교",
+   "campus": "이화여자대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 9311388,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "이화여자대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 21.1,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "이화여자대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "한국성서대학교",
+   "campus": "한국성서대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 7506665.2,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "한국성서대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 16.9,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "한국성서대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "한국외국어대학교",
+   "campus": "한국외국어대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 7791804,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "한국외국어대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 18.2,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "한국외국어대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "한성대학교",
+   "campus": "한성대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 8033733,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "한성대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 10.5,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "한성대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "한양대학교",
+   "campus": "한양대학교(서울)",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 9289910.8,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "한양대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 15.6,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "한양대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "강남대학교",
+   "campus": "강남대학교(용인)",
+   "region": "경기",
+   "tuitionUndergradAnnual": {
+    "value": 8206173.1,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "강남대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 14.1,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "강남대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "대진대학교",
+   "campus": "대진대학교(포천)",
+   "region": "경기",
+   "tuitionUndergradAnnual": {
+    "value": 8246988.5,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "대진대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 19.1,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "대진대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "서울신학대학교",
+   "campus": "서울신학대학교(부천)",
+   "region": "경기",
+   "tuitionUndergradAnnual": {
+    "value": 7676276.8,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "서울신학대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 14.2,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "서울신학대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "성결대학교",
+   "campus": "성결대학교(안양)",
+   "region": "경기",
+   "tuitionUndergradAnnual": {
+    "value": 7857086.3,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "성결대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 11.1,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "성결대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "수원대학교",
+   "campus": "수원대학교(수원)",
+   "region": "경기",
+   "tuitionUndergradAnnual": {
+    "value": 8195102.4,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "수원대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 12.2,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "수원대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "아주대학교",
+   "campus": "아주대학교(수원)",
+   "region": "경기",
+   "tuitionUndergradAnnual": {
+    "value": 9093154.8,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "아주대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 28.4,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "아주대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "용인대학교",
+   "campus": "용인대학교(용인)",
+   "region": "경기",
+   "tuitionUndergradAnnual": {
+    "value": 8397852.6,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "용인대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 11.6,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "용인대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "차의과학대학교",
+   "campus": "차의과학대학교(포천)",
+   "region": "경기",
+   "tuitionUndergradAnnual": {
+    "value": 7762597.4,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "차의과학대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 24.1,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "차의과학대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "평택대학교",
+   "campus": "평택대학교(평택)",
+   "region": "경기",
+   "tuitionUndergradAnnual": {
+    "value": 8198774.1,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "평택대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 30.1,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "평택대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "한국항공대학교",
+   "campus": "한국항공대학교(고양)",
+   "region": "경기",
+   "tuitionUndergradAnnual": {
+    "value": 9210265.3,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "한국항공대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 16.4,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "한국항공대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "한세대학교",
+   "campus": "한세대학교(군포)",
+   "region": "경기",
+   "tuitionUndergradAnnual": {
+    "value": 8859564.3,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "한세대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 12.2,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "한세대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "한신대학교",
+   "campus": "한신대학교(오산)",
+   "region": "경기",
+   "tuitionUndergradAnnual": {
+    "value": 7882204.1,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "한신대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 14.2,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "한신대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "한양대학교(ERICA)",
+   "campus": "한양대학교(에리카)",
+   "region": "경기",
+   "tuitionUndergradAnnual": {
+    "value": 9281769.8,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "한양대학교(ERICA) _분교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 21.8,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "한양대학교(ERICA)_분교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "협성대학교",
+   "campus": "협성대학교(화성)",
+   "region": "경기",
+   "tuitionUndergradAnnual": {
+    "value": 8135252.7,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "협성대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 12.5,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "협성대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "경인교육대학교",
+   "campus": "경인교육대학교(인천)",
+   "region": "인천",
+   "tuitionUndergradAnnual": {
+    "value": 3493348.8,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "경인교육대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "인천대학교",
+   "campus": "인천대학교(인천)",
+   "region": "인천",
+   "tuitionUndergradAnnual": {
+    "value": 4650414.5,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "인천대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 22.2,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "인천대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "상지대학교",
+   "campus": "상지대학교(원주)",
+   "region": "강원",
+   "tuitionUndergradAnnual": {
+    "value": 8102877.5,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "상지대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 29.9,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "상지대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "연세대학교(미래)",
+   "campus": "연세대학교(원주)",
+   "region": "강원",
+   "tuitionUndergradAnnual": {
+    "value": 9304672.8,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "연세대학교(미래) _분교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 57.0,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "연세대학교(미래)_분교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "춘천교육대학교",
+   "campus": "춘천교육대학교(춘천)",
+   "region": "강원",
+   "tuitionUndergradAnnual": {
+    "value": 3603000,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "춘천교육대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 48.7,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "춘천교육대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "한라대학교",
+   "campus": "한라대학교(원주)",
+   "region": "강원",
+   "tuitionUndergradAnnual": {
+    "value": 7767468.5,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "한라대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 20.2,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "한라대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "한림대학교",
+   "campus": "한림대학교(춘천)",
+   "region": "강원",
+   "tuitionUndergradAnnual": {
+    "value": 8226649.5,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "한림대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 33.1,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "한림대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "건국대학교(글로컬)",
+   "campus": "건국대학교(글로컬)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 8838628.7,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "건국대학교(글로컬) _분교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 30.2,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "건국대학교(글로컬)_분교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "고려대학교(세종)",
+   "campus": "고려대학교(세종)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 9214313.7,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "고려대학교(세종) _분교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 35.6,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "고려대학교(세종)_분교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "공주교육대학교",
+   "campus": "공주교육대학교(공주)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 3600000,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "공주교육대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 40.6,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "공주교육대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "극동대학교",
+   "campus": "극동대학교(음성)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 7846600.1,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "극동대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 32.8,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "극동대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "금강대학교",
+   "campus": "금강대학교(논산)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 6598000,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "금강대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 268.8,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "금강대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "남서울대학교",
+   "campus": "남서울대학교(천안)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 8616388.3,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "남서울대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 14.4,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "남서울대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "대전대학교",
+   "campus": "대전대학교(대전)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 7685682.1,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "대전대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 27.9,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "대전대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "배재대학교",
+   "campus": "배재대학교(대전)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 7959587.6,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "배재대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 23.1,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "배재대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "백석대학교",
+   "campus": "백석대학교(천안)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 8626213.5,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "백석대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 14.2,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "백석대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "서원대학교",
+   "campus": "서원대학교(청주)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 7574190.5,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "서원대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 12.7,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "서원대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "선문대학교",
+   "campus": "선문대학교(아산)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 8244256,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "선문대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 30.7,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "선문대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "세명대학교",
+   "campus": "세명대학교(제천)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 7503323.4,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "세명대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 57.6,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "세명대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "순천향대학교",
+   "campus": "순천향대학교(아산)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 8540656.9,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "순천향대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 38.7,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "순천향대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "우송대학교",
+   "campus": "우송대학교(대전)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 7817764.1,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "우송대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 17.8,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "우송대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "중원대학교",
+   "campus": "중원대학교(괴산)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 7659699.5,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "중원대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 60.8,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "중원대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "청운대학교",
+   "campus": "청운대학교(홍성)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 8000799,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "청운대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 14.3,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "청운대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "청주교육대학교",
+   "campus": "청주교육대학교(청주)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 3714000,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "청주교육대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 43.4,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "청주교육대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "청주대학교",
+   "campus": "청주대학교(청주)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 8319491,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "청주대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 19.2,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "청주대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "충남대학교",
+   "campus": "충남대학교(대전)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 4401836,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "충남대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 21.5,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "충남대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "충북대학교",
+   "campus": "충북대학교(청주)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 4305681,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "충북대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 24.4,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "충북대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "한국교원대학교",
+   "campus": "한국교원대학교(청원)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 3456068.7,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "한국교원대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 73.9,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "한국교원대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "한국기술교육대학교",
+   "campus": "한국기술교육대학교(천안)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 4475287.1,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "한국기술교육대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 56.4,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "한국기술교육대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "한남대학교",
+   "campus": "한남대학교(대전)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 7869677.4,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "한남대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 12.8,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "한남대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "한서대학교",
+   "campus": "한서대학교(서산)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 8525200.1,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "한서대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 29.4,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "한서대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "호서대학교",
+   "campus": "호서대학교(아산)",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 8412408,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "호서대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 24.5,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "호서대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "광주과학기술원",
+   "campus": "광주과학기술원(GIST)",
+   "region": "호남",
+   "tuitionUndergradAnnual": {
+    "value": 2060000,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "광주과학기술원",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 89.4,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "광주과학기술원",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "광주교육대학교",
+   "campus": "광주교육대학교(광주)",
+   "region": "호남",
+   "tuitionUndergradAnnual": {
+    "value": 3795423.5,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "광주교육대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 31.6,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "광주교육대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "광주대학교",
+   "campus": "광주대학교(광주)",
+   "region": "호남",
+   "tuitionUndergradAnnual": {
+    "value": 7133783.6,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "광주대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 26.5,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "광주대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "남부대학교",
+   "campus": "남부대학교(광주)",
+   "region": "호남",
+   "tuitionUndergradAnnual": {
+    "value": 6766873.8,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "남부대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 40.6,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "남부대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "세한대학교",
+   "campus": "세한대학교(영암)",
+   "region": "호남",
+   "tuitionUndergradAnnual": {
+    "value": 8013059.4,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "세한대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 36.9,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "세한대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "송원대학교",
+   "campus": "송원대학교(광주)",
+   "region": "호남",
+   "tuitionUndergradAnnual": {
+    "value": 7106105,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "송원대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 16.7,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "송원대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "우석대학교",
+   "campus": "우석대학교(완주)",
+   "region": "호남",
+   "tuitionUndergradAnnual": {
+    "value": 7519491.2,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "우석대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 25.8,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "우석대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "원광대학교",
+   "campus": "원광대학교(익산)",
+   "region": "호남",
+   "tuitionUndergradAnnual": {
+    "value": 8114465.8,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "원광대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 26.9,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "원광대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "전북대학교",
+   "campus": "전북대학교(전주)",
+   "region": "호남",
+   "tuitionUndergradAnnual": {
+    "value": 4461484.3,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "전북대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 24.6,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "전북대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "전주교육대학교",
+   "campus": "전주교육대학교(전주)",
+   "region": "호남",
+   "tuitionUndergradAnnual": {
+    "value": 3646000,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "전주교육대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 42.4,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "전주교육대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "전주대학교",
+   "campus": "전주대학교(전주)",
+   "region": "호남",
+   "tuitionUndergradAnnual": {
+    "value": 7543384.2,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "전주대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 18.1,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "전주대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "한일장신대학교",
+   "campus": "한일장신대학교(완주)",
+   "region": "호남",
+   "tuitionUndergradAnnual": {
+    "value": 6852602.7,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "한일장신대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 27.5,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "한일장신대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "호원대학교",
+   "campus": "호원대학교(군산)",
+   "region": "호남",
+   "tuitionUndergradAnnual": {
+    "value": 7501238.6,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "호원대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 40.6,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "호원대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "경남대학교",
+   "campus": "경남대학교(마산)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 7060677.8,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "경남대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 18.1,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "경남대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "경북대학교",
+   "campus": "경북대학교(대구)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 4527790.5,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "경북대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 23.7,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "경북대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "경일대학교",
+   "campus": "경일대학교(경산)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 7997556.5,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "경일대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 23.6,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "경일대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "계명대학교",
+   "campus": "계명대학교(대구)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 8236598.9,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "계명대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 13.4,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "계명대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "대구가톨릭대학교",
+   "campus": "대구가톨릭대학교(경산)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 7904801.4,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "대구가톨릭대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 22.6,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "대구가톨릭대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "대구교육대학교",
+   "campus": "대구교육대학교(대구)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 3896000,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "대구교육대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 28.5,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "대구교육대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "대구대학교",
+   "campus": "대구대학교(경산)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 7556022.7,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "대구대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 26.5,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "대구대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "대구한의대학교",
+   "campus": "대구한의대학교(경산)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 7845054.2,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "대구한의대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 12.7,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "대구한의대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "동국대학교(WISE)",
+   "campus": "동국대학교(경주)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 8417791.5,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "동국대학교(WISE) _분교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 25.9,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "동국대학교(WISE)_분교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "동명대학교",
+   "campus": "동명대학교(부산)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 7663538.1,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "동명대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 12.5,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "동명대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "동서대학교",
+   "campus": "동서대학교(부산)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 7543205.4,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "동서대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 22.0,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "동서대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "동아대학교",
+   "campus": "동아대학교(부산)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 7896057.5,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "동아대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 13.3,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "동아대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "동양대학교",
+   "campus": "동양대학교(영주)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 7942642.8,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "동양대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 33.4,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "동양대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "동의대학교",
+   "campus": "동의대학교(부산)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 7580400.9,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "동의대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 20.9,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "동의대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "부산교육대학교",
+   "campus": "부산교육대학교(부산)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 3316000,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "부산교육대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 42.9,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "부산교육대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "부산대학교",
+   "campus": "부산대학교(부산)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 4514543.2,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "부산대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 20.3,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "부산대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "부산외국어대학교",
+   "campus": "부산외국어대학교(부산)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 6947305.6,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "부산외국어대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 23.9,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "부산외국어대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "신라대학교",
+   "campus": "신라대학교(부산)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 7298401.8,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "신라대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 12.1,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "신라대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "영남대학교",
+   "campus": "영남대학교(경산)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 8072811.3,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "영남대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 14.0,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "영남대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "영산대학교(양산)",
+   "campus": "영산대학교(양산)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 7223987.2,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "영산대학교(양산) _제2캠퍼스",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 22.6,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "영산대학교(양산)_제2캠퍼스",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "울산과학기술원",
+   "campus": "울산과학기술원(UNIST)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 6554850,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "울산과학기술원",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 65.8,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "울산과학기술원",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "울산대학교",
+   "campus": "울산대학교(울산)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 7966453.2,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "울산대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 22.7,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "울산대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "위덕대학교",
+   "campus": "위덕대학교(경주)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 7312427.9,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "위덕대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 24.7,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "위덕대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "인제대학교",
+   "campus": "인제대학교(김해)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 7926630.2,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "인제대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "창신대학교",
+   "campus": "창신대학교(창원)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 6964561.1,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "창신대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 52.4,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "창신대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "한동대학교",
+   "campus": "한동대학교(포항)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 7413037.9,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "한동대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 81.0,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "한동대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "제주국제대학교",
+   "campus": "제주국제대학교(제주)",
+   "region": "제주",
+   "tuitionUndergradAnnual": {
+    "value": 5819108.1,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "제주국제대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 45.6,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "제주국제대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "제주대학교",
+   "campus": "제주대학교(제주)",
+   "region": "제주",
+   "tuitionUndergradAnnual": {
+    "value": 4060630.6,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "제주대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 27.7,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "제주대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "고신대학교",
+   "campus": "고신대학교(부산)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 7280970.9,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "고신대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 44.0,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "고신대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "김천대학교",
+   "campus": "김천대학교(김천)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 7387386.5,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "김천대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 53.4,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "김천대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "대구예술대학교",
+   "campus": "대구예술대학교(칠곡)",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 8390429.3,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "대구예술대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 41.2,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "대구예술대학교",
+    "match": "마커 univ 와 학교명 일치",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "강서대학교",
+   "campus": "강서대학교 (본교(제1캠퍼스))",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 7933023.5,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "강서대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 11.2,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "강서대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "경기대학교",
+   "campus": "경기대학교 (본교(제2캠퍼스))",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 7800638,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "경기대학교 _제2캠퍼스",
+    "match": "학교명+본분교 표기 일치(제2캠퍼스)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "경희대학교",
+   "campus": "경희대학교 (본교(제1캠퍼스))",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 8701099.7,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "경희대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 17.1,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "경희대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "명지대학교",
+   "campus": "명지대학교 (본교(제2캠퍼스))",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 7737615.2,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "명지대학교 _제2캠퍼스",
+    "match": "학교명+본분교 표기 일치(제2캠퍼스)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 13.8,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "명지대학교_제2캠퍼스",
+    "match": "학교명+본분교 표기 일치(제2캠퍼스)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "서울교육대학교",
+   "campus": "서울교육대학교 (본교(제1캠퍼스))",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 3256000,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "서울교육대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 58.8,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "서울교육대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "정석대학",
+   "campus": "정석대학 (본교(제1캠퍼스))",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 0,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "정석대학",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "홍익대학교",
+   "campus": "홍익대학교 (본교(제1캠퍼스))",
+   "region": "서울",
+   "tuitionUndergradAnnual": {
+    "value": 9101269.7,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "홍익대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 9.6,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "홍익대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "가천대학교",
+   "campus": "가천대학교 (본교(제1캠퍼스))",
+   "region": "경기",
+   "tuitionUndergradAnnual": {
+    "value": 9094425.6,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "가천대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 12.5,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "가천대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "가톨릭대학교",
+   "campus": "가톨릭대학교 (본교(제1캠퍼스))",
+   "region": "경기",
+   "tuitionUndergradAnnual": {
+    "value": 7725223,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "가톨릭대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 21.4,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "가톨릭대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "경기대학교",
+   "campus": "경기대학교 (본교(제1캠퍼스))",
+   "region": "경기",
+   "tuitionUndergradAnnual": {
+    "value": 8028841.1,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "경기대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 17.8,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "경기대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "경동대학교",
+   "campus": "경동대학교 (본교(제4캠퍼스))",
+   "region": "경기",
+   "tuitionUndergradAnnual": {
+    "value": 8146586.1,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "경동대학교 _제4캠퍼스",
+    "match": "학교명+본분교 표기 일치(제4캠퍼스)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 20.3,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "경동대학교_제4캠퍼스",
+    "match": "학교명+본분교 표기 일치(제4캠퍼스)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "경인교육대학교",
+   "campus": "경인교육대학교 (본교(제2캠퍼스))",
+   "region": "경기",
+   "dormCapacityRate": {
+    "value": 62.5,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "경인교육대학교_제2캠퍼스",
+    "match": "학교명+본분교 표기 일치(제2캠퍼스)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "단국대학교",
+   "campus": "단국대학교 (본교(제1캠퍼스))",
+   "region": "경기",
+   "tuitionUndergradAnnual": {
+    "value": 8756933.3,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "단국대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 19.2,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "단국대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "명지대학교",
+   "campus": "명지대학교 (본교(제1캠퍼스))",
+   "region": "경기",
+   "tuitionUndergradAnnual": {
+    "value": 9829417.3,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "명지대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 31.4,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "명지대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "한국공학대학교",
+   "campus": "한국공학대학교 (본교(제1캠퍼스))",
+   "region": "경기",
+   "tuitionUndergradAnnual": {
+    "value": 9449101.3,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "한국공학대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 35.5,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "한국공학대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "화성의과학대학교",
+   "campus": "화성의과학대학교 (본교(제1캠퍼스))",
+   "region": "경기",
+   "tuitionUndergradAnnual": {
+    "value": 7748928.3,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "화성의과학대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 61.9,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "화성의과학대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "안양대학교",
+   "campus": "안양대학교 (본교(제2캠퍼스))",
+   "region": "인천",
+   "tuitionUndergradAnnual": {
+    "value": 9105397.9,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "안양대학교 _제2캠퍼스",
+    "match": "학교명+본분교 표기 일치(제2캠퍼스)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 82.7,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "안양대학교_제2캠퍼스",
+    "match": "학교명+본분교 표기 일치(제2캠퍼스)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "인하대학교",
+   "campus": "인하대학교 (본교(제1캠퍼스))",
+   "region": "인천",
+   "tuitionUndergradAnnual": {
+    "value": 8490347.9,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "인하대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 12.4,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "인하대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "가톨릭관동대학교",
+   "campus": "가톨릭관동대학교 (본교(제1캠퍼스))",
+   "region": "강원",
+   "tuitionUndergradAnnual": {
+    "value": 7725838.9,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "가톨릭관동대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 42.8,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "가톨릭관동대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "나사렛대학교",
+   "campus": "나사렛대학교 (본교(제1캠퍼스))",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 7911622.7,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "나사렛대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 24.9,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "나사렛대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "단국대학교",
+   "campus": "단국대학교 (본교(제2캠퍼스))",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 8922944.1,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "단국대학교 _제2캠퍼스",
+    "match": "학교명+본분교 표기 일치(제2캠퍼스)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 20.3,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "단국대학교_제2캠퍼스",
+    "match": "학교명+본분교 표기 일치(제2캠퍼스)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "목원대학교",
+   "campus": "목원대학교 (본교(제1캠퍼스))",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 7965994,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "목원대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 17.7,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "목원대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "중부대학교",
+   "campus": "중부대학교 (본교(제1캠퍼스))",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 7846832.5,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "중부대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 21.2,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "중부대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "한국과학기술원",
+   "campus": "한국과학기술원 (본교(제1캠퍼스))",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 6866000,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "한국과학기술원",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 55.2,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "한국과학기술원",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "광주여자대학교",
+   "campus": "광주여자대학교 (본교(제1캠퍼스))",
+   "region": "호남",
+   "tuitionUndergradAnnual": {
+    "value": 6809350.9,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "광주여자대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 33.2,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "광주여자대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "국립군산대학교",
+   "campus": "국립군산대학교 (본교(제1캠퍼스))",
+   "region": "호남",
+   "tuitionUndergradAnnual": {
+    "value": 3891106.1,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "국립군산대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 24.6,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "국립군산대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "국립목포해양대학교",
+   "campus": "국립목포해양대학교 (본교(제1캠퍼스))",
+   "region": "호남",
+   "tuitionUndergradAnnual": {
+    "value": 3412114,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "국립목포해양대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 82.6,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "국립목포해양대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "국립순천대학교",
+   "campus": "국립순천대학교 (본교(제1캠퍼스))",
+   "region": "호남",
+   "tuitionUndergradAnnual": {
+    "value": 3970127.2,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "국립순천대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 30.3,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "국립순천대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "동신대학교",
+   "campus": "동신대학교 (본교(제1캠퍼스))",
+   "region": "호남",
+   "tuitionUndergradAnnual": {
+    "value": 7249025.9,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "동신대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 19.6,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "동신대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "조선대학교",
+   "campus": "조선대학교 (본교(제1캠퍼스))",
+   "region": "호남",
+   "tuitionUndergradAnnual": {
+    "value": 7718958.2,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "조선대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 12.6,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "조선대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "호남대학교",
+   "campus": "호남대학교 (본교(제1캠퍼스))",
+   "region": "호남",
+   "tuitionUndergradAnnual": {
+    "value": 6788793.8,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "호남대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 27.3,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "호남대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "경성대학교",
+   "campus": "경성대학교 (본교(제1캠퍼스))",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 7561386.3,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "경성대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 11.2,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "경성대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "경운대학교",
+   "campus": "경운대학교 (본교(제1캠퍼스))",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 8046670.2,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "경운대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 31.9,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "경운대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "국립금오공과대학교",
+   "campus": "국립금오공과대학교 (본교(제1캠퍼스))",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 3773623.1,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "국립금오공과대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 39.5,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "국립금오공과대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "국립부경대학교",
+   "campus": "국립부경대학교 (본교(제1캠퍼스))",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 4049668,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "국립부경대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 22.4,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "국립부경대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "국립한국해양대학교",
+   "campus": "국립한국해양대학교 (본교(제1캠퍼스))",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 3722953.1,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "국립한국해양대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 40.3,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "국립한국해양대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "부산가톨릭대학교",
+   "campus": "부산가톨릭대학교 (본교(제1캠퍼스))",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 7470200,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "부산가톨릭대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 14.0,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "부산가톨릭대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "신경주대학교",
+   "campus": "신경주대학교 (본교(제1캠퍼스))",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 7637546,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "신경주대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 18.6,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "신경주대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "진주교육대학교",
+   "campus": "진주교육대학교 (본교(제1캠퍼스))",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 3778500,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "진주교육대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 33.4,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "진주교육대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "포항공과대학교",
+   "campus": "포항공과대학교 (본교(제1캠퍼스))",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 5613500,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "포항공과대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 85.9,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "포항공과대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "한경국립대학교",
+   "campus": "한경국립대학교 (본교(제1캠퍼스))",
+   "region": "경기",
+   "tuitionUndergradAnnual": {
+    "value": 4021297,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "한경국립대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 24.7,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "한경국립대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "국립한밭대학교",
+   "campus": "국립한밭대학교 (본교(제1캠퍼스))",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 4479849.4,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "국립한밭대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 17.8,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "국립한밭대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "국립목포대학교",
+   "campus": "국립목포대학교 (본교(제1캠퍼스))",
+   "region": "호남",
+   "tuitionUndergradAnnual": {
+    "value": 3871285.8,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "국립목포대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 20.2,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "국립목포대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "전남대학교",
+   "campus": "전남대학교 (본교(제1캠퍼스))",
+   "region": "호남",
+   "tuitionUndergradAnnual": {
+    "value": 4222785.6,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "전남대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 23.2,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "전남대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "경상국립대학교",
+   "campus": "경상국립대학교 (본교(제1캠퍼스))",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 4095673.4,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "경상국립대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 27.2,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "경상국립대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "국립경국대학교",
+   "campus": "국립경국대학교 (본교(제1캠퍼스))",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 3844993.9,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "국립경국대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 31.3,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "국립경국대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "국립창원대학교",
+   "campus": "국립창원대학교 (본교(제1캠퍼스))",
+   "region": "영남",
+   "tuitionUndergradAnnual": {
+    "value": 3919778.2,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "국립창원대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 23.2,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "국립창원대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "경동대학교",
+   "campus": "경동대학교 (본교(제1캠퍼스))",
+   "region": "강원",
+   "tuitionUndergradAnnual": {
+    "value": 6782000,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "경동대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 63.6,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "경동대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "국립한국교통대학교",
+   "campus": "국립한국교통대학교 (본교(제1캠퍼스))",
+   "region": "충청",
+   "tuitionUndergradAnnual": {
+    "value": 4103672.1,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "국립한국교통대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 26.1,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "국립한국교통대학교",
+    "match": "학교명+본분교 표기 일치(접미사 없음)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "강원대학교",
+   "campus": "강원대학교 (본교(제3캠퍼스))",
+   "region": "강원",
+   "tuitionUndergradAnnual": {
+    "value": 4252250.3,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "강원대학교 _제3캠퍼스",
+    "match": "학교명+본분교 표기 일치(제3캠퍼스)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "강원대학교",
+   "campus": "강원대학교 (본교(제4캠퍼스))",
+   "region": "강원",
+   "tuitionUndergradAnnual": {
+    "value": 4259854,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "강원대학교 _제4캠퍼스",
+    "match": "학교명+본분교 표기 일치(제4캠퍼스)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  },
+  {
+   "univ": "예원예술대학교",
+   "campus": "예원예술대학교 (본교(제2캠퍼스))",
+   "region": "경기",
+   "tuitionUndergradAnnual": {
+    "value": 9026715.3,
+    "unit": "원",
+    "year": 2026,
+    "xlsxName": "예원예술대학교 _제2캠퍼스",
+    "match": "학교명+본분교 표기 일치(제2캠퍼스)",
+    "source": "대학알리미 8-차-1. 등록금 현황 (2026 공시, 학교별평균값)"
+   },
+   "dormCapacityRate": {
+    "value": 20.0,
+    "unit": "%",
+    "year": 2025,
+    "xlsxName": "예원예술대학교_제2캠퍼스",
+    "match": "학교명+본분교 표기 일치(제2캠퍼스)",
+    "source": "대학알리미 14-마-1. 기숙사 수용 현황 (2025 공시, 학교별평균값)"
+   },
+   "license": "공공누리 제1유형"
+  }
+ ]
+}
