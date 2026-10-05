@@ -45,11 +45,17 @@ NUM_RE = re.compile(r"^-?\d+(?:,\d{3})*(?:\.\d+)?$")
 
 
 # ---------------------------------------------------------------- 공통 도구
+PUNCT_RE = re.compile(r"[\s()\[\]{}（）［］\-－–—‐]")
+
+
+def exact_key(name):
+    """띄어쓰기, 괄호 기호, 붙임표(-)를 없앤 이름(끝말은 남긴다)."""
+    return PUNCT_RE.sub("", name or "")
+
+
 def norm_dept(name):
-    """띄어쓰기를 없애고 끝말(학과, 학부, 전공) 하나만 뗀다."""
-    s = re.sub(r"\s+", "", name or "")
-    s = re.sub(r"(학과|학부|전공)$", "", s)
-    return s
+    """띄어쓰기, 괄호 기호, 붙임표를 없애고 끝말(학과, 학부, 전공) 하나만 뗀다."""
+    return re.sub(r"(학과|학부|전공)$", "", exact_key(name))
 
 
 def to_num(t):
@@ -215,10 +221,23 @@ def open_pdf(fname):
     return fitz.open(src_path(fname))
 
 
-def mk(dept, admission, year, cut70, file, page, table, method, raw, cols=None, no70col=False, ocr=False, loc=None, ctx=None):
+def mk(dept, admission, year, cut70, file, page, table, method, raw, cols=None, no70col=False, ocr=False, loc=None, ctx=None,
+       other=None, note=None, force=False, note_only=False):
+    """other: [{"label": 원문 열 이름, "value": 숫자}] 70% 컷이 아닌 공개 기준 값. note: 학교 쪽 설명(있으면 note 앞에 붙는다).
+    force: IT 학과 대응을 거치지 않고 그대로 넣는 항목(학교 전체 값)."""
     return {"dept": dept, "admission": admission, "year": year, "cut70": cut70, "cols": cols or [], "file": file,
             "page": page, "table": table, "method": method, "raw": raw, "ocr": ocr, "no70col": no70col,
-            "loc": loc, "ctx": ctx}
+            "loc": loc, "ctx": ctx, "other": other or [], "note": note, "force": force, "note_only": note_only}
+
+
+def others_from(vals, labels):
+    """read_rows 가 읽은 vals 에서 'o:이름' 열의 숫자를 other 목록으로 만든다. labels: {'o:이름': 표시 이름}"""
+    out = []
+    for k, lab in labels.items():
+        v = vals.get(k)
+        if isinstance(v, (int, float)):
+            out.append({"label": lab, "value": v})
+    return out
 
 
 @extractor("건국대학교(서울)")
@@ -249,32 +268,38 @@ def ex_konkuk(ctx):
         else:
             label_x = (110, 280)
         cur_col = None
+        cur_hy = None
         seg_start = None
-        segs = []  # (y0, y1, head, c70x)
+        segs = []  # (y0, y1, head, c70x, 머리말 y)
         pts = ev + [(page.rect.height + 1, "E", None)]
         last_y = 0
         for y, kind, data in pts:
             if kind == "H":
                 if seg_start is not None and cur_col is not None:
-                    segs.append((seg_start, y - 1, head, cur_col))
+                    segs.append((seg_start, y - 1, head, cur_col, cur_hy))
                 head, cur_col, seg_start = data, None, None
             elif kind == "C":
                 if seg_start is not None and cur_col is not None:
-                    segs.append((seg_start, y - 1, head, cur_col))
-                cur_col, seg_start = data, y + 12
+                    segs.append((seg_start, y - 1, head, cur_col, cur_hy))
+                cur_col, seg_start, cur_hy = data, y + 12, y
             else:
                 if seg_start is not None and cur_col is not None:
-                    segs.append((seg_start, y, head, cur_col))
-        for y0, y1, h, cx in segs:
+                    segs.append((seg_start, y, head, cur_col, cur_hy))
+        for y0, y1, h, cx, hy in segs:
             if not h or "종합" not in h:
                 continue
-            rows = read_rows(ws, label_x, {"70% Cut": cx}, y0, y1, tol_cols=16)
+            c50 = [w for w in find_words(ws, r"^50%$", y0=hy - 4, y1=hy + 4) if w.xc < cx - 3]
+            vc = {"70% Cut": cx}
+            if c50:
+                vc["o:50%"] = max(c50, key=lambda w: w.xc).xc
+            rows = read_rows(ws, label_x, vc, y0, y1, tol_cols=16)
             for r in rows:
                 if not r["label"]:
                     continue
                 v = r["vals"].get("70% Cut")
                 out.append(mk(r["label"], h, 2026, v, fname, pno,
-                              "[수시] " + h + ", 열: 학생부 환산등급 > 70% Cut", "좌표(행=모집단위, 열=70% Cut)", r["raw"], loc=(pno, r["y"], r["xr"])))
+                              "[수시] " + h + ", 열: 학생부 환산등급 > 70% Cut", "좌표(행=모집단위, 열=70% Cut)", r["raw"], loc=(pno, r["y"], r["xr"]),
+                              other=others_from(r["vals"], {"o:50%": "학생부 환산등급 50% Cut"})))
     return out
 
 
@@ -291,28 +316,49 @@ def ex_kangwon(ctx):
         if c.value and "최종등록자" in str(c.value):
             grp = c.column
     cols = []
+    colidx = {}
     for c in ws[3]:
         if grp is not None and c.column >= grp and c.value:
             cols.append(str(c.value).replace("\n", ""))
+            colidx[str(c.value).replace("\n", "")] = c.column
     out = []
     for r in ws.iter_rows(min_row=4):
         campus, college, dept, adm = [r[i].value for i in range(4)]
         if campus != "춘천" or not dept:
             continue
+        oth = []
+        for name in cols:
+            if name == "표준편차":
+                continue   # 분포 통계라 기준 값으로 보지 않는다
+            v = ws.cell(r[0].row, colidx[name]).value
+            if isinstance(v, (int, float)):
+                oth.append({"label": "최종등록자 교과등급 " + name, "value": v})
         out.append(mk(str(dept).strip(), "학생부종합 " + str(adm).strip(), 2026, None, fname, "시트 학생부종합 %d행" % r[0].row,
                       "시트 '학생부종합', 열: 2026학년도 최종등록자 교과등급 현황 > " + ", ".join(cols),
                       "엑셀 셀(행=모집단위, 열=머리말 이름)", " | ".join(str(c.value) for c in r[:4]),
-                      cols=["최종등록자 교과등급 " + c for c in cols[:1]] + cols[1:], no70col=True))
+                      cols=["최종등록자 교과등급 " + c for c in cols[:1]] + cols[1:], no70col=True, other=oth))
     return out
 
 
 # ---------------------------------------------------------------- 공통 처리
 def build_notes(raw):
-    if raw["cut70"] is not None:
-        return None
-    if raw["no70col"]:
-        return "70% 컷 미공개(공개 항목: " + ", ".join(raw["cols"]) + ")"
-    return "70% 컷 칸이 비어 있음('-', 공개 안 함)"
+    """항목의 note. 학교 쪽 설명(raw["note"])이 있으면 그것을, 값이 없으면 이유를 덧붙인다."""
+    extra = None
+    if raw.get("note_only"):
+        return raw.get("note")
+    if raw["cut70"] is None:
+        if raw["no70col"]:
+            if raw.get("other"):
+                extra = "70% 컷 미공개(공개 항목: " + ", ".join(o["label"] for o in raw["other"]) + ")"
+            elif raw["cols"]:
+                extra = "70% 컷 미공개(공개 항목: " + ", ".join(raw["cols"]) + ")"
+            else:
+                extra = "70% 컷 미공개"
+        else:
+            extra = "70% 컷 칸이 비어 있음('-', 공개 안 함)"
+    if raw.get("note") and extra:
+        return raw["note"] + " / " + extra
+    return raw.get("note") or extra
 
 
 @extractor("연세대학교(서울)")
@@ -341,13 +387,17 @@ def ex_yonsei(ctx):
             if not (h70 and hcnt and hlab and hcol):
                 continue
             label_x = (hcol[0].x1 + 12, hcnt[0].x0 - 8)
-            rows = read_rows(hw, label_x, {"모집인원": hcnt[0].xc, "70%": h70[0].xc}, ty + 60, page.rect.height,
-                             tol_cols=16, anchor="모집인원")
+            c50 = [w for w in find_words(hw, r"^50%$", y0=ty, y1=ty + 70) if w.xc < h70[0].xc - 3]
+            vc = {"모집인원": hcnt[0].xc, "70%": h70[0].xc}
+            if c50:
+                vc["o:50%"] = max(c50, key=lambda w: w.xc).xc
+            rows = read_rows(hw, label_x, vc, ty + 60, page.rect.height, tol_cols=16, anchor="모집인원")
             for r in rows:
                 if not r["label"]:
                     continue
                 out.append(mk(r["label"], title, 2026, r["vals"].get("70%"), fname, pno,
-                              "표 '" + title + "', 열: 최종등록자 학생부 교과등급 > 70%", "좌표(행=모집단위, 열=70%)", r["raw"], loc=(pno, r["y"], r["xr"])))
+                              "표 '" + title + "', 열: 최종등록자 학생부 교과등급 > 70%", "좌표(행=모집단위, 열=70%)", r["raw"], loc=(pno, r["y"], r["xr"]),
+                              other=others_from(r["vals"], {"o:50%": "최종등록자 학생부 교과등급 50%"})))
     return out
 
 
@@ -389,18 +439,23 @@ def ex_sogang(ctx):
             continue
         h70 = h70[0]
         label_x = (hlab[0].x0 - 40, hcnt[0].x0 - 3)
-        rows = read_rows(ws, label_x, {"모집인원": hcnt[0].xc, "70%": h70.xc}, h70.y1 + 2, y1, tol_cols=14, anchor="모집인원")
+        c50 = [w for w in find_words(ws, r"^50%컷$", y0=y0, y1=h70.y1 + 4) if w.xc < h70.xc - 3]
+        vc = {"모집인원": hcnt[0].xc, "70%": h70.xc}
+        if c50:
+            vc["o:50%컷"] = max(c50, key=lambda w: w.xc).xc
+        rows = read_rows(ws, label_x, vc, h70.y1 + 2, y1, tol_cols=14, anchor="모집인원")
         title = re.sub(r"^\d-\d\.\s*", "", head)
         for r in rows:
             if not r["label"] or r["label"].startswith("총계"):
                 continue
             out.append(mk(r["label"], title, 2026, r["vals"].get("70%"), fname, pno,
-                          "표 '" + head + "', 열: 최종등록자 석차등급 평균 > 70% cut", "좌표(행=모집단위, 열=70% cut)", r["raw"], loc=(pno, r["y"], r["xr"])))
+                          "표 '" + head + "', 열: 최종등록자 석차등급 평균 > 70% cut", "좌표(행=모집단위, 열=70% cut)", r["raw"], loc=(pno, r["y"], r["xr"]),
+                          other=others_from(r["vals"], {"o:50%컷": "최종등록자 석차등급 평균 50%컷"})))
     return out
 
 
 def simple_table(ws, y0, y1, anchor_rx, c70_rx=None, lab_rx=r"^모집단위$", lab_pad=40, label_x=None, tol=14.0,
-                 c70_nth=0, anchor_nth=0, lab_after=3, band=45.0):
+                 c70_nth=0, anchor_nth=0, lab_after=3, band=45.0, extra=None, extra_x=None):
     """구역 안에서 모집단위 행을 읽는다. c70_rx 열이 있으면 그 값을, 없으면 None 으로 둔다.
     머리말 칸은 기준 열(anchor) 머리말에서 아래로 band 만큼 안에서만 찾는다(자료 칸의 같은 글자와 섞이지 않게).
     반환: (rows, has70, info)  info = {"anchor_x", "c70_x"}"""
@@ -420,10 +475,26 @@ def simple_table(ws, y0, y1, anchor_rx, c70_rx=None, lab_rx=r"^모집단위$", l
     if len(h70) > c70_nth:
         c70x = h70[c70_nth].xc
         cols["c70"] = c70x
+    # 다른 공개 기준 열(other): 머리말 이름(정규식)으로 찾고, 70% 열이 있으면 그 왼쪽에서 가장 가까운 것
+    elabels = {}
+    for lab, rx in (extra or {}).items():
+        cands = sorted(find_words(ws, rx, y0=y0, y1=hb), key=lambda w: w.xc)
+        if c70x is not None:
+            cands = [w for w in cands if w.xc < c70x - 3]
+            pick = cands[-1] if cands else None
+        else:
+            pick = cands[0] if cands else None
+        if pick is not None:
+            cols["o:" + lab] = pick.xc
+            elabels["o:" + lab] = lab
+    for lab, x in (extra_x or {}).items():
+        cols["o:" + lab] = x
+        elabels["o:" + lab] = lab
     y_start = max([w.y1 for w in h70[:1]] + [anc.y1]) + 2
     rows = read_rows(ws, label_x, cols, y_start, y1, tol_cols=tol, anchor="anchor")
     for r in rows:
         r["c70"] = r["vals"].get("c70")
+        r["other"] = others_from(r["vals"], elabels)
     return rows, c70x is not None, {"anchor_x": anc.xc, "c70_x": c70x}
 
 
@@ -439,14 +510,16 @@ def ex_sejong(ctx):
             continue
         if not section or "학생부종합" not in section:
             continue
-        rows, has70, info = simple_table(ws, y0, y1, r"^모집$", c70_rx=r"^70%$", lab_pad=100, label_x=(54, 262))
+        rows, has70, info = simple_table(ws, y0, y1, r"^모집$", c70_rx=r"^70%$", lab_pad=100, label_x=(54, 262),
+                                         extra={"50%": r"^50%$", "평균": r"^평균$", "최고": r"^최고$"})
         title = head.lstrip("□").strip()
         for r in rows:
             if not r["label"] or "요약" in r["label"]:
                 continue
             out.append(mk(r["label"], "학생부종합 " + title, 2026, r["c70"], fname, pno,
                           "표 '" + head + "', 열: 최종등록자 학생부등급평균[진로선택 제외] > 70%", "좌표(행=모집단위, 열=70%)", r["raw"], loc=(pno, r["y"], r["xr"]),
-                          cols=["최종등록자 학생부등급평균 최고, 평균, 50%"], no70col=not has70))
+                          cols=["최종등록자 학생부등급평균 최고, 평균, 50%"], no70col=not has70,
+                          other=[dict(o, label="최종등록자 학생부등급평균 " + o["label"]) for o in r["other"]]))
     return out
 
 
@@ -458,14 +531,16 @@ def ex_pusan(ctx):
     for pno, ws, y0, y1, head, cont in page_regions(doc, r"^\d-\d\s+\S+"):
         if "…" in head or "종합" not in head:
             continue
-        rows, has70, info = simple_table(ws, y0, y1, r"^모집$", c70_rx=r"^70%$", lab_pad=30)
+        rows, has70, info = simple_table(ws, y0, y1, r"^모집$", c70_rx=r"^70%$", lab_pad=30,
+                                         extra={"50%": r"^50%$", "평균": r"^평균$"})
         title = re.sub(r"^\d-\d\s+", "", head)
         for r in rows:
             if not r["label"]:
                 continue
             out.append(mk(r["label"], title, 2026, r["c70"], fname, pno,
                           "표 '" + head + "', 열: 교과종합등급 > 70%", "좌표(행=모집단위, 열=교과종합등급 70%)", r["raw"], loc=(pno, r["y"], r["xr"]),
-                          cols=["교과종합등급 평균, 50%, 표준편차"], no70col=not has70))
+                          cols=["교과종합등급 평균, 50%, 표준편차"], no70col=not has70,
+                          other=[dict(o, label="교과종합등급 " + o["label"]) for o in r["other"]]))
     return out
 
 
@@ -495,22 +570,31 @@ def ex_soongsil(ctx):
         ybot = (min(foot) - 2) if foot else page.rect.height
         if find_words(ws, r"^70%$", y0=100, y1=140):
             # 등급 표(모집단위, 주요교과 등급 평균·70%)
-            rows, has70, info = simple_table(ws, 0, ybot, r"^평균$", c70_rx=r"^70%$", lab_pad=60, label_x=(40, 150))
+            rows, has70, info = simple_table(ws, 0, ybot, r"^평균$", c70_rx=r"^70%$", lab_pad=60, label_x=(40, 150),
+                                             extra={"평균": r"^평균$"})
             tbl = "표 '" + adm + "', 열: 주요교과 등급 > 70%"
-            cols = []
             for r in rows:
                 if r["label"]:
                     out.append(mk(r["label"], "학생부종합 " + adm, 2026, r["c70"], fname, pno, tbl,
-                                  "좌표(행=모집단위, 열=주요교과 등급 70%)", r["raw"], loc=(pno, r["y"], r["xr"]), cols=["주요교과 등급 평균"], no70col=not has70))
+                                  "좌표(행=모집단위, 열=주요교과 등급 70%)", r["raw"], loc=(pno, r["y"], r["xr"]), cols=["주요교과 등급 평균"], no70col=not has70,
+                                  other=[dict(o, label="주요교과 등급 " + o["label"]) for o in r["other"]],
+                                  note="대상 집단 표기 없음" if r["c70"] is not None and adm == "SSU미래인재전형" else None))
         elif "주요교과" in txt and find_words(ws, r"^모집인원$", y0=100, y1=160):
             # 70% 열이 없는 표: 모집인원·경쟁률·충원 + 주요교과 평균
+            # 주요교과 평균 열: 머리말 '주요교과' 아래 글자로 열 이름을 만든다(예: 주요교과 평균성적, 주요교과 평균 등급)
+            hj = find_words(ws, r"^주요교과$", y0=100, y1=160)
+            ex = {}
+            if hj:
+                below = [w for w in ws if abs(w.xc - hj[0].xc) <= 35 and hj[0].y1 < w.yc <= hj[0].yc + 28]
+                nm = " ".join(w.t for w in sorted(below, key=lambda w: (round(w.yc / 3), w.x0)))
+                ex = {"주요교과 " + nm: hj[0].xc}
             rows, has70, info = simple_table(ws, 0, ybot, r"^모집인원$", c70_rx=None, lab_pad=60,
-                                             label_x=(40, 150))
+                                             label_x=(40, 150), extra_x=ex)
             for r in rows:
                 if r["label"]:
                     out.append(mk(r["label"], "학생부종합 " + adm, 2026, None, fname, pno,
                                   "표 '" + adm + "', 열: 주요교과 평균(70% 열 없음)", "좌표(행=모집단위)", r["raw"], loc=(pno, r["y"], r["xr"]),
-                                  cols=["주요교과 평균"], no70col=True))
+                                  cols=["주요교과 평균"], no70col=True, other=r["other"]))
     return out
 
 
@@ -556,22 +640,33 @@ def ex_khu(ctx):
             if not havg:
                 continue
             label_x = (hlab[0].x0 - 40, havg[0].x0 - 6)
-            rows = read_label_rows(ws, label_x, {"avg": havg[0].xc}, havg[0].y1 + 8, page.rect.height - 45)
+            rows = read_label_rows(ws, label_x, {"o:avg": havg[0].xc}, havg[0].y1 + 8, page.rect.height - 45)
             for r in rows:
                 if r["label"] and r["vals"]:
                     out.append(mk(r["label"], adm, 2026, None, fname, pno,
                                   "표 '" + adm + "', 열: 합격자 학생부 교과등급 > 평균(70% 열 없음)", "좌표(행=모집단위)", r["raw"], loc=(pno, r["y"], r["xr"]),
-                                  cols=["합격자 학생부 교과등급 평균", "합격자 학생부 교과등급 분포(1~9등급)"], no70col=True))
+                                  cols=["합격자 학생부 교과등급 평균", "합격자 학생부 교과등급 분포(1~9등급)"], no70col=True,
+                                  other=others_from(r["vals"], {"o:avg": "합격자 학생부 교과등급 평균"})))
             continue
         h70 = h70[0]
         h50 = find_words(ws, r"^50%$", x0=640, y0=100, y1=260)
         label_x = (hlab[0].x0 - 40, (h50[0].x0 if h50 else h70.x0 - 20) - 4)
-        rows = read_label_rows(ws, label_x, {"c70": h70.xc}, h70.y1 + 8, page.rect.height - 45)
+        vc = {"c70": h70.xc}
+        labs = {}
+        if h50:
+            vc["o:50"] = h50[0].xc
+            labs["o:50"] = "최종등록자 학생부등급 50% CUT"
+        havg2 = find_words(ws, r"^평균$", x0=700, y0=100, y1=260)
+        if havg2:
+            vc["o:avg"] = havg2[0].xc
+            labs["o:avg"] = "합격자 학생부등급 평균"
+        rows = read_label_rows(ws, label_x, vc, h70.y1 + 8, page.rect.height - 45)
         for r in rows:
             if not r["label"]:
                 continue
             out.append(mk(r["label"], adm, 2026, r["vals"].get("c70"), fname, pno,
-                          "표 '" + adm + "', 열: 최종등록자 학생부등급 > 70% CUT", "좌표(행=모집단위, 열=70% CUT)", r["raw"], loc=(pno, r["y"], r["xr"])))
+                          "표 '" + adm + "', 열: 최종등록자 학생부등급 > 70% CUT", "좌표(행=모집단위, 열=70% CUT)", r["raw"], loc=(pno, r["y"], r["xr"]),
+                          other=others_from(r["vals"], labs)))
     return out
 
 
@@ -635,13 +730,20 @@ def ex_erica(ctx):
         # 행 위치는 같은 그룹의 학년도 세 칸 중 어느 하나라도 값이 있는 줄
         cols2 = {"y%s" % w.t: w.xc for w in yrs}
         cols2["c70"] = ylast.xc
+        # 다른 공개 기준: 같은 학년도 칸의 최초합격자 평균등급, 최종등록자 평균등급(머리말 순서: 최초합격자, 최종등록자, 최종등록자 70% cut)
+        all_last = sorted(find_words(ws, "^" + ylast.t + "$", y0=100, y1=130), key=lambda w: w.xc)
+        elab = {}
+        if len(all_last) == 3:
+            cols2["o:최초"], cols2["o:최종"] = all_last[0].xc, all_last[1].xc
+            elab = {"o:최초": "최초합격자 평균등급", "o:최종": "최종등록자 평균등급"}
         rows = read_rows(ws, label_x, cols2, ylast.y1 + 4, 960, tol_cols=14)
         for r in rows:
             if not r["label"] or r["vals"].get("c70", None) is None and "c70" not in r["vals"] and not r["vals"]:
                 continue
             out.append(mk(r["label"], "학생부종합(서류형, 면접형)", int(ylast.t), r["vals"].get("c70"), fname, pno,
                           "표 '2024~2026학년도 수시모집 학생부종합전형 입시결과', 열: 최종등록자 평균등급 70% cut > " + ylast.t,
-                          "좌표(행=모집단위, 열=70% cut의 " + ylast.t + "학년도 칸)", r["raw"], loc=(pno, r["y"], r["xr"])))
+                          "좌표(행=모집단위, 열=70% cut의 " + ylast.t + "학년도 칸)", r["raw"], loc=(pno, r["y"], r["xr"]),
+                          other=others_from(r["vals"], elab)))
     return out
 
 
@@ -658,13 +760,21 @@ def ex_dongguk(ctx):
         hm = find_words(ws, r"^모집$", y0=y0, y1=y1)
         if not hm:
             continue
-        rows = read_label_rows(ws, (125, 232), {"m": hm[0].xc}, hm[0].y1 + 2, y1)
+        vc = {"m": hm[0].xc}
+        elab = {}
+        for nm, rx in (("학생부 평균", r"^평균$"), ("학생부 최저", r"^최저$")):
+            hh = find_words(ws, rx, y0=hm[0].y0 - 5, y1=hm[0].y0 + 40)   # 왼쪽 묶음이 2026학년도
+            if hh:
+                vc["o:" + nm] = hh[0].xc
+                elab["o:" + nm] = nm
+        rows = read_label_rows(ws, (125, 232), vc, hm[0].y1 + 2, y1)
         for r in rows:
             r["label"] = re.sub(r"\s+\d+$", "", re.sub(r"(?<=[가-힣A-Za-z])\d+$", "", r["label"]))
             if r["label"] and r["vals"]:   # 모집 칸이 비어 있으면 그 전형에서 모집하지 않는 단위
                 out.append(mk(r["label"], adm, 2026, None, fname, pno,
                               "표 '" + head + "', 열: 2026학년도 지원현황, 학생부 평균·최저, 충원율(70% 열 없음)",
-                              "좌표(행=모집단위)", r["raw"], loc=(pno, r["y"], r["xr"]), cols=["2026학년도 학생부 평균", "학생부 최저"], no70col=True))
+                              "좌표(행=모집단위)", r["raw"], loc=(pno, r["y"], r["xr"]), cols=["2026학년도 학생부 평균", "학생부 최저"], no70col=True,
+                              other=others_from(r["vals"], elab)))
     return out
 
 
@@ -681,12 +791,18 @@ def ex_kwangwoon(ctx):
         hm = find_words(ws, r"^인원$", y0=y0, y1=y1)
         if not hm:
             continue
-        rows = read_label_rows(ws, (60, 222), {"m": hm[0].xc}, hm[0].y1 + 3, y1)
+        hc = find_words(ws, r"^\(진로선택제외\)$", y0=y0, y1=y1)
+        vc = {"m": hm[0].xc}
+        if hc:
+            vc["c70"] = hc[0].xc
+        rows = read_label_rows(ws, (60, 222), vc, hm[0].y1 + 3, y1)
+        guide = "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적"
         for r in rows:
             if r["label"] and "※" not in r["label"] and r["vals"]:   # 모집 칸이 비어 있으면 그 전형에서 모집하지 않는 단위
-                out.append(mk(r["label"], adm, 2026, None, fname, pno,
-                              "표 '" + head + "', 열: 학생부 등급(진로선택제외)(70% 열 없음)", "좌표(행=모집단위)", r["raw"], loc=(pno, r["y"], r["xr"]),
-                              cols=["학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적]"], no70col=True))
+                out.append(mk(r["label"], adm, 2026, r["vals"].get("c70"), fname, pno,
+                              "표 '" + head + "', 열: 학생부 등급(진로선택제외)(학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적)",
+                              "좌표(행=모집단위, 열=학생부 등급(진로선택제외))", r["raw"], loc=(pno, r["y"], r["xr"]),
+                              cols=["학생부 등급(진로선택제외)"], no70col=not hc, note=guide))
     return out
 
 
@@ -731,10 +847,12 @@ def ex_dcu(ctx):
             if not dept or ws.cell(r, first_val_col).value in (None, ""):
                 continue
             v70 = ws.cell(r, c70[0]).value if c70 else None
+            oth = [{"label": n, "value": ws.cell(r, c).value} for c, n in cn.items()
+                   if re.search(r"등급|컷|점수|평균", n) and not re.match(r"^70\s*%", n) and isinstance(ws.cell(r, c).value, (int, float))]
             out.append(mk(str(dept).strip(), name, 2026, v70 if isinstance(v70, (int, float)) else None, fname, "시트 %s %d행" % (ws.title, r),
                           "시트 '성적자료_공개용', 묶음 '" + name + "', 열: " + ", ".join(cn.values()),
                           "엑셀 셀(행=모집단위명, 열=머리말 이름)", " | ".join(str(ws.cell(r, c).value) for c in [1] + list(range(c0, c1 + 1))),
-                          cols=score_cols, no70col=not c70))
+                          cols=score_cols, no70col=not c70, other=oth))
     return out
 
 
@@ -760,10 +878,12 @@ def ex_daegu(ctx):
             dept = ws.cell(r, 2).value
             if not dept or ws.cell(r, key_col).value in (None, "", 0):
                 continue
+            oth = [{"label": n, "value": ws.cell(r, c).value} for c, n in cn.items()
+                   if re.search(r"등급|컷|점수|평균", n) and isinstance(ws.cell(r, c).value, (int, float))]
             out.append(mk(str(dept).strip(), name, 2026, None, fname, "시트 %s %d행" % (ws.title, r),
                           "시트 '" + ws.title + "', 묶음 '" + name + "', 열: " + ", ".join(cn.values()),
                           "엑셀 셀(행=모집단위명, 열=머리말 이름)", " | ".join(str(ws.cell(r, c).value) for c in [2] + list(range(c0, c1 + 1))),
-                          cols=score_cols, no70col=not c70))
+                          cols=score_cols, no70col=not c70, other=oth))
     return out
 
 
@@ -798,7 +918,8 @@ def ex_hanyang_seoul(ctx):
                 if r["label"]:
                     out.append(mk(r["label"], title, 2026, None, fname, pno,
                                   "표 '" + title + "', 열: 최종등록자 내신등급 평균 > 2026(70% 열 없음)", "좌표(행=모집단위)", r["raw"], loc=(pno, r["y"], r["xr"]),
-                                  cols=["최종등록자 내신등급 평균"], no70col=True))
+                                  cols=["최종등록자 내신등급 평균"], no70col=True,
+                                  other=others_from({"o:평균": r["vals"].get("c")}, {"o:평균": "최종등록자 내신등급 평균"})))
     return out
 
 
@@ -816,14 +937,16 @@ def ex_hongik(ctx):
         title = tops[0][1].strip() if tops else ""
         if "종합" not in title:
             continue
-        rows, has70, info = simple_table(ws, 0, page.rect.height - 40, r"^모집인원$", c70_rx=r"^70%$", lab_pad=30, band=60)
+        rows, has70, info = simple_table(ws, 0, page.rect.height - 40, r"^모집인원$", c70_rx=r"^70%$", lab_pad=30, band=60,
+                                         extra={"평균": r"^평균$"})
         for r in rows:
             if r["label"].replace(" ", "").startswith("서울캠퍼스합계"):
                 break  # 이 아래는 세종캠퍼스 행(다른 마커)
             if r["label"] and r["label"] != "공과대학":
                 out.append(mk(r["label"], title, 2026, r["c70"], zname + " > " + inner, pno,
                               "표 '" + title + "', 열: 최종등록자 교과등급 > 70%", "좌표(행=모집단위, 열=교과등급 70%), zip 안 PDF 글자 추출",
-                              r["raw"], loc=(pno, r["y"], r["xr"]), cols=["최종등록자 교과등급 평균"], no70col=not has70))
+                              r["raw"], loc=(pno, r["y"], r["xr"]), cols=["최종등록자 교과등급 평균"], no70col=not has70,
+                              other=[dict(o, label="최종등록자 교과등급 " + o["label"]) for o in r["other"]]))
     return out
 
 
@@ -849,6 +972,36 @@ def ocr_page_text(doc, pno, dpi=220):
                        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
         with io.open(os.path.join(td, "o.txt"), encoding="utf-8") as f:
             return f.read()
+
+
+@extractor("한동대학교(포항)")
+def ex_handong(ctx):
+    """학과별 표가 없고 전형별 표만 있다. 2쪽 '입학생 평균 내신등급(학생부종합)' 표의 G-IMPACT인재 행을
+    학과 구분 없는 항목으로 넣는다(IT 학과 대응을 거치지 않는다)."""
+    fname = "한동대학교_2026_수시입결.pdf"
+    doc = open_pdf(fname)
+    out = []
+    page = doc[1]
+    ws = page_words(page)
+    tt = find_words(ws, r"^내신등급\(학생부종합\)$")
+    if not tt:
+        return out
+    y0 = tt[0].y1
+    h70 = find_words(ws, r"^등급\(70%Cut\)$", y0=y0, y1=y0 + 80)
+    havg = find_words(ws, r"^등급\(평균\)$", y0=y0, y1=y0 + 80)
+    rw = find_words(ws, r"^G-IMPACT인재$", y0=y0, y1=y0 + 160)
+    if not (h70 and havg and rw):
+        return out
+    cols = {"c70": h70[0].xc, "o:avg": havg[0].xc}
+    rows = read_rows(ws, (rw[0].x0 - 4, rw[0].x1 + 4), cols, rw[0].y0 - 3, rw[0].y1 + 3, tol_cols=14, anchor="c70")
+    for r in rows:
+        v = r["vals"]
+        if not isinstance(v.get("c70"), (int, float)):
+            continue
+        out.append(mk("전형 전체(학과 구분 없음)", "G-IMPACT인재", 2026, v["c70"], fname, 2,
+                      "표 '입학생 평균 내신등급(학생부종합)', 열: 등급(70%Cut)", "좌표(행=전형명, 열=등급(70%Cut))",
+                      r["raw"], loc=(2, r["y"], r["xr"]), other=others_from(v, {"o:avg": "등급(평균)"}), force=True))
+    return out
 
 
 @extractor("성균관대학교 (본교(제2캠퍼스))")
@@ -880,7 +1033,8 @@ def ex_skku(ctx):
                 ctx = [x.strip() for x in lines[max(0, k - 1):k + 2]]
                 out.append(mk(label, head, 2026, None, fname, pno,
                               "표 '" + head + "'(OCR), 열: " + ", ".join(cols_seen) + "(성적 열 없음)", "OCR 글자(행=모집단위)", line.strip(),
-                              cols=["모집인원", "지원인원", "경쟁률", "충원합격인원", "충원율"], no70col=True, ocr=True, ctx=ctx))
+                              cols=["모집인원", "지원인원", "경쟁률", "충원합격인원", "충원율"], no70col=True, ocr=True, ctx=ctx,
+                              note="학종 성적 미공개", note_only=True))
     return out
 
 
@@ -888,23 +1042,22 @@ def ex_skku(ctx):
 # 사용자 지시로 값 대신 note 만 넣는 마커
 SPECIAL = OrderedDict([
     ("서울대학교(서울)", {"note": "입결 미공개", "file": None, "reason": "받은 파일 없음(학종 자료 없음)"}),
-    ("한동대학교(포항)", {"note": "입결 미공개(현황만)", "file": "한동대학교_2026_수시입결.pdf", "page": None,
-                       "reason": "지원·입학 현황 표만 있고 학과별 컷이 없음(G-IMPACT인재 전형 전체 70%Cut 4.09 한 줄은 학과 구분이 없어 넣지 않음)"}),
 ])
 
 
 def punct_key(name):
-    """괄호·가운뎃점 등을 모두 뺀 비교용 키(근접 후보 보고에만 쓴다)."""
-    return norm_dept(re.sub(r"[\s()·\-_/,\[\]]", "", name or ""))
+    """가운뎃점, 밑줄, 쉼표, 빗금까지 모두 뺀 비교용 키(근접 후보 보고에만 쓴다)."""
+    return norm_dept(re.sub(r"[·_/,]", "", name or ""))
 
 
 def process_school(marker, raws, it_names):
-    """raw 행 -> (맞춘 항목, 짝 목록, 버린 항목, 근접 후보)."""
-    exact_set = {re.sub(r"\s+", "", n) for n in it_names}
+    """raw 행 -> (맞춘 항목, 짝 목록, 버린 항목, 근접 후보, 학년도)."""
+    exact_set = {exact_key(n) for n in it_names}
     itmap = defaultdict(list)
     for n in it_names:
         itmap[norm_dept(n)].append(n)
-    cand = [r for r in raws if norm_dept(r["dept"]) in itmap]
+    forced = [r for r in raws if r.get("force")]
+    cand = [r for r in raws if not r.get("force") and norm_dept(r["dept"]) in itmap]
     # 가장 최근 학년도만
     years = [r["year"] for r in cand if r["year"] is not None]
     latest = max(years) if years else None
@@ -915,9 +1068,9 @@ def process_school(marker, raws, it_names):
     for r in cand:
         by_key[(r["admission"], r["year"], norm_dept(r["dept"]))].append(r)
     for key, g in by_key.items():
-        names = {re.sub(r"\s+", "", r["dept"]) for r in g}
+        names = {exact_key(r["dept"]) for r in g}
         if len(names) > 1:
-            keep = [r for r in g if re.sub(r"\s+", "", r["dept"]) in exact_set]
+            keep = [r for r in g if exact_key(r["dept"]) in exact_set]
             drop = [r for r in g if r not in keep]
             matched += keep
             if drop:
@@ -927,7 +1080,7 @@ def process_school(marker, raws, it_names):
     # 같은 (이름, 전형, 학년도)가 여러 번: 값이 모두 같으면 하나, 다르면 버린다
     final, seen = [], OrderedDict()
     for r in matched:
-        seen.setdefault((re.sub(r"\s+", "", r["dept"]), r["admission"], r["year"]), []).append(r)
+        seen.setdefault((exact_key(r["dept"]), r["admission"], r["year"]), []).append(r)
     for k, g in seen.items():
         if len({x["cut70"] for x in g}) > 1:
             dropped.append(("같은 이름·전형·학년도에 값이 서로 다른 행이 둘 이상", g))
@@ -935,22 +1088,21 @@ def process_school(marker, raws, it_names):
             final.append(g[0])
     pairs = []
     for r in final:
-        e = re.sub(r"\s+", "", r["dept"])
-        same = [n for n in it_names if re.sub(r"\s+", "", n) == e] or itmap[norm_dept(r["dept"])]
+        e = exact_key(r["dept"])
+        same = [n for n in it_names if exact_key(n) == e] or itmap[norm_dept(r["dept"])]
         pairs.append((r["dept"], same[0] if len(set(same)) == 1 else " / ".join(sorted(set(same)))))
-    # 근접 후보: 괄호·가운뎃점·붙임표를 무시하면 같아지지만 엄격 규칙으로는 안 맞은 이름
+    # 근접 후보: 가운뎃점·밑줄 등까지 무시하면 같아지지만 규칙으로는 안 맞은 이름
     pk = defaultdict(list)
     for n in it_names:
         pk[punct_key(n)].append(n)
     near = OrderedDict()
-    matched_names = {re.sub(r"\s+", "", r["dept"]) for r in final}
     for r in raws:
-        if r["year"] != latest or norm_dept(r["dept"]) in itmap:
+        if r.get("force") or r["year"] != latest or norm_dept(r["dept"]) in itmap:
             continue
         k = punct_key(r["dept"])
         if k in pk:
             near.setdefault((r["dept"], tuple(sorted(set(pk[k])))), r["admission"])
-    return final, sorted(set(pairs)), dropped, list(near.items()), latest
+    return forced + final, sorted(set(pairs)), dropped, list(near.items()), latest
 
 
 def collect(only=None):
@@ -986,6 +1138,16 @@ def collect(only=None):
     return results, url_by_file, url_by_marker
 
 
+def counts(res):
+    """(70% 컷 값 있는 행, 70% 컷 없이 other 만 있는 행, 값이 하나도 없는 행)"""
+    if res["special"]:
+        return 0, 0, 1
+    ents = res["entries"]
+    has = sum(1 for r in ents if r["cut70"] is not None)
+    oth = sum(1 for r in ents if r["cut70"] is None and r["other"])
+    return has, oth, len(ents) - has - oth
+
+
 def to_json(results, url_by_file, url_by_marker):
     out = OrderedDict()
     for marker, res in results.items():
@@ -994,12 +1156,12 @@ def to_json(results, url_by_file, url_by_marker):
             sp = res["special"]
             fname = sp.get("file")
             items.append(OrderedDict([("department", None), ("admission", None), ("year", None), ("cut70", None),
-                                      ("note", sp["note"]), ("ocr", False), ("source_file", fname), ("page", sp.get("page")),
+                                      ("note", sp["note"]), ("other", []), ("ocr", False), ("source_file", fname), ("page", sp.get("page")),
                                       ("source_url", url_by_file.get(fname) if fname else url_by_marker.get(marker))]))
         for r in res["entries"]:
             fname = r["file"].split(" > ")[0]
             items.append(OrderedDict([("department", r["dept"]), ("admission", r["admission"]), ("year", r["year"]),
-                                      ("cut70", r["cut70"]), ("note", build_notes(r)), ("ocr", bool(r["ocr"])),
+                                      ("cut70", r["cut70"]), ("note", build_notes(r)), ("other", r["other"]), ("ocr", bool(r["ocr"])),
                                       ("source_file", fname), ("page", r["page"]), ("source_url", url_by_file.get(fname))]))
         if items:
             out[marker] = items
@@ -1047,31 +1209,28 @@ def write_review(results, markers):
     L.append("")
     L.append("## 학교별 요약")
     L.append("")
-    L.append("| 학교(마커) | 상태 | 값 있는 학과 행 | null 학과 행 | 비고 |")
-    L.append("|---|---|---|---|---|")
+    L.append("| 학교(마커) | 상태 | 70% 컷 값 있는 학과 수 | other 만 있는 학과 수 | 값 없는 학과 수 | 비고 |")
+    L.append("|---|---|---|---|---|---|")
     for m, res in results.items():
         ents = res["entries"]
-        has = sum(1 for r in ents if r["cut70"] is not None)
-        nul = len(ents) - has
-        if res["special"]:
-            has, nul = 0, 1
+        has, oth, nul = counts(res)
         why = res["skipped"] or (res["special"]["reason"] if res["special"] else "")
         if not why and not ents:
             why = "표에서 맞는 IT 학과 행 없음(이름이 정확히 같은 행 없음)"
-        L.append("| %s | %s | %d | %d | %s |" % (md_cell(m), md_cell(res["status"]), has, nul, md_cell(why)))
+        L.append("| %s | %s | %d | %d | %d | %s |" % (md_cell(m), md_cell(res["status"]), has, oth, nul, md_cell(why)))
     L.append("")
     L.append("## 값 목록")
     L.append("")
-    L.append("| 학교 | 학과 | 전형명 | 학년도 | 값 | note | ocr | 파일명 | 페이지 | 표 제목과 행·열 이름 | 찾은 방법 |")
+    L.append("| 학교 | 학과 | 전형명 | 학년도 | 값 | other | note | ocr | 파일명 | 페이지 | 표 제목과 행·열 이름 | 찾은 방법 |")
     L.append("|---|---|---|---|---|---|---|---|---|---|---|")
     for m, res in results.items():
         if res["special"]:
             sp = res["special"]
-            L.append("| %s | (학교 전체) | - | - | null | %s | false | %s | - | - | 사용자 지시(#1005-49 작업 7) |" % (md_cell(m), md_cell(sp["note"]), md_cell(sp.get("file") or "(받은 파일 없음)")))
+            L.append("| %s | (학교 전체) | - | - | null | - | %s | false | %s | - | - | 사용자 지시(#1005-49 작업 7) |" % (md_cell(m), md_cell(sp["note"]), md_cell(sp.get("file") or "(받은 파일 없음)")))
         for r in res["entries"]:
-            L.append("| %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s |" % (
+            L.append("| %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s |" % (
                 md_cell(m), md_cell(r["dept"]), md_cell(r["admission"]), r["year"], "null" if r["cut70"] is None else r["cut70"],
-                md_cell(build_notes(r)), "true" if r["ocr"] else "false", md_cell(r["file"]), md_cell(r["page"]),
+                md_cell("; ".join("%s %s" % (o["label"], o["value"]) for o in r["other"]) or "-"), md_cell(build_notes(r)), "true" if r["ocr"] else "false", md_cell(r["file"]), md_cell(r["page"]),
                 md_cell(r["table"]), md_cell(r["method"])))
     L.append("")
     L.append("## 맞춘 학과명 쌍(표의 이름 -> markers.json 의 IT 학과명)")
@@ -1135,21 +1294,19 @@ def main():
     results, url_by_file, url_by_marker = collect()
     markers = {m["campus"]: m for m in load_json(MARKERS_JSON)["markers"]}
     data = to_json(results, url_by_file, url_by_marker)
-    print("%-26s %-12s %6s %6s  %s" % ("마커", "상태", "값", "null", "비고"))
-    tot_v = tot_n = 0
+    print("%-26s %-12s %6s %6s %6s  %s" % ("마커", "상태", "70%컷", "other만", "값없음", "비고"))
+    tot_v = tot_o = tot_n = 0
     for m, res in results.items():
         ents = res["entries"]
-        has = sum(1 for r in ents if r["cut70"] is not None)
-        nul = len(ents) - has
-        if res["special"]:
-            has, nul = 0, 1
+        has, oth, nul = counts(res)
         tot_v += has
+        tot_o += oth
         tot_n += nul
         why = res["skipped"] or (res["special"]["reason"] if res["special"] else "")
         if not why and not ents:
             why = "표에서 맞는 IT 학과 행 없음"
-        print("%-26s %-12s %6d %6d  %s" % (m, res["status"], has, nul, why))
-    print("합계: 값 %d, null %d" % (tot_v, tot_n))
+        print("%-26s %-12s %6d %6d %6d  %s" % (m, res["status"], has, oth, nul, why))
+    print("합계: 70%% 컷 %d, other만 %d, 값 없음 %d" % (tot_v, tot_o, tot_n))
     if write:
         with io.open(OUT_JSON, "w", encoding="utf-8", newline="\n") as f:
             json.dump(data, f, ensure_ascii=False, indent=1)

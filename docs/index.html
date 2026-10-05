@@ -110,7 +110,7 @@ main{position:relative;flex:1;min-height:0}
 .pu .info .meta{display:block;font-size:11.5px;color:var(--muted);line-height:1.35}
 .pu .na{color:var(--muted)}
 .pu .note{font-size:12px;color:var(--muted);line-height:1.35}
-.pu .d2 .ocr{color:var(--err);font-weight:600}
+.pu .note .ocr,.pu .d2 .ocr{color:var(--err);font-weight:600}
 
 /* 하단 고정 한 줄 (지도 영역 밖: main 아래 flex 항목) */
 #note{flex:none;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:3px 12px;padding-bottom:calc(3px + env(safe-area-inset-bottom));background:var(--surface);border-top:1px solid var(--line);font-size:11.5px;line-height:1.35;color:var(--muted)}
@@ -312,6 +312,10 @@ function fmtYear(y){
   var s = String(y);
   return s.indexOf('학년도') >= 0 ? s : s + '학년도';
 }
+function otherList(d){
+  if(!d || !Array.isArray(d.other)) return [];
+  return d.other.filter(function(o){ return o && typeof o.label === 'string' && o.label && typeof o.value === 'number' && isFinite(o.value); });
+}
 function deptNode(d){
   var li = el('li', 'd');
   var note = d && typeof d.note === 'string' && d.note.trim() ? d.note.trim() : null;
@@ -325,8 +329,13 @@ function deptNode(d){
   row.appendChild(el('span', '', d && d.admission ? d.admission : '전형명 없음'));
   row.appendChild(el('span', '', fmtYear(d && d.year) || '학년도 없음'));
   var cutTxt = fmtCut(d && d.cut70);
-  var cut = el('span', 'cut' + (cutTxt ? '' : ' na'), '70% 컷 ' + (cutTxt || '자료 없음'));
-  row.appendChild(cut);
+  var others = otherList(d);
+  if(cutTxt || !others.length){
+    row.appendChild(el('span', 'cut' + (cutTxt ? '' : ' na'), '70% 컷 ' + (cutTxt || '자료 없음')));
+  } else {
+    /* 70% 컷이 없고 다른 기준 값이 있으면 원문 열 이름과 값을 그대로 보여 준다(색 계산에는 쓰지 않는다) */
+    others.forEach(function(o){ row.appendChild(el('span', 'cut', o.label + ' ' + fmtCut(o.value))); });
+  }
   if(d && d.ocr === true) row.appendChild(el('span', 'ocr', 'OCR 값, 확인 필요'));
   var lv = LEVELS[deptLevel(d, grade)];
   var lvEl = el('span', 'lv');
@@ -357,8 +366,20 @@ function ipgyeolNode(campus){
     frag.appendChild(el('div', 'na', '자료 없음'));
     return frag;
   }
+  var shown = latestOnly(list);
+  /* 전부 70% 컷이 없고, note 가 같고, other 도 없으면 학과 목록 대신 한 줄로 보여 준다 */
+  var n0 = shown[0] && typeof shown[0].note === 'string' ? shown[0].note.trim() : '';
+  var allSame = shown.length > 0 && n0 && shown.every(function(d){
+    return !hasCut(d) && typeof d.note === 'string' && d.note.trim() === n0 && !otherList(d).length;
+  });
+  if(allSame){
+    var one = el('div', 'note', n0);
+    if(shown.every(function(d){ return d.ocr === true; })) one.appendChild(el('span', 'ocr', ' OCR 값, 확인 필요'));
+    frag.appendChild(one);
+    return frag;
+  }
   var ul = el('ul');
-  latestOnly(list).forEach(function(d){ ul.appendChild(deptNode(d)); });
+  shown.forEach(function(d){ ul.appendChild(deptNode(d)); });
   frag.appendChild(ul);
   return frag;
 }

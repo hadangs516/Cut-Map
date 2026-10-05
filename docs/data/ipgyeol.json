@@ -5,7 +5,29 @@
    "admission": "학생부종합 미래인재서류전형",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 표준편차, 최고등급, 50%컷, 75%컷, 최저등급)",
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 최종등록자 교과등급 최고등급, 최종등록자 교과등급 50%컷, 최종등록자 교과등급 75%컷, 최종등록자 교과등급 최저등급)",
+   "other": [
+    {
+     "label": "최종등록자 교과등급 평균",
+     "value": 3.26
+    },
+    {
+     "label": "최종등록자 교과등급 최고등급",
+     "value": 1.58
+    },
+    {
+     "label": "최종등록자 교과등급 50%컷",
+     "value": 3.24
+    },
+    {
+     "label": "최종등록자 교과등급 75%컷",
+     "value": 3.53
+    },
+    {
+     "label": "최종등록자 교과등급 최저등급",
+     "value": 4.07
+    }
+   ],
    "ocr": false,
    "source_file": "강원대학교_2026_수시입결_1.xlsx",
    "page": "시트 학생부종합 61행",
@@ -16,7 +38,29 @@
    "admission": "학생부종합 미래인재서류전형",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 표준편차, 최고등급, 50%컷, 75%컷, 최저등급)",
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 최종등록자 교과등급 최고등급, 최종등록자 교과등급 50%컷, 최종등록자 교과등급 75%컷, 최종등록자 교과등급 최저등급)",
+   "other": [
+    {
+     "label": "최종등록자 교과등급 평균",
+     "value": 3.39
+    },
+    {
+     "label": "최종등록자 교과등급 최고등급",
+     "value": 3.15
+    },
+    {
+     "label": "최종등록자 교과등급 50%컷",
+     "value": 3.35
+    },
+    {
+     "label": "최종등록자 교과등급 75%컷",
+     "value": 3.55
+    },
+    {
+     "label": "최종등록자 교과등급 최저등급",
+     "value": 3.66
+    }
+   ],
    "ocr": false,
    "source_file": "강원대학교_2026_수시입결_1.xlsx",
    "page": "시트 학생부종합 62행",
@@ -27,7 +71,29 @@
    "admission": "학생부종합 미래인재서류전형",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 표준편차, 최고등급, 50%컷, 75%컷, 최저등급)",
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 최종등록자 교과등급 최고등급, 최종등록자 교과등급 50%컷, 최종등록자 교과등급 75%컷, 최종등록자 교과등급 최저등급)",
+   "other": [
+    {
+     "label": "최종등록자 교과등급 평균",
+     "value": 3.23
+    },
+    {
+     "label": "최종등록자 교과등급 최고등급",
+     "value": 1.29
+    },
+    {
+     "label": "최종등록자 교과등급 50%컷",
+     "value": 3.39
+    },
+    {
+     "label": "최종등록자 교과등급 75%컷",
+     "value": 3.52
+    },
+    {
+     "label": "최종등록자 교과등급 최저등급",
+     "value": 4.43
+    }
+   ],
    "ocr": false,
    "source_file": "강원대학교_2026_수시입결_1.xlsx",
    "page": "시트 학생부종합 63행",
@@ -38,7 +104,29 @@
    "admission": "학생부종합 미래인재서류전형",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 표준편차, 최고등급, 50%컷, 75%컷, 최저등급)",
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 최종등록자 교과등급 최고등급, 최종등록자 교과등급 50%컷, 최종등록자 교과등급 75%컷, 최종등록자 교과등급 최저등급)",
+   "other": [
+    {
+     "label": "최종등록자 교과등급 평균",
+     "value": 3.52
+    },
+    {
+     "label": "최종등록자 교과등급 최고등급",
+     "value": 2.96
+    },
+    {
+     "label": "최종등록자 교과등급 50%컷",
+     "value": 3.7
+    },
+    {
+     "label": "최종등록자 교과등급 75%컷",
+     "value": 3.72
+    },
+    {
+     "label": "최종등록자 교과등급 최저등급",
+     "value": 3.79
+    }
+   ],
    "ocr": false,
    "source_file": "강원대학교_2026_수시입결_1.xlsx",
    "page": "시트 학생부종합 64행",
@@ -49,7 +137,29 @@
    "admission": "학생부종합 미래인재면접전형",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 표준편차, 최고등급, 50%컷, 75%컷, 최저등급)",
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 최종등록자 교과등급 최고등급, 최종등록자 교과등급 50%컷, 최종등록자 교과등급 75%컷, 최종등록자 교과등급 최저등급)",
+   "other": [
+    {
+     "label": "최종등록자 교과등급 평균",
+     "value": 3.66
+    },
+    {
+     "label": "최종등록자 교과등급 최고등급",
+     "value": 2.73
+    },
+    {
+     "label": "최종등록자 교과등급 50%컷",
+     "value": 3.67
+    },
+    {
+     "label": "최종등록자 교과등급 75%컷",
+     "value": 3.88
+    },
+    {
+     "label": "최종등록자 교과등급 최저등급",
+     "value": 4.33
+    }
+   ],
    "ocr": false,
    "source_file": "강원대학교_2026_수시입결_1.xlsx",
    "page": "시트 학생부종합 133행",
@@ -60,7 +170,29 @@
    "admission": "학생부종합 미래인재면접전형",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 표준편차, 최고등급, 50%컷, 75%컷, 최저등급)",
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 최종등록자 교과등급 최고등급, 최종등록자 교과등급 50%컷, 최종등록자 교과등급 75%컷, 최종등록자 교과등급 최저등급)",
+   "other": [
+    {
+     "label": "최종등록자 교과등급 평균",
+     "value": 3.75
+    },
+    {
+     "label": "최종등록자 교과등급 최고등급",
+     "value": 3.16
+    },
+    {
+     "label": "최종등록자 교과등급 50%컷",
+     "value": 3.99
+    },
+    {
+     "label": "최종등록자 교과등급 75%컷",
+     "value": 4.05
+    },
+    {
+     "label": "최종등록자 교과등급 최저등급",
+     "value": 4.11
+    }
+   ],
    "ocr": false,
    "source_file": "강원대학교_2026_수시입결_1.xlsx",
    "page": "시트 학생부종합 134행",
@@ -71,7 +203,29 @@
    "admission": "학생부종합 미래인재면접전형",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 표준편차, 최고등급, 50%컷, 75%컷, 최저등급)",
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 최종등록자 교과등급 최고등급, 최종등록자 교과등급 50%컷, 최종등록자 교과등급 75%컷, 최종등록자 교과등급 최저등급)",
+   "other": [
+    {
+     "label": "최종등록자 교과등급 평균",
+     "value": 3.51
+    },
+    {
+     "label": "최종등록자 교과등급 최고등급",
+     "value": 2.49
+    },
+    {
+     "label": "최종등록자 교과등급 50%컷",
+     "value": 3.52
+    },
+    {
+     "label": "최종등록자 교과등급 75%컷",
+     "value": 3.74
+    },
+    {
+     "label": "최종등록자 교과등급 최저등급",
+     "value": 4.36
+    }
+   ],
    "ocr": false,
    "source_file": "강원대학교_2026_수시입결_1.xlsx",
    "page": "시트 학생부종합 135행",
@@ -82,7 +236,29 @@
    "admission": "학생부종합 미래인재면접전형",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 표준편차, 최고등급, 50%컷, 75%컷, 최저등급)",
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 최종등록자 교과등급 최고등급, 최종등록자 교과등급 50%컷, 최종등록자 교과등급 75%컷, 최종등록자 교과등급 최저등급)",
+   "other": [
+    {
+     "label": "최종등록자 교과등급 평균",
+     "value": 3.75
+    },
+    {
+     "label": "최종등록자 교과등급 최고등급",
+     "value": 3.44
+    },
+    {
+     "label": "최종등록자 교과등급 50%컷",
+     "value": 3.84
+    },
+    {
+     "label": "최종등록자 교과등급 75%컷",
+     "value": 3.91
+    },
+    {
+     "label": "최종등록자 교과등급 최저등급",
+     "value": 3.97
+    }
+   ],
    "ocr": false,
    "source_file": "강원대학교_2026_수시입결_1.xlsx",
    "page": "시트 학생부종합 136행",
@@ -93,7 +269,29 @@
    "admission": "학생부종합 기회균형전형",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 표준편차, 최고등급, 50%컷, 75%컷, 최저등급)",
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 최종등록자 교과등급 최고등급, 최종등록자 교과등급 50%컷, 최종등록자 교과등급 75%컷, 최종등록자 교과등급 최저등급)",
+   "other": [
+    {
+     "label": "최종등록자 교과등급 평균",
+     "value": 3
+    },
+    {
+     "label": "최종등록자 교과등급 최고등급",
+     "value": 2.71
+    },
+    {
+     "label": "최종등록자 교과등급 50%컷",
+     "value": 3
+    },
+    {
+     "label": "최종등록자 교과등급 75%컷",
+     "value": 3.14
+    },
+    {
+     "label": "최종등록자 교과등급 최저등급",
+     "value": 3.29
+    }
+   ],
    "ocr": false,
    "source_file": "강원대학교_2026_수시입결_1.xlsx",
    "page": "시트 학생부종합 208행",
@@ -104,7 +302,29 @@
    "admission": "학생부종합 기회균형전형",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 표준편차, 최고등급, 50%컷, 75%컷, 최저등급)",
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 최종등록자 교과등급 최고등급, 최종등록자 교과등급 50%컷, 최종등록자 교과등급 75%컷, 최종등록자 교과등급 최저등급)",
+   "other": [
+    {
+     "label": "최종등록자 교과등급 평균",
+     "value": 3.73
+    },
+    {
+     "label": "최종등록자 교과등급 최고등급",
+     "value": 3.73
+    },
+    {
+     "label": "최종등록자 교과등급 50%컷",
+     "value": 3.73
+    },
+    {
+     "label": "최종등록자 교과등급 75%컷",
+     "value": 3.73
+    },
+    {
+     "label": "최종등록자 교과등급 최저등급",
+     "value": 3.73
+    }
+   ],
    "ocr": false,
    "source_file": "강원대학교_2026_수시입결_1.xlsx",
    "page": "시트 학생부종합 209행",
@@ -115,7 +335,29 @@
    "admission": "학생부종합 기회균형전형",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 표준편차, 최고등급, 50%컷, 75%컷, 최저등급)",
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 최종등록자 교과등급 최고등급, 최종등록자 교과등급 50%컷, 최종등록자 교과등급 75%컷, 최종등록자 교과등급 최저등급)",
+   "other": [
+    {
+     "label": "최종등록자 교과등급 평균",
+     "value": 3.85
+    },
+    {
+     "label": "최종등록자 교과등급 최고등급",
+     "value": 3.52
+    },
+    {
+     "label": "최종등록자 교과등급 50%컷",
+     "value": 3.88
+    },
+    {
+     "label": "최종등록자 교과등급 75%컷",
+     "value": 3.99
+    },
+    {
+     "label": "최종등록자 교과등급 최저등급",
+     "value": 4.03
+    }
+   ],
    "ocr": false,
    "source_file": "강원대학교_2026_수시입결_1.xlsx",
    "page": "시트 학생부종합 210행",
@@ -126,7 +368,29 @@
    "admission": "학생부종합 기회균형전형",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 표준편차, 최고등급, 50%컷, 75%컷, 최저등급)",
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 최종등록자 교과등급 최고등급, 최종등록자 교과등급 50%컷, 최종등록자 교과등급 75%컷, 최종등록자 교과등급 최저등급)",
+   "other": [
+    {
+     "label": "최종등록자 교과등급 평균",
+     "value": 3.62
+    },
+    {
+     "label": "최종등록자 교과등급 최고등급",
+     "value": 3.52
+    },
+    {
+     "label": "최종등록자 교과등급 50%컷",
+     "value": 3.62
+    },
+    {
+     "label": "최종등록자 교과등급 75%컷",
+     "value": 3.67
+    },
+    {
+     "label": "최종등록자 교과등급 최저등급",
+     "value": 3.72
+    }
+   ],
    "ocr": false,
    "source_file": "강원대학교_2026_수시입결_1.xlsx",
    "page": "시트 학생부종합 211행",
@@ -135,11 +399,126 @@
  ],
  "부산대학교(부산)": [
   {
+   "department": "전기전자공학부(전기공학전공)",
+   "admission": "학생부종합(학생부종합전형)",
+   "year": 2026,
+   "cut70": 2.25,
+   "note": null,
+   "other": [
+    {
+     "label": "교과종합등급 50%",
+     "value": 2.14
+    },
+    {
+     "label": "교과종합등급 평균",
+     "value": 2.13
+    }
+   ],
+   "ocr": false,
+   "source_file": "부산대학교_2026_수시입결.pdf",
+   "page": 13,
+   "source_url": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4250"
+  },
+  {
+   "department": "전기전자공학부(전자공학전공)",
+   "admission": "학생부종합(학생부종합전형)",
+   "year": 2026,
+   "cut70": 1.94,
+   "note": null,
+   "other": [
+    {
+     "label": "교과종합등급 50%",
+     "value": 1.86
+    },
+    {
+     "label": "교과종합등급 평균",
+     "value": 1.97
+    }
+   ],
+   "ocr": false,
+   "source_file": "부산대학교_2026_수시입결.pdf",
+   "page": 13,
+   "source_url": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4250"
+  },
+  {
+   "department": "전기전자공학부(반도체공학전공)",
+   "admission": "학생부종합(학생부종합전형)",
+   "year": 2026,
+   "cut70": 2.32,
+   "note": null,
+   "other": [
+    {
+     "label": "교과종합등급 50%",
+     "value": 2.27
+    },
+    {
+     "label": "교과종합등급 평균",
+     "value": 2.32
+    }
+   ],
+   "ocr": false,
+   "source_file": "부산대학교_2026_수시입결.pdf",
+   "page": 13,
+   "source_url": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4250"
+  },
+  {
    "department": "IT응용공학과",
    "admission": "학생부종합(학생부종합전형)",
    "year": 2026,
    "cut70": 3.56,
    "note": null,
+   "other": [
+    {
+     "label": "교과종합등급 50%",
+     "value": 3.56
+    },
+    {
+     "label": "교과종합등급 평균",
+     "value": 3.51
+    }
+   ],
+   "ocr": false,
+   "source_file": "부산대학교_2026_수시입결.pdf",
+   "page": 14,
+   "source_url": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4250"
+  },
+  {
+   "department": "정보컴퓨터공학부(컴퓨터공학전공)",
+   "admission": "학생부종합(학생부종합전형)",
+   "year": 2026,
+   "cut70": 2.52,
+   "note": null,
+   "other": [
+    {
+     "label": "교과종합등급 50%",
+     "value": 2.49
+    },
+    {
+     "label": "교과종합등급 평균",
+     "value": 2.65
+    }
+   ],
+   "ocr": false,
+   "source_file": "부산대학교_2026_수시입결.pdf",
+   "page": 14,
+   "source_url": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4250"
+  },
+  {
+   "department": "정보컴퓨터공학부(인공지능전공)",
+   "admission": "학생부종합(학생부종합전형)",
+   "year": 2026,
+   "cut70": 6.48,
+   "note": null,
+   "other": [
+    {
+     "label": "교과종합등급 50%",
+     "value": 5.94
+    },
+    {
+     "label": "교과종합등급 평균",
+     "value": 5.06
+    }
+   ],
    "ocr": false,
    "source_file": "부산대학교_2026_수시입결.pdf",
    "page": 14,
@@ -151,9 +530,78 @@
    "year": 2026,
    "cut70": 3.57,
    "note": null,
+   "other": [
+    {
+     "label": "교과종합등급 50%",
+     "value": 3.57
+    },
+    {
+     "label": "교과종합등급 평균",
+     "value": 3.66
+    }
+   ],
    "ocr": false,
    "source_file": "부산대학교_2026_수시입결.pdf",
    "page": 15,
+   "source_url": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4250"
+  },
+  {
+   "department": "전기전자공학부(전기공학전공)",
+   "admission": "학생부종합(사회배려자전형)",
+   "year": 2026,
+   "cut70": 3.27,
+   "note": null,
+   "other": [
+    {
+     "label": "교과종합등급 50%",
+     "value": 3.27
+    },
+    {
+     "label": "교과종합등급 평균",
+     "value": 3.25
+    }
+   ],
+   "ocr": false,
+   "source_file": "부산대학교_2026_수시입결.pdf",
+   "page": 17,
+   "source_url": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4250"
+  },
+  {
+   "department": "전기전자공학부(전자공학전공)",
+   "admission": "학생부종합(사회배려자전형)",
+   "year": 2026,
+   "cut70": 2.58,
+   "note": null,
+   "other": [
+    {
+     "label": "교과종합등급 50%",
+     "value": 2.58
+    },
+    {
+     "label": "교과종합등급 평균",
+     "value": 2.58
+    }
+   ],
+   "ocr": false,
+   "source_file": "부산대학교_2026_수시입결.pdf",
+   "page": 17,
+   "source_url": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4250"
+  },
+  {
+   "department": "전기전자공학부(반도체공학전공)",
+   "admission": "학생부종합(사회배려자전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 칸이 비어 있음('-', 공개 안 함)",
+   "other": [
+    {
+     "label": "교과종합등급 평균",
+     "value": 2.56
+    }
+   ],
+   "ocr": false,
+   "source_file": "부산대학교_2026_수시입결.pdf",
+   "page": 17,
    "source_url": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4250"
   },
   {
@@ -162,9 +610,112 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 칸이 비어 있음('-', 공개 안 함)",
+   "other": [],
    "ocr": false,
    "source_file": "부산대학교_2026_수시입결.pdf",
    "page": 18,
+   "source_url": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4250"
+  },
+  {
+   "department": "정보컴퓨터공학부(컴퓨터공학전공)",
+   "admission": "학생부종합(사회배려자전형)",
+   "year": 2026,
+   "cut70": 2.79,
+   "note": null,
+   "other": [
+    {
+     "label": "교과종합등급 50%",
+     "value": 2.54
+    },
+    {
+     "label": "교과종합등급 평균",
+     "value": 2.65
+    }
+   ],
+   "ocr": false,
+   "source_file": "부산대학교_2026_수시입결.pdf",
+   "page": 18,
+   "source_url": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4250"
+  },
+  {
+   "department": "정보컴퓨터공학부(인공지능전공)",
+   "admission": "학생부종합(사회배려자전형)",
+   "year": 2026,
+   "cut70": 2.76,
+   "note": null,
+   "other": [
+    {
+     "label": "교과종합등급 50%",
+     "value": 2.76
+    },
+    {
+     "label": "교과종합등급 평균",
+     "value": 2.78
+    }
+   ],
+   "ocr": false,
+   "source_file": "부산대학교_2026_수시입결.pdf",
+   "page": 18,
+   "source_url": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4250"
+  },
+  {
+   "department": "전기전자공학부(전기공학전공)",
+   "admission": "학생부종합(저소득층학생전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 칸이 비어 있음('-', 공개 안 함)",
+   "other": [],
+   "ocr": false,
+   "source_file": "부산대학교_2026_수시입결.pdf",
+   "page": 20,
+   "source_url": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4250"
+  },
+  {
+   "department": "전기전자공학부(전자공학전공)",
+   "admission": "학생부종합(저소득층학생전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 칸이 비어 있음('-', 공개 안 함)",
+   "other": [],
+   "ocr": false,
+   "source_file": "부산대학교_2026_수시입결.pdf",
+   "page": 20,
+   "source_url": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4250"
+  },
+  {
+   "department": "전기전자공학부(반도체공학전공)",
+   "admission": "학생부종합(저소득층학생전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 칸이 비어 있음('-', 공개 안 함)",
+   "other": [],
+   "ocr": false,
+   "source_file": "부산대학교_2026_수시입결.pdf",
+   "page": 20,
+   "source_url": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4250"
+  },
+  {
+   "department": "정보컴퓨터공학부(컴퓨터공학전공)",
+   "admission": "학생부종합(저소득층학생전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 칸이 비어 있음('-', 공개 안 함)",
+   "other": [],
+   "ocr": false,
+   "source_file": "부산대학교_2026_수시입결.pdf",
+   "page": 21,
+   "source_url": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4250"
+  },
+  {
+   "department": "정보컴퓨터공학부(인공지능전공)",
+   "admission": "학생부종합(저소득층학생전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 칸이 비어 있음('-', 공개 안 함)",
+   "other": [],
+   "ocr": false,
+   "source_file": "부산대학교_2026_수시입결.pdf",
+   "page": 21,
    "source_url": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4250"
   },
   {
@@ -173,9 +724,22 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 칸이 비어 있음('-', 공개 안 함)",
+   "other": [],
    "ocr": false,
    "source_file": "부산대학교_2026_수시입결.pdf",
    "page": 21,
+   "source_url": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4250"
+  },
+  {
+   "department": "정보컴퓨터공학부(인공지능전공)",
+   "admission": "학생부종합(특수교육대상자전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 칸이 비어 있음('-', 공개 안 함)",
+   "other": [],
+   "ocr": false,
+   "source_file": "부산대학교_2026_수시입결.pdf",
+   "page": 22,
    "source_url": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4250"
   }
  ],
@@ -186,6 +750,7 @@
    "year": 2026,
    "cut70": 3.01,
    "note": null,
+   "other": [],
    "ocr": false,
    "source_file": "충북대학교_2026_수시입결_1.pdf",
    "page": 2,
@@ -197,6 +762,7 @@
    "year": 2026,
    "cut70": 3.36,
    "note": null,
+   "other": [],
    "ocr": false,
    "source_file": "충북대학교_2026_수시입결_1.pdf",
    "page": 2,
@@ -208,6 +774,7 @@
    "year": 2026,
    "cut70": 3.44,
    "note": null,
+   "other": [],
    "ocr": false,
    "source_file": "충북대학교_2026_수시입결_1.pdf",
    "page": 2,
@@ -219,6 +786,7 @@
    "year": 2026,
    "cut70": 3.28,
    "note": null,
+   "other": [],
    "ocr": false,
    "source_file": "충북대학교_2026_수시입결_1.pdf",
    "page": 2,
@@ -230,6 +798,7 @@
    "year": 2026,
    "cut70": 3.22,
    "note": null,
+   "other": [],
    "ocr": false,
    "source_file": "충북대학교_2026_수시입결_1.pdf",
    "page": 2,
@@ -241,6 +810,7 @@
    "year": 2026,
    "cut70": 3.23,
    "note": null,
+   "other": [],
    "ocr": false,
    "source_file": "충북대학교_2026_수시입결_1.pdf",
    "page": 2,
@@ -252,6 +822,7 @@
    "year": 2026,
    "cut70": 3.27,
    "note": null,
+   "other": [],
    "ocr": false,
    "source_file": "충북대학교_2026_수시입결_1.pdf",
    "page": 2,
@@ -263,6 +834,7 @@
    "year": 2026,
    "cut70": 3.35,
    "note": null,
+   "other": [],
    "ocr": false,
    "source_file": "충북대학교_2026_수시입결_2.pdf",
    "page": 2,
@@ -274,6 +846,7 @@
    "year": 2026,
    "cut70": 2.93,
    "note": null,
+   "other": [],
    "ocr": false,
    "source_file": "충북대학교_2026_수시입결_2.pdf",
    "page": 2,
@@ -285,6 +858,7 @@
    "year": 2026,
    "cut70": 3.71,
    "note": null,
+   "other": [],
    "ocr": false,
    "source_file": "충북대학교_2026_수시입결_2.pdf",
    "page": 2,
@@ -296,6 +870,7 @@
    "year": 2026,
    "cut70": 3.17,
    "note": null,
+   "other": [],
    "ocr": false,
    "source_file": "충북대학교_2026_수시입결_2.pdf",
    "page": 2,
@@ -307,6 +882,7 @@
    "year": 2026,
    "cut70": 3.26,
    "note": null,
+   "other": [],
    "ocr": false,
    "source_file": "충북대학교_2026_수시입결_2.pdf",
    "page": 2,
@@ -318,6 +894,7 @@
    "year": 2026,
    "cut70": 3.8,
    "note": null,
+   "other": [],
    "ocr": false,
    "source_file": "충북대학교_2026_수시입결_2.pdf",
    "page": 2,
@@ -329,6 +906,7 @@
    "year": 2026,
    "cut70": 3.32,
    "note": null,
+   "other": [],
    "ocr": false,
    "source_file": "충북대학교_2026_수시입결_2.pdf",
    "page": 2,
@@ -340,6 +918,7 @@
    "year": 2026,
    "cut70": 3.77,
    "note": null,
+   "other": [],
    "ocr": false,
    "source_file": "충북대학교_2026_수시입결_3.pdf",
    "page": 1,
@@ -351,6 +930,7 @@
    "year": 2026,
    "cut70": 3.4,
    "note": null,
+   "other": [],
    "ocr": false,
    "source_file": "충북대학교_2026_수시입결_3.pdf",
    "page": 1,
@@ -362,6 +942,7 @@
    "year": 2026,
    "cut70": 3.04,
    "note": null,
+   "other": [],
    "ocr": false,
    "source_file": "충북대학교_2026_수시입결_3.pdf",
    "page": 1,
@@ -370,14 +951,20 @@
  ],
  "한동대학교(포항)": [
   {
-   "department": null,
-   "admission": null,
-   "year": null,
-   "cut70": null,
-   "note": "입결 미공개(현황만)",
+   "department": "전형 전체(학과 구분 없음)",
+   "admission": "G-IMPACT인재",
+   "year": 2026,
+   "cut70": 4.09,
+   "note": null,
+   "other": [
+    {
+     "label": "등급(평균)",
+     "value": 3.85
+    }
+   ],
    "ocr": false,
    "source_file": "한동대학교_2026_수시입결.pdf",
-   "page": null,
+   "page": 2,
    "source_url": "https://admissions.handong.edu/dcp/editor/files/2026%ED%95%99%EB%85%84%EB%8F%84%20%EC%9E%85%EC%8B%9C%EA%B2%B0%EA%B3%BC.pdf"
   }
  ],
@@ -388,6 +975,12 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 미공개(공개 항목: 전 과목 (참고) 등급 평균)",
+   "other": [
+    {
+     "label": "전 과목 (참고) 등급 평균",
+     "value": 6.1
+    }
+   ],
    "ocr": false,
    "source_file": "대구대학교_2026_수시입결_2.xlsx",
    "page": "시트 Sheet4 49행",
@@ -399,6 +992,12 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 미공개(공개 항목: 전 과목 (참고) 등급 평균)",
+   "other": [
+    {
+     "label": "전 과목 (참고) 등급 평균",
+     "value": 6.4
+    }
+   ],
    "ocr": false,
    "source_file": "대구대학교_2026_수시입결_2.xlsx",
    "page": "시트 Sheet4 50행",
@@ -410,6 +1009,12 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 미공개(공개 항목: 전 과목 (참고) 등급 평균)",
+   "other": [
+    {
+     "label": "전 과목 (참고) 등급 평균",
+     "value": 6.2
+    }
+   ],
    "ocr": false,
    "source_file": "대구대학교_2026_수시입결_2.xlsx",
    "page": "시트 Sheet4 51행",
@@ -421,6 +1026,12 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 미공개(공개 항목: 전 과목 (참고) 등급 평균)",
+   "other": [
+    {
+     "label": "전 과목 (참고) 등급 평균",
+     "value": 6
+    }
+   ],
    "ocr": false,
    "source_file": "대구대학교_2026_수시입결_2.xlsx",
    "page": "시트 Sheet4 52행",
@@ -432,6 +1043,12 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 미공개(공개 항목: 전 과목 (참고) 등급 평균)",
+   "other": [
+    {
+     "label": "전 과목 (참고) 등급 평균",
+     "value": 6.4
+    }
+   ],
    "ocr": false,
    "source_file": "대구대학교_2026_수시입결_2.xlsx",
    "page": "시트 Sheet4 53행",
@@ -444,7 +1061,17 @@
    "admission": "학생부종합(종합전형)",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 평균 등급, 85%컷)",
+   "note": "70% 컷 미공개(공개 항목: 평균 등급, 85% 컷)",
+   "other": [
+    {
+     "label": "평균 등급",
+     "value": 4.05
+    },
+    {
+     "label": "85% 컷",
+     "value": 4.17
+    }
+   ],
    "ocr": false,
    "source_file": "대구가톨릭대학교_2026_수시입결_2.xlsx",
    "page": "시트 성적자료_공개용 34행",
@@ -455,7 +1082,17 @@
    "admission": "학생부종합(종합전형)",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 평균 등급, 85%컷)",
+   "note": "70% 컷 미공개(공개 항목: 평균 등급, 85% 컷)",
+   "other": [
+    {
+     "label": "평균 등급",
+     "value": 5.22
+    },
+    {
+     "label": "85% 컷",
+     "value": 5.25
+    }
+   ],
    "ocr": false,
    "source_file": "대구가톨릭대학교_2026_수시입결_2.xlsx",
    "page": "시트 성적자료_공개용 37행",
@@ -466,7 +1103,17 @@
    "admission": "학생부종합(종합전형)",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 평균 등급, 85%컷)",
+   "note": "70% 컷 미공개(공개 항목: 평균 등급, 85% 컷)",
+   "other": [
+    {
+     "label": "평균 등급",
+     "value": 4.67
+    },
+    {
+     "label": "85% 컷",
+     "value": 5.08
+    }
+   ],
    "ocr": false,
    "source_file": "대구가톨릭대학교_2026_수시입결_2.xlsx",
    "page": "시트 성적자료_공개용 38행",
@@ -480,6 +1127,7 @@
    "year": null,
    "cut70": null,
    "note": "입결 미공개",
+   "other": [],
    "ocr": false,
    "source_file": null,
    "page": null,
@@ -493,6 +1141,12 @@
    "year": 2026,
    "cut70": 1.57,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부 교과등급 50%",
+     "value": 1.52
+    }
+   ],
    "ocr": false,
    "source_file": "연세대학교(서울)_2026_수시입결.pdf",
    "page": 1,
@@ -504,6 +1158,12 @@
    "year": 2026,
    "cut70": 1.47,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부 교과등급 50%",
+     "value": 1.43
+    }
+   ],
    "ocr": false,
    "source_file": "연세대학교(서울)_2026_수시입결.pdf",
    "page": 2,
@@ -517,6 +1177,12 @@
    "year": 2026,
    "cut70": 3.13,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 석차등급 평균 50%컷",
+     "value": 2.23
+    }
+   ],
    "ocr": false,
    "source_file": "서강대학교_2026_수시입결.pdf",
    "page": 2,
@@ -528,6 +1194,12 @@
    "year": 2026,
    "cut70": 2.81,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 석차등급 평균 50%컷",
+     "value": 1.76
+    }
+   ],
    "ocr": false,
    "source_file": "서강대학교_2026_수시입결.pdf",
    "page": 2,
@@ -539,6 +1211,12 @@
    "year": 2026,
    "cut70": 2.05,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 석차등급 평균 50%컷",
+     "value": 1.87
+    }
+   ],
    "ocr": false,
    "source_file": "서강대학교_2026_수시입결.pdf",
    "page": 2,
@@ -550,6 +1228,12 @@
    "year": 2026,
    "cut70": 3.09,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 석차등급 평균 50%컷",
+     "value": 2.98
+    }
+   ],
    "ocr": false,
    "source_file": "서강대학교_2026_수시입결.pdf",
    "page": 2,
@@ -561,6 +1245,12 @@
    "year": 2026,
    "cut70": 1.92,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 석차등급 평균 50%컷",
+     "value": 1.63
+    }
+   ],
    "ocr": false,
    "source_file": "서강대학교_2026_수시입결.pdf",
    "page": 3,
@@ -572,6 +1262,12 @@
    "year": 2026,
    "cut70": 2.08,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 석차등급 평균 50%컷",
+     "value": 1.69
+    }
+   ],
    "ocr": false,
    "source_file": "서강대학교_2026_수시입결.pdf",
    "page": 3,
@@ -583,6 +1279,7 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 칸이 비어 있음('-', 공개 안 함)",
+   "other": [],
    "ocr": false,
    "source_file": "서강대학교_2026_수시입결.pdf",
    "page": 3,
@@ -594,6 +1291,7 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 칸이 비어 있음('-', 공개 안 함)",
+   "other": [],
    "ocr": false,
    "source_file": "서강대학교_2026_수시입결.pdf",
    "page": 3,
@@ -606,7 +1304,8 @@
    "admission": "학생부종합(융합형)",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 모집인원, 지원인원, 경쟁률, 충원합격인원, 충원율)",
+   "note": "학종 성적 미공개",
+   "other": [],
    "ocr": true,
    "source_file": "성균관대학교(수원)_2026_수시입결.pdf",
    "page": 2,
@@ -617,7 +1316,8 @@
    "admission": "학생부종합(탐구형)",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 모집인원, 지원인원, 경쟁률, 충원합격인원, 충원율)",
+   "note": "학종 성적 미공개",
+   "other": [],
    "ocr": true,
    "source_file": "성균관대학교(수원)_2026_수시입결.pdf",
    "page": 2,
@@ -628,7 +1328,8 @@
    "admission": "학생부종합(탐구형)",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 모집인원, 지원인원, 경쟁률, 충원합격인원, 충원율)",
+   "note": "학종 성적 미공개",
+   "other": [],
    "ocr": true,
    "source_file": "성균관대학교(수원)_2026_수시입결.pdf",
    "page": 2,
@@ -639,7 +1340,8 @@
    "admission": "학생부종합(과학인재)",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 모집인원, 지원인원, 경쟁률, 충원합격인원, 충원율)",
+   "note": "학종 성적 미공개",
+   "other": [],
    "ocr": true,
    "source_file": "성균관대학교(수원)_2026_수시입결.pdf",
    "page": 3,
@@ -650,7 +1352,8 @@
    "admission": "학생부종합(과학인재)",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 모집인원, 지원인원, 경쟁률, 충원합격인원, 충원율)",
+   "note": "학종 성적 미공개",
+   "other": [],
    "ocr": true,
    "source_file": "성균관대학교(수원)_2026_수시입결.pdf",
    "page": 3,
@@ -661,7 +1364,8 @@
    "admission": "학생부종합(과학인재)",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 모집인원, 지원인원, 경쟁률, 충원합격인원, 충원율)",
+   "note": "학종 성적 미공개",
+   "other": [],
    "ocr": true,
    "source_file": "성균관대학교(수원)_2026_수시입결.pdf",
    "page": 3,
@@ -672,7 +1376,8 @@
    "admission": "학생부종합(과학인재)",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 모집인원, 지원인원, 경쟁률, 충원합격인원, 충원율)",
+   "note": "학종 성적 미공개",
+   "other": [],
    "ocr": true,
    "source_file": "성균관대학교(수원)_2026_수시입결.pdf",
    "page": 3,
@@ -686,6 +1391,12 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 미공개(공개 항목: 최종등록자 내신등급 평균)",
+   "other": [
+    {
+     "label": "최종등록자 내신등급 평균",
+     "value": 2.3
+    }
+   ],
    "ocr": false,
    "source_file": "한양대학교(서울)_2024-2026_수시입결.pdf",
    "page": 6,
@@ -697,6 +1408,12 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 미공개(공개 항목: 최종등록자 내신등급 평균)",
+   "other": [
+    {
+     "label": "최종등록자 내신등급 평균",
+     "value": 2.65
+    }
+   ],
    "ocr": false,
    "source_file": "한양대학교(서울)_2024-2026_수시입결.pdf",
    "page": 6,
@@ -708,6 +1425,12 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 미공개(공개 항목: 최종등록자 내신등급 평균)",
+   "other": [
+    {
+     "label": "최종등록자 내신등급 평균",
+     "value": 2.18
+    }
+   ],
    "ocr": false,
    "source_file": "한양대학교(서울)_2024-2026_수시입결.pdf",
    "page": 6,
@@ -719,6 +1442,12 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 미공개(공개 항목: 최종등록자 내신등급 평균)",
+   "other": [
+    {
+     "label": "최종등록자 내신등급 평균",
+     "value": 1.96
+    }
+   ],
    "ocr": false,
    "source_file": "한양대학교(서울)_2024-2026_수시입결.pdf",
    "page": 6,
@@ -730,6 +1459,12 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 미공개(공개 항목: 최종등록자 내신등급 평균)",
+   "other": [
+    {
+     "label": "최종등록자 내신등급 평균",
+     "value": 2.7
+    }
+   ],
    "ocr": false,
    "source_file": "한양대학교(서울)_2024-2026_수시입결.pdf",
    "page": 6,
@@ -741,6 +1476,12 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 미공개(공개 항목: 최종등록자 내신등급 평균)",
+   "other": [
+    {
+     "label": "최종등록자 내신등급 평균",
+     "value": 2.36
+    }
+   ],
    "ocr": false,
    "source_file": "한양대학교(서울)_2024-2026_수시입결.pdf",
    "page": 6,
@@ -752,6 +1493,12 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 미공개(공개 항목: 최종등록자 내신등급 평균)",
+   "other": [
+    {
+     "label": "최종등록자 내신등급 평균",
+     "value": 2.63
+    }
+   ],
    "ocr": false,
    "source_file": "한양대학교(서울)_2024-2026_수시입결.pdf",
    "page": 6,
@@ -763,6 +1510,12 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 미공개(공개 항목: 최종등록자 내신등급 평균)",
+   "other": [
+    {
+     "label": "최종등록자 내신등급 평균",
+     "value": 2.42
+    }
+   ],
    "ocr": false,
    "source_file": "한양대학교(서울)_2024-2026_수시입결.pdf",
    "page": 6,
@@ -774,6 +1527,12 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 미공개(공개 항목: 최종등록자 내신등급 평균)",
+   "other": [
+    {
+     "label": "최종등록자 내신등급 평균",
+     "value": 3.77
+    }
+   ],
    "ocr": false,
    "source_file": "한양대학교(서울)_2024-2026_수시입결.pdf",
    "page": 7,
@@ -785,6 +1544,12 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 미공개(공개 항목: 최종등록자 내신등급 평균)",
+   "other": [
+    {
+     "label": "최종등록자 내신등급 평균",
+     "value": 3.92
+    }
+   ],
    "ocr": false,
    "source_file": "한양대학교(서울)_2024-2026_수시입결.pdf",
    "page": 7,
@@ -796,6 +1561,12 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 미공개(공개 항목: 최종등록자 내신등급 평균)",
+   "other": [
+    {
+     "label": "최종등록자 내신등급 평균",
+     "value": 4.04
+    }
+   ],
    "ocr": false,
    "source_file": "한양대학교(서울)_2024-2026_수시입결.pdf",
    "page": 7,
@@ -807,6 +1578,12 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 미공개(공개 항목: 최종등록자 내신등급 평균)",
+   "other": [
+    {
+     "label": "최종등록자 내신등급 평균",
+     "value": 4.38
+    }
+   ],
    "ocr": false,
    "source_file": "한양대학교(서울)_2024-2026_수시입결.pdf",
    "page": 7,
@@ -820,6 +1597,16 @@
    "year": 2026,
    "cut70": 2.97,
    "note": null,
+   "other": [
+    {
+     "label": "최초합격자 평균등급",
+     "value": 3.44
+    },
+    {
+     "label": "최종등록자 평균등급",
+     "value": 3.03
+    }
+   ],
    "ocr": false,
    "source_file": "한양대학교(ERICA)_2024-2026_수시입결.pdf",
    "page": 10,
@@ -831,6 +1618,16 @@
    "year": 2026,
    "cut70": 3.14,
    "note": null,
+   "other": [
+    {
+     "label": "최초합격자 평균등급",
+     "value": 3.14
+    },
+    {
+     "label": "최종등록자 평균등급",
+     "value": 3.17
+    }
+   ],
    "ocr": false,
    "source_file": "한양대학교(ERICA)_2024-2026_수시입결.pdf",
    "page": 10,
@@ -842,6 +1639,16 @@
    "year": 2026,
    "cut70": 2.71,
    "note": null,
+   "other": [
+    {
+     "label": "최초합격자 평균등급",
+     "value": 2.39
+    },
+    {
+     "label": "최종등록자 평균등급",
+     "value": 2.74
+    }
+   ],
    "ocr": false,
    "source_file": "한양대학교(ERICA)_2024-2026_수시입결.pdf",
    "page": 10,
@@ -853,6 +1660,16 @@
    "year": 2026,
    "cut70": 2.65,
    "note": null,
+   "other": [
+    {
+     "label": "최초합격자 평균등급",
+     "value": 2.68
+    },
+    {
+     "label": "최종등록자 평균등급",
+     "value": 2.55
+    }
+   ],
    "ocr": false,
    "source_file": "한양대학교(ERICA)_2024-2026_수시입결.pdf",
    "page": 10,
@@ -864,6 +1681,16 @@
    "year": 2026,
    "cut70": 2.83,
    "note": null,
+   "other": [
+    {
+     "label": "최초합격자 평균등급",
+     "value": 3.18
+    },
+    {
+     "label": "최종등록자 평균등급",
+     "value": 2.75
+    }
+   ],
    "ocr": false,
    "source_file": "한양대학교(ERICA)_2024-2026_수시입결.pdf",
    "page": 10,
@@ -875,6 +1702,16 @@
    "year": 2026,
    "cut70": 2.9,
    "note": null,
+   "other": [
+    {
+     "label": "최초합격자 평균등급",
+     "value": 3.48
+    },
+    {
+     "label": "최종등록자 평균등급",
+     "value": 3.48
+    }
+   ],
    "ocr": false,
    "source_file": "한양대학교(ERICA)_2024-2026_수시입결.pdf",
    "page": 10,
@@ -888,6 +1725,16 @@
    "year": 2026,
    "cut70": 1.86,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급 50% CUT",
+     "value": 1.81
+    },
+    {
+     "label": "합격자 학생부등급 평균",
+     "value": 1.82
+    }
+   ],
    "ocr": false,
    "source_file": "경희대학교(국제캠퍼스)_2026_수시입결.pdf",
    "page": 9,
@@ -899,6 +1746,16 @@
    "year": 2026,
    "cut70": 1.8,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급 50% CUT",
+     "value": 1.8
+    },
+    {
+     "label": "합격자 학생부등급 평균",
+     "value": 1.9
+    }
+   ],
    "ocr": false,
    "source_file": "경희대학교(국제캠퍼스)_2026_수시입결.pdf",
    "page": 9,
@@ -910,6 +1767,16 @@
    "year": 2026,
    "cut70": 2.3,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급 50% CUT",
+     "value": 2.04
+    },
+    {
+     "label": "합격자 학생부등급 평균",
+     "value": 2.61
+    }
+   ],
    "ocr": false,
    "source_file": "경희대학교(국제캠퍼스)_2026_수시입결.pdf",
    "page": 9,
@@ -920,7 +1787,13 @@
    "admission": "학생부종합 [기회균형전형Ⅰ - 국가보훈·농어촌·수급자·자립아동 등]",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 합격자 학생부 교과등급 평균, 합격자 학생부 교과등급 분포(1~9등급))",
+   "note": "70% 컷 미공개(공개 항목: 합격자 학생부 교과등급 평균)",
+   "other": [
+    {
+     "label": "합격자 학생부 교과등급 평균",
+     "value": 1.95
+    }
+   ],
    "ocr": false,
    "source_file": "경희대학교(국제캠퍼스)_2026_수시입결.pdf",
    "page": 14,
@@ -931,7 +1804,13 @@
    "admission": "학생부종합 [기회균형전형Ⅰ - 국가보훈·농어촌·수급자·자립아동 등]",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 합격자 학생부 교과등급 평균, 합격자 학생부 교과등급 분포(1~9등급))",
+   "note": "70% 컷 미공개(공개 항목: 합격자 학생부 교과등급 평균)",
+   "other": [
+    {
+     "label": "합격자 학생부 교과등급 평균",
+     "value": 1.96
+    }
+   ],
    "ocr": false,
    "source_file": "경희대학교(국제캠퍼스)_2026_수시입결.pdf",
    "page": 14,
@@ -942,7 +1821,13 @@
    "admission": "학생부종합 [기회균형전형Ⅱ]",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 합격자 학생부 교과등급 평균, 합격자 학생부 교과등급 분포(1~9등급))",
+   "note": "70% 컷 미공개(공개 항목: 합격자 학생부 교과등급 평균)",
+   "other": [
+    {
+     "label": "합격자 학생부 교과등급 평균",
+     "value": 2.06
+    }
+   ],
    "ocr": false,
    "source_file": "경희대학교(국제캠퍼스)_2026_수시입결.pdf",
    "page": 18,
@@ -953,7 +1838,13 @@
    "admission": "학생부종합 [기회균형전형Ⅱ]",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 합격자 학생부 교과등급 평균, 합격자 학생부 교과등급 분포(1~9등급))",
+   "note": "70% 컷 미공개(공개 항목: 합격자 학생부 교과등급 평균)",
+   "other": [
+    {
+     "label": "합격자 학생부 교과등급 평균",
+     "value": 1.96
+    }
+   ],
    "ocr": false,
    "source_file": "경희대학교(국제캠퍼스)_2026_수시입결.pdf",
    "page": 18,
@@ -967,6 +1858,12 @@
    "year": 2026,
    "cut70": 1.83,
    "note": null,
+   "other": [
+    {
+     "label": "학생부 환산등급 50% Cut",
+     "value": 1.83
+    }
+   ],
    "ocr": false,
    "source_file": "건국대학교(서울)_2026_수시입결.pdf",
    "page": 3,
@@ -978,6 +1875,12 @@
    "year": 2026,
    "cut70": 2.16,
    "note": null,
+   "other": [
+    {
+     "label": "학생부 환산등급 50% Cut",
+     "value": 2.09
+    }
+   ],
    "ocr": false,
    "source_file": "건국대학교(서울)_2026_수시입결.pdf",
    "page": 3,
@@ -989,6 +1892,12 @@
    "year": 2026,
    "cut70": 2.37,
    "note": null,
+   "other": [
+    {
+     "label": "학생부 환산등급 50% Cut",
+     "value": 2.28
+    }
+   ],
    "ocr": false,
    "source_file": "건국대학교(서울)_2026_수시입결.pdf",
    "page": 3,
@@ -1000,6 +1909,7 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 칸이 비어 있음('-', 공개 안 함)",
+   "other": [],
    "ocr": false,
    "source_file": "건국대학교(서울)_2026_수시입결.pdf",
    "page": 5,
@@ -1011,6 +1921,12 @@
    "year": 2026,
    "cut70": 1.81,
    "note": null,
+   "other": [
+    {
+     "label": "학생부 환산등급 50% Cut",
+     "value": 1.81
+    }
+   ],
    "ocr": false,
    "source_file": "건국대학교(서울)_2026_수시입결.pdf",
    "page": 5,
@@ -1022,6 +1938,12 @@
    "year": 2026,
    "cut70": 2.11,
    "note": null,
+   "other": [
+    {
+     "label": "학생부 환산등급 50% Cut",
+     "value": 2.11
+    }
+   ],
    "ocr": false,
    "source_file": "건국대학교(서울)_2026_수시입결.pdf",
    "page": 5,
@@ -1033,6 +1955,7 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 칸이 비어 있음('-', 공개 안 함)",
+   "other": [],
    "ocr": false,
    "source_file": "건국대학교(서울)_2026_수시입결.pdf",
    "page": 7,
@@ -1044,6 +1967,7 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 칸이 비어 있음('-', 공개 안 함)",
+   "other": [],
    "ocr": false,
    "source_file": "건국대학교(서울)_2026_수시입결.pdf",
    "page": 7,
@@ -1055,6 +1979,7 @@
    "year": 2026,
    "cut70": null,
    "note": "70% 컷 칸이 비어 있음('-', 공개 안 함)",
+   "other": [],
    "ocr": false,
    "source_file": "건국대학교(서울)_2026_수시입결.pdf",
    "page": 7,
@@ -1067,7 +1992,17 @@
    "admission": "[학생부종합] Do Dream",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "note": "70% 컷 미공개(공개 항목: 학생부 평균, 학생부 최저)",
+   "other": [
+    {
+     "label": "학생부 평균",
+     "value": 2.28
+    },
+    {
+     "label": "학생부 최저",
+     "value": 2.78
+    }
+   ],
    "ocr": false,
    "source_file": "동국대학교(서울)_2026_수시입결.pdf",
    "page": 7,
@@ -1078,7 +2013,17 @@
    "admission": "[학생부종합] Do Dream",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "note": "70% 컷 미공개(공개 항목: 학생부 평균, 학생부 최저)",
+   "other": [
+    {
+     "label": "학생부 평균",
+     "value": 2.37
+    },
+    {
+     "label": "학생부 최저",
+     "value": 2.68
+    }
+   ],
    "ocr": false,
    "source_file": "동국대학교(서울)_2026_수시입결.pdf",
    "page": 7,
@@ -1089,7 +2034,17 @@
    "admission": "[학생부종합] Do Dream",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "note": "70% 컷 미공개(공개 항목: 학생부 평균, 학생부 최저)",
+   "other": [
+    {
+     "label": "학생부 평균",
+     "value": 2.37
+    },
+    {
+     "label": "학생부 최저",
+     "value": 2.87
+    }
+   ],
    "ocr": false,
    "source_file": "동국대학교(서울)_2026_수시입결.pdf",
    "page": 7,
@@ -1100,7 +2055,17 @@
    "admission": "[학생부종합] Do Dream",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "note": "70% 컷 미공개(공개 항목: 학생부 평균, 학생부 최저)",
+   "other": [
+    {
+     "label": "학생부 평균",
+     "value": 2.39
+    },
+    {
+     "label": "학생부 최저",
+     "value": 6.94
+    }
+   ],
    "ocr": false,
    "source_file": "동국대학교(서울)_2026_수시입결.pdf",
    "page": 7,
@@ -1111,7 +2076,17 @@
    "admission": "[학생부종합] 불교추천인재",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "note": "70% 컷 미공개(공개 항목: 학생부 평균, 학생부 최저)",
+   "other": [
+    {
+     "label": "학생부 평균",
+     "value": 2.63
+    },
+    {
+     "label": "학생부 최저",
+     "value": 2.86
+    }
+   ],
    "ocr": false,
    "source_file": "동국대학교(서울)_2026_수시입결.pdf",
    "page": 9,
@@ -1122,7 +2097,17 @@
    "admission": "[학생부종합] 불교추천인재",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "note": "70% 컷 미공개(공개 항목: 학생부 평균, 학생부 최저)",
+   "other": [
+    {
+     "label": "학생부 평균",
+     "value": 2.85
+    },
+    {
+     "label": "학생부 최저",
+     "value": 3.03
+    }
+   ],
    "ocr": false,
    "source_file": "동국대학교(서울)_2026_수시입결.pdf",
    "page": 9,
@@ -1133,7 +2118,17 @@
    "admission": "[학생부종합] 불교추천인재",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "note": "70% 컷 미공개(공개 항목: 학생부 평균, 학생부 최저)",
+   "other": [
+    {
+     "label": "학생부 평균",
+     "value": 2.6
+    },
+    {
+     "label": "학생부 최저",
+     "value": 2.85
+    }
+   ],
    "ocr": false,
    "source_file": "동국대학교(서울)_2026_수시입결.pdf",
    "page": 9,
@@ -1144,7 +2139,17 @@
    "admission": "[학생부종합] 불교추천인재",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "note": "70% 컷 미공개(공개 항목: 학생부 평균, 학생부 최저)",
+   "other": [
+    {
+     "label": "학생부 평균",
+     "value": 2.41
+    },
+    {
+     "label": "학생부 최저",
+     "value": 2.96
+    }
+   ],
    "ocr": false,
    "source_file": "동국대학교(서울)_2026_수시입결.pdf",
    "page": 9,
@@ -1155,7 +2160,17 @@
    "admission": "[학생부종합] 기회균형통합",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "note": "70% 컷 미공개(공개 항목: 학생부 평균, 학생부 최저)",
+   "other": [
+    {
+     "label": "학생부 평균",
+     "value": 2.47
+    },
+    {
+     "label": "학생부 최저",
+     "value": 2.62
+    }
+   ],
    "ocr": false,
    "source_file": "동국대학교(서울)_2026_수시입결.pdf",
    "page": 10,
@@ -1166,7 +2181,17 @@
    "admission": "[학생부종합] 기회균형통합",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "note": "70% 컷 미공개(공개 항목: 학생부 평균, 학생부 최저)",
+   "other": [
+    {
+     "label": "학생부 평균",
+     "value": 2.61
+    },
+    {
+     "label": "학생부 최저",
+     "value": 2.85
+    }
+   ],
    "ocr": false,
    "source_file": "동국대학교(서울)_2026_수시입결.pdf",
    "page": 10,
@@ -1177,7 +2202,17 @@
    "admission": "[학생부종합] 기회균형통합",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "note": "70% 컷 미공개(공개 항목: 학생부 평균, 학생부 최저)",
+   "other": [
+    {
+     "label": "학생부 평균",
+     "value": 2.48
+    },
+    {
+     "label": "학생부 최저",
+     "value": 2.87
+    }
+   ],
    "ocr": false,
    "source_file": "동국대학교(서울)_2026_수시입결.pdf",
    "page": 10,
@@ -1188,7 +2223,17 @@
    "admission": "[학생부종합] 기회균형통합",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "note": "70% 컷 미공개(공개 항목: 학생부 평균, 학생부 최저)",
+   "other": [
+    {
+     "label": "학생부 평균",
+     "value": 2.41
+    },
+    {
+     "label": "학생부 최저",
+     "value": 2.66
+    }
+   ],
    "ocr": false,
    "source_file": "동국대학교(서울)_2026_수시입결.pdf",
    "page": 10,
@@ -1199,7 +2244,17 @@
    "admission": "[학생부종합] 특수교육대상자",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "note": "70% 컷 미공개(공개 항목: 학생부 평균, 학생부 최저)",
+   "other": [
+    {
+     "label": "학생부 평균",
+     "value": 3.4
+    },
+    {
+     "label": "학생부 최저",
+     "value": 4.2
+    }
+   ],
    "ocr": false,
    "source_file": "동국대학교(서울)_2026_수시입결.pdf",
    "page": 11,
@@ -1210,7 +2265,17 @@
    "admission": "[학생부종합] 특수교육대상자",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "note": "70% 컷 미공개(공개 항목: 학생부 평균, 학생부 최저)",
+   "other": [
+    {
+     "label": "학생부 평균",
+     "value": 3.46
+    },
+    {
+     "label": "학생부 최저",
+     "value": 3.79
+    }
+   ],
    "ocr": false,
    "source_file": "동국대학교(서울)_2026_수시입결.pdf",
    "page": 11,
@@ -1221,7 +2286,17 @@
    "admission": "[학생부종합] 특수교육대상자",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "note": "70% 컷 미공개(공개 항목: 학생부 평균, 학생부 최저)",
+   "other": [
+    {
+     "label": "학생부 평균",
+     "value": 2.75
+    },
+    {
+     "label": "학생부 최저",
+     "value": 3.43
+    }
+   ],
    "ocr": false,
    "source_file": "동국대학교(서울)_2026_수시입결.pdf",
    "page": 11,
@@ -1235,6 +2310,12 @@
    "year": 2026,
    "cut70": 2.39,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 교과등급 평균",
+     "value": 2.3
+    }
+   ],
    "ocr": false,
    "source_file": "홍익대학교(서울)_2026_수시입결_1.zip",
    "page": 2,
@@ -1246,6 +2327,12 @@
    "year": 2026,
    "cut70": 2.28,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 교과등급 평균",
+     "value": 2.19
+    }
+   ],
    "ocr": false,
    "source_file": "홍익대학교(서울)_2026_수시입결_1.zip",
    "page": 2,
@@ -1257,6 +2344,12 @@
    "year": 2026,
    "cut70": 2.29,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 교과등급 평균",
+     "value": 2.22
+    }
+   ],
    "ocr": false,
    "source_file": "홍익대학교(서울)_2026_수시입결_1.zip",
    "page": 2,
@@ -1269,7 +2362,13 @@
    "admission": "학생부종합 SSU미래인재전형",
    "year": 2026,
    "cut70": 2.97,
-   "note": null,
+   "note": "대상 집단 표기 없음",
+   "other": [
+    {
+     "label": "주요교과 등급 평균",
+     "value": 2.87
+    }
+   ],
    "ocr": false,
    "source_file": "숭실대학교_2026_수시입결.pdf",
    "page": 7,
@@ -1280,7 +2379,13 @@
    "admission": "학생부종합 SSU미래인재전형",
    "year": 2026,
    "cut70": 2.82,
-   "note": null,
+   "note": "대상 집단 표기 없음",
+   "other": [
+    {
+     "label": "주요교과 등급 평균",
+     "value": 2.77
+    }
+   ],
    "ocr": false,
    "source_file": "숭실대학교_2026_수시입결.pdf",
    "page": 7,
@@ -1291,7 +2396,47 @@
    "admission": "학생부종합 SSU미래인재전형",
    "year": 2026,
    "cut70": 2.43,
-   "note": null,
+   "note": "대상 집단 표기 없음",
+   "other": [
+    {
+     "label": "주요교과 등급 평균",
+     "value": 2.35
+    }
+   ],
+   "ocr": false,
+   "source_file": "숭실대학교_2026_수시입결.pdf",
+   "page": 7,
+   "source_url": "https://iphak.ssu.ac.kr/upload/SSU(1)_26051116627.pdf"
+  },
+  {
+   "department": "전자정보공학부(전자공학)",
+   "admission": "학생부종합 SSU미래인재전형",
+   "year": 2026,
+   "cut70": 2.66,
+   "note": "대상 집단 표기 없음",
+   "other": [
+    {
+     "label": "주요교과 등급 평균",
+     "value": 2.69
+    }
+   ],
+   "ocr": false,
+   "source_file": "숭실대학교_2026_수시입결.pdf",
+   "page": 7,
+   "source_url": "https://iphak.ssu.ac.kr/upload/SSU(1)_26051116627.pdf"
+  },
+  {
+   "department": "전자정보공학부(IT융합)",
+   "admission": "학생부종합 SSU미래인재전형",
+   "year": 2026,
+   "cut70": 2.68,
+   "note": "대상 집단 표기 없음",
+   "other": [
+    {
+     "label": "주요교과 등급 평균",
+     "value": 2.68
+    }
+   ],
    "ocr": false,
    "source_file": "숭실대학교_2026_수시입결.pdf",
    "page": 7,
@@ -1302,7 +2447,13 @@
    "admission": "학생부종합 SSU미래인재전형",
    "year": 2026,
    "cut70": 2.55,
-   "note": null,
+   "note": "대상 집단 표기 없음",
+   "other": [
+    {
+     "label": "주요교과 등급 평균",
+     "value": 2.78
+    }
+   ],
    "ocr": false,
    "source_file": "숭실대학교_2026_수시입결.pdf",
    "page": 7,
@@ -1313,7 +2464,13 @@
    "admission": "학생부종합 기회균형전형",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 주요교과 평균)",
+   "note": "70% 컷 미공개(공개 항목: 주요교과 평균성적)",
+   "other": [
+    {
+     "label": "주요교과 평균성적",
+     "value": 3.05
+    }
+   ],
    "ocr": false,
    "source_file": "숭실대학교_2026_수시입결.pdf",
    "page": 22,
@@ -1324,7 +2481,13 @@
    "admission": "학생부종합 기회균형전형",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 주요교과 평균)",
+   "note": "70% 컷 미공개(공개 항목: 주요교과 평균성적)",
+   "other": [
+    {
+     "label": "주요교과 평균성적",
+     "value": 3.21
+    }
+   ],
    "ocr": false,
    "source_file": "숭실대학교_2026_수시입결.pdf",
    "page": 22,
@@ -1335,7 +2498,47 @@
    "admission": "학생부종합 기회균형전형",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 주요교과 평균)",
+   "note": "70% 컷 미공개(공개 항목: 주요교과 평균성적)",
+   "other": [
+    {
+     "label": "주요교과 평균성적",
+     "value": 2.54
+    }
+   ],
+   "ocr": false,
+   "source_file": "숭실대학교_2026_수시입결.pdf",
+   "page": 22,
+   "source_url": "https://iphak.ssu.ac.kr/upload/SSU(1)_26051116627.pdf"
+  },
+  {
+   "department": "전자정보공학부(전자공학)",
+   "admission": "학생부종합 기회균형전형",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 주요교과 평균성적)",
+   "other": [
+    {
+     "label": "주요교과 평균성적",
+     "value": 2.46
+    }
+   ],
+   "ocr": false,
+   "source_file": "숭실대학교_2026_수시입결.pdf",
+   "page": 22,
+   "source_url": "https://iphak.ssu.ac.kr/upload/SSU(1)_26051116627.pdf"
+  },
+  {
+   "department": "전자정보공학부(IT융합)",
+   "admission": "학생부종합 기회균형전형",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 주요교과 평균성적)",
+   "other": [
+    {
+     "label": "주요교과 평균성적",
+     "value": 3.05
+    }
+   ],
    "ocr": false,
    "source_file": "숭실대학교_2026_수시입결.pdf",
    "page": 22,
@@ -1346,7 +2549,13 @@
    "admission": "학생부종합 SW우수자전형",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 주요교과 평균)",
+   "note": "70% 컷 미공개(공개 항목: 주요교과 평균 등급)",
+   "other": [
+    {
+     "label": "주요교과 평균 등급",
+     "value": 3.28
+    }
+   ],
    "ocr": false,
    "source_file": "숭실대학교_2026_수시입결.pdf",
    "page": 24,
@@ -1360,6 +2569,20 @@
    "year": 2026,
    "cut70": 2.73,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 2.64
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 2.7
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 2.54
+    }
+   ],
    "ocr": false,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 4,
@@ -1371,6 +2594,20 @@
    "year": 2026,
    "cut70": 2.73,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 2.63
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 2.67
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 2.24
+    }
+   ],
    "ocr": false,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 4,
@@ -1382,6 +2619,20 @@
    "year": 2026,
    "cut70": 2.64,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 2.64
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 3.0
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 2.57
+    }
+   ],
    "ocr": false,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 4,
@@ -1393,6 +2644,20 @@
    "year": 2026,
    "cut70": 2.71,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 2.68
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 3.41
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 2.35
+    }
+   ],
    "ocr": false,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 4,
@@ -1404,6 +2669,20 @@
    "year": 2026,
    "cut70": 3.13,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 2.86
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 3.14
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 2.39
+    }
+   ],
    "ocr": false,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 4,
@@ -1415,6 +2694,45 @@
    "year": 2026,
    "cut70": 2.91,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 2.73
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 3.05
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 2.42
+    }
+   ],
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 4,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "우주항공시스템공학부-지능형드론융합전공",
+   "admission": "학생부종합 세종창의인재(면접형)",
+   "year": 2026,
+   "cut70": 2.94,
+   "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 2.85
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 2.88
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 2.52
+    }
+   ],
    "ocr": false,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 4,
@@ -1426,6 +2744,20 @@
    "year": 2026,
    "cut70": 2.43,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 2.42
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 2.42
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 2.33
+    }
+   ],
    "ocr": false,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 5,
@@ -1437,6 +2769,20 @@
    "year": 2026,
    "cut70": 2.51,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 2.36
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 2.47
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 2.18
+    }
+   ],
    "ocr": false,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 5,
@@ -1448,6 +2794,20 @@
    "year": 2026,
    "cut70": 2.6,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 2.58
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 2.61
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 2.58
+    }
+   ],
    "ocr": false,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 5,
@@ -1459,6 +2819,20 @@
    "year": 2026,
    "cut70": 2.59,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 2.55
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 2.82
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 2.13
+    }
+   ],
    "ocr": false,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 5,
@@ -1470,6 +2844,20 @@
    "year": 2026,
    "cut70": 2.66,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 2.62
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 2.63
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 2.48
+    }
+   ],
    "ocr": false,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 5,
@@ -1481,6 +2869,45 @@
    "year": 2026,
    "cut70": 2.78,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 2.69
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 2.84
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 2.44
+    }
+   ],
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 5,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "우주항공시스템공학부-지능형드론융합전공",
+   "admission": "학생부종합 세종창의인재(서류형)",
+   "year": 2026,
+   "cut70": 2.53,
+   "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 2.52
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 2.51
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 1.68
+    }
+   ],
    "ocr": false,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 5,
@@ -1492,6 +2919,20 @@
    "year": 2026,
    "cut70": 2.29,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 2.29
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 2.49
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 2.07
+    }
+   ],
    "ocr": false,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 6,
@@ -1503,6 +2944,20 @@
    "year": 2026,
    "cut70": 2.64,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 2.27
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 2.6
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 2.24
+    }
+   ],
    "ocr": false,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 6,
@@ -1514,6 +2969,20 @@
    "year": 2026,
    "cut70": 2.71,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 2.35
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 2.43
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 1.42
+    }
+   ],
    "ocr": false,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 6,
@@ -1525,6 +2994,20 @@
    "year": 2026,
    "cut70": 2.87,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 2.77
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 3.02
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 2.46
+    }
+   ],
    "ocr": false,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 6,
@@ -1536,6 +3019,45 @@
    "year": 2026,
    "cut70": 2.0,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 1.33
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 1.86
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 1.33
+    }
+   ],
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 6,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "우주항공시스템공학부-지능형드론융합전공",
+   "admission": "학생부종합 기회균형",
+   "year": 2026,
+   "cut70": 2.08,
+   "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 2.08
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 2.84
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 2.08
+    }
+   ],
    "ocr": false,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 6,
@@ -1547,6 +3069,20 @@
    "year": 2026,
    "cut70": 2.65,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 2.65
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 2.78
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 2.65
+    }
+   ],
    "ocr": false,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 7,
@@ -1558,6 +3094,20 @@
    "year": 2026,
    "cut70": 2.55,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 2.37
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 2.5
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 2.37
+    }
+   ],
    "ocr": false,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 7,
@@ -1569,6 +3119,20 @@
    "year": 2026,
    "cut70": 2.62,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 2.51
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 2.86
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 2.51
+    }
+   ],
    "ocr": false,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 7,
@@ -1580,6 +3144,20 @@
    "year": 2026,
    "cut70": 2.94,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 2.94
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 3.12
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 2.93
+    }
+   ],
    "ocr": false,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 7,
@@ -1591,6 +3169,20 @@
    "year": 2026,
    "cut70": 3.93,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 3.93
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 3.93
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 3.93
+    }
+   ],
    "ocr": false,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 7,
@@ -1602,6 +3194,20 @@
    "year": 2026,
    "cut70": 6.96,
    "note": null,
+   "other": [
+    {
+     "label": "최종등록자 학생부등급평균 50%",
+     "value": 6.96
+    },
+    {
+     "label": "최종등록자 학생부등급평균 평균",
+     "value": 6.96
+    },
+    {
+     "label": "최종등록자 학생부등급평균 최고",
+     "value": 6.96
+    }
+   ],
    "ocr": false,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 7,
@@ -1613,8 +3219,9 @@
    "department": "전자공학과",
    "admission": "학생부종합(광운참빛인재전형-면접형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 3.17,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 1,
@@ -1624,8 +3231,9 @@
    "department": "전자통신공학과",
    "admission": "학생부종합(광운참빛인재전형-면접형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 2.95,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 1,
@@ -1635,8 +3243,9 @@
    "department": "전자융합공학과",
    "admission": "학생부종합(광운참빛인재전형-면접형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 2.63,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 1,
@@ -1646,8 +3255,9 @@
    "department": "전기공학과",
    "admission": "학생부종합(광운참빛인재전형-면접형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 3.3,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 1,
@@ -1657,8 +3267,9 @@
    "department": "전자재료공학과",
    "admission": "학생부종합(광운참빛인재전형-면접형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 3.11,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 1,
@@ -1668,8 +3279,9 @@
    "department": "전자바이오물리학과",
    "admission": "학생부종합(광운참빛인재전형-면접형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 2.94,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 1,
@@ -1679,8 +3291,9 @@
    "department": "경영학부 빅데이터경영전공",
    "admission": "학생부종합(광운참빛인재전형-면접형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 3.27,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 1,
@@ -1690,8 +3303,9 @@
    "department": "전자공학과",
    "admission": "학생부종합(광운참빛인재전형-서류형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 2.57,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 2,
@@ -1701,8 +3315,9 @@
    "department": "전자통신공학과",
    "admission": "학생부종합(광운참빛인재전형-서류형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 2.95,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 2,
@@ -1712,8 +3327,9 @@
    "department": "전자융합공학과",
    "admission": "학생부종합(광운참빛인재전형-서류형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 2.64,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 2,
@@ -1723,8 +3339,9 @@
    "department": "전기공학과",
    "admission": "학생부종합(광운참빛인재전형-서류형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 1.0,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 2,
@@ -1734,8 +3351,9 @@
    "department": "전자재료공학과",
    "admission": "학생부종합(광운참빛인재전형-서류형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 2.9,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 2,
@@ -1745,8 +3363,9 @@
    "department": "컴퓨터정보공학부",
    "admission": "학생부종합(광운참빛인재전형-서류형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 2.66,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 2,
@@ -1756,8 +3375,9 @@
    "department": "소프트웨어학부",
    "admission": "학생부종합(광운참빛인재전형-서류형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 2.33,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 2,
@@ -1767,8 +3387,9 @@
    "department": "로봇학부 AI로봇전공",
    "admission": "학생부종합(광운참빛인재전형-서류형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 2.73,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 2,
@@ -1778,8 +3399,9 @@
    "department": "전자바이오물리학과",
    "admission": "학생부종합(광운참빛인재전형-서류형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 3.6,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 2,
@@ -1789,8 +3411,9 @@
    "department": "경영학부 빅데이터경영전공",
    "admission": "학생부종합(광운참빛인재전형-서류형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 2.74,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 2,
@@ -1800,8 +3423,9 @@
    "department": "컴퓨터정보공학부",
    "admission": "학생부종합(소프트웨어우수인재전형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 2.75,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 3,
@@ -1811,8 +3435,9 @@
    "department": "소프트웨어학부",
    "admission": "학생부종합(소프트웨어우수인재전형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 3.22,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 3,
@@ -1822,8 +3447,9 @@
    "department": "로봇학부 AI로봇전공",
    "admission": "학생부종합(소프트웨어우수인재전형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 3.6,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 3,
@@ -1834,7 +3460,8 @@
    "admission": "학생부종합(특성화고등을졸업한재직자전형-정원내)",
    "year": 2026,
    "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적 / 70% 컷 칸이 비어 있음('-', 공개 안 함)",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 4,
@@ -1844,8 +3471,9 @@
    "department": "전자통신공학과",
    "admission": "학생부종합(농어촌학생전형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 2.9,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 9,
@@ -1855,8 +3483,9 @@
    "department": "전자재료공학과",
    "admission": "학생부종합(농어촌학생전형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 3.21,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 9,
@@ -1866,8 +3495,9 @@
    "department": "전자바이오물리학과",
    "admission": "학생부종합(농어촌학생전형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 2.84,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 9,
@@ -1877,8 +3507,9 @@
    "department": "전자통신공학과",
    "admission": "학생부종합(특성화고졸업자전형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 1.46,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 10,
@@ -1888,8 +3519,9 @@
    "department": "전자재료공학과",
    "admission": "학생부종합(특성화고졸업자전형)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 1.23,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 10,
@@ -1899,8 +3531,9 @@
    "department": "게임콘텐츠학과",
    "admission": "학생부종합(특성화고등을졸업한재직자전형-정원외)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 5.95,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 11,
@@ -1910,8 +3543,9 @@
    "department": "스마트전기전자학과",
    "admission": "학생부종합(특성화고등을졸업한재직자전형-정원외)",
    "year": 2026,
-   "cut70": null,
-   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "cut70": 4.78,
+   "note": "학교 안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적",
+   "other": [],
    "ocr": false,
    "source_file": "광운대학교_2026_수시입결.pdf",
    "page": 11,
