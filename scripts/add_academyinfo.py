@@ -91,6 +91,12 @@ def find_alias(m, gub):
     return None, None
 
 
+def same_school(kedi_name, univ):
+    """같은 주소 행 안에서만 쓰는 학교명 규칙: KEDI 학교명이 괄호를 뗀 마커 univ 와 같거나, 그 뒤에 공백 하나를 붙인 글자로 시작하면 같은 학교(#1005-28)"""
+    base = strip_paren(univ)
+    return kedi_name == base or kedi_name.startswith(base + " ")
+
+
 def find_one(prefix):
     hits = sorted(f for f in os.listdir(ROOT) if f.startswith(prefix) and f.lower().endswith(".xlsx"))
     if len(hits) != 1:
@@ -241,7 +247,7 @@ def main():
         link = row["연결캠퍼스명"] if row else None
         tag = TAG_RE.match(link.strip()) if link else None
         base = tag.group("name") if tag else m["univ"].strip()
-        k_rows = [k for k in by_addr.get((m.get("address") or "").strip(), []) if k["학교명"] == strip_paren(m["univ"])] if m.get("address") else []
+        k_rows = [k for k in by_addr.get((m.get("address") or "").strip(), []) if same_school(k["학교명"], m["univ"])] if m.get("address") else []
         if len(k_rows) == 1 and KEDI_TAG_RE.match(k_rows[0]["본분교"]):
             kt = KEDI_TAG_RE.match(k_rows[0]["본분교"])
             gub, gsrc = (kt.group("kind"), kt.group("n")), "KEDI 주소 일치"
@@ -321,11 +327,14 @@ def main():
         json.dump(doc, f, ensure_ascii=False, indent=1)
         f.write("\n")
 
+    def addr_types(m):   # 마커 주소와 같은 KEDI 행 중 같은 학교(same_school)인 행의 학제
+        return sorted({k["학제"] for k in by_addr.get((m.get("address") or "").strip(), []) if same_school(k["학교명"], m["univ"])}) if m else []
+
     def typ(row, m=None):
-        if row is None:   # master 행이 없으면 마커 주소와 같은 KEDI 행(학교명이 마커 univ 와 같은 것)의 학제를 쓴다
-            t = sorted({k["학제"] for k in by_addr.get((m.get("address") or "").strip(), []) if k["학교명"] == m["univ"]}) if m else []
+        if row is None:   # master 행이 없으면 주소로 정한다
+            t = addr_types(m)
             return "/".join(t) if t else None
-        t = kedi_types(row, kedi_ug)
+        t = kedi_types(row, kedi_ug) or addr_types(m)   # 이름으로 못 찾으면 같은 주소 행으로 정한다
         return "/".join(t) if t else "찾지 못함"
     gs = defaultdict(int)
     for i, *_ in rows_out:
