@@ -1,1 +1,1921 @@
-{}
+{
+ "강원대학교(춘천)": [
+  {
+   "department": "전기전자공학과",
+   "admission": "학생부종합 미래인재서류전형",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 표준편차, 최고등급, 50%컷, 75%컷, 최저등급)",
+   "ocr": false,
+   "source_file": "강원대학교_2026_수시입결_1.xlsx",
+   "page": "시트 학생부종합 61행",
+   "source_url": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260511102957280fYK.xlsx&path=/DATA/bbs/376&fn=2026%ED%95%99%EB%85%84%EB%8F%84%20%EC%88%98%EC%8B%9C%20%EC%9E%85%EC%8B%9C%EA%B2%B0%EA%B3%BC%EF%BC%88%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EA%B2%8C%EC%8B%9C%EC%9A%A9%EF%BC%89.xlsx"
+  },
+  {
+   "department": "전자공학과",
+   "admission": "학생부종합 미래인재서류전형",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 표준편차, 최고등급, 50%컷, 75%컷, 최저등급)",
+   "ocr": false,
+   "source_file": "강원대학교_2026_수시입결_1.xlsx",
+   "page": "시트 학생부종합 62행",
+   "source_url": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260511102957280fYK.xlsx&path=/DATA/bbs/376&fn=2026%ED%95%99%EB%85%84%EB%8F%84%20%EC%88%98%EC%8B%9C%20%EC%9E%85%EC%8B%9C%EA%B2%B0%EA%B3%BC%EF%BC%88%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EA%B2%8C%EC%8B%9C%EC%9A%A9%EF%BC%89.xlsx"
+  },
+  {
+   "department": "컴퓨터공학과",
+   "admission": "학생부종합 미래인재서류전형",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 표준편차, 최고등급, 50%컷, 75%컷, 최저등급)",
+   "ocr": false,
+   "source_file": "강원대학교_2026_수시입결_1.xlsx",
+   "page": "시트 학생부종합 63행",
+   "source_url": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260511102957280fYK.xlsx&path=/DATA/bbs/376&fn=2026%ED%95%99%EB%85%84%EB%8F%84%20%EC%88%98%EC%8B%9C%20%EC%9E%85%EC%8B%9C%EA%B2%B0%EA%B3%BC%EF%BC%88%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EA%B2%8C%EC%8B%9C%EC%9A%A9%EF%BC%89.xlsx"
+  },
+  {
+   "department": "AI융합학과",
+   "admission": "학생부종합 미래인재서류전형",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 표준편차, 최고등급, 50%컷, 75%컷, 최저등급)",
+   "ocr": false,
+   "source_file": "강원대학교_2026_수시입결_1.xlsx",
+   "page": "시트 학생부종합 64행",
+   "source_url": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260511102957280fYK.xlsx&path=/DATA/bbs/376&fn=2026%ED%95%99%EB%85%84%EB%8F%84%20%EC%88%98%EC%8B%9C%20%EC%9E%85%EC%8B%9C%EA%B2%B0%EA%B3%BC%EF%BC%88%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EA%B2%8C%EC%8B%9C%EC%9A%A9%EF%BC%89.xlsx"
+  },
+  {
+   "department": "전기전자공학과",
+   "admission": "학생부종합 미래인재면접전형",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 표준편차, 최고등급, 50%컷, 75%컷, 최저등급)",
+   "ocr": false,
+   "source_file": "강원대학교_2026_수시입결_1.xlsx",
+   "page": "시트 학생부종합 133행",
+   "source_url": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260511102957280fYK.xlsx&path=/DATA/bbs/376&fn=2026%ED%95%99%EB%85%84%EB%8F%84%20%EC%88%98%EC%8B%9C%20%EC%9E%85%EC%8B%9C%EA%B2%B0%EA%B3%BC%EF%BC%88%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EA%B2%8C%EC%8B%9C%EC%9A%A9%EF%BC%89.xlsx"
+  },
+  {
+   "department": "전자공학과",
+   "admission": "학생부종합 미래인재면접전형",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 표준편차, 최고등급, 50%컷, 75%컷, 최저등급)",
+   "ocr": false,
+   "source_file": "강원대학교_2026_수시입결_1.xlsx",
+   "page": "시트 학생부종합 134행",
+   "source_url": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260511102957280fYK.xlsx&path=/DATA/bbs/376&fn=2026%ED%95%99%EB%85%84%EB%8F%84%20%EC%88%98%EC%8B%9C%20%EC%9E%85%EC%8B%9C%EA%B2%B0%EA%B3%BC%EF%BC%88%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EA%B2%8C%EC%8B%9C%EC%9A%A9%EF%BC%89.xlsx"
+  },
+  {
+   "department": "컴퓨터공학과",
+   "admission": "학생부종합 미래인재면접전형",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 표준편차, 최고등급, 50%컷, 75%컷, 최저등급)",
+   "ocr": false,
+   "source_file": "강원대학교_2026_수시입결_1.xlsx",
+   "page": "시트 학생부종합 135행",
+   "source_url": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260511102957280fYK.xlsx&path=/DATA/bbs/376&fn=2026%ED%95%99%EB%85%84%EB%8F%84%20%EC%88%98%EC%8B%9C%20%EC%9E%85%EC%8B%9C%EA%B2%B0%EA%B3%BC%EF%BC%88%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EA%B2%8C%EC%8B%9C%EC%9A%A9%EF%BC%89.xlsx"
+  },
+  {
+   "department": "AI융합학과",
+   "admission": "학생부종합 미래인재면접전형",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 표준편차, 최고등급, 50%컷, 75%컷, 최저등급)",
+   "ocr": false,
+   "source_file": "강원대학교_2026_수시입결_1.xlsx",
+   "page": "시트 학생부종합 136행",
+   "source_url": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260511102957280fYK.xlsx&path=/DATA/bbs/376&fn=2026%ED%95%99%EB%85%84%EB%8F%84%20%EC%88%98%EC%8B%9C%20%EC%9E%85%EC%8B%9C%EA%B2%B0%EA%B3%BC%EF%BC%88%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EA%B2%8C%EC%8B%9C%EC%9A%A9%EF%BC%89.xlsx"
+  },
+  {
+   "department": "전기전자공학과",
+   "admission": "학생부종합 기회균형전형",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 표준편차, 최고등급, 50%컷, 75%컷, 최저등급)",
+   "ocr": false,
+   "source_file": "강원대학교_2026_수시입결_1.xlsx",
+   "page": "시트 학생부종합 208행",
+   "source_url": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260511102957280fYK.xlsx&path=/DATA/bbs/376&fn=2026%ED%95%99%EB%85%84%EB%8F%84%20%EC%88%98%EC%8B%9C%20%EC%9E%85%EC%8B%9C%EA%B2%B0%EA%B3%BC%EF%BC%88%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EA%B2%8C%EC%8B%9C%EC%9A%A9%EF%BC%89.xlsx"
+  },
+  {
+   "department": "전자공학과",
+   "admission": "학생부종합 기회균형전형",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 표준편차, 최고등급, 50%컷, 75%컷, 최저등급)",
+   "ocr": false,
+   "source_file": "강원대학교_2026_수시입결_1.xlsx",
+   "page": "시트 학생부종합 209행",
+   "source_url": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260511102957280fYK.xlsx&path=/DATA/bbs/376&fn=2026%ED%95%99%EB%85%84%EB%8F%84%20%EC%88%98%EC%8B%9C%20%EC%9E%85%EC%8B%9C%EA%B2%B0%EA%B3%BC%EF%BC%88%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EA%B2%8C%EC%8B%9C%EC%9A%A9%EF%BC%89.xlsx"
+  },
+  {
+   "department": "컴퓨터공학과",
+   "admission": "학생부종합 기회균형전형",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 표준편차, 최고등급, 50%컷, 75%컷, 최저등급)",
+   "ocr": false,
+   "source_file": "강원대학교_2026_수시입결_1.xlsx",
+   "page": "시트 학생부종합 210행",
+   "source_url": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260511102957280fYK.xlsx&path=/DATA/bbs/376&fn=2026%ED%95%99%EB%85%84%EB%8F%84%20%EC%88%98%EC%8B%9C%20%EC%9E%85%EC%8B%9C%EA%B2%B0%EA%B3%BC%EF%BC%88%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EA%B2%8C%EC%8B%9C%EC%9A%A9%EF%BC%89.xlsx"
+  },
+  {
+   "department": "AI융합학과",
+   "admission": "학생부종합 기회균형전형",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 교과등급 평균, 표준편차, 최고등급, 50%컷, 75%컷, 최저등급)",
+   "ocr": false,
+   "source_file": "강원대학교_2026_수시입결_1.xlsx",
+   "page": "시트 학생부종합 211행",
+   "source_url": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260511102957280fYK.xlsx&path=/DATA/bbs/376&fn=2026%ED%95%99%EB%85%84%EB%8F%84%20%EC%88%98%EC%8B%9C%20%EC%9E%85%EC%8B%9C%EA%B2%B0%EA%B3%BC%EF%BC%88%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EA%B2%8C%EC%8B%9C%EC%9A%A9%EF%BC%89.xlsx"
+  }
+ ],
+ "부산대학교(부산)": [
+  {
+   "department": "IT응용공학과",
+   "admission": "학생부종합(학생부종합전형)",
+   "year": 2026,
+   "cut70": 3.56,
+   "note": null,
+   "ocr": false,
+   "source_file": "부산대학교_2026_수시입결.pdf",
+   "page": 14,
+   "source_url": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4250"
+  },
+  {
+   "department": "IT응용공학과",
+   "admission": "학생부종합(지역인재전형)",
+   "year": 2026,
+   "cut70": 3.57,
+   "note": null,
+   "ocr": false,
+   "source_file": "부산대학교_2026_수시입결.pdf",
+   "page": 15,
+   "source_url": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4250"
+  },
+  {
+   "department": "IT응용공학과",
+   "admission": "학생부종합(사회배려자전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 칸이 비어 있음('-', 공개 안 함)",
+   "ocr": false,
+   "source_file": "부산대학교_2026_수시입결.pdf",
+   "page": 18,
+   "source_url": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4250"
+  },
+  {
+   "department": "IT응용공학과",
+   "admission": "학생부종합(특성화고교졸업자전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 칸이 비어 있음('-', 공개 안 함)",
+   "ocr": false,
+   "source_file": "부산대학교_2026_수시입결.pdf",
+   "page": 21,
+   "source_url": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4250"
+  }
+ ],
+ "충북대학교(청주)": [
+  {
+   "department": "전기공학부",
+   "admission": "학생부종합(학생부종합Ⅰ전형)",
+   "year": 2026,
+   "cut70": 3.01,
+   "note": null,
+   "ocr": false,
+   "source_file": "충북대학교_2026_수시입결_1.pdf",
+   "page": 2,
+   "source_url": "https://ipsi.chungbuk.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000003237SxAbe&fileSn=0"
+  },
+  {
+   "department": "전자공학과",
+   "admission": "학생부종합(학생부종합Ⅰ전형)",
+   "year": 2026,
+   "cut70": 3.36,
+   "note": null,
+   "ocr": false,
+   "source_file": "충북대학교_2026_수시입결_1.pdf",
+   "page": 2,
+   "source_url": "https://ipsi.chungbuk.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000003237SxAbe&fileSn=0"
+  },
+  {
+   "department": "정보통신공학부",
+   "admission": "학생부종합(학생부종합Ⅰ전형)",
+   "year": 2026,
+   "cut70": 3.44,
+   "note": null,
+   "ocr": false,
+   "source_file": "충북대학교_2026_수시입결_1.pdf",
+   "page": 2,
+   "source_url": "https://ipsi.chungbuk.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000003237SxAbe&fileSn=0"
+  },
+  {
+   "department": "컴퓨터공학과",
+   "admission": "학생부종합(학생부종합Ⅰ전형)",
+   "year": 2026,
+   "cut70": 3.28,
+   "note": null,
+   "ocr": false,
+   "source_file": "충북대학교_2026_수시입결_1.pdf",
+   "page": 2,
+   "source_url": "https://ipsi.chungbuk.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000003237SxAbe&fileSn=0"
+  },
+  {
+   "department": "소프트웨어학부",
+   "admission": "학생부종합(학생부종합Ⅰ전형)",
+   "year": 2026,
+   "cut70": 3.22,
+   "note": null,
+   "ocr": false,
+   "source_file": "충북대학교_2026_수시입결_1.pdf",
+   "page": 2,
+   "source_url": "https://ipsi.chungbuk.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000003237SxAbe&fileSn=0"
+  },
+  {
+   "department": "지능로봇공학과",
+   "admission": "학생부종합(학생부종합Ⅰ전형)",
+   "year": 2026,
+   "cut70": 3.23,
+   "note": null,
+   "ocr": false,
+   "source_file": "충북대학교_2026_수시입결_1.pdf",
+   "page": 2,
+   "source_url": "https://ipsi.chungbuk.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000003237SxAbe&fileSn=0"
+  },
+  {
+   "department": "전자정보자율전공학부",
+   "admission": "학생부종합(학생부종합Ⅰ전형)",
+   "year": 2026,
+   "cut70": 3.27,
+   "note": null,
+   "ocr": false,
+   "source_file": "충북대학교_2026_수시입결_1.pdf",
+   "page": 2,
+   "source_url": "https://ipsi.chungbuk.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000003237SxAbe&fileSn=0"
+  },
+  {
+   "department": "전기공학부",
+   "admission": "학생부종합(학생부종합Ⅱ전형)",
+   "year": 2026,
+   "cut70": 3.35,
+   "note": null,
+   "ocr": false,
+   "source_file": "충북대학교_2026_수시입결_2.pdf",
+   "page": 2,
+   "source_url": "https://ipsi.chungbuk.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000003237SxAbe&fileSn=1"
+  },
+  {
+   "department": "전자공학과",
+   "admission": "학생부종합(학생부종합Ⅱ전형)",
+   "year": 2026,
+   "cut70": 2.93,
+   "note": null,
+   "ocr": false,
+   "source_file": "충북대학교_2026_수시입결_2.pdf",
+   "page": 2,
+   "source_url": "https://ipsi.chungbuk.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000003237SxAbe&fileSn=1"
+  },
+  {
+   "department": "정보통신공학부",
+   "admission": "학생부종합(학생부종합Ⅱ전형)",
+   "year": 2026,
+   "cut70": 3.71,
+   "note": null,
+   "ocr": false,
+   "source_file": "충북대학교_2026_수시입결_2.pdf",
+   "page": 2,
+   "source_url": "https://ipsi.chungbuk.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000003237SxAbe&fileSn=1"
+  },
+  {
+   "department": "컴퓨터공학과",
+   "admission": "학생부종합(학생부종합Ⅱ전형)",
+   "year": 2026,
+   "cut70": 3.17,
+   "note": null,
+   "ocr": false,
+   "source_file": "충북대학교_2026_수시입결_2.pdf",
+   "page": 2,
+   "source_url": "https://ipsi.chungbuk.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000003237SxAbe&fileSn=1"
+  },
+  {
+   "department": "소프트웨어학부",
+   "admission": "학생부종합(학생부종합Ⅱ전형)",
+   "year": 2026,
+   "cut70": 3.26,
+   "note": null,
+   "ocr": false,
+   "source_file": "충북대학교_2026_수시입결_2.pdf",
+   "page": 2,
+   "source_url": "https://ipsi.chungbuk.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000003237SxAbe&fileSn=1"
+  },
+  {
+   "department": "지능로봇공학과",
+   "admission": "학생부종합(학생부종합Ⅱ전형)",
+   "year": 2026,
+   "cut70": 3.8,
+   "note": null,
+   "ocr": false,
+   "source_file": "충북대학교_2026_수시입결_2.pdf",
+   "page": 2,
+   "source_url": "https://ipsi.chungbuk.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000003237SxAbe&fileSn=1"
+  },
+  {
+   "department": "전자정보자율전공학부",
+   "admission": "학생부종합(학생부종합Ⅱ전형)",
+   "year": 2026,
+   "cut70": 3.32,
+   "note": null,
+   "ocr": false,
+   "source_file": "충북대학교_2026_수시입결_2.pdf",
+   "page": 2,
+   "source_url": "https://ipsi.chungbuk.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000003237SxAbe&fileSn=1"
+  },
+  {
+   "department": "정보통신공학부",
+   "admission": "학생부종합(sw우수인재전형)",
+   "year": 2026,
+   "cut70": 3.77,
+   "note": null,
+   "ocr": false,
+   "source_file": "충북대학교_2026_수시입결_3.pdf",
+   "page": 1,
+   "source_url": "https://ipsi.chungbuk.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000003237SxAbe&fileSn=2"
+  },
+  {
+   "department": "컴퓨터공학과",
+   "admission": "학생부종합(sw우수인재전형)",
+   "year": 2026,
+   "cut70": 3.4,
+   "note": null,
+   "ocr": false,
+   "source_file": "충북대학교_2026_수시입결_3.pdf",
+   "page": 1,
+   "source_url": "https://ipsi.chungbuk.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000003237SxAbe&fileSn=2"
+  },
+  {
+   "department": "소프트웨어학부",
+   "admission": "학생부종합(sw우수인재전형)",
+   "year": 2026,
+   "cut70": 3.04,
+   "note": null,
+   "ocr": false,
+   "source_file": "충북대학교_2026_수시입결_3.pdf",
+   "page": 1,
+   "source_url": "https://ipsi.chungbuk.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000003237SxAbe&fileSn=2"
+  }
+ ],
+ "한동대학교(포항)": [
+  {
+   "department": null,
+   "admission": null,
+   "year": null,
+   "cut70": null,
+   "note": "입결 미공개(현황만)",
+   "ocr": false,
+   "source_file": "한동대학교_2026_수시입결.pdf",
+   "page": null,
+   "source_url": "https://admissions.handong.edu/dcp/editor/files/2026%ED%95%99%EB%85%84%EB%8F%84%20%EC%9E%85%EC%8B%9C%EA%B2%B0%EA%B3%BC.pdf"
+  }
+ ],
+ "대구대학교(경산)": [
+  {
+   "department": "전자전기공학부(반도체전자공학전공)",
+   "admission": "학생부종합(서류전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 전 과목 (참고) 등급 평균)",
+   "ocr": false,
+   "source_file": "대구대학교_2026_수시입결_2.xlsx",
+   "page": "시트 Sheet4 49행",
+   "source_url": "https://ipsi.daegu.ac.kr/attach/4f07f1bc883c5ed3a5f2810a1615e214/778bdbf5db9ced7c8fd52756c00bf0cd"
+  },
+  {
+   "department": "전자전기공학부(전기공학전공)",
+   "admission": "학생부종합(서류전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 전 과목 (참고) 등급 평균)",
+   "ocr": false,
+   "source_file": "대구대학교_2026_수시입결_2.xlsx",
+   "page": "시트 Sheet4 50행",
+   "source_url": "https://ipsi.daegu.ac.kr/attach/4f07f1bc883c5ed3a5f2810a1615e214/778bdbf5db9ced7c8fd52756c00bf0cd"
+  },
+  {
+   "department": "컴퓨터정보공학부(컴퓨터공학전공)",
+   "admission": "학생부종합(서류전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 전 과목 (참고) 등급 평균)",
+   "ocr": false,
+   "source_file": "대구대학교_2026_수시입결_2.xlsx",
+   "page": "시트 Sheet4 51행",
+   "source_url": "https://ipsi.daegu.ac.kr/attach/4f07f1bc883c5ed3a5f2810a1615e214/778bdbf5db9ced7c8fd52756c00bf0cd"
+  },
+  {
+   "department": "컴퓨터정보공학부(컴퓨터소프트웨어전공)",
+   "admission": "학생부종합(서류전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 전 과목 (참고) 등급 평균)",
+   "ocr": false,
+   "source_file": "대구대학교_2026_수시입결_2.xlsx",
+   "page": "시트 Sheet4 52행",
+   "source_url": "https://ipsi.daegu.ac.kr/attach/4f07f1bc883c5ed3a5f2810a1615e214/778bdbf5db9ced7c8fd52756c00bf0cd"
+  },
+  {
+   "department": "컴퓨터정보공학부(사이버보안전공)",
+   "admission": "학생부종합(서류전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 전 과목 (참고) 등급 평균)",
+   "ocr": false,
+   "source_file": "대구대학교_2026_수시입결_2.xlsx",
+   "page": "시트 Sheet4 53행",
+   "source_url": "https://ipsi.daegu.ac.kr/attach/4f07f1bc883c5ed3a5f2810a1615e214/778bdbf5db9ced7c8fd52756c00bf0cd"
+  }
+ ],
+ "대구가톨릭대학교(경산)": [
+  {
+   "department": "전기공학과",
+   "admission": "학생부종합(종합전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 평균 등급, 85%컷)",
+   "ocr": false,
+   "source_file": "대구가톨릭대학교_2026_수시입결_2.xlsx",
+   "page": "시트 성적자료_공개용 34행",
+   "source_url": "https://ibsi.cu.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000004342&fileSn=1"
+  },
+  {
+   "department": "반도체전자공학과",
+   "admission": "학생부종합(종합전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 평균 등급, 85%컷)",
+   "ocr": false,
+   "source_file": "대구가톨릭대학교_2026_수시입결_2.xlsx",
+   "page": "시트 성적자료_공개용 37행",
+   "source_url": "https://ibsi.cu.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000004342&fileSn=1"
+  },
+  {
+   "department": "로봇공학과",
+   "admission": "학생부종합(종합전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 평균 등급, 85%컷)",
+   "ocr": false,
+   "source_file": "대구가톨릭대학교_2026_수시입결_2.xlsx",
+   "page": "시트 성적자료_공개용 38행",
+   "source_url": "https://ibsi.cu.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000004342&fileSn=1"
+  }
+ ],
+ "서울대학교(서울)": [
+  {
+   "department": null,
+   "admission": null,
+   "year": null,
+   "cut70": null,
+   "note": "입결 미공개",
+   "ocr": false,
+   "source_file": null,
+   "page": null,
+   "source_url": "https://admission.snu.ac.kr/materials/stats/result"
+  }
+ ],
+ "연세대학교(서울)": [
+  {
+   "department": "전기전자공학부",
+   "admission": "학생부종합[활동우수형]",
+   "year": 2026,
+   "cut70": 1.57,
+   "note": null,
+   "ocr": false,
+   "source_file": "연세대학교(서울)_2026_수시입결.pdf",
+   "page": 1,
+   "source_url": "https://admission.yonsei.ac.kr/seoul/download.asp?furl=bbs/202604201055398D4W8V.PDF&fname=2026%C7%D0%B3%E2%B5%B5+%BC%F6%BD%C3%B8%F0%C1%FD+%BC%B1%B9%DF%B0%E1%B0%FA%2Epdf"
+  },
+  {
+   "department": "전기전자공학부",
+   "admission": "학생부종합[기회균형]",
+   "year": 2026,
+   "cut70": 1.47,
+   "note": null,
+   "ocr": false,
+   "source_file": "연세대학교(서울)_2026_수시입결.pdf",
+   "page": 2,
+   "source_url": "https://admission.yonsei.ac.kr/seoul/download.asp?furl=bbs/202604201055398D4W8V.PDF&fname=2026%C7%D0%B3%E2%B5%B5+%BC%F6%BD%C3%B8%F0%C1%FD+%BC%B1%B9%DF%B0%E1%B0%FA%2Epdf"
+  }
+ ],
+ "서강대학교(서울)": [
+  {
+   "department": "전자공학과",
+   "admission": "학생부종합(일반)",
+   "year": 2026,
+   "cut70": 3.13,
+   "note": null,
+   "ocr": false,
+   "source_file": "서강대학교_2026_수시입결.pdf",
+   "page": 2,
+   "source_url": "https://admission.sogang.ac.kr/upload/GUIDES/20260602150120JNQJPH.pdf"
+  },
+  {
+   "department": "컴퓨터공학과",
+   "admission": "학생부종합(일반)",
+   "year": 2026,
+   "cut70": 2.81,
+   "note": null,
+   "ocr": false,
+   "source_file": "서강대학교_2026_수시입결.pdf",
+   "page": 2,
+   "source_url": "https://admission.sogang.ac.kr/upload/GUIDES/20260602150120JNQJPH.pdf"
+  },
+  {
+   "department": "인공지능학과",
+   "admission": "학생부종합(일반)",
+   "year": 2026,
+   "cut70": 2.05,
+   "note": null,
+   "ocr": false,
+   "source_file": "서강대학교_2026_수시입결.pdf",
+   "page": 2,
+   "source_url": "https://admission.sogang.ac.kr/upload/GUIDES/20260602150120JNQJPH.pdf"
+  },
+  {
+   "department": "AI기반자유전공학부",
+   "admission": "학생부종합(일반)",
+   "year": 2026,
+   "cut70": 3.09,
+   "note": null,
+   "ocr": false,
+   "source_file": "서강대학교_2026_수시입결.pdf",
+   "page": 2,
+   "source_url": "https://admission.sogang.ac.kr/upload/GUIDES/20260602150120JNQJPH.pdf"
+  },
+  {
+   "department": "전자공학과",
+   "admission": "학생부종합(기회균형)",
+   "year": 2026,
+   "cut70": 1.92,
+   "note": null,
+   "ocr": false,
+   "source_file": "서강대학교_2026_수시입결.pdf",
+   "page": 3,
+   "source_url": "https://admission.sogang.ac.kr/upload/GUIDES/20260602150120JNQJPH.pdf"
+  },
+  {
+   "department": "컴퓨터공학과",
+   "admission": "학생부종합(기회균형)",
+   "year": 2026,
+   "cut70": 2.08,
+   "note": null,
+   "ocr": false,
+   "source_file": "서강대학교_2026_수시입결.pdf",
+   "page": 3,
+   "source_url": "https://admission.sogang.ac.kr/upload/GUIDES/20260602150120JNQJPH.pdf"
+  },
+  {
+   "department": "전자공학과",
+   "admission": "학생부종합(서강가치)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 칸이 비어 있음('-', 공개 안 함)",
+   "ocr": false,
+   "source_file": "서강대학교_2026_수시입결.pdf",
+   "page": 3,
+   "source_url": "https://admission.sogang.ac.kr/upload/GUIDES/20260602150120JNQJPH.pdf"
+  },
+  {
+   "department": "컴퓨터공학과",
+   "admission": "학생부종합(서강가치)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 칸이 비어 있음('-', 공개 안 함)",
+   "ocr": false,
+   "source_file": "서강대학교_2026_수시입결.pdf",
+   "page": 3,
+   "source_url": "https://admission.sogang.ac.kr/upload/GUIDES/20260602150120JNQJPH.pdf"
+  }
+ ],
+ "성균관대학교 (본교(제2캠퍼스))": [
+  {
+   "department": "전자전기공학부",
+   "admission": "학생부종합(융합형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 모집인원, 지원인원, 경쟁률, 충원합격인원, 충원율)",
+   "ocr": true,
+   "source_file": "성균관대학교(수원)_2026_수시입결.pdf",
+   "page": 2,
+   "source_url": "https://admission.skku.edu/common/download.php?fpath=board/2026041019340236ADBE.pdf&fname=%5B%EC%84%B1%EA%B7%A0%EA%B4%80%EB%8C%80%5D+2026%ED%95%99%EB%85%84%EB%8F%84+%EB%8C%80%EC%9E%85%EC%A0%84%ED%98%95+%EA%B2%B0%EA%B3%BC.pdf"
+  },
+  {
+   "department": "소프트웨어학과",
+   "admission": "학생부종합(탐구형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 모집인원, 지원인원, 경쟁률, 충원합격인원, 충원율)",
+   "ocr": true,
+   "source_file": "성균관대학교(수원)_2026_수시입결.pdf",
+   "page": 2,
+   "source_url": "https://admission.skku.edu/common/download.php?fpath=board/2026041019340236ADBE.pdf&fname=%5B%EC%84%B1%EA%B7%A0%EA%B4%80%EB%8C%80%5D+2026%ED%95%99%EB%85%84%EB%8F%84+%EB%8C%80%EC%9E%85%EC%A0%84%ED%98%95+%EA%B2%B0%EA%B3%BC.pdf"
+  },
+  {
+   "department": "양자정보공학과",
+   "admission": "학생부종합(탐구형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 모집인원, 지원인원, 경쟁률, 충원합격인원, 충원율)",
+   "ocr": true,
+   "source_file": "성균관대학교(수원)_2026_수시입결.pdf",
+   "page": 2,
+   "source_url": "https://admission.skku.edu/common/download.php?fpath=board/2026041019340236ADBE.pdf&fname=%5B%EC%84%B1%EA%B7%A0%EA%B4%80%EB%8C%80%5D+2026%ED%95%99%EB%85%84%EB%8F%84+%EB%8C%80%EC%9E%85%EC%A0%84%ED%98%95+%EA%B2%B0%EA%B3%BC.pdf"
+  },
+  {
+   "department": "전자전기공학부",
+   "admission": "학생부종합(과학인재)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 모집인원, 지원인원, 경쟁률, 충원합격인원, 충원율)",
+   "ocr": true,
+   "source_file": "성균관대학교(수원)_2026_수시입결.pdf",
+   "page": 3,
+   "source_url": "https://admission.skku.edu/common/download.php?fpath=board/2026041019340236ADBE.pdf&fname=%5B%EC%84%B1%EA%B7%A0%EA%B4%80%EB%8C%80%5D+2026%ED%95%99%EB%85%84%EB%8F%84+%EB%8C%80%EC%9E%85%EC%A0%84%ED%98%95+%EA%B2%B0%EA%B3%BC.pdf"
+  },
+  {
+   "department": "소프트웨어학과",
+   "admission": "학생부종합(과학인재)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 모집인원, 지원인원, 경쟁률, 충원합격인원, 충원율)",
+   "ocr": true,
+   "source_file": "성균관대학교(수원)_2026_수시입결.pdf",
+   "page": 3,
+   "source_url": "https://admission.skku.edu/common/download.php?fpath=board/2026041019340236ADBE.pdf&fname=%5B%EC%84%B1%EA%B7%A0%EA%B4%80%EB%8C%80%5D+2026%ED%95%99%EB%85%84%EB%8F%84+%EB%8C%80%EC%9E%85%EC%A0%84%ED%98%95+%EA%B2%B0%EA%B3%BC.pdf"
+  },
+  {
+   "department": "지능형소프트웨어학과",
+   "admission": "학생부종합(과학인재)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 모집인원, 지원인원, 경쟁률, 충원합격인원, 충원율)",
+   "ocr": true,
+   "source_file": "성균관대학교(수원)_2026_수시입결.pdf",
+   "page": 3,
+   "source_url": "https://admission.skku.edu/common/download.php?fpath=board/2026041019340236ADBE.pdf&fname=%5B%EC%84%B1%EA%B7%A0%EA%B4%80%EB%8C%80%5D+2026%ED%95%99%EB%85%84%EB%8F%84+%EB%8C%80%EC%9E%85%EC%A0%84%ED%98%95+%EA%B2%B0%EA%B3%BC.pdf"
+  },
+  {
+   "department": "양자정보공학과",
+   "admission": "학생부종합(과학인재)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 모집인원, 지원인원, 경쟁률, 충원합격인원, 충원율)",
+   "ocr": true,
+   "source_file": "성균관대학교(수원)_2026_수시입결.pdf",
+   "page": 3,
+   "source_url": "https://admission.skku.edu/common/download.php?fpath=board/2026041019340236ADBE.pdf&fname=%5B%EC%84%B1%EA%B7%A0%EA%B4%80%EB%8C%80%5D+2026%ED%95%99%EB%85%84%EB%8F%84+%EB%8C%80%EC%9E%85%EC%A0%84%ED%98%95+%EA%B2%B0%EA%B3%BC.pdf"
+  }
+ ],
+ "한양대학교(서울)": [
+  {
+   "department": "융합전자공학부",
+   "admission": "학생부종합(추천형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 내신등급 평균)",
+   "ocr": false,
+   "source_file": "한양대학교(서울)_2024-2026_수시입결.pdf",
+   "page": 6,
+   "source_url": "https://go.hanyang.ac.kr/file/download.do?menu=board&file_no=20773&type=B_1_8"
+  },
+  {
+   "department": "컴퓨터소프트웨어학부",
+   "admission": "학생부종합(추천형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 내신등급 평균)",
+   "ocr": false,
+   "source_file": "한양대학교(서울)_2024-2026_수시입결.pdf",
+   "page": 6,
+   "source_url": "https://go.hanyang.ac.kr/file/download.do?menu=board&file_no=20773&type=B_1_8"
+  },
+  {
+   "department": "전기공학전공",
+   "admission": "학생부종합(추천형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 내신등급 평균)",
+   "ocr": false,
+   "source_file": "한양대학교(서울)_2024-2026_수시입결.pdf",
+   "page": 6,
+   "source_url": "https://go.hanyang.ac.kr/file/download.do?menu=board&file_no=20773&type=B_1_8"
+  },
+  {
+   "department": "데이터사이언스학부",
+   "admission": "학생부종합(추천형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 내신등급 평균)",
+   "ocr": false,
+   "source_file": "한양대학교(서울)_2024-2026_수시입결.pdf",
+   "page": 6,
+   "source_url": "https://go.hanyang.ac.kr/file/download.do?menu=board&file_no=20773&type=B_1_8"
+  },
+  {
+   "department": "융합전자공학부",
+   "admission": "학생부종합(서류형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 내신등급 평균)",
+   "ocr": false,
+   "source_file": "한양대학교(서울)_2024-2026_수시입결.pdf",
+   "page": 6,
+   "source_url": "https://go.hanyang.ac.kr/file/download.do?menu=board&file_no=20773&type=B_1_8"
+  },
+  {
+   "department": "컴퓨터소프트웨어학부",
+   "admission": "학생부종합(서류형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 내신등급 평균)",
+   "ocr": false,
+   "source_file": "한양대학교(서울)_2024-2026_수시입결.pdf",
+   "page": 6,
+   "source_url": "https://go.hanyang.ac.kr/file/download.do?menu=board&file_no=20773&type=B_1_8"
+  },
+  {
+   "department": "전기공학전공",
+   "admission": "학생부종합(서류형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 내신등급 평균)",
+   "ocr": false,
+   "source_file": "한양대학교(서울)_2024-2026_수시입결.pdf",
+   "page": 6,
+   "source_url": "https://go.hanyang.ac.kr/file/download.do?menu=board&file_no=20773&type=B_1_8"
+  },
+  {
+   "department": "데이터사이언스학부",
+   "admission": "학생부종합(서류형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 내신등급 평균)",
+   "ocr": false,
+   "source_file": "한양대학교(서울)_2024-2026_수시입결.pdf",
+   "page": 6,
+   "source_url": "https://go.hanyang.ac.kr/file/download.do?menu=board&file_no=20773&type=B_1_8"
+  },
+  {
+   "department": "융합전자공학부",
+   "admission": "학생부종합(면접형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 내신등급 평균)",
+   "ocr": false,
+   "source_file": "한양대학교(서울)_2024-2026_수시입결.pdf",
+   "page": 7,
+   "source_url": "https://go.hanyang.ac.kr/file/download.do?menu=board&file_no=20773&type=B_1_8"
+  },
+  {
+   "department": "컴퓨터소프트웨어학부",
+   "admission": "학생부종합(면접형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 내신등급 평균)",
+   "ocr": false,
+   "source_file": "한양대학교(서울)_2024-2026_수시입결.pdf",
+   "page": 7,
+   "source_url": "https://go.hanyang.ac.kr/file/download.do?menu=board&file_no=20773&type=B_1_8"
+  },
+  {
+   "department": "전기공학전공",
+   "admission": "학생부종합(면접형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 내신등급 평균)",
+   "ocr": false,
+   "source_file": "한양대학교(서울)_2024-2026_수시입결.pdf",
+   "page": 7,
+   "source_url": "https://go.hanyang.ac.kr/file/download.do?menu=board&file_no=20773&type=B_1_8"
+  },
+  {
+   "department": "데이터사이언스학부",
+   "admission": "학생부종합(면접형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 최종등록자 내신등급 평균)",
+   "ocr": false,
+   "source_file": "한양대학교(서울)_2024-2026_수시입결.pdf",
+   "page": 7,
+   "source_url": "https://go.hanyang.ac.kr/file/download.do?menu=board&file_no=20773&type=B_1_8"
+  }
+ ],
+ "한양대학교(에리카)": [
+  {
+   "department": "전자공학부",
+   "admission": "학생부종합(서류형, 면접형)",
+   "year": 2026,
+   "cut70": 2.97,
+   "note": null,
+   "ocr": false,
+   "source_file": "한양대학교(ERICA)_2024-2026_수시입결.pdf",
+   "page": 10,
+   "source_url": "https://goerica.hanyang.ac.kr/upload/BBS0062/20260423200430A2SV89.PDF"
+  },
+  {
+   "department": "로봇공학과",
+   "admission": "학생부종합(서류형, 면접형)",
+   "year": 2026,
+   "cut70": 3.14,
+   "note": null,
+   "ocr": false,
+   "source_file": "한양대학교(ERICA)_2024-2026_수시입결.pdf",
+   "page": 10,
+   "source_url": "https://goerica.hanyang.ac.kr/upload/BBS0062/20260423200430A2SV89.PDF"
+  },
+  {
+   "department": "컴퓨터학부",
+   "admission": "학생부종합(서류형, 면접형)",
+   "year": 2026,
+   "cut70": 2.71,
+   "note": null,
+   "ocr": false,
+   "source_file": "한양대학교(ERICA)_2024-2026_수시입결.pdf",
+   "page": 10,
+   "source_url": "https://goerica.hanyang.ac.kr/upload/BBS0062/20260423200430A2SV89.PDF"
+  },
+  {
+   "department": "컴퓨터전공",
+   "admission": "학생부종합(서류형, 면접형)",
+   "year": 2026,
+   "cut70": 2.65,
+   "note": null,
+   "ocr": false,
+   "source_file": "한양대학교(ERICA)_2024-2026_수시입결.pdf",
+   "page": 10,
+   "source_url": "https://goerica.hanyang.ac.kr/upload/BBS0062/20260423200430A2SV89.PDF"
+  },
+  {
+   "department": "인공지능학과",
+   "admission": "학생부종합(서류형, 면접형)",
+   "year": 2026,
+   "cut70": 2.83,
+   "note": null,
+   "ocr": false,
+   "source_file": "한양대학교(ERICA)_2024-2026_수시입결.pdf",
+   "page": 10,
+   "source_url": "https://goerica.hanyang.ac.kr/upload/BBS0062/20260423200430A2SV89.PDF"
+  },
+  {
+   "department": "수리데이터사이언스학과",
+   "admission": "학생부종합(서류형, 면접형)",
+   "year": 2026,
+   "cut70": 2.9,
+   "note": null,
+   "ocr": false,
+   "source_file": "한양대학교(ERICA)_2024-2026_수시입결.pdf",
+   "page": 10,
+   "source_url": "https://goerica.hanyang.ac.kr/upload/BBS0062/20260423200430A2SV89.PDF"
+  }
+ ],
+ "경희대학교 (본교(제2캠퍼스))": [
+  {
+   "department": "컴퓨터공학부 컴퓨터공학과",
+   "admission": "학생부종합 [네오르네상스전형]",
+   "year": 2026,
+   "cut70": 1.86,
+   "note": null,
+   "ocr": false,
+   "source_file": "경희대학교(국제캠퍼스)_2026_수시입결.pdf",
+   "page": 9,
+   "source_url": "https://iphak.khu.ac.kr/file/download.do?sfn=20260513054241529_2026%ed%95%99%eb%85%84%eb%8f%84+%ec%9e%85%ed%95%99%ec%a0%84%ed%98%95+%ed%86%b5%ea%b3%84%ec%9e%90%eb%a3%8c_%ed%99%88%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b3%b5%ec%a7%80%ec%9a%a9.pdf&ofn=2026%ed%95%99%eb%85%84%eb%8f%84+%ec%9e%85%ed%95%99%ec%a0%84%ed%98%95+%ed%86%b5%ea%b3%84%ec%9e%90%eb%a3%8c_%ed%99%88%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b3%b5%ec%a7%80%ec%9a%a9.pdf"
+  },
+  {
+   "department": "컴퓨터공학부 인공지능학과",
+   "admission": "학생부종합 [네오르네상스전형]",
+   "year": 2026,
+   "cut70": 1.8,
+   "note": null,
+   "ocr": false,
+   "source_file": "경희대학교(국제캠퍼스)_2026_수시입결.pdf",
+   "page": 9,
+   "source_url": "https://iphak.khu.ac.kr/file/download.do?sfn=20260513054241529_2026%ed%95%99%eb%85%84%eb%8f%84+%ec%9e%85%ed%95%99%ec%a0%84%ed%98%95+%ed%86%b5%ea%b3%84%ec%9e%90%eb%a3%8c_%ed%99%88%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b3%b5%ec%a7%80%ec%9a%a9.pdf&ofn=2026%ed%95%99%eb%85%84%eb%8f%84+%ec%9e%85%ed%95%99%ec%a0%84%ed%98%95+%ed%86%b5%ea%b3%84%ec%9e%90%eb%a3%8c_%ed%99%88%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b3%b5%ec%a7%80%ec%9a%a9.pdf"
+  },
+  {
+   "department": "소프트웨어융합학과",
+   "admission": "학생부종합 [네오르네상스전형]",
+   "year": 2026,
+   "cut70": 2.3,
+   "note": null,
+   "ocr": false,
+   "source_file": "경희대학교(국제캠퍼스)_2026_수시입결.pdf",
+   "page": 9,
+   "source_url": "https://iphak.khu.ac.kr/file/download.do?sfn=20260513054241529_2026%ed%95%99%eb%85%84%eb%8f%84+%ec%9e%85%ed%95%99%ec%a0%84%ed%98%95+%ed%86%b5%ea%b3%84%ec%9e%90%eb%a3%8c_%ed%99%88%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b3%b5%ec%a7%80%ec%9a%a9.pdf&ofn=2026%ed%95%99%eb%85%84%eb%8f%84+%ec%9e%85%ed%95%99%ec%a0%84%ed%98%95+%ed%86%b5%ea%b3%84%ec%9e%90%eb%a3%8c_%ed%99%88%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b3%b5%ec%a7%80%ec%9a%a9.pdf"
+  },
+  {
+   "department": "컴퓨터공학부 컴퓨터공학과",
+   "admission": "학생부종합 [기회균형전형Ⅰ - 국가보훈·농어촌·수급자·자립아동 등]",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 합격자 학생부 교과등급 평균, 합격자 학생부 교과등급 분포(1~9등급))",
+   "ocr": false,
+   "source_file": "경희대학교(국제캠퍼스)_2026_수시입결.pdf",
+   "page": 14,
+   "source_url": "https://iphak.khu.ac.kr/file/download.do?sfn=20260513054241529_2026%ed%95%99%eb%85%84%eb%8f%84+%ec%9e%85%ed%95%99%ec%a0%84%ed%98%95+%ed%86%b5%ea%b3%84%ec%9e%90%eb%a3%8c_%ed%99%88%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b3%b5%ec%a7%80%ec%9a%a9.pdf&ofn=2026%ed%95%99%eb%85%84%eb%8f%84+%ec%9e%85%ed%95%99%ec%a0%84%ed%98%95+%ed%86%b5%ea%b3%84%ec%9e%90%eb%a3%8c_%ed%99%88%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b3%b5%ec%a7%80%ec%9a%a9.pdf"
+  },
+  {
+   "department": "소프트웨어융합학과",
+   "admission": "학생부종합 [기회균형전형Ⅰ - 국가보훈·농어촌·수급자·자립아동 등]",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 합격자 학생부 교과등급 평균, 합격자 학생부 교과등급 분포(1~9등급))",
+   "ocr": false,
+   "source_file": "경희대학교(국제캠퍼스)_2026_수시입결.pdf",
+   "page": 14,
+   "source_url": "https://iphak.khu.ac.kr/file/download.do?sfn=20260513054241529_2026%ed%95%99%eb%85%84%eb%8f%84+%ec%9e%85%ed%95%99%ec%a0%84%ed%98%95+%ed%86%b5%ea%b3%84%ec%9e%90%eb%a3%8c_%ed%99%88%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b3%b5%ec%a7%80%ec%9a%a9.pdf&ofn=2026%ed%95%99%eb%85%84%eb%8f%84+%ec%9e%85%ed%95%99%ec%a0%84%ed%98%95+%ed%86%b5%ea%b3%84%ec%9e%90%eb%a3%8c_%ed%99%88%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b3%b5%ec%a7%80%ec%9a%a9.pdf"
+  },
+  {
+   "department": "컴퓨터공학부 컴퓨터공학과",
+   "admission": "학생부종합 [기회균형전형Ⅱ]",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 합격자 학생부 교과등급 평균, 합격자 학생부 교과등급 분포(1~9등급))",
+   "ocr": false,
+   "source_file": "경희대학교(국제캠퍼스)_2026_수시입결.pdf",
+   "page": 18,
+   "source_url": "https://iphak.khu.ac.kr/file/download.do?sfn=20260513054241529_2026%ed%95%99%eb%85%84%eb%8f%84+%ec%9e%85%ed%95%99%ec%a0%84%ed%98%95+%ed%86%b5%ea%b3%84%ec%9e%90%eb%a3%8c_%ed%99%88%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b3%b5%ec%a7%80%ec%9a%a9.pdf&ofn=2026%ed%95%99%eb%85%84%eb%8f%84+%ec%9e%85%ed%95%99%ec%a0%84%ed%98%95+%ed%86%b5%ea%b3%84%ec%9e%90%eb%a3%8c_%ed%99%88%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b3%b5%ec%a7%80%ec%9a%a9.pdf"
+  },
+  {
+   "department": "소프트웨어융합학과",
+   "admission": "학생부종합 [기회균형전형Ⅱ]",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 합격자 학생부 교과등급 평균, 합격자 학생부 교과등급 분포(1~9등급))",
+   "ocr": false,
+   "source_file": "경희대학교(국제캠퍼스)_2026_수시입결.pdf",
+   "page": 18,
+   "source_url": "https://iphak.khu.ac.kr/file/download.do?sfn=20260513054241529_2026%ed%95%99%eb%85%84%eb%8f%84+%ec%9e%85%ed%95%99%ec%a0%84%ed%98%95+%ed%86%b5%ea%b3%84%ec%9e%90%eb%a3%8c_%ed%99%88%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b3%b5%ec%a7%80%ec%9a%a9.pdf&ofn=2026%ed%95%99%eb%85%84%eb%8f%84+%ec%9e%85%ed%95%99%ec%a0%84%ed%98%95+%ed%86%b5%ea%b3%84%ec%9e%90%eb%a3%8c_%ed%99%88%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b3%b5%ec%a7%80%ec%9a%a9.pdf"
+  }
+ ],
+ "건국대학교(서울)": [
+  {
+   "department": "기계·로봇·자동차공학부",
+   "admission": "학생부종합(KU자기추천)",
+   "year": 2026,
+   "cut70": 1.83,
+   "note": null,
+   "ocr": false,
+   "source_file": "건국대학교(서울)_2026_수시입결.pdf",
+   "page": 3,
+   "source_url": "https://admission.konkuk.ac.kr/bbs/admission/6290/1216634/download.do"
+  },
+  {
+   "department": "전기전자공학부",
+   "admission": "학생부종합(KU자기추천)",
+   "year": 2026,
+   "cut70": 2.16,
+   "note": null,
+   "ocr": false,
+   "source_file": "건국대학교(서울)_2026_수시입결.pdf",
+   "page": 3,
+   "source_url": "https://admission.konkuk.ac.kr/bbs/admission/6290/1216634/download.do"
+  },
+  {
+   "department": "컴퓨터공학부",
+   "admission": "학생부종합(KU자기추천)",
+   "year": 2026,
+   "cut70": 2.37,
+   "note": null,
+   "ocr": false,
+   "source_file": "건국대학교(서울)_2026_수시입결.pdf",
+   "page": 3,
+   "source_url": "https://admission.konkuk.ac.kr/bbs/admission/6290/1216634/download.do"
+  },
+  {
+   "department": "기계·로봇·자동차공학부",
+   "admission": "학생부종합(기회균형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 칸이 비어 있음('-', 공개 안 함)",
+   "ocr": false,
+   "source_file": "건국대학교(서울)_2026_수시입결.pdf",
+   "page": 5,
+   "source_url": "https://admission.konkuk.ac.kr/bbs/admission/6290/1216634/download.do"
+  },
+  {
+   "department": "전기전자공학부",
+   "admission": "학생부종합(기회균형)",
+   "year": 2026,
+   "cut70": 1.81,
+   "note": null,
+   "ocr": false,
+   "source_file": "건국대학교(서울)_2026_수시입결.pdf",
+   "page": 5,
+   "source_url": "https://admission.konkuk.ac.kr/bbs/admission/6290/1216634/download.do"
+  },
+  {
+   "department": "컴퓨터공학부",
+   "admission": "학생부종합(기회균형)",
+   "year": 2026,
+   "cut70": 2.11,
+   "note": null,
+   "ocr": false,
+   "source_file": "건국대학교(서울)_2026_수시입결.pdf",
+   "page": 5,
+   "source_url": "https://admission.konkuk.ac.kr/bbs/admission/6290/1216634/download.do"
+  },
+  {
+   "department": "기계·로봇·자동차공학부",
+   "admission": "학생부종합(특성화고교졸업자)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 칸이 비어 있음('-', 공개 안 함)",
+   "ocr": false,
+   "source_file": "건국대학교(서울)_2026_수시입결.pdf",
+   "page": 7,
+   "source_url": "https://admission.konkuk.ac.kr/bbs/admission/6290/1216634/download.do"
+  },
+  {
+   "department": "전기전자공학부",
+   "admission": "학생부종합(특성화고교졸업자)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 칸이 비어 있음('-', 공개 안 함)",
+   "ocr": false,
+   "source_file": "건국대학교(서울)_2026_수시입결.pdf",
+   "page": 7,
+   "source_url": "https://admission.konkuk.ac.kr/bbs/admission/6290/1216634/download.do"
+  },
+  {
+   "department": "컴퓨터공학부",
+   "admission": "학생부종합(특성화고교졸업자)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 칸이 비어 있음('-', 공개 안 함)",
+   "ocr": false,
+   "source_file": "건국대학교(서울)_2026_수시입결.pdf",
+   "page": 7,
+   "source_url": "https://admission.konkuk.ac.kr/bbs/admission/6290/1216634/download.do"
+  }
+ ],
+ "동국대학교(서울)": [
+  {
+   "department": "전자전기공학부",
+   "admission": "[학생부종합] Do Dream",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "ocr": false,
+   "source_file": "동국대학교(서울)_2026_수시입결.pdf",
+   "page": 7,
+   "source_url": "https://ipsi.dongguk.edu/common/downLoad.asp?strFileName=2026%B5%BF%B1%B9%5F%C0%D4%C7%D0%C0%FC%C7%FC%B0%E1%B0%FA%5F%B4%DC%B8%E9%5F260918%BC%F6%C1%A4%2Epdf&strRealFileName=/upload/file/202609181646284P926C.PDF"
+  },
+  {
+   "department": "정보통신공학과",
+   "admission": "[학생부종합] Do Dream",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "ocr": false,
+   "source_file": "동국대학교(서울)_2026_수시입결.pdf",
+   "page": 7,
+   "source_url": "https://ipsi.dongguk.edu/common/downLoad.asp?strFileName=2026%B5%BF%B1%B9%5F%C0%D4%C7%D0%C0%FC%C7%FC%B0%E1%B0%FA%5F%B4%DC%B8%E9%5F260918%BC%F6%C1%A4%2Epdf&strRealFileName=/upload/file/202609181646284P926C.PDF"
+  },
+  {
+   "department": "기계로봇에너지공학과",
+   "admission": "[학생부종합] Do Dream",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "ocr": false,
+   "source_file": "동국대학교(서울)_2026_수시입결.pdf",
+   "page": 7,
+   "source_url": "https://ipsi.dongguk.edu/common/downLoad.asp?strFileName=2026%B5%BF%B1%B9%5F%C0%D4%C7%D0%C0%FC%C7%FC%B0%E1%B0%FA%5F%B4%DC%B8%E9%5F260918%BC%F6%C1%A4%2Epdf&strRealFileName=/upload/file/202609181646284P926C.PDF"
+  },
+  {
+   "department": "컴퓨터·AI학부",
+   "admission": "[학생부종합] Do Dream",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "ocr": false,
+   "source_file": "동국대학교(서울)_2026_수시입결.pdf",
+   "page": 7,
+   "source_url": "https://ipsi.dongguk.edu/common/downLoad.asp?strFileName=2026%B5%BF%B1%B9%5F%C0%D4%C7%D0%C0%FC%C7%FC%B0%E1%B0%FA%5F%B4%DC%B8%E9%5F260918%BC%F6%C1%A4%2Epdf&strRealFileName=/upload/file/202609181646284P926C.PDF"
+  },
+  {
+   "department": "전자전기공학부",
+   "admission": "[학생부종합] 불교추천인재",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "ocr": false,
+   "source_file": "동국대학교(서울)_2026_수시입결.pdf",
+   "page": 9,
+   "source_url": "https://ipsi.dongguk.edu/common/downLoad.asp?strFileName=2026%B5%BF%B1%B9%5F%C0%D4%C7%D0%C0%FC%C7%FC%B0%E1%B0%FA%5F%B4%DC%B8%E9%5F260918%BC%F6%C1%A4%2Epdf&strRealFileName=/upload/file/202609181646284P926C.PDF"
+  },
+  {
+   "department": "정보통신공학과",
+   "admission": "[학생부종합] 불교추천인재",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "ocr": false,
+   "source_file": "동국대학교(서울)_2026_수시입결.pdf",
+   "page": 9,
+   "source_url": "https://ipsi.dongguk.edu/common/downLoad.asp?strFileName=2026%B5%BF%B1%B9%5F%C0%D4%C7%D0%C0%FC%C7%FC%B0%E1%B0%FA%5F%B4%DC%B8%E9%5F260918%BC%F6%C1%A4%2Epdf&strRealFileName=/upload/file/202609181646284P926C.PDF"
+  },
+  {
+   "department": "기계로봇에너지공학과",
+   "admission": "[학생부종합] 불교추천인재",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "ocr": false,
+   "source_file": "동국대학교(서울)_2026_수시입결.pdf",
+   "page": 9,
+   "source_url": "https://ipsi.dongguk.edu/common/downLoad.asp?strFileName=2026%B5%BF%B1%B9%5F%C0%D4%C7%D0%C0%FC%C7%FC%B0%E1%B0%FA%5F%B4%DC%B8%E9%5F260918%BC%F6%C1%A4%2Epdf&strRealFileName=/upload/file/202609181646284P926C.PDF"
+  },
+  {
+   "department": "컴퓨터·AI학부",
+   "admission": "[학생부종합] 불교추천인재",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "ocr": false,
+   "source_file": "동국대학교(서울)_2026_수시입결.pdf",
+   "page": 9,
+   "source_url": "https://ipsi.dongguk.edu/common/downLoad.asp?strFileName=2026%B5%BF%B1%B9%5F%C0%D4%C7%D0%C0%FC%C7%FC%B0%E1%B0%FA%5F%B4%DC%B8%E9%5F260918%BC%F6%C1%A4%2Epdf&strRealFileName=/upload/file/202609181646284P926C.PDF"
+  },
+  {
+   "department": "전자전기공학부",
+   "admission": "[학생부종합] 기회균형통합",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "ocr": false,
+   "source_file": "동국대학교(서울)_2026_수시입결.pdf",
+   "page": 10,
+   "source_url": "https://ipsi.dongguk.edu/common/downLoad.asp?strFileName=2026%B5%BF%B1%B9%5F%C0%D4%C7%D0%C0%FC%C7%FC%B0%E1%B0%FA%5F%B4%DC%B8%E9%5F260918%BC%F6%C1%A4%2Epdf&strRealFileName=/upload/file/202609181646284P926C.PDF"
+  },
+  {
+   "department": "정보통신공학과",
+   "admission": "[학생부종합] 기회균형통합",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "ocr": false,
+   "source_file": "동국대학교(서울)_2026_수시입결.pdf",
+   "page": 10,
+   "source_url": "https://ipsi.dongguk.edu/common/downLoad.asp?strFileName=2026%B5%BF%B1%B9%5F%C0%D4%C7%D0%C0%FC%C7%FC%B0%E1%B0%FA%5F%B4%DC%B8%E9%5F260918%BC%F6%C1%A4%2Epdf&strRealFileName=/upload/file/202609181646284P926C.PDF"
+  },
+  {
+   "department": "기계로봇에너지공학과",
+   "admission": "[학생부종합] 기회균형통합",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "ocr": false,
+   "source_file": "동국대학교(서울)_2026_수시입결.pdf",
+   "page": 10,
+   "source_url": "https://ipsi.dongguk.edu/common/downLoad.asp?strFileName=2026%B5%BF%B1%B9%5F%C0%D4%C7%D0%C0%FC%C7%FC%B0%E1%B0%FA%5F%B4%DC%B8%E9%5F260918%BC%F6%C1%A4%2Epdf&strRealFileName=/upload/file/202609181646284P926C.PDF"
+  },
+  {
+   "department": "컴퓨터·AI학부",
+   "admission": "[학생부종합] 기회균형통합",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "ocr": false,
+   "source_file": "동국대학교(서울)_2026_수시입결.pdf",
+   "page": 10,
+   "source_url": "https://ipsi.dongguk.edu/common/downLoad.asp?strFileName=2026%B5%BF%B1%B9%5F%C0%D4%C7%D0%C0%FC%C7%FC%B0%E1%B0%FA%5F%B4%DC%B8%E9%5F260918%BC%F6%C1%A4%2Epdf&strRealFileName=/upload/file/202609181646284P926C.PDF"
+  },
+  {
+   "department": "전자전기공학부",
+   "admission": "[학생부종합] 특수교육대상자",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "ocr": false,
+   "source_file": "동국대학교(서울)_2026_수시입결.pdf",
+   "page": 11,
+   "source_url": "https://ipsi.dongguk.edu/common/downLoad.asp?strFileName=2026%B5%BF%B1%B9%5F%C0%D4%C7%D0%C0%FC%C7%FC%B0%E1%B0%FA%5F%B4%DC%B8%E9%5F260918%BC%F6%C1%A4%2Epdf&strRealFileName=/upload/file/202609181646284P926C.PDF"
+  },
+  {
+   "department": "정보통신공학과",
+   "admission": "[학생부종합] 특수교육대상자",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "ocr": false,
+   "source_file": "동국대학교(서울)_2026_수시입결.pdf",
+   "page": 11,
+   "source_url": "https://ipsi.dongguk.edu/common/downLoad.asp?strFileName=2026%B5%BF%B1%B9%5F%C0%D4%C7%D0%C0%FC%C7%FC%B0%E1%B0%FA%5F%B4%DC%B8%E9%5F260918%BC%F6%C1%A4%2Epdf&strRealFileName=/upload/file/202609181646284P926C.PDF"
+  },
+  {
+   "department": "컴퓨터·AI학부",
+   "admission": "[학생부종합] 특수교육대상자",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 2026학년도 학생부 평균, 학생부 최저)",
+   "ocr": false,
+   "source_file": "동국대학교(서울)_2026_수시입결.pdf",
+   "page": 11,
+   "source_url": "https://ipsi.dongguk.edu/common/downLoad.asp?strFileName=2026%B5%BF%B1%B9%5F%C0%D4%C7%D0%C0%FC%C7%FC%B0%E1%B0%FA%5F%B4%DC%B8%E9%5F260918%BC%F6%C1%A4%2Epdf&strRealFileName=/upload/file/202609181646284P926C.PDF"
+  }
+ ],
+ "홍익대학교 (본교(제1캠퍼스))": [
+  {
+   "department": "전자·전기공학부",
+   "admission": "학교생활우수자_종합_인문자연",
+   "year": 2026,
+   "cut70": 2.39,
+   "note": null,
+   "ocr": false,
+   "source_file": "홍익대학교(서울)_2026_수시입결_1.zip",
+   "page": 2,
+   "source_url": "https://www.hongik.ac.kr/kr/admission/entrance-point.do?mode=download&articleNo=152834&attachNo=89149"
+  },
+  {
+   "department": "컴퓨터공학과",
+   "admission": "학교생활우수자_종합_인문자연",
+   "year": 2026,
+   "cut70": 2.28,
+   "note": null,
+   "ocr": false,
+   "source_file": "홍익대학교(서울)_2026_수시입결_1.zip",
+   "page": 2,
+   "source_url": "https://www.hongik.ac.kr/kr/admission/entrance-point.do?mode=download&articleNo=152834&attachNo=89149"
+  },
+  {
+   "department": "산업·데이터공학과",
+   "admission": "학교생활우수자_종합_인문자연",
+   "year": 2026,
+   "cut70": 2.29,
+   "note": null,
+   "ocr": false,
+   "source_file": "홍익대학교(서울)_2026_수시입결_1.zip",
+   "page": 2,
+   "source_url": "https://www.hongik.ac.kr/kr/admission/entrance-point.do?mode=download&articleNo=152834&attachNo=89149"
+  }
+ ],
+ "숭실대학교(서울)": [
+  {
+   "department": "전기공학부",
+   "admission": "학생부종합 SSU미래인재전형",
+   "year": 2026,
+   "cut70": 2.97,
+   "note": null,
+   "ocr": false,
+   "source_file": "숭실대학교_2026_수시입결.pdf",
+   "page": 7,
+   "source_url": "https://iphak.ssu.ac.kr/upload/SSU(1)_26051116627.pdf"
+  },
+  {
+   "department": "산업·정보시스템공학과",
+   "admission": "학생부종합 SSU미래인재전형",
+   "year": 2026,
+   "cut70": 2.82,
+   "note": null,
+   "ocr": false,
+   "source_file": "숭실대학교_2026_수시입결.pdf",
+   "page": 7,
+   "source_url": "https://iphak.ssu.ac.kr/upload/SSU(1)_26051116627.pdf"
+  },
+  {
+   "department": "컴퓨터학부",
+   "admission": "학생부종합 SSU미래인재전형",
+   "year": 2026,
+   "cut70": 2.43,
+   "note": null,
+   "ocr": false,
+   "source_file": "숭실대학교_2026_수시입결.pdf",
+   "page": 7,
+   "source_url": "https://iphak.ssu.ac.kr/upload/SSU(1)_26051116627.pdf"
+  },
+  {
+   "department": "정보보호학과",
+   "admission": "학생부종합 SSU미래인재전형",
+   "year": 2026,
+   "cut70": 2.55,
+   "note": null,
+   "ocr": false,
+   "source_file": "숭실대학교_2026_수시입결.pdf",
+   "page": 7,
+   "source_url": "https://iphak.ssu.ac.kr/upload/SSU(1)_26051116627.pdf"
+  },
+  {
+   "department": "전기공학부",
+   "admission": "학생부종합 기회균형전형",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 주요교과 평균)",
+   "ocr": false,
+   "source_file": "숭실대학교_2026_수시입결.pdf",
+   "page": 22,
+   "source_url": "https://iphak.ssu.ac.kr/upload/SSU(1)_26051116627.pdf"
+  },
+  {
+   "department": "산업·정보시스템공학과",
+   "admission": "학생부종합 기회균형전형",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 주요교과 평균)",
+   "ocr": false,
+   "source_file": "숭실대학교_2026_수시입결.pdf",
+   "page": 22,
+   "source_url": "https://iphak.ssu.ac.kr/upload/SSU(1)_26051116627.pdf"
+  },
+  {
+   "department": "컴퓨터학부",
+   "admission": "학생부종합 기회균형전형",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 주요교과 평균)",
+   "ocr": false,
+   "source_file": "숭실대학교_2026_수시입결.pdf",
+   "page": 22,
+   "source_url": "https://iphak.ssu.ac.kr/upload/SSU(1)_26051116627.pdf"
+  },
+  {
+   "department": "컴퓨터학부",
+   "admission": "학생부종합 SW우수자전형",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 주요교과 평균)",
+   "ocr": false,
+   "source_file": "숭실대학교_2026_수시입결.pdf",
+   "page": 24,
+   "source_url": "https://iphak.ssu.ac.kr/upload/SSU(1)_26051116627.pdf"
+  }
+ ],
+ "세종대학교(서울)": [
+  {
+   "department": "AI융합전자공학과",
+   "admission": "학생부종합 세종창의인재(면접형)",
+   "year": 2026,
+   "cut70": 2.73,
+   "note": null,
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 4,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "컴퓨터공학과",
+   "admission": "학생부종합 세종창의인재(면접형)",
+   "year": 2026,
+   "cut70": 2.73,
+   "note": null,
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 4,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "정보보호학과",
+   "admission": "학생부종합 세종창의인재(면접형)",
+   "year": 2026,
+   "cut70": 2.64,
+   "note": null,
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 4,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "인공지능데이터사이언스학과",
+   "admission": "학생부종합 세종창의인재(면접형)",
+   "year": 2026,
+   "cut70": 2.71,
+   "note": null,
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 4,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "AI로봇학과",
+   "admission": "학생부종합 세종창의인재(면접형)",
+   "year": 2026,
+   "cut70": 3.13,
+   "note": null,
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 4,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "콘텐츠소프트웨어학과",
+   "admission": "학생부종합 세종창의인재(면접형)",
+   "year": 2026,
+   "cut70": 2.91,
+   "note": null,
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 4,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "AI융합전자공학과",
+   "admission": "학생부종합 세종창의인재(서류형)",
+   "year": 2026,
+   "cut70": 2.43,
+   "note": null,
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 5,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "컴퓨터공학과",
+   "admission": "학생부종합 세종창의인재(서류형)",
+   "year": 2026,
+   "cut70": 2.51,
+   "note": null,
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 5,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "정보보호학과",
+   "admission": "학생부종합 세종창의인재(서류형)",
+   "year": 2026,
+   "cut70": 2.6,
+   "note": null,
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 5,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "인공지능데이터사이언스학과",
+   "admission": "학생부종합 세종창의인재(서류형)",
+   "year": 2026,
+   "cut70": 2.59,
+   "note": null,
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 5,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "AI로봇학과",
+   "admission": "학생부종합 세종창의인재(서류형)",
+   "year": 2026,
+   "cut70": 2.66,
+   "note": null,
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 5,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "콘텐츠소프트웨어학과",
+   "admission": "학생부종합 세종창의인재(서류형)",
+   "year": 2026,
+   "cut70": 2.78,
+   "note": null,
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 5,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "AI융합전자공학과",
+   "admission": "학생부종합 기회균형",
+   "year": 2026,
+   "cut70": 2.29,
+   "note": null,
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 6,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "컴퓨터공학과",
+   "admission": "학생부종합 기회균형",
+   "year": 2026,
+   "cut70": 2.64,
+   "note": null,
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 6,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "인공지능데이터사이언스학과",
+   "admission": "학생부종합 기회균형",
+   "year": 2026,
+   "cut70": 2.71,
+   "note": null,
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 6,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "AI로봇학과",
+   "admission": "학생부종합 기회균형",
+   "year": 2026,
+   "cut70": 2.87,
+   "note": null,
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 6,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "콘텐츠소프트웨어학과",
+   "admission": "학생부종합 기회균형",
+   "year": 2026,
+   "cut70": 2.0,
+   "note": null,
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 6,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "AI융합전자공학과",
+   "admission": "학생부종합 사회기여 및 배려자",
+   "year": 2026,
+   "cut70": 2.65,
+   "note": null,
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 7,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "컴퓨터공학과",
+   "admission": "학생부종합 사회기여 및 배려자",
+   "year": 2026,
+   "cut70": 2.55,
+   "note": null,
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 7,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "AI로봇학과",
+   "admission": "학생부종합 사회기여 및 배려자",
+   "year": 2026,
+   "cut70": 2.62,
+   "note": null,
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 7,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "콘텐츠소프트웨어학과",
+   "admission": "학생부종합 사회기여 및 배려자",
+   "year": 2026,
+   "cut70": 2.94,
+   "note": null,
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 7,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "컴퓨터공학과",
+   "admission": "학생부종합 서해 5도",
+   "year": 2026,
+   "cut70": 3.93,
+   "note": null,
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 7,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  },
+  {
+   "department": "AI로봇학과",
+   "admission": "학생부종합 서해 5도",
+   "year": 2026,
+   "cut70": 6.96,
+   "note": null,
+   "ocr": false,
+   "source_file": "세종대학교_2026_수시입결.pdf",
+   "page": 7,
+   "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
+  }
+ ],
+ "광운대학교(서울)": [
+  {
+   "department": "전자공학과",
+   "admission": "학생부종합(광운참빛인재전형-면접형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 1,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "전자통신공학과",
+   "admission": "학생부종합(광운참빛인재전형-면접형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 1,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "전자융합공학과",
+   "admission": "학생부종합(광운참빛인재전형-면접형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 1,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "전기공학과",
+   "admission": "학생부종합(광운참빛인재전형-면접형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 1,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "전자재료공학과",
+   "admission": "학생부종합(광운참빛인재전형-면접형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 1,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "전자바이오물리학과",
+   "admission": "학생부종합(광운참빛인재전형-면접형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 1,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "경영학부 빅데이터경영전공",
+   "admission": "학생부종합(광운참빛인재전형-면접형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 1,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "전자공학과",
+   "admission": "학생부종합(광운참빛인재전형-서류형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 2,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "전자통신공학과",
+   "admission": "학생부종합(광운참빛인재전형-서류형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 2,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "전자융합공학과",
+   "admission": "학생부종합(광운참빛인재전형-서류형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 2,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "전기공학과",
+   "admission": "학생부종합(광운참빛인재전형-서류형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 2,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "전자재료공학과",
+   "admission": "학생부종합(광운참빛인재전형-서류형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 2,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "컴퓨터정보공학부",
+   "admission": "학생부종합(광운참빛인재전형-서류형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 2,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "소프트웨어학부",
+   "admission": "학생부종합(광운참빛인재전형-서류형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 2,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "로봇학부 AI로봇전공",
+   "admission": "학생부종합(광운참빛인재전형-서류형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 2,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "전자바이오물리학과",
+   "admission": "학생부종합(광운참빛인재전형-서류형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 2,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "경영학부 빅데이터경영전공",
+   "admission": "학생부종합(광운참빛인재전형-서류형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 2,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "컴퓨터정보공학부",
+   "admission": "학생부종합(소프트웨어우수인재전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 3,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "소프트웨어학부",
+   "admission": "학생부종합(소프트웨어우수인재전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 3,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "로봇학부 AI로봇전공",
+   "admission": "학생부종합(소프트웨어우수인재전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 3,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "게임콘텐츠학과",
+   "admission": "학생부종합(특성화고등을졸업한재직자전형-정원내)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 4,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "전자통신공학과",
+   "admission": "학생부종합(농어촌학생전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 9,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "전자재료공학과",
+   "admission": "학생부종합(농어촌학생전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 9,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "전자바이오물리학과",
+   "admission": "학생부종합(농어촌학생전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 9,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "전자통신공학과",
+   "admission": "학생부종합(특성화고졸업자전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 10,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "전자재료공학과",
+   "admission": "학생부종합(특성화고졸업자전형)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 10,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "게임콘텐츠학과",
+   "admission": "학생부종합(특성화고등을졸업한재직자전형-정원외)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 11,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  },
+  {
+   "department": "스마트전기전자학과",
+   "admission": "학생부종합(특성화고등을졸업한재직자전형-정원외)",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 미공개(공개 항목: 학생부 등급(진로선택제외)[안내문: 최종등록자 환산점수 기준 70% 컷 학생의 성적])",
+   "ocr": false,
+   "source_file": "광운대학교_2026_수시입결.pdf",
+   "page": 11,
+   "source_url": "https://iphak.kw.ac.kr/_common/new_download_file.php?menu=board&b_code=B_1_8&b_no=44580&field=file_nm"
+  }
+ ]
+}

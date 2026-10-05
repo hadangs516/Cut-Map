@@ -334,7 +334,7 @@ function deptNode(d){
   lvEl.appendChild(document.createTextNode(lv.label));
   row.appendChild(lvEl);
   var url = d && typeof d.source_url === 'string' && /^https?:\/\//i.test(d.source_url) ? d.source_url : null;
-  var where = d && d.source_file ? d.source_file + (d.page != null && d.page !== '' ? ' p.' + d.page : '') : '';
+  var where = d && d.source_file ? d.source_file + (typeof d.page === 'number' ? ' p.' + d.page : (d.page ? ' ' + d.page : '')) : '';
   if(url){
     var a = el('a', '', '원문');
     a.href = url;
