@@ -57,6 +57,11 @@ main{position:relative;flex:1;min-height:0}
 .leaflet-pane path.gu{fill:none;stroke:var(--gu-line);stroke-width:.8px}
 .rl span{display:block;transform:translate(-50%,-50%);white-space:nowrap;font-size:12px;color:var(--map-label);text-shadow:0 0 3px var(--land)}
 .rl.city span{font-size:11px}
+/* 확대하면 마커 옆에 짧은 대학 이름. 마우스·터치를 받지 않아 마커 클릭과 팝업을 가리지 않는다 */
+.leaflet-tooltip.nm{padding:0;border:0;background:none;box-shadow:none;color:var(--ink);font-size:11px;font-weight:600;line-height:1;white-space:nowrap;pointer-events:none;visibility:hidden;opacity:0;text-shadow:0 0 2px var(--surface),0 0 3px var(--surface),0 0 4px var(--surface)}
+.leaflet-tooltip.nm::before{display:none}
+.leaflet-tooltip-pane{z-index:590}  /* 마커(600)와 팝업(700) 아래 */
+#map.names .leaflet-tooltip.nm{visibility:visible;opacity:1}
 .leaflet-bar a{background:var(--surface)!important;color:var(--ink)!important;border-bottom-color:var(--line)!important}
 .leaflet-container a.leaflet-popup-close-button{color:var(--muted)}
 .leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--surface);color:var(--ink)}
@@ -110,7 +115,7 @@ main{position:relative;flex:1;min-height:0}
 .pu .info .meta{display:block;font-size:11.5px;color:var(--muted);line-height:1.35}
 .pu .na{color:var(--muted)}
 .pu .note{font-size:12px;color:var(--muted);line-height:1.35}
-.pu .d2 .ocr{color:var(--err);font-weight:600}
+.pu .note .ocr,.pu .d2 .ocr{color:var(--err);font-weight:600}
 
 /* 하단 고정 한 줄 (지도 영역 밖: main 아래 flex 항목) */
 #note{flex:none;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:3px 12px;padding-bottom:calc(3px + env(safe-area-inset-bottom));background:var(--surface);border-top:1px solid var(--line);font-size:11.5px;line-height:1.35;color:var(--muted)}
@@ -136,6 +141,7 @@ main{position:relative;flex:1;min-height:0}
     <div class="lg"><i class="dot g-mid"></i>적정: −0.3 초과 0.3 미만</div>
     <div class="lg"><i class="dot g-hi"></i>상향: ≤ −0.3</div>
     <div class="lg"><i class="dot g-none"></i>회색: 등급 미입력 또는 cut70 없음</div>
+    <div class="lg">색은 지원 자격 제한 전형을 빼고 계산합니다</div>
     <p>학종은 등급만으로 합격이 정해지지 않으므로 참고용입니다</p>
   </div>
 </main>
@@ -194,9 +200,11 @@ function latestOnly(list){
     return yearNum(d && d.year) === best[k];
   });
 }
-/* 학과 하나: 차이 = cut70 - 입력 등급. 등급이 비었거나 cut70이 없으면 none */
+/* restricted(지원 자격 제한 전형)가 true 인 항목은 색 계산에서 뺀다 */
+function isRestricted(d){ return !!d && d.restricted === true; }
+/* 학과 하나: 차이 = cut70 - 입력 등급. 등급이 비었거나 cut70이 없거나 지원 자격 제한 전형이면 none */
 function deptLevel(d, grade){
-  if(grade == null || !hasCut(d)) return 'none';
+  if(grade == null || !hasCut(d) || isRestricted(d)) return 'none';
   return levelOf(d.cut70 - grade);
 }
 /* 마커: 학과 중 차이가 가장 큰 학과 기준 */
@@ -204,7 +212,7 @@ function markerLevel(depts, grade){
   if(grade == null || !Array.isArray(depts)) return 'none';
   var best = null;
   latestOnly(depts).forEach(function(d){
-    if(!hasCut(d)) return;
+    if(!hasCut(d) || isRestricted(d)) return;
     var diff = d.cut70 - grade;
     if(best === null || diff > best) best = diff;
   });
@@ -312,6 +320,10 @@ function fmtYear(y){
   var s = String(y);
   return s.indexOf('학년도') >= 0 ? s : s + '학년도';
 }
+function otherList(d){
+  if(!d || !Array.isArray(d.other)) return [];
+  return d.other.filter(function(o){ return o && typeof o.label === 'string' && o.label && typeof o.value === 'number' && isFinite(o.value); });
+}
 function deptNode(d){
   var li = el('li', 'd');
   var note = d && typeof d.note === 'string' && d.note.trim() ? d.note.trim() : null;
@@ -322,11 +334,16 @@ function deptNode(d){
   }
   li.appendChild(el('div', 'd1', d && d.department ? d.department : '(학과명 없음)'));
   var row = el('div', 'd2');
-  row.appendChild(el('span', '', d && d.admission ? d.admission : '전형명 없음'));
+  row.appendChild(el('span', '', (d && d.admission ? d.admission : '전형명 없음') + (isRestricted(d) ? ' (지원 자격 제한)' : '')));
   row.appendChild(el('span', '', fmtYear(d && d.year) || '학년도 없음'));
   var cutTxt = fmtCut(d && d.cut70);
-  var cut = el('span', 'cut' + (cutTxt ? '' : ' na'), '70% 컷 ' + (cutTxt || '자료 없음'));
-  row.appendChild(cut);
+  var others = otherList(d);
+  if(cutTxt || !others.length){
+    row.appendChild(el('span', 'cut' + (cutTxt ? '' : ' na'), '70% 컷 ' + (cutTxt || '자료 없음')));
+  } else {
+    /* 70% 컷이 없고 다른 기준 값이 있으면 원문 열 이름과 값을 그대로 보여 준다(색 계산에는 쓰지 않는다) */
+    others.forEach(function(o){ row.appendChild(el('span', 'cut', o.label + ' ' + fmtCut(o.value))); });
+  }
   if(d && d.ocr === true) row.appendChild(el('span', 'ocr', 'OCR 값, 확인 필요'));
   var lv = LEVELS[deptLevel(d, grade)];
   var lvEl = el('span', 'lv');
@@ -334,7 +351,7 @@ function deptNode(d){
   lvEl.appendChild(document.createTextNode(lv.label));
   row.appendChild(lvEl);
   var url = d && typeof d.source_url === 'string' && /^https?:\/\//i.test(d.source_url) ? d.source_url : null;
-  var where = d && d.source_file ? d.source_file + (d.page != null && d.page !== '' ? ' p.' + d.page : '') : '';
+  var where = d && d.source_file ? d.source_file + (typeof d.page === 'number' ? ' p.' + d.page : (d.page ? ' ' + d.page : '')) : '';
   if(url){
     var a = el('a', '', '원문');
     a.href = url;
@@ -357,8 +374,20 @@ function ipgyeolNode(campus){
     frag.appendChild(el('div', 'na', '자료 없음'));
     return frag;
   }
+  var shown = latestOnly(list);
+  /* 전부 70% 컷이 없고, note 가 같고, other 도 없으면 학과 목록 대신 한 줄로 보여 준다 */
+  var n0 = shown[0] && typeof shown[0].note === 'string' ? shown[0].note.trim() : '';
+  var allSame = shown.length > 0 && n0 && shown.every(function(d){
+    return !hasCut(d) && typeof d.note === 'string' && d.note.trim() === n0 && !otherList(d).length;
+  });
+  if(allSame){
+    var one = el('div', 'note', n0);
+    if(shown.every(function(d){ return d.ocr === true; })) one.appendChild(el('span', 'ocr', ' OCR 값, 확인 필요'));
+    frag.appendChild(one);
+    return frag;
+  }
   var ul = el('ul');
-  latestOnly(list).forEach(function(d){ ul.appendChild(deptNode(d)); });
+  shown.forEach(function(d){ ul.appendChild(deptNode(d)); });
   frag.appendChild(ul);
   return frag;
 }
@@ -417,8 +446,29 @@ function markerIcon(st, level){
   return L.divIcon({className:'', iconSize:[0,0],
     html:'<span class="mk ' + st.cls + ' ' + LEVELS[level].cls + '">' + shapeSVG(st.cls) + '</span>'});
 }
+/* 이름표: "서강대학교" -> "서강대". 같은 학교 마커가 둘 이상이면 "한양대(서울)", "한양대(ERICA)"처럼 캠퍼스를 붙인다 */
+var NAME_ZOOM = 10, SHORT = {};
+function baseName(m){ return String(m.univ || m.campus).replace(/\s*\([^)]*\)\s*$/, '').replace(/학교$/, ''); }
+function campusTag(m){
+  var u = String(m.univ || '').match(/\(([^)]+)\)\s*$/);
+  if(u) return u[1];
+  var c = String(m.campus || '').match(/^[^(]*\(([^()]+)\)/);
+  return c ? c[1] : '';
+}
+function buildShortNames(list){
+  var cnt = {};
+  list.forEach(function(m){ var b = baseName(m); cnt[b] = (cnt[b] || 0) + 1; });
+  list.forEach(function(m){
+    var b = baseName(m), t = cnt[b] > 1 ? campusTag(m) : '';
+    SHORT[m.campus] = t ? b + '(' + t + ')' : b;
+  });
+}
+function updateNames(){
+  $('#map').classList.toggle('names', map.getZoom() >= NAME_ZOOM);
+}
 function addMarker(m, st){
   var mk = L.marker([m.lat, m.lon], {icon:markerIcon(st, markerLevel(IPG[m.campus], grade)), title:m.campus, keyboard:true, riseOnHover:true});
+  mk.bindTooltip(SHORT[m.campus] || baseName(m), {permanent:true, direction:'right', offset:[10, 0], className:'nm', opacity:1, interactive:false});
   mk.bindPopup(function(){ return popupNode(m, st); }, {autoPanPadding:[12,12], maxWidth:300, maxHeight:popupMaxH()});
   layers[st.key].addLayer(mk);
   entries.push({m:m, st:st, mk:mk, nu:nk(m.univ), nc:nk(m.campus)});
@@ -527,6 +577,8 @@ function initMap(prov, seoul){
       icon:L.divIcon({className:'rl ' + l[3], html:'<span>' + l[0] + '</span>', iconSize:[0,0]})}).addTo(map);
   });
   map.setView([36.4, 127.9], 7);
+  map.on('zoomend', updateNames);
+  updateNames();
   map.on('resize', function(){
     var h = popupMaxH();
     entries.forEach(function(e){ e.mk.getPopup().options.maxHeight = h; });
@@ -559,6 +611,7 @@ Promise.all([getJSON('data/markers.json'), getJSON('data/targets.json'), getJSON
   initGrade();
   initMap(res[2], res[3]);
   var unknown = 0;
+  buildShortNames(markers.filter(function(m){ return TARGET[m.campus] && BYKEY[m.itStatus]; }));
   markers.forEach(function(m){
     if(!TARGET[m.campus]) return;
     var st = BYKEY[m.itStatus];
@@ -571,7 +624,7 @@ Promise.all([getJSON('data/markers.json'), getJSON('data/targets.json'), getJSON
   if(unknown) console.warn('알 수 없는 itStatus 값을 가진 마커 ' + unknown + '개는 표시하지 않았습니다.');
   STATUS.forEach(function(s){ if(active[s.key]) layers[s.key].addTo(map); });
   initSearch();
-  window.__cutmap = {total:total, unknown:unknown, entries:entries.length,
+  window.__cutmap = {total:total, unknown:unknown, entries:entries.length, nameZoom:NAME_ZOOM, shortNames:SHORT,
                      levelOf:levelOf, markerLevel:markerLevel, deptLevel:deptLevel, parseGrade:parseGrade};
 })
 .catch(function(e){
