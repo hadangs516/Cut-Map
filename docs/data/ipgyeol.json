@@ -1630,6 +1630,46 @@
    "source_url": "https://admission.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=423&bbsMode=view&page=1&key=26"
   }
  ],
+ "전북대학교(전주)": [
+  {
+   "department": "공학계열1(소프트웨어공학과)",
+   "admission": "학생부종합 특성화고졸재직자",
+   "year": 2026,
+   "cut70": 1.18,
+   "note": null,
+   "other": [
+    {
+     "label": "학생부 등급 최종등록자 평균",
+     "value": 1.18
+    },
+    {
+     "label": "학생부 등급 최종등록자 50% cut",
+     "value": 1.18
+    }
+   ],
+   "ocr": false,
+   "source_file": "전북대학교_2026_수시입결.xlsx",
+   "page": "시트 수시모집-학생부종합전형 142행",
+   "source_url": "https://enter.jbnu.ac.kr/detail.do?search_key=title&searchNo=&searchtext=&menuurl=bmyV1ovIAzYtqDXLjUSVtw%3D%3D&board_seq=43571&pageNo=1&categoryid=7&value="
+  },
+  {
+   "department": "공학계열1(융합기술공학부[IT융합기전공학])",
+   "admission": "학생부종합 특성화고졸재직자",
+   "year": 2026,
+   "cut70": null,
+   "note": "70% 컷 칸 원문 표기: 2명 이하",
+   "other": [
+    {
+     "label": "학생부 등급 최종등록자 평균",
+     "value": 6.09
+    }
+   ],
+   "ocr": false,
+   "source_file": "전북대학교_2026_수시입결.xlsx",
+   "page": "시트 수시모집-학생부종합전형 143행",
+   "source_url": "https://enter.jbnu.ac.kr/detail.do?search_key=title&searchNo=&searchtext=&menuurl=bmyV1ovIAzYtqDXLjUSVtw%3D%3D&board_seq=43571&pageNo=1&categoryid=7&value="
+  }
+ ],
  "제주대학교(제주)": [
   {
    "department": "컴퓨터교육과",
@@ -1656,16 +1696,12 @@
    "department": "컴퓨터교육과",
    "admission": "학생부종합 일반학생",
    "year": 2026,
-   "cut70": null,
-   "note": "교과성적 70컷이 주요교과·전체교과 두 열이라 어느 쪽이 70% 컷인지 정하지 않음",
+   "cut70": 4.31,
+   "note": "전체교과 기준",
    "other": [
     {
      "label": "교과성적 주요교과 70컷",
      "value": 4.27
-    },
-    {
-     "label": "교과성적 전체교과 70컷",
-     "value": 4.31
     }
    ],
    "ocr": false,
@@ -1737,16 +1773,12 @@
    "department": "데이터사이언스학과",
    "admission": "학생부종합 소프트웨어인재",
    "year": 2026,
-   "cut70": null,
-   "note": "교과성적 70컷이 주요교과·전체교과 두 열이라 어느 쪽이 70% 컷인지 정하지 않음",
+   "cut70": 5.18,
+   "note": "전체교과 기준",
    "other": [
     {
      "label": "교과성적 주요교과 70컷",
      "value": 5.17
-    },
-    {
-     "label": "교과성적 전체교과 70컷",
-     "value": 5.18
     }
    ],
    "ocr": false,
@@ -1758,16 +1790,12 @@
    "department": "데이터사이언스학과",
    "admission": "학생부종합 일반학생",
    "year": 2026,
-   "cut70": null,
-   "note": "교과성적 70컷이 주요교과·전체교과 두 열이라 어느 쪽이 70% 컷인지 정하지 않음",
+   "cut70": 5.55,
+   "note": "전체교과 기준",
    "other": [
     {
      "label": "교과성적 주요교과 70컷",
      "value": 5.72
-    },
-    {
-     "label": "교과성적 전체교과 70컷",
-     "value": 5.55
     }
    ],
    "ocr": false,
@@ -1836,16 +1864,12 @@
    "department": "컴퓨터공학과",
    "admission": "학생부종합 일반학생",
    "year": 2026,
-   "cut70": null,
-   "note": "교과성적 70컷이 주요교과·전체교과 두 열이라 어느 쪽이 70% 컷인지 정하지 않음",
+   "cut70": 4.36,
+   "note": "전체교과 기준",
    "other": [
     {
      "label": "교과성적 주요교과 70컷",
      "value": 4.35
-    },
-    {
-     "label": "교과성적 전체교과 70컷",
-     "value": 4.36
     }
    ],
    "ocr": false,
@@ -1917,15 +1941,11 @@
    "department": "인공지능학과",
    "admission": "학생부종합 일반학생",
    "year": 2026,
-   "cut70": null,
-   "note": "교과성적 70컷이 주요교과·전체교과 두 열이라 어느 쪽이 70% 컷인지 정하지 않음",
+   "cut70": 4.74,
+   "note": "전체교과 기준",
    "other": [
     {
      "label": "교과성적 주요교과 70컷",
-     "value": 4.74
-    },
-    {
-     "label": "교과성적 전체교과 70컷",
      "value": 4.74
     }
    ],
@@ -2617,6 +2637,20 @@
    "source_url": "https://ipsi.chungbuk.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000003237SxAbe&fileSn=2"
   }
  ],
+ "포항공과대학교 (본교(제1캠퍼스))": [
+  {
+   "department": null,
+   "admission": null,
+   "year": null,
+   "cut70": null,
+   "note": "입결 미공개로 보임",
+   "other": [],
+   "ocr": false,
+   "source_file": null,
+   "page": null,
+   "source_url": "https://adm-u.postech.ac.kr/entrance-exam/form/"
+  }
+ ],
  "한동대학교(포항)": [
   {
    "department": "전형 전체(학과 구분 없음)",
@@ -2882,7 +2916,7 @@
    "admission": "학생부종합 잠재능력우수자",
    "year": 2026,
    "cut70": null,
-   "note": "교과성적은 1~9등급 분포 칸만 있고 값이 적혀 있지 않음",
+   "note": "학종 성적 분포만 공개, 셀 값 없음",
    "other": [],
    "ocr": false,
    "source_file": "영남대학교_2026_수시입결.xlsx",
@@ -2894,7 +2928,7 @@
    "admission": "학생부종합 잠재능력우수자",
    "year": 2026,
    "cut70": null,
-   "note": "교과성적은 1~9등급 분포 칸만 있고 값이 적혀 있지 않음",
+   "note": "학종 성적 분포만 공개, 셀 값 없음",
    "other": [],
    "ocr": false,
    "source_file": "영남대학교_2026_수시입결.xlsx",
@@ -2906,7 +2940,7 @@
    "admission": "학생부종합 잠재능력우수자",
    "year": 2026,
    "cut70": null,
-   "note": "교과성적은 1~9등급 분포 칸만 있고 값이 적혀 있지 않음",
+   "note": "학종 성적 분포만 공개, 셀 값 없음",
    "other": [],
    "ocr": false,
    "source_file": "영남대학교_2026_수시입결.xlsx",
@@ -2918,7 +2952,7 @@
    "admission": "학생부종합 잠재능력우수자",
    "year": 2026,
    "cut70": null,
-   "note": "교과성적은 1~9등급 분포 칸만 있고 값이 적혀 있지 않음",
+   "note": "학종 성적 분포만 공개, 셀 값 없음",
    "other": [],
    "ocr": false,
    "source_file": "영남대학교_2026_수시입결.xlsx",
@@ -2930,7 +2964,7 @@
    "admission": "학생부종합 잠재능력우수자",
    "year": 2026,
    "cut70": null,
-   "note": "교과성적은 1~9등급 분포 칸만 있고 값이 적혀 있지 않음",
+   "note": "학종 성적 분포만 공개, 셀 값 없음",
    "other": [],
    "ocr": false,
    "source_file": "영남대학교_2026_수시입결.xlsx",
@@ -2942,7 +2976,7 @@
    "admission": "학생부종합 특성화고교졸업자",
    "year": 2026,
    "cut70": null,
-   "note": "교과성적은 1~9등급 분포 칸만 있고 값이 적혀 있지 않음",
+   "note": "학종 성적 분포만 공개, 셀 값 없음",
    "other": [],
    "ocr": false,
    "source_file": "영남대학교_2026_수시입결.xlsx",
@@ -2954,7 +2988,7 @@
    "admission": "학생부종합 특성화고교졸업자",
    "year": 2026,
    "cut70": null,
-   "note": "교과성적은 1~9등급 분포 칸만 있고 값이 적혀 있지 않음",
+   "note": "학종 성적 분포만 공개, 셀 값 없음",
    "other": [],
    "ocr": false,
    "source_file": "영남대학교_2026_수시입결.xlsx",
@@ -2966,7 +3000,7 @@
    "admission": "학생부종합 특성화고교졸업자",
    "year": 2026,
    "cut70": null,
-   "note": "교과성적은 1~9등급 분포 칸만 있고 값이 적혀 있지 않음",
+   "note": "학종 성적 분포만 공개, 셀 값 없음",
    "other": [],
    "ocr": false,
    "source_file": "영남대학교_2026_수시입결.xlsx",
@@ -2978,7 +3012,7 @@
    "admission": "학생부종합 특성화고교졸업자",
    "year": 2026,
    "cut70": null,
-   "note": "교과성적은 1~9등급 분포 칸만 있고 값이 적혀 있지 않음",
+   "note": "학종 성적 분포만 공개, 셀 값 없음",
    "other": [],
    "ocr": false,
    "source_file": "영남대학교_2026_수시입결.xlsx",
@@ -2990,7 +3024,7 @@
    "admission": "학생부종합 특성화고교졸업자",
    "year": 2026,
    "cut70": null,
-   "note": "교과성적은 1~9등급 분포 칸만 있고 값이 적혀 있지 않음",
+   "note": "학종 성적 분포만 공개, 셀 값 없음",
    "other": [],
    "ocr": false,
    "source_file": "영남대학교_2026_수시입결.xlsx",
@@ -3002,7 +3036,7 @@
    "admission": "학생부종합 특성화고졸재직자",
    "year": 2026,
    "cut70": null,
-   "note": "교과성적은 1~9등급 분포 칸만 있고 값이 적혀 있지 않음",
+   "note": "학종 성적 분포만 공개, 셀 값 없음",
    "other": [],
    "ocr": false,
    "source_file": "영남대학교_2026_수시입결.xlsx",
@@ -3210,6 +3244,20 @@
    "source_file": "연세대학교(서울)_2026_수시입결.pdf",
    "page": 2,
    "source_url": "https://admission.yonsei.ac.kr/seoul/download.asp?furl=bbs/202604201055398D4W8V.PDF&fname=2026%C7%D0%B3%E2%B5%B5+%BC%F6%BD%C3%B8%F0%C1%FD+%BC%B1%B9%DF%B0%E1%B0%FA%2Epdf"
+  }
+ ],
+ "고려대학교(서울)": [
+  {
+   "department": null,
+   "admission": null,
+   "year": null,
+   "cut70": null,
+   "note": "입결 미공개로 보임",
+   "other": [],
+   "ocr": false,
+   "source_file": null,
+   "page": null,
+   "source_url": "https://oku.korea.ac.kr/oku/cms/FR_CON/index.do?MENU_ID=1720"
   }
  ],
  "서강대학교(서울)": [

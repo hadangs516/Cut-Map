@@ -222,12 +222,12 @@ def open_pdf(fname):
 
 
 def mk(dept, admission, year, cut70, file, page, table, method, raw, cols=None, no70col=False, ocr=False, loc=None, ctx=None,
-       other=None, note=None, force=False, note_only=False):
+       other=None, note=None, force=False, note_only=False, match=None):
     """other: [{"label": 원문 열 이름, "value": 숫자}] 70% 컷이 아닌 공개 기준 값. note: 학교 쪽 설명(있으면 note 앞에 붙는다).
     force: IT 학과 대응을 거치지 않고 그대로 넣는 항목(학교 전체 값)."""
     return {"dept": dept, "admission": admission, "year": year, "cut70": cut70, "cols": cols or [], "file": file,
             "page": page, "table": table, "method": method, "raw": raw, "ocr": ocr, "no70col": no70col,
-            "loc": loc, "ctx": ctx, "other": other or [], "note": note, "force": force, "note_only": note_only}
+            "loc": loc, "ctx": ctx, "other": other or [], "note": note, "force": force, "note_only": note_only, "match": match}
 
 
 def others_from(vals, labels):
@@ -1156,17 +1156,20 @@ def ex_jbnu(ctx):
         note = None
         if c70 is None and isinstance(raw70, str) and raw70.strip():
             note = "70% 컷 칸 원문 표기: " + raw70.strip()
+        # 전북대만: 모집단위명이 "계열 이름(학과명)"이면 괄호 안 학과명으로 IT 학과 대응을 본다(표시 이름은 원문 그대로)
+        mm = re.match(r"^[^()]+\((.+)\)$", dept)
         out.append(mk(dept, "학생부종합 " + str(adm).strip(), 2026, c70, fname, xl_page(ws.title, r),
                       "시트 '%s', 열: 학생부 등급 > 최종등록자 > 70%% cut" % ws.title, "엑셀 셀(행=모집단위명, 열=머리말 이름)",
                       " | ".join(str(ws.cell(r, i).value) for i in (1, 2, 3)), other=oth,
-                      cols=["학생부 등급 최종등록자 평균, 50% cut"], no70col=False, note=note, note_only=bool(note)))
+                      cols=["학생부 등급 최종등록자 평균, 50% cut"], no70col=False, note=note, note_only=bool(note),
+                      match=mm.group(1) if mm else None))
     return out
 
 
 @extractor("제주대학교(제주)")
 def ex_jejunu(ctx):
     """시트 '전체성적'. 전형유형 칸이 '학생부종합'이고 모집시기가 '수시'인 블록만 쓴다(블록 = 성적구분 평균/50컷/70컷 세 줄).
-    교과성적 열이 '주요교과'와 '전체교과' 둘이라 어느 쪽이 70% 컷인지 정할 수 없어 cut70 은 비우고 두 70컷을 other 에 넣는다."""
+    교과성적 열은 '주요교과'와 '전체교과' 둘이다. 지시(#1005-69)로 전체교과 70컷을 cut70(note "전체교과 기준"), 주요교과 70컷을 other 로 쓴다."""
     fname = "제주대학교_2026_수시입결.xlsx"
     ws = openpyxl.load_workbook(src_path(fname), data_only=True, read_only=True)["전체성적"]
     head = list(ws.iter_rows(min_row=1, max_row=30, max_col=24, values_only=True))
@@ -1198,23 +1201,30 @@ def ex_jejunu(ctx):
             blk["txt"] = t.strip()
         if kind == "70컷":
             if blk["term"] == "수시" and blk["type"] == "학생부종합" and blk["dept"] and isinstance(blk["year"], int):
+                v_all = xl_num(blk["vals"].get(("70컷", "전체교과")))
+                v_main = xl_num(blk["vals"].get(("70컷", "주요교과")))
                 oth = []
-                for nm in ("주요교과", "전체교과"):
-                    v = xl_num(blk["vals"].get(("70컷", nm)))
-                    if v is not None:
-                        oth.append({"label": "교과성적 %s 70컷" % nm, "value": v})
-                note = "교과성적 70컷이 주요교과·전체교과 두 열이라 어느 쪽이 70% 컷인지 정하지 않음"
-                if not oth:
-                    # 70컷이 없으면(등록 인원이 적어 일부만 공개) 같은 줄에 공개된 50컷 두 값을 other 에 넣는다
-                    for nm in ("주요교과", "전체교과"):
-                        v = xl_num(blk["vals"].get(("50컷", nm)))
-                        if v is not None:
-                            oth.append({"label": "교과성적 %s 50컷" % nm, "value": v})
-                    note = blk["txt"] or "70% 컷 칸이 비어 있음"
-                out.append(mk(blk["dept"], "학생부종합 " + str(blk["adm"]), int(blk["year"]), None, fname, xl_page(ws.title, blk["row"]),
-                              "시트 '전체성적', 열: 교과성적 > 주요교과·전체교과 > 성적구분 70컷", "엑셀 셀(블록=평균/50컷/70컷 세 줄)",
+                c70, note = None, None
+                if v_all is not None:
+                    # 전체교과 70컷을 cut70 으로, 주요교과 70컷은 other 에 남긴다
+                    c70, note = v_all, "전체교과 기준"
+                    if v_main is not None:
+                        oth.append({"label": "교과성적 주요교과 70컷", "value": v_main})
+                else:
+                    if v_main is not None:
+                        oth.append({"label": "교과성적 주요교과 70컷", "value": v_main})
+                        note = "전체교과 70컷 칸이 비어 있음"
+                    else:
+                        # 70컷이 없으면(등록 인원이 적어 일부만 공개) 같은 줄에 공개된 50컷 두 값을 other 에 넣는다
+                        for nm in ("주요교과", "전체교과"):
+                            v = xl_num(blk["vals"].get(("50컷", nm)))
+                            if v is not None:
+                                oth.append({"label": "교과성적 %s 50컷" % nm, "value": v})
+                        note = blk["txt"] or "70% 컷 칸이 비어 있음"
+                out.append(mk(blk["dept"], "학생부종합 " + str(blk["adm"]), int(blk["year"]), c70, fname, xl_page(ws.title, blk["row"]),
+                              "시트 '전체성적', 열: 교과성적 > 전체교과 > 성적구분 70컷", "엑셀 셀(블록=평균/50컷/70컷 세 줄)",
                               " | ".join(str(x) for x in (blk["dept"], blk["term"], blk["type"], blk["adm"], blk["year"])),
-                              other=oth, no70col=True, note=note, note_only=True))
+                              other=oth, no70col=c70 is None, note=note, note_only=True))
             blk = None
     return out
 
@@ -1242,7 +1252,7 @@ def ex_yu(ctx):
             out.append(mk(dept, "학생부종합 " + str(adm).strip(), 2026, None, fname, xl_page(ws.title, r),
                           "시트 '%s', 열: 교과성적 분포(지원자) 1~9등급" % ws.title, "엑셀 셀(행=학과(부))",
                           " | ".join(str(ws.cell(r, i).value) for i in (1, 2, 3, 4)),
-                          no70col=True, note="교과성적은 1~9등급 분포 칸만 있고 값이 적혀 있지 않음", note_only=True))
+                          no70col=True, note="학종 성적 분포만 공개, 셀 값 없음", note_only=True))
     return out
 
 
@@ -1601,12 +1611,19 @@ def ex_kookmin(ctx):
 # 사용자 지시로 값 대신 note 만 넣는 마커
 SPECIAL = OrderedDict([
     ("서울대학교(서울)", {"note": "입결 미공개", "file": None, "reason": "받은 파일 없음(학종 자료 없음)"}),
+    ("고려대학교(서울)", {"note": "입결 미공개로 보임", "file": None, "reason": "받은 파일 없음(입결 미공개로 보임, 통합 공지 1~3쪽 확인: 사용자 2026-10-05)"}),
+    ("포항공과대학교 (본교(제1캠퍼스))", {"note": "입결 미공개로 보임", "file": None, "reason": "받은 파일 없음(입결 미공개로 보임)"}),
 ])
 
 
 def punct_key(name):
     """가운뎃점, 밑줄, 쉼표, 빗금까지 모두 뺀 비교용 키(근접 후보 보고에만 쓴다)."""
     return norm_dept(re.sub(r"[·_/,]", "", name or ""))
+
+
+def mname(r):
+    """IT 학과 대응에 쓰는 이름. 추출기가 match 를 정해 두면(전북대: 계열 이름(학과명)의 괄호 안 학과명) 그것을 쓴다."""
+    return r.get("match") or r["dept"]
 
 
 def process_school(marker, raws, it_names):
@@ -1616,7 +1633,7 @@ def process_school(marker, raws, it_names):
     for n in it_names:
         itmap[norm_dept(n)].append(n)
     forced = [r for r in raws if r.get("force")]
-    cand = [r for r in raws if not r.get("force") and norm_dept(r["dept"]) in itmap]
+    cand = [r for r in raws if not r.get("force") and norm_dept(mname(r)) in itmap]
     # 가장 최근 학년도만
     years = [r["year"] for r in cand if r["year"] is not None]
     latest = max(years) if years else None
@@ -1625,11 +1642,11 @@ def process_school(marker, raws, it_names):
     # 한 표(전형, 학년도) 안에서 끝말을 뗀 이름이 같은 행이 둘 이상이면: 이름 전체가 IT 학과명과 같은 행만 맞춘다
     by_key = defaultdict(list)
     for r in cand:
-        by_key[(r["admission"], r["year"], norm_dept(r["dept"]))].append(r)
+        by_key[(r["admission"], r["year"], norm_dept(mname(r)))].append(r)
     for key, g in by_key.items():
-        names = {exact_key(r["dept"]) for r in g}
+        names = {exact_key(mname(r)) for r in g}
         if len(names) > 1:
-            keep = [r for r in g if exact_key(r["dept"]) in exact_set]
+            keep = [r for r in g if exact_key(mname(r)) in exact_set]
             drop = [r for r in g if r not in keep]
             matched += keep
             if drop:
@@ -1639,7 +1656,7 @@ def process_school(marker, raws, it_names):
     # 같은 (이름, 전형, 학년도)가 여러 번: 값이 모두 같으면 하나, 다르면 버린다
     final, seen = [], OrderedDict()
     for r in matched:
-        seen.setdefault((exact_key(r["dept"]), r["admission"], r["year"]), []).append(r)
+        seen.setdefault((exact_key(mname(r)), r["admission"], r["year"]), []).append(r)
     for k, g in seen.items():
         if len({x["cut70"] for x in g}) > 1:
             dropped.append(("같은 이름·전형·학년도에 값이 서로 다른 행이 둘 이상", g))
@@ -1647,8 +1664,8 @@ def process_school(marker, raws, it_names):
             final.append(g[0])
     pairs = []
     for r in final:
-        e = exact_key(r["dept"])
-        same = [n for n in it_names if exact_key(n) == e] or itmap[norm_dept(r["dept"])]
+        e = exact_key(mname(r))
+        same = [n for n in it_names if exact_key(n) == e] or itmap[norm_dept(mname(r))]
         pairs.append((r["dept"], same[0] if len(set(same)) == 1 else " / ".join(sorted(set(same)))))
     # 근접 후보: 가운뎃점·밑줄 등까지 무시하면 같아지지만 규칙으로는 안 맞은 이름
     pk = defaultdict(list)
@@ -1656,9 +1673,9 @@ def process_school(marker, raws, it_names):
         pk[punct_key(n)].append(n)
     near = OrderedDict()
     for r in raws:
-        if r.get("force") or r["year"] != latest or norm_dept(r["dept"]) in itmap:
+        if r.get("force") or r["year"] != latest or norm_dept(mname(r)) in itmap:
             continue
-        k = punct_key(r["dept"])
+        k = punct_key(mname(r))
         if k in pk:
             near.setdefault((r["dept"], tuple(sorted(set(pk[k])))), r["admission"])
     return forced + final, sorted(set(pairs)), dropped, list(near.items()), latest

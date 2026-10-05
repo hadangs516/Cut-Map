@@ -16,8 +16,8 @@ robots.txt로 막혔던 학교와 입결 위치를 못 찾았던 학교는 Cowor
 | 입결 위치 미확인 | 0 | - |
 | 학종 자료 없음 | 1 | 서울대학교 |
 | 내려받기 실패 | 0 | - |
-| 입결 미공개로 보임 | 2 | 포항공과대학교, 대구경북과학기술원 |
-| 위치 미확인(통합 공지 2~3쪽 미확인) | 1 | 고려대학교(서울) |
+| 입결 미공개로 보임 | 3 | 포항공과대학교, 대구경북과학기술원, 고려대학교(서울) |
+| 위치 미확인(통합 공지 2~3쪽 미확인) | 0 | - |
 
 ## 목록
 
@@ -46,7 +46,7 @@ robots.txt로 막혔던 학교와 입결 위치를 못 찾았던 학교는 Cowor
 | C | 대구가톨릭대학교 | 대구가톨릭대학교(경산) | 대구가톨릭대학교_2026_수시입결_2.xlsx | https://ibsi.cu.ac.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000004342&fileSn=1 | 2026 | xlsx | 받음 | 같은 제목 .xlsx / 학종 문구 확인(종합전형, 학생부종합) |
 | D | 서울대학교 | 서울대학교(서울) | - | https://admission.snu.ac.kr/materials/stats/result | - | - | 학종 자료 없음 | v8: 성적 입결 자료 없음(입학본부 공개 범위는 선발현황·보도자료). 보도자료는 선발 결과 요약이라 받지 않음 |
 | D | 연세대학교(서울) | 연세대학교(서울) | 연세대학교(서울)_2026_수시입결.pdf | https://admission.yonsei.ac.kr/seoul/download.asp?furl=bbs/202604201055398D4W8V.PDF&fname=2026%C7%D0%B3%E2%B5%B5+%BC%F6%BD%C3%B8%F0%C1%FD+%BC%B1%B9%DF%B0%E1%B0%FA%2Epdf | 2026 | pdf | 받음 | 2026학년도 수시모집 선발결과.pdf / 학종 문구 확인(학생부종합) |
-| D | 고려대학교(서울) | 고려대학교(서울) | - | https://oku.korea.ac.kr/oku/cms/FR_CON/index.do?MENU_ID=1720 | - | - | 위치 미확인(통합 공지 2~3쪽 미확인) | Cowork 조사(cowork_20261005_47, #1005-53). 확인한 주소: https://oku.korea.ac.kr/oku/cms/FR_CON/index.do?MENU_ID=1720 ; https://oku.korea.ac.kr/oku/cms/FR_CON/index.do?MENU_ID=590 ; https://oku.korea.ac.kr/oku/cms/FR_CON/index.do?MENU_ID=750 / 수시 지원율통계의 게시글은 모두 학년도별 수시모집 최종경쟁률(지원 현황)이며 입결이 아님. 입학자료실은 본문이 비어 있음. 통합 공지사항은 23건 중 1쪽 10건의 제목만 확인했고 2쪽과 3쪽은 쪽 이동이 되지 않아 확인하지 못함. 입학도우미의 고교별 합격자 조회와 신청 및 조회 메뉴는 조회·신청형이라 열지 않음. 이전 지시에서도 지원율통계(경쟁률)만 있고 입결 파일 위치는 미확인이었음 |
+| D | 고려대학교(서울) | 고려대학교(서울) | - | https://oku.korea.ac.kr/oku/cms/FR_CON/index.do?MENU_ID=1720 | - | - | 입결 미공개로 보임 | 통합 공지 1~3쪽 확인(사용자, 2026-10-05) / Cowork 조사(cowork_20261005_47, #1005-53). 확인한 주소: https://oku.korea.ac.kr/oku/cms/FR_CON/index.do?MENU_ID=1720 ; https://oku.korea.ac.kr/oku/cms/FR_CON/index.do?MENU_ID=590 ; https://oku.korea.ac.kr/oku/cms/FR_CON/index.do?MENU_ID=750 / 수시 지원율통계의 게시글은 모두 학년도별 수시모집 최종경쟁률(지원 현황)이며 입결이 아님. 입학자료실은 본문이 비어 있음. 통합 공지사항은 23건 중 1쪽 10건의 제목만 확인했고 2쪽과 3쪽은 쪽 이동이 되지 않아 확인하지 못함. 입학도우미의 고교별 합격자 조회와 신청 및 조회 메뉴는 조회·신청형이라 열지 않음. 이전 지시에서도 지원율통계(경쟁률)만 있고 입결 파일 위치는 미확인이었음 |
 | D | 서강대학교 | 서강대학교(서울) | 서강대학교_2026_수시입결.pdf | https://admission.sogang.ac.kr/upload/GUIDES/20260602150120JNQJPH.pdf | 2026 | pdf | 받음 | 2026학년도 서강대학교 입시결과.pdf (PDF 확대보기 링크, 수시·정시 통합) / 학종 문구 확인(학생부종합) / 수시·정시 통합 파일 |
 | D | 성균관대학교(수원) | 성균관대학교 (본교(제2캠퍼스)) | 성균관대학교(수원)_2026_수시입결.pdf | https://admission.skku.edu/common/download.php?fpath=board/2026041019340236ADBE.pdf&fname=%5B%EC%84%B1%EA%B7%A0%EA%B4%80%EB%8C%80%5D+2026%ED%95%99%EB%85%84%EB%8F%84+%EB%8C%80%EC%9E%85%EC%A0%84%ED%98%95+%EA%B2%B0%EA%B3%BC.pdf | 2026 | pdf | 받음 | [성균관대] 2026학년도 대입전형 결과.pdf / 텍스트에서 학종 문구를 찾지 못함 / 텍스트 층이 없는 PDF(이미지)라 학종 포함 여부 미확인 |
 | D | 한양대학교(서울) | 한양대학교(서울) | 한양대학교(서울)_2024-2026_수시입결.pdf | https://go.hanyang.ac.kr/file/download.do?menu=board&file_no=20773&type=B_1_8 | 2024-2026 | pdf | 받음 | 수시 2024 - 2026 전형별 입시결과 (게시 2026.05.11) / 학종 문구 확인(면접형, 서류, 학생부종합) / 2024~2026 전형별 입시결과 한 파일(41MB) |
