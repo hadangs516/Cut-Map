@@ -1714,6 +1714,17 @@ def collect(only=None):
     return results, url_by_file, url_by_marker
 
 
+# 지원 자격이 제한된 전형(#1005-71): 전형명에 아래 말이 그대로 들어 있으면 restricted=true. 띄어쓰기는 고치지 않는다.
+RESTRICT_WORDS = ["기회균형", "기회균등", "고른기회", "농어촌", "특성화", "재직자", "특수교육", "평생학습", "사회공헌", "사회통합",
+                  "사회배려", "저소득", "기초생활", "차상위", "북한이탈", "서해5도", "다문화", "군인", "보훈", "장애"]
+# 위 말에 걸리지 않지만 이름상 자격 제한으로 보일 수 있는 전형(바꾸지 않고 보고만 한다)
+SUSPECT_WORDS = ["지역", "서해", "배려", "기여", "추천", "SW", "sw", "소프트웨어", "불교"]
+
+
+def is_restricted(admission):
+    return bool(admission) and any(w in admission for w in RESTRICT_WORDS)
+
+
 def counts(res):
     """(70% 컷 값 있는 행, 70% 컷 없이 other 만 있는 행, 값이 하나도 없는 행)"""
     if res["special"]:
@@ -1732,12 +1743,12 @@ def to_json(results, url_by_file, url_by_marker):
             sp = res["special"]
             fname = sp.get("file")
             items.append(OrderedDict([("department", None), ("admission", None), ("year", None), ("cut70", None),
-                                      ("note", sp["note"]), ("other", []), ("ocr", False), ("source_file", fname), ("page", sp.get("page")),
+                                      ("note", sp["note"]), ("other", []), ("ocr", False), ("restricted", False), ("source_file", fname), ("page", sp.get("page")),
                                       ("source_url", url_by_file.get(fname) if fname else url_by_marker.get(marker))]))
         for r in res["entries"]:
             fname = r["file"].split(" > ")[0]
             items.append(OrderedDict([("department", r["dept"]), ("admission", r["admission"]), ("year", r["year"]),
-                                      ("cut70", r["cut70"]), ("note", build_notes(r)), ("other", r["other"]), ("ocr", bool(r["ocr"])),
+                                      ("cut70", r["cut70"]), ("note", build_notes(r)), ("other", r["other"]), ("ocr", bool(r["ocr"])), ("restricted", is_restricted(r["admission"])),
                                       ("source_file", fname), ("page", r["page"]), ("source_url", url_by_file.get(fname))]))
         if items:
             out[marker] = items
@@ -1835,6 +1846,31 @@ def write_review(results, markers):
             anyd = True
             L.append("- **%s**: %s: " % (m, why) + "; ".join("%s(%s) %s" % (r["dept"], r["admission"], r["cut70"]) for r in rows))
     if not anyd:
+        L.append("- 없음")
+    L.append("")
+    L.append("## 지원 자격 제한 전형 판정(restricted)")
+    L.append("")
+    L.append("전형명에 다음 말 중 하나가 그대로 들어 있으면 restricted=true, 아니면 false: " + ", ".join(RESTRICT_WORDS) + ". 색 계산에서는 true 인 항목을 뺀다.")
+    L.append("")
+    suspects = []
+    for m, res in results.items():
+        seen = OrderedDict()
+        for r in res["entries"]:
+            if r["admission"]:
+                seen[r["admission"]] = is_restricted(r["admission"])
+        if not seen:
+            continue
+        L.append("- **%s**: " % m + "; ".join("%s = %s" % (a, "true" if v else "false") for a, v in seen.items()))
+        for a, v in seen.items():
+            if not v and any(w in a for w in SUSPECT_WORDS):
+                suspects.append((m, a))
+    L.append("")
+    L.append("### 위 말에 걸리지 않지만 이름상 자격 제한으로 보일 수 있는 전형(false 그대로 둠, 판단 필요)")
+    L.append("")
+    if suspects:
+        for m, a in suspects:
+            L.append("- %s: %s" % (m, a))
+    else:
         L.append("- 없음")
     L.append("")
     L.append("## 학교마다 값 하나와 주변 원문 글자 3줄")

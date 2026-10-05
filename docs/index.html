@@ -141,6 +141,7 @@ main{position:relative;flex:1;min-height:0}
     <div class="lg"><i class="dot g-mid"></i>적정: −0.3 초과 0.3 미만</div>
     <div class="lg"><i class="dot g-hi"></i>상향: ≤ −0.3</div>
     <div class="lg"><i class="dot g-none"></i>회색: 등급 미입력 또는 cut70 없음</div>
+    <div class="lg">색은 지원 자격 제한 전형을 빼고 계산합니다</div>
     <p>학종은 등급만으로 합격이 정해지지 않으므로 참고용입니다</p>
   </div>
 </main>
@@ -199,9 +200,11 @@ function latestOnly(list){
     return yearNum(d && d.year) === best[k];
   });
 }
-/* 학과 하나: 차이 = cut70 - 입력 등급. 등급이 비었거나 cut70이 없으면 none */
+/* restricted(지원 자격 제한 전형)가 true 인 항목은 색 계산에서 뺀다 */
+function isRestricted(d){ return !!d && d.restricted === true; }
+/* 학과 하나: 차이 = cut70 - 입력 등급. 등급이 비었거나 cut70이 없거나 지원 자격 제한 전형이면 none */
 function deptLevel(d, grade){
-  if(grade == null || !hasCut(d)) return 'none';
+  if(grade == null || !hasCut(d) || isRestricted(d)) return 'none';
   return levelOf(d.cut70 - grade);
 }
 /* 마커: 학과 중 차이가 가장 큰 학과 기준 */
@@ -209,7 +212,7 @@ function markerLevel(depts, grade){
   if(grade == null || !Array.isArray(depts)) return 'none';
   var best = null;
   latestOnly(depts).forEach(function(d){
-    if(!hasCut(d)) return;
+    if(!hasCut(d) || isRestricted(d)) return;
     var diff = d.cut70 - grade;
     if(best === null || diff > best) best = diff;
   });
@@ -331,7 +334,7 @@ function deptNode(d){
   }
   li.appendChild(el('div', 'd1', d && d.department ? d.department : '(학과명 없음)'));
   var row = el('div', 'd2');
-  row.appendChild(el('span', '', d && d.admission ? d.admission : '전형명 없음'));
+  row.appendChild(el('span', '', (d && d.admission ? d.admission : '전형명 없음') + (isRestricted(d) ? ' (지원 자격 제한)' : '')));
   row.appendChild(el('span', '', fmtYear(d && d.year) || '학년도 없음'));
   var cutTxt = fmtCut(d && d.cut70);
   var others = otherList(d);
