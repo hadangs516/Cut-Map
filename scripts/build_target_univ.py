@@ -46,8 +46,14 @@ TARGETS = [
     ("E", "상명대학교(서울)", "상명대학교", "서울"), ("E", "명지대학교", "명지대학교", "전체"), ("E", "한성대학교", "한성대학교", None),
     ("E", "삼육대학교", "삼육대학교", None), ("E", "서경대학교", "서경대학교", None), ("E", "한국외국어대학교(글로벌캠퍼스)", "한국외국어대학교", "용인시"),
 ]
-GROUP_NAME = OrderedDict([("A", "지역거점국립대"), ("B", "포항"), ("C", "대구·경산"), ("D", "서울·수도권 대상"), ("E", "서울·수도권 보류")])
+GROUP_NAME = OrderedDict([("A", "지역거점국립대"), ("B", "포항"), ("C", "대구·경산"), ("D", "서울·수도권 대상")])
+GROUP_E_NAME = "서울·수도권 보류"
 E_MEMO = "교과전형 IT 학과 70% 컷을 확인한 뒤 9등급제 4.0보다 나쁘면 대상에서 뺀다."
+# #1005-43 결정(#1005-45 작업 111): 그룹 E 전체, 대구한의대학교, 서경대학교는 대상에서 뺀다. 대구경북과학기술원은 그룹 C 대상으로 넣고 "지도 마커 없음"으로 표시한다.
+EXCLUDED_GROUPS = {"E"}
+EXCLUDED_NAMES = {"대구한의대학교", "서경대학교"}
+EXCLUDE_LABEL = "제외(#1005-43 결정)"
+NO_MARKER = "(지도 마커 없음)"
 
 
 def cells(line):
@@ -168,10 +174,19 @@ def main():
 
     out = []
     reports = []
+    excluded = []
     others = []
     used_markers = set()
     for grp, tname, univ, rule in TARGETS:
         cand = [m for m in data if m["univ"] == univ]
+        if tname == "대구경북과학기술원":   # 지도 마커 없음, 그래도 그룹 C 대상으로 넣는다
+            m = OrderedDict([("univ", univ), ("campus", NO_MARKER), ("region", "영남"), ("address", "")])
+            st8, row8, raw8 = v8_status(m, "")
+            out.append(OrderedDict([
+                ("group", grp), ("target", tname), ("marker", NO_MARKER), ("univ", univ), ("region", "영남"), ("address", None),
+                ("itStatus", "지도 마커 없음"), ("ipgyeol", st8), ("ipgyeolRow", row8), ("ipgyeolRaw", raw8),
+                ("jeongsi2027", "행 없음"), ("jeongsiRaw", ""), ("plan2028", "행 없음"), ("planRaw", ""), ("tuition", "마커 없음"), ("dorm", "마커 없음"), ("kedi", "")]))
+            continue
         if not cand:
             reports.append(OrderedDict([("group", grp), ("target", tname), ("reason", "지도 마커에 '%s' 마커가 없음" % univ)]))
             continue
@@ -199,6 +214,10 @@ def main():
             if len(picks) != 1:
                 reports.append(OrderedDict([("group", grp), ("target", tname), ("reason", "'%s' 조건에 맞는 마커가 하나로 정해지지 않음: %s" % (rule, " / ".join(m["campus"] for m in cand)))]))
                 continue
+        if grp in EXCLUDED_GROUPS or tname in EXCLUDED_NAMES:
+            for m in picks:
+                excluded.append(OrderedDict([("group", grp), ("target", tname), ("marker", m["campus"]), ("itStatus", m["itStatus"]), ("label", EXCLUDE_LABEL)]))
+            continue
         for m in picks:
             it = m["itStatus"]
             if it != "IT있음":
@@ -218,7 +237,7 @@ def main():
                 ("kedi", kedi_kind(m))]))
     doc = OrderedDict([("note", ["scripts/build_target_univ.py 가 만든다. 마커와 기존 조사 기록은 바꾸지 않았다.",
                                  "상태는 v8(1장 입결 위치, 7장 시행계획), 2027 정시 요강 누적 파일(조사 완료 대학 표), docs/data/academyinfo.json 에서 읽었다."]),
-                       ("groups", GROUP_NAME), ("groupE", E_MEMO), ("targets", out), ("otherCampus", others), ("reports", reports)])
+                       ("groups", GROUP_NAME), ("groupE", E_MEMO), ("targets", out), ("otherCampus", others), ("excluded", excluded), ("reports", reports)])
     with io.open(OUT_JSON, "w", encoding="utf-8", newline="\n") as f:
         json.dump(doc, f, ensure_ascii=False, indent=1)
         f.write("\n")
@@ -247,8 +266,6 @@ def main():
     for g, gn in GROUP_NAME.items():
         rows = [r for r in out if r["group"] == g]
         rv += ["## 그룹 %s %s (%d)" % (g, gn, len(rows)), ""]
-        if g == "E":
-            rv += ["메모: " + E_MEMO, ""]
         if g == "A":
             rv += ["그룹 A는 KEDI 2026 고등교육통계에서 본분교 값이 본교(제1캠퍼스)인 마커만 대상이다. 같은 학교의 다른 마커는 목록 끝의 \"다른 캠퍼스(대상 아님)\"에 있다.", ""]
         rv += ["| 그룹 | 마커 이름 | IT 학과 유무 | 입결 위치 상태 | 2027 정시 요강 상태 | 2028 시행계획 위치 상태 | 등록금 값 유무 | 기숙사 값 유무 |", "|---|---|---|---|---|---|---|---|"]
@@ -270,6 +287,10 @@ def main():
     for r in out:
         if r["ipgyeol"] in ("기타", "행 확정 못함", "행 없음", "보류") or r["ipgyeolRow"] is None:
             rv.append("| %s | %s | %s |" % (r["marker"], r["ipgyeolRow"], (r["ipgyeolRaw"] or "")[:80].replace("|", "/")))
+    rv += ["", "## %s" % EXCLUDE_LABEL, "", "사용자가 조사 대상에서 뺐다. 그룹 E 전체(메모: %s), 대구한의대학교, 서경대학교이며 마커와 기존 조사 기록은 그대로 둔다." % E_MEMO, "",
+           "| 그룹 | 목록의 이름 | 마커 이름 | IT 학과 유무 |", "|---|---|---|---|"]
+    for e in excluded:
+        rv.append("| %s | %s | %s | %s |" % (e["group"], e["target"], e["marker"], e["itStatus"]))
     rv.append("")
     with io.open(OUT_MD, "w", encoding="utf-8", newline="\n") as f:
         f.write("\n".join(rv))

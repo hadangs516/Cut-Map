@@ -37,3 +37,7 @@ univ_major_scope.json
 # 점검 산출물
 audit_repo_files.json
 sources/2028_plan/
+
+# 예외: 사용자가 공개 저장소에 올리는 것을 승인한 입결 원본(#1005-42, #1005-45 작업 112)
+!sources/ipgyeol/
+!sources/ipgyeol/*
