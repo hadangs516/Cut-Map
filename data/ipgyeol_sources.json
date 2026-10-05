@@ -2,23 +2,25 @@
  "note": [
   "작업 112·113(#1005-45). 학종(학생부종합전형) IT 계열 입결 자료를 대상 학교별로 찾아 sources/ipgyeol/ 에 받았다.",
   "상태는 받음, robots 차단, 허용 도메인 밖, 입결 위치 미확인, 학종 자료 없음, 내려받기 실패 중 하나다.",
-  "학교별 상태(school_status)는 받은 파일이 하나라도 있으면 받음이다."
+  "학교별 상태(school_status)는 받은 파일이 하나라도 있으면 받음이다.",
+  "작업 116(#1005-52): cowork_20261005_45·46번에 적힌 10개 학교의 원본 파일이 sources/ipgyeol/에 있음을 파일명과 크기로 확인하고 상태를 받음으로 바꿨다. 국민대학교는 조사 중(cs.u-is.co.kr 허용 후 재조사).",
+  "작업 116(#1005-52): cowork_20261005_45·46번에 적힌 10개 학교의 원본 파일이 sources/ipgyeol/에 있음을 파일명과 크기로 확인하고 상태를 받음으로 바꿨다. 국민대학교는 조사 중(cs.u-is.co.kr 허용 후 재조사)."
  ],
  "school_status": {
   "강원대학교": "받음",
-  "경북대학교": "robots 차단",
-  "경상국립대학교": "robots 차단",
+  "경북대학교": "받음",
+  "경상국립대학교": "받음",
   "부산대학교": "받음",
-  "전남대학교": "robots 차단",
-  "전북대학교": "robots 차단",
-  "제주대학교": "robots 차단",
-  "충남대학교": "robots 차단",
+  "전남대학교": "받음",
+  "전북대학교": "받음",
+  "제주대학교": "받음",
+  "충남대학교": "받음",
   "충북대학교": "받음",
   "포항공과대학교": "입결 위치 미확인",
   "한동대학교": "받음",
-  "계명대학교": "robots 차단",
+  "계명대학교": "받음",
   "대구경북과학기술원": "입결 위치 미확인",
-  "영남대학교": "robots 차단",
+  "영남대학교": "받음",
   "대구대학교": "받음",
   "대구가톨릭대학교": "받음",
   "서울대학교": "학종 자료 없음",
@@ -28,13 +30,13 @@
   "성균관대학교(수원)": "받음",
   "한양대학교(서울)": "받음",
   "한양대학교(ERICA)": "받음",
-  "서울시립대학교": "robots 차단",
-  "중앙대학교(서울)": "robots 차단",
+  "서울시립대학교": "받음",
+  "중앙대학교(서울)": "받음",
   "경희대학교(국제캠퍼스)": "받음",
   "건국대학교(서울)": "받음",
   "동국대학교(서울)": "받음",
   "홍익대학교(서울)": "받음",
-  "국민대학교": "robots 차단",
+  "국민대학교": "조사 중(cs.u-is.co.kr 허용 후 재조사)",
   "숭실대학교": "받음",
   "세종대학교": "받음",
   "광운대학교": "받음",
@@ -68,23 +70,23 @@
    "group": "A·C(겹침)",
    "school": "경북대학교",
    "marker": "경북대학교(대구)",
-   "file": "-",
+   "file": "경북대학교_2026_수시입결.xlsx",
    "url": "https://ipsi1.knu.ac.kr/data/view.php?r=FxlcTxxJV0FHAHIbHAY6WQ9CEEogPWAvMyE1S0M4CAMAEEc",
    "year": "2026",
-   "format": "-",
-   "status": "robots 차단",
-   "note": "2026 수시/정시 전형결과 게시글(통합자료실) | robots.txt 있음: 차단 | User-agent: * Disallow: /"
+   "format": "xlsx",
+   "status": "받음",
+   "note": "Cowork 직접 내려받기(cowork_20261005_45, #1005-50). 학종 포함 여부와 근거: 포함. 근거는 시트 이름 \"5.학생부종합(일반학생)\", \"6.학생부종합(지역인재)\", \"7.학생부종합(농어촌)\", \"8.학생부종합(영농창업인재)\", \"9.학생부종합(SW특별)\"과 목차 시트 \"2026학년도 전형 결과 목차\""
   },
   {
    "group": "A",
    "school": "경상국립대학교",
    "marker": "경상국립대학교 (본교(제1캠퍼스))",
-   "file": "-",
+   "file": "경상국립대학교_2026_수시입결.pdf",
    "url": "https://www.gnu.ac.kr/common/fileDownload.do?fileKey=65036",
    "year": "2026",
-   "format": "-",
-   "status": "robots 차단",
-   "note": "2026학년도 수시모집 결과(다운로드) — 게시글은 열렸으나 파일 경로가 robots 차단 | robots.txt 있음: 차단 | User-agent: * Disallow: /editor/ Disallow: /excel/ Disallow: | 게시글은 열렸으나 파일 경로(/common/fileDownload.do)가 robots.txt로 막힘"
+   "format": "pdf",
+   "status": "받음",
+   "note": "Cowork 직접 내려받기(cowork_20261005_45, #1005-50). 학종 포함 여부와 근거: 포함. 근거는 20쪽 중 5~20쪽의 머리글 \"수시모집 입학결과[학생부종합]\""
   },
   {
    "group": "A",
@@ -101,45 +103,45 @@
    "group": "A",
    "school": "전남대학교",
    "marker": "전남대학교 (본교(제1캠퍼스))",
-   "file": "-",
+   "file": "전남대학교_2026_수시입결.xlsx",
    "url": "https://admission.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=423&bbsMode=view&page=1&key=26",
    "year": "2026",
-   "format": "-",
-   "status": "robots 차단",
-   "note": "2026학년도 대입전형 입시 결과분석 자료 공고(수시_공개.xlsx) | robots.txt 있음: 차단 | ﻿# 전체 차단\r User-agent: *\r Disallow: /\r \r User-agent: Googlebo"
+   "format": "xlsx",
+   "status": "받음",
+   "note": "Cowork 직접 내려받기(cowork_20261005_45, #1005-50). 학종 포함 여부와 근거: 포함. 근거는 전형명 표기 \"학생부종합(고교생활우수자Ⅰ)\", \"학생부종합(고교생활우수자Ⅱ)\", \"학생부종합(후계농업경영인)\", \"학생부종합(조기취업형계약학과)\""
   },
   {
    "group": "A",
    "school": "전북대학교",
    "marker": "전북대학교(전주)",
-   "file": "-",
-   "url": "https://enter.jbnu.ac.kr/detail.do?search_key=title&searchNo=&searchtext=&menuurl=vQ5Um0%2FKclp6EAegmwbvhQ%3D%3D&board_seq=43573&pageNo=1&categoryid=8&value=",
+   "file": "전북대학교_2026_수시입결.xlsx",
+   "url": "https://enter.jbnu.ac.kr/detail.do?search_key=title&searchNo=&searchtext=&menuurl=bmyV1ovIAzYtqDXLjUSVtw%3D%3D&board_seq=43571&pageNo=1&categoryid=7&value=",
    "year": "2026",
-   "format": "-",
-   "status": "robots 차단",
-   "note": "v8에 있는 전북대 입결 위치는 2026 정시 게시글 하나뿐 | robots.txt 있음: 차단 | User-agent: * Disallow: /"
+   "format": "xlsx",
+   "status": "받음",
+   "note": "Cowork 직접 내려받기(cowork_20261005_45, #1005-50). 학종 포함 여부와 근거: 포함. 근거는 글 제목 \"수시(학생부종합) 입시 결과 안내\", 첨부 파일명 \"전북대학교 2026학년도 수시(학생부종합) 입시결과(공개용).xlsx\", 시트 이름 \"수시모집-학생부종합전형\", 전형구분 표기 \"농어촌학생(종합)\""
   },
   {
    "group": "A",
    "school": "제주대학교",
    "marker": "제주대학교(제주)",
-   "file": "-",
-   "url": "https://ibsi.jejunu.ac.kr/10000048?mode=view&bbs_seq=45701&categorycode=57",
+   "file": "제주대학교_2026_수시입결.xlsx",
+   "url": "https://ibsi.jejunu.ac.kr/files/ibsi/content/202605/d1d48e51aa241bd6096bbcba0bdecc5f.xlsx",
    "year": "2026",
-   "format": "-",
-   "status": "robots 차단",
-   "note": "(게시용)최근 3개 학년도 입시 결과자료.xlsx | robots.txt 있음: 차단 | User-agent: * Disallow: /  User-agent:Yeti User-agent:Google"
+   "format": "xlsx",
+   "status": "받음",
+   "note": "Cowork 직접 내려받기(cowork_20261005_45, #1005-50). 학종 포함 여부와 근거: 포함. 근거는 전형유형 표기 \"학생부종합\", \"학생부교과\", 모집시기 표기 \"수시\", \"정시\", 시트 이름 \"전체성적\", \"세부과목성적\""
   },
   {
    "group": "A",
    "school": "충남대학교",
    "marker": "충남대학교(대전)",
-   "file": "-",
-   "url": "https://ipsi.cnu.ac.kr/html/uadm/",
+   "file": "충남대학교_2026_수시입결.pdf",
+   "url": "https://ipsi.cnu.ac.kr/_prog/_board/?mode=V&no=2025630&code=recsroom_01&site_dvs_cd=uadm&menu_dvs_cd=0105&skey=&sval=&site_dvs=&GotoPage=",
    "year": "2026",
-   "format": "-",
-   "status": "robots 차단",
-   "note": "2026 수시모집 결과 안내 공지(입학정보 메인) | robots.txt 있음: 차단 | User-agent: *\r Disallow : /\r Disallow : /_hamTool/\r"
+   "format": "pdf",
+   "status": "받음",
+   "note": "Cowork 직접 내려받기(cowork_20261005_46, #1005-50). 학종 포함 여부와 근거: 포함. 근거는 글 제목의 \"교과 및 종합 성적\"과 PDF 27쪽 중 12쪽 머리글 \"종합전형은 서류평가로...\"(종합전형 구간)"
   },
   {
    "group": "A",
@@ -200,12 +202,12 @@
    "group": "C",
    "school": "계명대학교",
    "marker": "계명대학교(대구)",
-   "file": "-",
+   "file": "계명대학교_2026_수시입결.pdf",
    "url": "https://www.gokmu.ac.kr/service/board.htm?bbsid=result&mode=view&bltn_seq=85112",
    "year": "2026",
-   "format": "-",
-   "status": "robots 차단",
-   "note": "2026학년도 신입생 수시모집 성적현황.pdf | robots.txt 있음: 차단 | User-agent: * Disallow: /"
+   "format": "pdf",
+   "status": "받음",
+   "note": "Cowork 직접 내려받기(cowork_20261005_46, #1005-50). 학종 포함 여부와 근거: 포함. 근거는 PDF 2쪽 표의 열 머리글 \"학생부종합 일반전형\"(쪽 제목은 \"학생부교과 일반전형\", \"학생부교과 지역전형\")"
   },
   {
    "group": "C",
@@ -222,12 +224,12 @@
    "group": "C",
    "school": "영남대학교",
    "marker": "영남대학교(경산)",
-   "file": "-",
+   "file": "영남대학교_2026_수시입결.xlsx",
    "url": "https://enter.yu.ac.kr/10000011?mode=view&bbs_seq=1223",
    "year": "2026",
-   "format": "-",
-   "status": "robots 차단",
-   "note": "2026학년도 수시모집 입학자 성적_게시용.xlsx | robots.txt 있음: 차단 | User-agent: * Disallow: /"
+   "format": "xlsx",
+   "status": "받음",
+   "note": "Cowork 직접 내려받기(cowork_20261005_46, #1005-50). 학종 포함 여부와 근거: 포함. 근거는 시트 이름 \"잠재능력우수자\", \"특성화고교졸업,특성화고졸재직\"과 표 제목 \"[학생부종합]잠재능력우수자전형, 지역인재(의약) 입학자 성적\", \"[학생부종합]특성화고교졸업자, 특성화고졸재직자전형 입학자 성적\""
   },
   {
    "group": "C",
@@ -354,12 +356,12 @@
    "group": "D",
    "school": "서울시립대학교",
    "marker": "서울시립대학교(서울)",
-   "file": "-",
+   "file": "서울시립대학교_2026_수시입결.pdf",
    "url": "https://admission.uos.ac.kr/common/board-download.do?listId=K7&seq=35&fSeq=3",
    "year": "2026",
-   "format": "-",
-   "status": "robots 차단",
-   "note": "붙임3. 2026학년도 수시모집 최종등록자 성적 현황(학생부종합위주) — 파일 경로가 robots 차단(붙임4도 같음) | robots.txt 있음: 차단 | User-agent: * Disallow: /exsignon/ Disallow: /search/  Disal | 게시글은 열렸으나 파일 경로(/common/board-download.do)가 robots.txt로 막힘. 학종 파일은 붙임3·붙임4"
+   "format": "pdf",
+   "status": "받음",
+   "note": "Cowork 직접 내려받기(cowork_20261005_46, #1005-50). 학종 포함 여부와 근거: 포함. 근거는 파일 제목 \"(학생부종합위주)\"와 1쪽 제목 \"2026학년도 수시모집 최종등록자 성적 현황(학생부종합Ⅰ·Ⅱ, 기회균형Ⅰ, 사회공헌·통합전형)\""
   },
   {
    "group": "D",
@@ -369,19 +371,19 @@
    "url": "https://admission.uos.ac.kr/common/board-download.do?listId=K7&seq=35&fSeq=4",
    "year": "2026",
    "format": "-",
-   "status": "robots 차단",
-   "note": "붙임4. 2026학년도 수시모집 최종등록자 고교유형별 성적 현황(학생부종합위주).pdf | robots.txt 있음: 차단 | User-agent: * Disallow: /exsignon/ Disallow: /search/  Disal | 게시글은 열렸으나 파일 경로(/common/board-download.do)가 robots.txt로 막힘. 학종 파일은 붙임3·붙임4"
+   "status": "받지 않음(붙임3으로 학교는 받음)",
+   "note": "붙임4. …고교유형별 성적 현황(학생부종합위주).pdf | Cowork는 붙임3만 받고 붙임4는 받지 않음(cowork_20261005_46)"
   },
   {
    "group": "D",
    "school": "중앙대학교(서울)",
    "marker": "중앙대학교(서울)",
-   "file": "-",
-   "url": "https://admission.cau.ac.kr/files/2027/becaus_news_s_2027.pdf",
+   "file": "중앙대학교_2026_수시입결.pdf",
+   "url": "https://admission.cau.ac.kr/detail.do?menuurl=%2Bwb2%2F2YpjUGJjmg2NfyS6Q%3D%3D&board_seq=3235&pageNo=1&categoryid=11",
    "year": "2026",
-   "format": "-",
-   "status": "robots 차단",
-   "note": "BECAUS NEWS 수시 입시결과 뉴스레터 | robots.txt 있음: 차단 | User-agent: * Disallow: /  User-agent: Googlebot Allow: / Di"
+   "format": "pdf",
+   "status": "받음",
+   "note": "Cowork 직접 내려받기(cowork_20261005_46, #1005-50). 학종 포함 여부와 근거: 포함으로 보임. 근거는 PDF 2쪽 중 2쪽 제목 \"중앙대학교 2026학년도 수시모집 입시결과\"와 전형명 표기 \"CAU융합형\", \"CAU탐구형\". \"학생부종합\" 글자는 1쪽(2027학년도 입학전형 주요 변경사항)에만 있고 2쪽 결과 부분에는 없음"
   },
   {
    "group": "D",
@@ -446,8 +448,8 @@
    "url": "https://admission.kookmin.ac.kr/main.php?kw=047359",
    "year": "2026",
    "format": "-",
-   "status": "robots 차단",
-   "note": "입학처 메인(2026 학생부교과·학생부종합 입시결과 안내 배너) | robots.txt 있음: 차단 | # 기본: 모든 User-agent 차단 User-agent: * Disallow: /  # 허용: 주요 검"
+   "status": "조사 중(cs.u-is.co.kr 허용 후 재조사)",
+   "note": "입학처 메인(2026 학생부교과·학생부종합 입시결과 안내 배너). #1005-51 결정으로 cs.u-is.co.kr을 허용 도메인에 추가, 허용 후 재조사 예정 | cowork_20261005_46에는 국민대 결과 없음"
   },
   {
    "group": "D",
