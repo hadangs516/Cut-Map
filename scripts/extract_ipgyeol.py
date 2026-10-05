@@ -1721,8 +1721,35 @@ RESTRICT_WORDS = ["기회균형", "기회균등", "고른기회", "농어촌", "
 SUSPECT_WORDS = ["지역", "서해", "배려", "기여", "추천", "SW", "sw", "소프트웨어", "불교"]
 
 
-def is_restricted(admission):
-    return bool(admission) and any(w in admission for w in RESTRICT_WORDS)
+# 공백을 무시하고 비교하는 말(#1005-74)
+NOSPACE_WORDS = ["서해5도"]
+# 사용자 결정(#1005-73, #1005-74)으로 말 목록과 별개로 정한 전형. 사용자는 경상북도 포항시 소재 일반고 재학생이라
+# 지역인재는 고교 소재지(경북) 기준으로 판정한다: 경북대 지역인재와 계명대 지역전형은 경북 학생도 지원할 수 있어 false,
+# 부산대·경상국립대(경남)·제주대 지역인재는 true.
+RESTRICT_OVERRIDE = {
+    ("세종대학교(서울)", "학생부종합 사회기여 및 배려자"): True,
+    ("동국대학교(서울)", "[학생부종합] 불교추천인재"): True,
+    ("부산대학교(부산)", "학생부종합(지역인재전형)"): True,
+    ("경상국립대학교 (본교(제1캠퍼스))", "학생부종합 정원내 지역인재"): True,
+    ("제주대학교(제주)", "학생부종합 지역인재"): True,
+    ("경북대학교(대구)", "학생부종합(지역인재)"): False,
+    ("계명대학교(대구)", "학생부종합 지역전형"): False,
+    ("제주대학교(제주)", "학생부종합 소프트웨어인재"): False,
+    ("충북대학교(청주)", "학생부종합(sw우수인재전형)"): False,
+    ("숭실대학교(서울)", "학생부종합 SW우수자전형"): False,
+    ("광운대학교(서울)", "학생부종합(소프트웨어우수인재전형)"): False,
+    ("한양대학교(서울)", "학생부종합(추천형)"): False,
+    ("건국대학교(서울)", "학생부종합(KU자기추천)"): False,
+}
+
+
+def is_restricted(admission, marker=None):
+    if not admission:
+        return False
+    if (marker, admission) in RESTRICT_OVERRIDE:
+        return RESTRICT_OVERRIDE[(marker, admission)]
+    flat = re.sub(r"\s+", "", admission)
+    return any(w in admission or (w in NOSPACE_WORDS and w in flat) for w in RESTRICT_WORDS)
 
 
 def counts(res):
@@ -1748,7 +1775,7 @@ def to_json(results, url_by_file, url_by_marker):
         for r in res["entries"]:
             fname = r["file"].split(" > ")[0]
             items.append(OrderedDict([("department", r["dept"]), ("admission", r["admission"]), ("year", r["year"]),
-                                      ("cut70", r["cut70"]), ("note", build_notes(r)), ("other", r["other"]), ("ocr", bool(r["ocr"])), ("restricted", is_restricted(r["admission"])),
+                                      ("cut70", r["cut70"]), ("note", build_notes(r)), ("other", r["other"]), ("ocr", bool(r["ocr"])), ("restricted", is_restricted(r["admission"], marker)),
                                       ("source_file", fname), ("page", r["page"]), ("source_url", url_by_file.get(fname))]))
         if items:
             out[marker] = items
@@ -1852,17 +1879,22 @@ def write_review(results, markers):
     L.append("")
     L.append("전형명에 다음 말 중 하나가 그대로 들어 있으면 restricted=true, 아니면 false: " + ", ".join(RESTRICT_WORDS) + ". 색 계산에서는 true 인 항목을 뺀다.")
     L.append("")
+    L.append("- 변경(#1005-74): \"서해5도\"는 공백을 무시하고 비교한다(세종대 \"서해 5도\" = true).")
+    L.append("- 사용자 결정으로 말 목록과 별개로 정한 전형. 근거: 사용자는 경상북도 포항시 소재 일반고 재학생이고 지역인재는 고교 소재지(경북) 기준으로 판정한다(#1005-73 결정, #1005-74 지시).")
+    for (mk_, adm_), val in RESTRICT_OVERRIDE.items():
+        L.append("  - %s: %s = %s" % (mk_, adm_, "true" if val else "false"))
+    L.append("")
     suspects = []
     for m, res in results.items():
         seen = OrderedDict()
         for r in res["entries"]:
             if r["admission"]:
-                seen[r["admission"]] = is_restricted(r["admission"])
+                seen[r["admission"]] = is_restricted(r["admission"], m)
         if not seen:
             continue
         L.append("- **%s**: " % m + "; ".join("%s = %s" % (a, "true" if v else "false") for a, v in seen.items()))
         for a, v in seen.items():
-            if not v and any(w in a for w in SUSPECT_WORDS):
+            if not v and (m, a) not in RESTRICT_OVERRIDE and any(w in a for w in SUSPECT_WORDS):
                 suspects.append((m, a))
     L.append("")
     L.append("### 위 말에 걸리지 않지만 이름상 자격 제한으로 보일 수 있는 전형(false 그대로 둠, 판단 필요)")

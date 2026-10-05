@@ -941,7 +941,7 @@
     }
    ],
    "ocr": false,
-   "restricted": false,
+   "restricted": true,
    "source_file": "경상국립대학교_2026_수시입결.pdf",
    "page": 10,
    "source_url": "https://www.gnu.ac.kr/common/fileDownload.do?fileKey=65036"
@@ -954,7 +954,7 @@
    "note": "70% 컷 미공개(공개 항목: 학생부등급 평균)",
    "other": [],
    "ocr": false,
-   "restricted": false,
+   "restricted": true,
    "source_file": "경상국립대학교_2026_수시입결.pdf",
    "page": 10,
    "source_url": "https://www.gnu.ac.kr/common/fileDownload.do?fileKey=65036"
@@ -972,7 +972,7 @@
     }
    ],
    "ocr": false,
-   "restricted": false,
+   "restricted": true,
    "source_file": "경상국립대학교_2026_수시입결.pdf",
    "page": 10,
    "source_url": "https://www.gnu.ac.kr/common/fileDownload.do?fileKey=65036"
@@ -985,7 +985,7 @@
    "note": "70% 컷 미공개(공개 항목: 학생부등급 평균)",
    "other": [],
    "ocr": false,
-   "restricted": false,
+   "restricted": true,
    "source_file": "경상국립대학교_2026_수시입결.pdf",
    "page": 10,
    "source_url": "https://www.gnu.ac.kr/common/fileDownload.do?fileKey=65036"
@@ -1003,7 +1003,7 @@
     }
    ],
    "ocr": false,
-   "restricted": false,
+   "restricted": true,
    "source_file": "경상국립대학교_2026_수시입결.pdf",
    "page": 10,
    "source_url": "https://www.gnu.ac.kr/common/fileDownload.do?fileKey=65036"
@@ -1406,7 +1406,7 @@
     }
    ],
    "ocr": false,
-   "restricted": false,
+   "restricted": true,
    "source_file": "부산대학교_2026_수시입결.pdf",
    "page": 15,
    "source_url": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4250"
@@ -1803,7 +1803,7 @@
    "note": "1인 등록 성적 미공개",
    "other": [],
    "ocr": false,
-   "restricted": false,
+   "restricted": true,
    "source_file": "제주대학교_2026_수시입결.xlsx",
    "page": "시트 전체성적 2054행",
    "source_url": "https://ibsi.jejunu.ac.kr/files/ibsi/content/202605/d1d48e51aa241bd6096bbcba0bdecc5f.xlsx"
@@ -4698,7 +4698,7 @@
     }
    ],
    "ocr": false,
-   "restricted": false,
+   "restricted": true,
    "source_file": "동국대학교(서울)_2026_수시입결.pdf",
    "page": 9,
    "source_url": "https://ipsi.dongguk.edu/common/downLoad.asp?strFileName=2026%B5%BF%B1%B9%5F%C0%D4%C7%D0%C0%FC%C7%FC%B0%E1%B0%FA%5F%B4%DC%B8%E9%5F260918%BC%F6%C1%A4%2Epdf&strRealFileName=/upload/file/202609181646284P926C.PDF"
@@ -4720,7 +4720,7 @@
     }
    ],
    "ocr": false,
-   "restricted": false,
+   "restricted": true,
    "source_file": "동국대학교(서울)_2026_수시입결.pdf",
    "page": 9,
    "source_url": "https://ipsi.dongguk.edu/common/downLoad.asp?strFileName=2026%B5%BF%B1%B9%5F%C0%D4%C7%D0%C0%FC%C7%FC%B0%E1%B0%FA%5F%B4%DC%B8%E9%5F260918%BC%F6%C1%A4%2Epdf&strRealFileName=/upload/file/202609181646284P926C.PDF"
@@ -4742,7 +4742,7 @@
     }
    ],
    "ocr": false,
-   "restricted": false,
+   "restricted": true,
    "source_file": "동국대학교(서울)_2026_수시입결.pdf",
    "page": 9,
    "source_url": "https://ipsi.dongguk.edu/common/downLoad.asp?strFileName=2026%B5%BF%B1%B9%5F%C0%D4%C7%D0%C0%FC%C7%FC%B0%E1%B0%FA%5F%B4%DC%B8%E9%5F260918%BC%F6%C1%A4%2Epdf&strRealFileName=/upload/file/202609181646284P926C.PDF"
@@ -4764,7 +4764,7 @@
     }
    ],
    "ocr": false,
-   "restricted": false,
+   "restricted": true,
    "source_file": "동국대학교(서울)_2026_수시입결.pdf",
    "page": 9,
    "source_url": "https://ipsi.dongguk.edu/common/downLoad.asp?strFileName=2026%B5%BF%B1%B9%5F%C0%D4%C7%D0%C0%FC%C7%FC%B0%E1%B0%FA%5F%B4%DC%B8%E9%5F260918%BC%F6%C1%A4%2Epdf&strRealFileName=/upload/file/202609181646284P926C.PDF"
@@ -5904,7 +5904,7 @@
     }
    ],
    "ocr": false,
-   "restricted": false,
+   "restricted": true,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 7,
    "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
@@ -5930,7 +5930,7 @@
     }
    ],
    "ocr": false,
-   "restricted": false,
+   "restricted": true,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 7,
    "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
@@ -5956,7 +5956,7 @@
     }
    ],
    "ocr": false,
-   "restricted": false,
+   "restricted": true,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 7,
    "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
@@ -5982,7 +5982,7 @@
     }
    ],
    "ocr": false,
-   "restricted": false,
+   "restricted": true,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 7,
    "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
@@ -6008,7 +6008,7 @@
     }
    ],
    "ocr": false,
-   "restricted": false,
+   "restricted": true,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 7,
    "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
@@ -6034,7 +6034,7 @@
     }
    ],
    "ocr": false,
-   "restricted": false,
+   "restricted": true,
    "source_file": "세종대학교_2026_수시입결.pdf",
    "page": 7,
    "source_url": "https://ipsi.sejong.ac.kr/ipsi/assistant/entrance.do?mode=download&articleNo=2742&attachNo=2850"
