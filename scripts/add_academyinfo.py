@@ -15,7 +15,7 @@
 열 선택: 머리글(4행)에 "등록금"이 들어간 열이 하나일 때만, "기숙사수용률"이 들어간 열이 하나일 때만 값을 쓴다.
 
 마커의 캠퍼스 구분(본교(제1캠퍼스), 본교(제N캠퍼스), 분교)
-  1) markers.json 마커 주소와 정확히 같은 주소를 가진 KEDI 행(대학원 제외)이 정확히 하나이면 그 행의 본분교 값을 쓴다.
+  1) markers.json 마커 주소와 정확히 같은 주소를 가진 KEDI 행(대학원 제외, 학교명이 마커 univ 와 같은 행만)이 정확히 하나이면 그 행의 본분교 값을 쓴다.
   2) 같은 주소 행이 없거나 둘 이상이면 master 의 연결캠퍼스명("학교명 (본교(제N캠퍼스))" 등)에서 정한다.
   3) 그래도 알 수 없으면 캠퍼스 구분 없음.
 xlsx 행과 맞추는 규칙(이름이 정확히 같을 때만, 비슷한 이름으로 맞추지 않는다)
@@ -214,7 +214,7 @@ def main():
         link = row["연결캠퍼스명"] if row else None
         tag = TAG_RE.match(link.strip()) if link else None
         base = tag.group("name") if tag else m["univ"].strip()
-        k_rows = by_addr.get((m.get("address") or "").strip(), []) if m.get("address") else []
+        k_rows = [k for k in by_addr.get((m.get("address") or "").strip(), []) if k["학교명"] == m["univ"]] if m.get("address") else []
         if len(k_rows) == 1 and KEDI_TAG_RE.match(k_rows[0]["본분교"]):
             kt = KEDI_TAG_RE.match(k_rows[0]["본분교"])
             gub, gsrc = (kt.group("kind"), kt.group("n")), "KEDI 주소 일치"
