@@ -1,0 +1,290 @@
+{
+ "version": 1,
+ "note": [
+  "data/target_univ.json 의 targets 중 그룹 A~D 대상 마커만 골랐다(마커 이름 기준, 중복 제외). 그룹 E, 대구한의대학교, 서경대학교는 넣지 않았다.",
+  "경북대학교(대구)는 그룹 A와 C에 모두 있어 groups 에 둘 다 적었다.",
+  "화면은 이 목록에 있는 마커만 보여 준다. docs/data/markers.json 은 바꾸지 않았다."
+ ],
+ "source": "data/target_univ.json",
+ "groups": {
+  "A": "지역거점국립대",
+  "B": "포항",
+  "C": "대구·경산",
+  "D": "서울·수도권 대상"
+ },
+ "targets": [
+  {
+   "marker": "강원대학교(춘천)",
+   "univ": "강원대학교",
+   "region": "강원",
+   "groups": [
+    "A"
+   ]
+  },
+  {
+   "marker": "경북대학교(대구)",
+   "univ": "경북대학교",
+   "region": "영남",
+   "groups": [
+    "A",
+    "C"
+   ]
+  },
+  {
+   "marker": "경상국립대학교 (본교(제1캠퍼스))",
+   "univ": "경상국립대학교",
+   "region": "영남",
+   "groups": [
+    "A"
+   ]
+  },
+  {
+   "marker": "부산대학교(부산)",
+   "univ": "부산대학교",
+   "region": "영남",
+   "groups": [
+    "A"
+   ]
+  },
+  {
+   "marker": "전남대학교 (본교(제1캠퍼스))",
+   "univ": "전남대학교",
+   "region": "호남",
+   "groups": [
+    "A"
+   ]
+  },
+  {
+   "marker": "전북대학교(전주)",
+   "univ": "전북대학교",
+   "region": "호남",
+   "groups": [
+    "A"
+   ]
+  },
+  {
+   "marker": "제주대학교(제주)",
+   "univ": "제주대학교",
+   "region": "제주",
+   "groups": [
+    "A"
+   ]
+  },
+  {
+   "marker": "충남대학교(대전)",
+   "univ": "충남대학교",
+   "region": "충청",
+   "groups": [
+    "A"
+   ]
+  },
+  {
+   "marker": "충북대학교(청주)",
+   "univ": "충북대학교",
+   "region": "충청",
+   "groups": [
+    "A"
+   ]
+  },
+  {
+   "marker": "포항공과대학교 (본교(제1캠퍼스))",
+   "univ": "포항공과대학교",
+   "region": "영남",
+   "groups": [
+    "B"
+   ]
+  },
+  {
+   "marker": "한동대학교(포항)",
+   "univ": "한동대학교",
+   "region": "영남",
+   "groups": [
+    "B"
+   ]
+  },
+  {
+   "marker": "계명대학교(대구)",
+   "univ": "계명대학교",
+   "region": "영남",
+   "groups": [
+    "C"
+   ]
+  },
+  {
+   "marker": "영남대학교(경산)",
+   "univ": "영남대학교",
+   "region": "영남",
+   "groups": [
+    "C"
+   ]
+  },
+  {
+   "marker": "대구대학교(경산)",
+   "univ": "대구대학교",
+   "region": "영남",
+   "groups": [
+    "C"
+   ]
+  },
+  {
+   "marker": "대구가톨릭대학교(경산)",
+   "univ": "대구가톨릭대학교",
+   "region": "영남",
+   "groups": [
+    "C"
+   ]
+  },
+  {
+   "marker": "서울대학교(서울)",
+   "univ": "서울대학교",
+   "region": "서울",
+   "groups": [
+    "D"
+   ]
+  },
+  {
+   "marker": "연세대학교(서울)",
+   "univ": "연세대학교",
+   "region": "서울",
+   "groups": [
+    "D"
+   ]
+  },
+  {
+   "marker": "고려대학교(서울)",
+   "univ": "고려대학교",
+   "region": "서울",
+   "groups": [
+    "D"
+   ]
+  },
+  {
+   "marker": "서강대학교(서울)",
+   "univ": "서강대학교",
+   "region": "서울",
+   "groups": [
+    "D"
+   ]
+  },
+  {
+   "marker": "성균관대학교 (본교(제2캠퍼스))",
+   "univ": "성균관대학교",
+   "region": "경기",
+   "groups": [
+    "D"
+   ]
+  },
+  {
+   "marker": "한양대학교(서울)",
+   "univ": "한양대학교",
+   "region": "서울",
+   "groups": [
+    "D"
+   ]
+  },
+  {
+   "marker": "한양대학교(에리카)",
+   "univ": "한양대학교(ERICA)",
+   "region": "경기",
+   "groups": [
+    "D"
+   ]
+  },
+  {
+   "marker": "서울시립대학교(서울)",
+   "univ": "서울시립대학교",
+   "region": "서울",
+   "groups": [
+    "D"
+   ]
+  },
+  {
+   "marker": "중앙대학교(서울)",
+   "univ": "중앙대학교",
+   "region": "서울",
+   "groups": [
+    "D"
+   ]
+  },
+  {
+   "marker": "경희대학교 (본교(제2캠퍼스))",
+   "univ": "경희대학교",
+   "region": "경기",
+   "groups": [
+    "D"
+   ]
+  },
+  {
+   "marker": "건국대학교(서울)",
+   "univ": "건국대학교",
+   "region": "서울",
+   "groups": [
+    "D"
+   ]
+  },
+  {
+   "marker": "동국대학교(서울)",
+   "univ": "동국대학교",
+   "region": "서울",
+   "groups": [
+    "D"
+   ]
+  },
+  {
+   "marker": "홍익대학교 (본교(제1캠퍼스))",
+   "univ": "홍익대학교",
+   "region": "서울",
+   "groups": [
+    "D"
+   ]
+  },
+  {
+   "marker": "국민대학교(서울)",
+   "univ": "국민대학교",
+   "region": "서울",
+   "groups": [
+    "D"
+   ]
+  },
+  {
+   "marker": "숭실대학교(서울)",
+   "univ": "숭실대학교",
+   "region": "서울",
+   "groups": [
+    "D"
+   ]
+  },
+  {
+   "marker": "세종대학교(서울)",
+   "univ": "세종대학교",
+   "region": "서울",
+   "groups": [
+    "D"
+   ]
+  },
+  {
+   "marker": "광운대학교(서울)",
+   "univ": "광운대학교",
+   "region": "서울",
+   "groups": [
+    "D"
+   ]
+  },
+  {
+   "marker": "서울과학기술대학교(서울)",
+   "univ": "서울과학기술대학교",
+   "region": "서울",
+   "groups": [
+    "D"
+   ]
+  },
+  {
+   "marker": "가톨릭대학교 (본교(제1캠퍼스))",
+   "univ": "가톨릭대학교",
+   "region": "경기",
+   "groups": [
+    "D"
+   ]
+  }
+ ]
+}
