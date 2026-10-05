@@ -9,17 +9,19 @@
 <style>
 :root{
   --bg:#FFFFFF;--surface:#FFFFFF;--ink:#16202B;--muted:#5B6877;--line:#D9E0E8;
-  --accent:#2A55C9;--accent-bg:#E6ECFB;--warn-bg:#FFF4D6;--warn-ink:#6B4A00;
+  --accent:#2A55C9;--accent-bg:#E6ECFB;--err:#B3261E;
   --sea:#CFDDEA;--land:#F9FAFB;--land-metro:#FFFFFF;--prov-line:#AEBBCB;--gu-line:#D3DBE4;--map-label:#6F7E8F;
   --c-it:#2A55C9;--c-none:#7A8593;--c-unk:#E08A00;
+  --g-safe:#2E9E5B;--g-mid:#E3B100;--g-hi:#D64545;--g-none:#9AA5B1;
   --font:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;
 }
 @media (prefers-color-scheme: dark){
   :root{
     --bg:#0F171F;--surface:#141D27;--ink:#E7EDF3;--muted:#9AA8B6;--line:#2A3745;
-    --accent:#86A6FF;--accent-bg:#1B2742;--warn-bg:#3A2F10;--warn-ink:#F2D68A;
+    --accent:#86A6FF;--accent-bg:#1B2742;--err:#FF8A80;
     --sea:#0A1722;--land:#17202A;--land-metro:#1B2530;--prov-line:#3A4855;--gu-line:#29343F;--map-label:#72808F;
     --c-it:#86A6FF;--c-none:#9AA5B1;--c-unk:#FFB033;
+    --g-safe:#4CC47B;--g-mid:#F2C94C;--g-hi:#FF7A7A;--g-none:#7F8B98;
   }
 }
 *{box-sizing:border-box}
@@ -30,6 +32,13 @@ header{position:relative;z-index:1100;padding:10px 16px 8px;padding-top:calc(10p
 header h1{flex:none;margin:0;font-size:18px;font-weight:700;line-height:1.3}
 #q{flex:1;min-width:0;height:36px;padding:0 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit;font-size:14px}
 #q:focus{outline:2px solid var(--accent);outline-offset:-1px}
+.grow{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;margin-top:8px}
+#grade{width:84px;height:36px;padding:0 10px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit;font-size:15px;font-variant-numeric:tabular-nums}
+#grade:focus{outline:2px solid var(--accent);outline-offset:-1px}
+#grade[aria-invalid="true"]{border-color:var(--err)}
+.grow label{font-size:13.5px;font-weight:600}
+#gerr{font-size:12px;color:var(--err)}
+#gerr[hidden]{display:none}
 #results{position:absolute;left:12px;right:12px;z-index:1200;max-height:min(340px,calc(100vh - 150px));max-height:min(340px,calc(100dvh - 150px));overflow:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface);box-shadow:0 8px 24px rgba(0,0,0,.22)}
 #results[hidden]{display:none}
 #results .none{padding:12px 14px;font-size:13.5px;color:var(--muted)}
@@ -38,13 +47,6 @@ header h1{flex:none;margin:0;font-size:18px;font-weight:700;line-height:1.3}
 #results .item:hover,#results .item:focus{background:var(--accent-bg);outline:none}
 #results .item .nm{display:block;font-size:14px;font-weight:600;line-height:1.35}
 #results .item .sub{display:block;font-size:12px;color:var(--muted);line-height:1.35}
-#prov{margin:6px 0 0;padding:6px 10px;border-radius:8px;background:var(--warn-bg);color:var(--warn-ink);font-size:13px;line-height:1.4}
-#prov[hidden]{display:none}
-#chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
-.chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;padding:6px 12px;font:inherit;font-size:13.5px;font-weight:600;cursor:pointer}
-.chip[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-bg);color:var(--ink)}
-.chip .n{font-variant-numeric:tabular-nums;color:var(--muted);font-weight:500}
-#count{margin-top:6px;font-size:12.5px;color:var(--muted)}
 main{position:relative;flex:1;min-height:0}
 #map{position:absolute;inset:0;background:var(--sea);font-family:var(--font)}
 .maperr{padding:24px 16px;color:var(--ink)}
@@ -66,12 +68,26 @@ main{position:relative;flex:1;min-height:0}
 .mk.none svg rect{fill:var(--surface);stroke:var(--c-none);stroke-width:2}
 .mk.unk svg path{fill:var(--c-unk);stroke:var(--surface);stroke-width:1.5;stroke-linejoin:round}
 .mk.unk svg text{fill:#fff;font:700 9px var(--font);text-anchor:middle}
-.chip .sw{display:inline-block;width:14px;height:14px}
-.chip .sw svg{display:block;width:14px;height:14px}
+/* 등급 입력에 따른 마커 색 */
+.mk.g-safe svg circle{fill:var(--g-safe)}
+.mk.g-mid svg circle{fill:var(--g-mid)}
+.mk.g-hi svg circle{fill:var(--g-hi)}
+.mk.g-none svg circle{fill:var(--g-none)}
+
+/* 범례 */
+#legend{position:absolute;left:8px;bottom:8px;z-index:650;max-width:208px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);font-size:11px;line-height:1.4;opacity:.96}
+#legend .lg{display:flex;align-items:center;gap:6px}
+#legend .dot,.pu .dot{flex:none;display:inline-block;width:10px;height:10px;border-radius:50%;border:1px solid var(--surface);box-shadow:0 0 0 1px var(--line)}
+.dot.g-safe{background:var(--g-safe)}
+.dot.g-mid{background:var(--g-mid)}
+.dot.g-hi{background:var(--g-hi)}
+.dot.g-none{background:var(--g-none)}
+#legend p{margin:4px 0 0;padding-top:4px;border-top:1px solid var(--line);color:var(--muted)}
 
 /* popup */
-.pu{min-width:180px;font-size:13.5px;line-height:1.5}
+.pu{min-width:180px;max-width:300px;font-size:13.5px;line-height:1.5}
 .pu h2{margin:0 0 4px;font-size:15px;font-weight:700}
+.pu h3{margin:8px 0 2px;padding-top:6px;border-top:1px solid var(--line);font-size:13px;font-weight:700}
 .pu dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:2px 10px}
 .pu dt{color:var(--muted)}
 .pu dd{margin:0}
@@ -81,27 +97,23 @@ main{position:relative;flex:1;min-height:0}
 .pu .addr .none{color:var(--muted)}
 .pu .cp{flex:none;padding:3px 9px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);font:inherit;font-size:12px;cursor:pointer}
 .pu .copied{flex-basis:100%;font-size:12px;color:var(--accent)}
-
-/* 오류 제보 (공통) */
-.rep{display:flex;flex-direction:column;align-items:flex-start;gap:2px}
-.rep .btn{display:inline-block;padding:5px 12px;border:1px solid var(--accent);border-radius:8px;background:var(--accent-bg);color:var(--accent);font-size:13px;font-weight:700;line-height:1.3;text-decoration:none}
-.rep .url{font-size:11px;line-height:1.3;color:var(--muted);word-break:break-all;user-select:all}
-.pu .rep{margin-top:8px;padding-top:8px;border-top:1px solid var(--line)}
+.pu ul{margin:0;padding:0;list-style:none}
+.pu li.d{padding:4px 0;border-bottom:1px dashed var(--line)}
+.pu li.d:last-child{border-bottom:0}
+.pu .d1{font-weight:600}
+.pu .d2{display:flex;flex-wrap:wrap;align-items:center;gap:2px 8px;font-size:12.5px;color:var(--muted)}
+.pu .d2 .cut{color:var(--ink);font-variant-numeric:tabular-nums}
+.pu .d2 .lv{display:inline-flex;align-items:center;gap:4px;color:var(--ink)}
+.pu .d2 a{color:var(--accent)}
+.pu .info{margin:2px 0 0}
+.pu .info .v{font-weight:600}
+.pu .info .meta{display:block;font-size:11.5px;color:var(--muted);line-height:1.35}
+.pu .na{color:var(--muted)}
+.pu .note{font-size:12px;color:var(--muted);line-height:1.35}
+.pu .d2 .ocr{color:var(--err);font-weight:600}
 
 /* 하단 고정 한 줄 (지도 영역 밖: main 아래 flex 항목) */
 #note{flex:none;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:3px 12px;padding-bottom:calc(3px + env(safe-area-inset-bottom));background:var(--surface);border-top:1px solid var(--line);font-size:11.5px;line-height:1.35;color:var(--muted)}
-#note .rep{align-items:flex-end;flex:none}
-#note .rep .btn{padding:2px 9px;font-size:11.5px;border-radius:6px}
-#note .rep .url{font-size:9.5px;text-align:right}
-
-/* 첫 방문 안내창 */
-.overlay{position:fixed;inset:0;z-index:2000;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(10,20,30,.55)}
-.overlay[hidden]{display:none}
-.dlg{width:100%;max-width:440px;max-height:calc(100% - 8px);overflow:auto;padding:18px 18px 16px;border-radius:14px;background:var(--surface);color:var(--ink);box-shadow:0 10px 40px rgba(0,0,0,.3);font-size:14.5px;line-height:1.55}
-.dlg p{margin:0 0 8px}
-.dlg .rep{margin:12px 0 14px}
-.dlg .ok{display:block;width:100%;padding:10px 0;border:0;border-radius:10px;background:var(--accent);color:#fff;font:inherit;font-size:15px;font-weight:700;cursor:pointer}
-@media (prefers-color-scheme: dark){ .dlg .ok{color:#0F171F} }
 </style>
 </head>
 <body>
@@ -110,46 +122,94 @@ main{position:relative;flex:1;min-height:0}
     <h1>컷맵 대학맵</h1>
     <input id="q" type="search" placeholder="학교명·캠퍼스명 검색" aria-label="학교명 또는 캠퍼스명 검색" autocomplete="off" enterkeyhint="search">
   </div>
-  <p id="prov" hidden>IT 유무는 잠정값입니다</p>
-  <div id="chips" role="group" aria-label="마커 상태 필터"></div>
-  <div id="count" aria-live="polite"></div>
+  <div class="grow">
+    <input id="grade" type="text" inputmode="decimal" placeholder="예: 3.25" autocomplete="off" aria-describedby="gerr">
+    <label for="grade">9등급제 환산 등급</label>
+    <span id="gerr" role="alert" hidden>1.00~9.00 사이 숫자만 입력할 수 있습니다</span>
+  </div>
   <div id="results" role="listbox" aria-label="검색 결과" hidden></div>
 </header>
-<main><div id="map"></div></main>
+<main>
+  <div id="map"></div>
+  <div id="legend" aria-label="마커 색 설명">
+    <div class="lg"><i class="dot g-safe"></i>안정: 학과 cut70 − 내 등급 ≥ 0.3</div>
+    <div class="lg"><i class="dot g-mid"></i>적정: −0.3 초과 0.3 미만</div>
+    <div class="lg"><i class="dot g-hi"></i>상향: ≤ −0.3</div>
+    <div class="lg"><i class="dot g-none"></i>회색: 등급 미입력 또는 cut70 없음</div>
+    <p>학종은 등급만으로 합격이 정해지지 않으므로 참고용입니다</p>
+  </div>
+</main>
 <footer id="note">
   <span>이 지도는 참고용입니다. 모든 항목을 사람이 직접 확인하지는 못했습니다.</span>
-  <div data-report></div>
 </footer>
-
-<div id="notice" class="overlay" hidden>
-  <div class="dlg" role="dialog" aria-modal="true" aria-label="첫 방문 안내">
-    <p>이 지도는 대학 공식 자료와 공공데이터를 자동화 도구(AI 포함)로 모아 정리한 것입니다.</p>
-    <p>자료가 많아 모든 항목을 사람이 직접 확인하지는 못했습니다.</p>
-    <p>정보가 틀리거나 오래되었을 수 있으니 참고용으로만 사용해 주세요.</p>
-    <p>입결은 5등급제 실제 자료가 아직 없어, 이전 9등급 자료를 환산한 추정값입니다.</p>
-    <p>지원 전에는 반드시 각 대학 입학처의 공식 자료를 확인해 주세요.</p>
-    <p>잘못된 정보를 발견하면 오류 제보로 알려 주시면 바로 고치겠습니다.</p>
-    <div data-report></div>
-    <button type="button" class="ok" id="noticeOk">확인</button>
-  </div>
-</div>
 
 <script src="vendor/leaflet/leaflet.js"></script>
 <script>
 (function(){
 'use strict';
 
-/* 화면이 읽는 필드: univ(학교명), campus, region, lat, lon, itStatus, itStatusProvisional */
+/* 화면이 읽는 필드: univ(학교명), campus, region, lat, lon, address, itStatus */
 var STATUS = [
-  {key:'IT있음', label:'IT있음-입결없음', cls:'it',   on:true,
+  {key:'IT있음', cls:'it',   on:true,
    msg:''},
-  {key:'IT없음', label:'IT없음',           cls:'none', on:false,
+  {key:'IT없음', cls:'none', on:false,
    msg:'IT계열 학과가 없습니다'},
-  {key:'판정불가', label:'판정불가',       cls:'unk',  on:true,
+  {key:'판정불가', cls:'unk',  on:true,
    msg:'IT 학과 유무를 판정하지 못했습니다(자료 확인 필요)'}
 ];
 var BYKEY = {};
 STATUS.forEach(function(s){ BYKEY[s.key] = s; });
+
+/* data/ipgyeol.json: { "<마커 이름(markers.json의 campus)>": [ 학과, ... ] }
+   학과 = { department, admission(전형명), year(학년도), cut70(70% 컷: 숫자 또는 null), source_file, page, source_url } */
+var LEVELS = {
+  safe: {label:'안정', cls:'g-safe'},
+  mid:  {label:'적정', cls:'g-mid'},
+  hi:   {label:'상향', cls:'g-hi'},
+  none: {label:'회색', cls:'g-none'}
+};
+var TH = 0.3, EPS = 1e-9;   /* 부동소수 오차 허용 */
+function levelOf(diff){
+  if(diff >= TH - EPS) return 'safe';
+  if(diff <= -TH + EPS) return 'hi';
+  return 'mid';
+}
+function hasCut(d){ return d && typeof d.cut70 === 'number' && isFinite(d.cut70); }
+/* 학과(학과명+전형명)마다 가장 최근 year 값 하나만 쓴다. 색 계산과 팝업이 같이 쓴다.
+   year 는 숫자나 "2026", "2026학년도" 형태를 읽는다. year 를 읽을 수 없는 항목끼리만 있으면 그대로 둔다. */
+function yearNum(y){
+  var m = String(y == null ? '' : y).match(/\d{4}/);
+  return m ? Number(m[0]) : -Infinity;
+}
+function latestOnly(list){
+  if(!Array.isArray(list)) return [];
+  var best = {};
+  list.forEach(function(d){
+    var k = (d && d.department || '') + '|' + (d && d.admission || '');
+    var y = yearNum(d && d.year);
+    if(!(k in best) || y > best[k]) best[k] = y;
+  });
+  return list.filter(function(d){
+    var k = (d && d.department || '') + '|' + (d && d.admission || '');
+    return yearNum(d && d.year) === best[k];
+  });
+}
+/* 학과 하나: 차이 = cut70 - 입력 등급. 등급이 비었거나 cut70이 없으면 none */
+function deptLevel(d, grade){
+  if(grade == null || !hasCut(d)) return 'none';
+  return levelOf(d.cut70 - grade);
+}
+/* 마커: 학과 중 차이가 가장 큰 학과 기준 */
+function markerLevel(depts, grade){
+  if(grade == null || !Array.isArray(depts)) return 'none';
+  var best = null;
+  latestOnly(depts).forEach(function(d){
+    if(!hasCut(d)) return;
+    var diff = d.cut70 - grade;
+    if(best === null || diff > best) best = diff;
+  });
+  return best === null ? 'none' : levelOf(best);
+}
 
 var LABELS = [
   ['경기',37.78,127.36,'prov'],['강원',37.75,128.35,'prov'],['충북',36.80,127.75,'prov'],['충남',36.50,126.85,'prov'],
@@ -178,39 +238,36 @@ function shapeSVG(cls){
   return '<svg viewBox="0 0 16 16"><path d="M8 0.8 L15.2 8 L8 15.2 L0.8 8 Z"/><text x="8" y="11.2">?</text></svg>';
 }
 
-var REPORT_URL = 'https://forms.gle/BJrARcTLTah184JA8';
-function reportBlock(){
-  var box = el('div', 'rep');
-  var a = el('a', 'btn', '오류 제보');
-  a.href = REPORT_URL;
-  a.target = '_blank';
-  a.rel = 'noopener';
-  box.appendChild(a);
-  box.appendChild(el('span', 'url', REPORT_URL));
-  return box;
-}
-document.querySelectorAll('[data-report]').forEach(function(ph){ ph.replaceWith(reportBlock()); });
-
-/* 첫 방문 안내창: 기억은 localStorage, 읽기·쓰기 모두 try/catch */
-var SEEN_KEY = 'cutmap_notice_seen_v1';
-function noticeSeen(){
-  try { return localStorage.getItem(SEEN_KEY) === '1'; } catch(e) { return false; }
-}
-function markNoticeSeen(){
-  try { localStorage.setItem(SEEN_KEY, '1'); } catch(e) { /* 저장 불가 환경: 이번 방문에서만 닫힘 */ }
-}
-(function(){
-  var box = $('#notice'), ok = $('#noticeOk');
-  if(noticeSeen()) return;
-  box.hidden = false;
-  ok.addEventListener('click', function(){ box.hidden = true; markNoticeSeen(); });
-  try { ok.focus(); } catch(e) {}
-})();
-
 function nk(s){ return String(s == null ? '' : s).replace(/\s+/g, '').toLowerCase(); }
 
-var map, layers = {}, counts = {}, total = 0, active = {};
-STATUS.forEach(function(s){ active[s.key] = s.on; layers[s.key] = L.layerGroup(); counts[s.key] = 0; });
+var map, layers = {}, total = 0, active = {};
+STATUS.forEach(function(s){ active[s.key] = s.on; layers[s.key] = L.layerGroup(); });
+
+var IPG = {};      /* data/ipgyeol.json */
+var ACAD = {};     /* campus -> data/academyinfo.json 항목 */
+var grade = null;  /* 입력된 9등급제 환산 등급 (null = 비어 있거나 잘못된 값) */
+
+/* 등급 입력: 브라우저 localStorage에 저장(읽기·쓰기 모두 try/catch) */
+var GRADE_KEY = 'cutmap_grade_v1';
+function parseGrade(raw){
+  var s = String(raw == null ? '' : raw).trim();
+  if(s === '') return {empty:true};
+  if(!/^\d+(\.\d+)?$/.test(s)) return {invalid:true};
+  var n = Number(s);
+  if(!isFinite(n) || n < 1 || n > 9) return {invalid:true};
+  return {value:n};
+}
+function loadGrade(){
+  try {
+    var r = parseGrade(localStorage.getItem(GRADE_KEY));
+    return r.value != null ? localStorage.getItem(GRADE_KEY).trim() : '';
+  } catch(e) { return ''; }
+}
+function saveGrade(text){
+  try {
+    if(text) localStorage.setItem(GRADE_KEY, text); else localStorage.removeItem(GRADE_KEY);
+  } catch(e) { /* 저장 불가 환경: 이번 방문에서만 유지 */ }
+}
 
 function selectText(node){
   var sel = window.getSelection(), r = document.createRange();
@@ -248,11 +305,98 @@ function addrNode(addr){
   return dd;
 }
 
+/* 학과별 학종 입결 */
+function fmtCut(v){ return typeof v === 'number' && isFinite(v) ? v.toFixed(2) : null; }
+function fmtYear(y){
+  if(y == null || y === '') return null;
+  var s = String(y);
+  return s.indexOf('학년도') >= 0 ? s : s + '학년도';
+}
+function deptNode(d){
+  var li = el('li', 'd');
+  var note = d && typeof d.note === 'string' && d.note.trim() ? d.note.trim() : null;
+  /* 학과·전형·학년도가 모두 비어 있고 note 만 있는 항목(예: "입결 미공개")은 note 만 보여 준다 */
+  if(note && !(d.department || d.admission || d.year != null)){
+    li.appendChild(el('div', 'note', note));
+    return li;
+  }
+  li.appendChild(el('div', 'd1', d && d.department ? d.department : '(학과명 없음)'));
+  var row = el('div', 'd2');
+  row.appendChild(el('span', '', d && d.admission ? d.admission : '전형명 없음'));
+  row.appendChild(el('span', '', fmtYear(d && d.year) || '학년도 없음'));
+  var cutTxt = fmtCut(d && d.cut70);
+  var cut = el('span', 'cut' + (cutTxt ? '' : ' na'), '70% 컷 ' + (cutTxt || '자료 없음'));
+  row.appendChild(cut);
+  if(d && d.ocr === true) row.appendChild(el('span', 'ocr', 'OCR 값, 확인 필요'));
+  var lv = LEVELS[deptLevel(d, grade)];
+  var lvEl = el('span', 'lv');
+  lvEl.appendChild(el('i', 'dot ' + lv.cls));
+  lvEl.appendChild(document.createTextNode(lv.label));
+  row.appendChild(lvEl);
+  var url = d && typeof d.source_url === 'string' && /^https?:\/\//i.test(d.source_url) ? d.source_url : null;
+  var where = d && d.source_file ? d.source_file + (d.page != null && d.page !== '' ? ' p.' + d.page : '') : '';
+  if(url){
+    var a = el('a', '', '원문');
+    a.href = url;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    if(where) a.title = where;
+    row.appendChild(a);
+  } else {
+    row.appendChild(el('span', 'na', where ? '원문: ' + where : '원문 링크 없음'));
+  }
+  li.appendChild(row);
+  if(note) li.appendChild(el('div', 'note', note));
+  return li;
+}
+function ipgyeolNode(campus){
+  var frag = document.createDocumentFragment();
+  frag.appendChild(el('h3', '', '학종 입결'));
+  var list = IPG[campus];
+  if(!Array.isArray(list) || !list.length){
+    frag.appendChild(el('div', 'na', '자료 없음'));
+    return frag;
+  }
+  var ul = el('ul');
+  latestOnly(list).forEach(function(d){ ul.appendChild(deptNode(d)); });
+  frag.appendChild(ul);
+  return frag;
+}
+
+/* 등록금·기숙사 (docs/data/academyinfo.json) */
+function fmtNum(v){ return v.toLocaleString('ko-KR', {maximumFractionDigits:1}); }
+function infoNode(rec, key, fallbackName){
+  var box = el('div', 'info');
+  var it = rec && rec[key];
+  var name = it && it.name ? it.name : fallbackName;
+  if(!it || typeof it.value !== 'number'){
+    box.appendChild(el('span', '', name + ': '));
+    box.appendChild(el('span', 'na', '자료 없음'));
+    return box;
+  }
+  box.appendChild(el('span', '', name + ': '));
+  box.appendChild(el('span', 'v', fmtNum(it.value) + (it.unit || '')));
+  var meta = [];
+  if(it.year != null) meta.push(it.year + ' 공시');
+  if(it.source) meta.push('출처: ' + it.source);
+  if(it.scope) meta.push(it.scope);
+  if(it.flag) meta.push(it.flag);
+  box.appendChild(el('span', 'meta', meta.join(' · ')));
+  return box;
+}
+function academyNode(campus){
+  var frag = document.createDocumentFragment();
+  var rec = ACAD[campus];
+  frag.appendChild(infoNode(rec, 'tuitionUndergradAnnual', '연평균 등록금(학부)'));
+  frag.appendChild(infoNode(rec, 'dormCapacityRate', '기숙사 수용률'));
+  return frag;
+}
+
 function popupNode(m, st){
   var box = el('div', 'pu');
   box.appendChild(el('h2', '', m.univ));
   var dl = el('dl');
-  [['캠퍼스', m.campus], ['지역', m.region], ['상태', st.label]].forEach(function(r){
+  [['캠퍼스', m.campus], ['지역', m.region]].forEach(function(r){
     dl.appendChild(el('dt', '', r[0]));
     dl.appendChild(el('dd', '', r[1]));
   });
@@ -260,48 +404,50 @@ function popupNode(m, st){
   dl.appendChild(addrNode(m.address));
   box.appendChild(dl);
   if(st.msg) box.appendChild(el('p', 'msg', st.msg));
-  box.appendChild(reportBlock());
+  box.appendChild(ipgyeolNode(m.campus));
+  box.appendChild(el('h3', '', '등록금·기숙사'));
+  box.appendChild(academyNode(m.campus));
   return box;
 }
 
 var entries = [];
+/* 팝업이 지도보다 커지지 않게: 지도 높이의 55% (180~380px), 넘치면 팝업 안에서 스크롤 */
+function popupMaxH(){ return Math.max(180, Math.min(380, Math.round(map.getSize().y * 0.55))); }
+function markerIcon(st, level){
+  return L.divIcon({className:'', iconSize:[0,0],
+    html:'<span class="mk ' + st.cls + ' ' + LEVELS[level].cls + '">' + shapeSVG(st.cls) + '</span>'});
+}
 function addMarker(m, st){
-  var icon = L.divIcon({className:'', iconSize:[0,0],
-    html:'<span class="mk ' + st.cls + '">' + shapeSVG(st.cls) + '</span>'});
-  var mk = L.marker([m.lat, m.lon], {icon:icon, title:m.campus, keyboard:true, riseOnHover:true});
-  mk.bindPopup(function(){ return popupNode(m, st); }, {autoPanPadding:[12,12]});
+  var mk = L.marker([m.lat, m.lon], {icon:markerIcon(st, markerLevel(IPG[m.campus], grade)), title:m.campus, keyboard:true, riseOnHover:true});
+  mk.bindPopup(function(){ return popupNode(m, st); }, {autoPanPadding:[12,12], maxWidth:300, maxHeight:popupMaxH()});
   layers[st.key].addLayer(mk);
   entries.push({m:m, st:st, mk:mk, nu:nk(m.univ), nc:nk(m.campus)});
 }
-
-function updateCount(){
-  var shown = 0;
-  STATUS.forEach(function(s){ if(active[s.key]) shown += counts[s.key]; });
-  $('#count').textContent = '표시 ' + shown + '개 / 전체 ' + total + '개';
-}
-
-function buildChips(){
-  var box = $('#chips');
-  STATUS.forEach(function(s){
-    var b = el('button', 'chip');
-    b.type = 'button';
-    b.setAttribute('aria-pressed', String(active[s.key]));
-    var sw = el('span', 'sw');
-    sw.innerHTML = '<span class="mk ' + s.cls + '" style="transform:none;width:14px;height:14px">' + shapeSVG(s.cls) + '</span>';
-    b.appendChild(sw);
-    b.appendChild(document.createTextNode(s.label));
-    b.appendChild(el('span', 'n', String(counts[s.key])));
-    b.addEventListener('click', function(){
-      active[s.key] = !active[s.key];
-      b.setAttribute('aria-pressed', String(active[s.key]));
-      if(active[s.key]) layers[s.key].addTo(map); else map.removeLayer(layers[s.key]);
-      updateCount();
-    });
-    box.appendChild(b);
+/* 등급 입력이 바뀌면 마커 색과 열려 있는 팝업을 다시 계산 */
+function recolor(){
+  entries.forEach(function(e){
+    e.mk.setIcon(markerIcon(e.st, markerLevel(IPG[e.m.campus], grade)));
+    if(e.mk.isPopupOpen()) e.mk.getPopup().setContent(popupNode(e.m, e.st));
   });
 }
 
-/* 검색: 학교명·캠퍼스명 일부, 띄어쓰기·대소문자 무시. 상태 칩으로 숨긴 마커도 포함 */
+function initGrade(){
+  var inp = $('#grade'), err = $('#gerr');
+  function apply(){
+    var r = parseGrade(inp.value);
+    grade = r.value != null ? r.value : null;
+    err.hidden = !r.invalid;
+    inp.setAttribute('aria-invalid', r.invalid ? 'true' : 'false');
+    saveGrade(r.value != null ? inp.value.trim() : '');
+    recolor();
+  }
+  inp.value = loadGrade();
+  var r0 = parseGrade(inp.value);
+  grade = r0.value != null ? r0.value : null;
+  inp.addEventListener('input', apply);
+}
+
+/* 검색: 학교명·캠퍼스명 일부, 띄어쓰기·대소문자 무시. 대상 마커만 */
 var tempEntry = null;
 function dropTemp(){
   if(tempEntry && !active[tempEntry.st.key]) map.removeLayer(tempEntry.mk);
@@ -342,7 +488,7 @@ function initSearch(){
         b.type = 'button';
         b.setAttribute('role', 'option');
         b.appendChild(el('span', 'nm', e.m.campus));
-        b.appendChild(el('span', 'sub', e.m.region + ' · ' + e.st.label + (active[e.st.key] ? '' : ' · 필터로 숨김')));
+        b.appendChild(el('span', 'sub', e.m.region + (active[e.st.key] ? '' : ' · 필터로 숨김')));
         b.addEventListener('click', function(){ hide(); q.blur(); goTo(e); });
         box.appendChild(b);
       });
@@ -363,7 +509,7 @@ function initMap(prov, seoul){
   map = L.map('map', {
     zoomControl:false, attributionControl:false, minZoom:6, maxZoom:15,
     zoomSnap:0.25, zoomDelta:0.5,
-    maxBounds:[[32.6,123.8],[41.0,132.4]], maxBoundsViscosity:0.8
+    maxBounds:[[31.0,123.8],[43.0,132.4]], maxBoundsViscosity:0.8
   });
   L.control.zoom({position:'topright', zoomInTitle:'확대', zoomOutTitle:'축소'}).addTo(map);
   map.createPane('labels');
@@ -381,6 +527,12 @@ function initMap(prov, seoul){
       icon:L.divIcon({className:'rl ' + l[3], html:'<span>' + l[0] + '</span>', iconSize:[0,0]})}).addTo(map);
   });
   map.setView([36.4, 127.9], 7);
+  map.on('resize', function(){
+    var h = popupMaxH();
+    entries.forEach(function(e){ e.mk.getPopup().options.maxHeight = h; });
+  });
+  /* 헤더 높이가 바뀌면(잠정값 안내 표시, 등급 오류 문구 등) 지도 크기를 다시 읽는다 */
+  if(window.ResizeObserver) new ResizeObserver(function(){ map.invalidateSize(); }).observe($('#map'));
 }
 
 function fail(msg){
@@ -391,26 +543,36 @@ function fail(msg){
 
 if(!window.L){ fail('지도 라이브러리를 불러오지 못했습니다.'); return; }
 
-Promise.all([getJSON('data/markers.json'), getJSON('data/geo_prov.json'), getJSON('data/geo_seoul.json')])
+/* ipgyeol.json, academyinfo.json 은 못 읽어도 지도는 뜬다(입결·등록금 "자료 없음") */
+function optional(url, fallback){
+  return getJSON(url).catch(function(e){ console.warn('선택 자료를 읽지 못했습니다:', e.message); return fallback; });
+}
+
+Promise.all([getJSON('data/markers.json'), getJSON('data/targets.json'), getJSON('data/geo_prov.json'), getJSON('data/geo_seoul.json'),
+             optional('data/ipgyeol.json', {}), optional('data/academyinfo.json', null)])
 .then(function(res){
   var markers = res[0].markers;
-  initMap(res[1], res[2]);
-  var unknown = 0, provisional = false;
+  var TARGET = {};
+  res[1].targets.forEach(function(t){ TARGET[t.marker] = true; });
+  IPG = res[4] && typeof res[4] === 'object' ? res[4] : {};
+  if(res[5] && Array.isArray(res[5].markers)) res[5].markers.forEach(function(a){ ACAD[a.campus] = a; });
+  initGrade();
+  initMap(res[2], res[3]);
+  var unknown = 0;
   markers.forEach(function(m){
+    if(!TARGET[m.campus]) return;
     var st = BYKEY[m.itStatus];
     total++;
-    if(m.itStatusProvisional === true) provisional = true;
     if(!st){ unknown++; return; }
-    counts[st.key]++;
     addMarker(m, st);
   });
+  var missing = Object.keys(TARGET).length - total;
+  if(missing) console.warn('targets.json 에 있으나 markers.json 에 없는 마커 ' + missing + '개');
   if(unknown) console.warn('알 수 없는 itStatus 값을 가진 마커 ' + unknown + '개는 표시하지 않았습니다.');
   STATUS.forEach(function(s){ if(active[s.key]) layers[s.key].addTo(map); });
-  $('#prov').hidden = !provisional;
-  buildChips();
-  updateCount();
   initSearch();
-  window.__cutmap = {total:total, counts:counts, unknown:unknown, entries:entries.length};
+  window.__cutmap = {total:total, unknown:unknown, entries:entries.length,
+                     levelOf:levelOf, markerLevel:markerLevel, deptLevel:deptLevel, parseGrade:parseGrade};
 })
 .catch(function(e){
   console.error(e);
