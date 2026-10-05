@@ -64,6 +64,33 @@ FLAG = "원자료 값(확인 필요)"
 FLAGS = [("정석대학", "tuitionUndergradAnnual"), ("금강대학교(논산)", "dormCapacityRate")]   # 기존 flag 2개 유지
 
 
+def strip_paren(s):
+    """괄호와 그 안의 글자를 뗀 이름(한양대학교(ERICA) -> 한양대학교)"""
+    return re.sub(r"\([^)]*\)", "", s or "").strip()
+
+
+# #1005-25 결정: 이름이 xlsx 와 달라 자동으로 맞지 않는 마커 2개를 아래 2줄로만 xlsx 행에 연결한다(다른 마커에는 쓰지 않는다).
+# (이름 기준, 이름, 캠퍼스 구분, 주소 조건, xlsx 학교명, xlsx 접미사)
+#   이름 기준 univ = 괄호를 뗀 마커 univ, campus = 괄호 표기 "(본교(제N캠퍼스))"를 뗀 마커 campus
+ALIASES = [
+    ("univ", "영산대학교", ("본교", "1"), lambda a: "해운대구" in a, "영산대학교(해운대)", None),
+    ("campus", "홍익대학교 세종캠퍼스", None, lambda a: a.startswith("세종특별자치시"), "홍익대학교", "제2캠퍼스"),
+]
+
+
+def find_alias(m, gub):
+    """(별칭 행 또는 None, 이름·구분은 맞는데 주소 조건이 안 맞아 매칭하지 않은 경우의 설명 또는 None)"""
+    addr = (m.get("address") or "").strip()
+    for field, name, g, cond, base, suf in ALIASES:
+        label = strip_paren(m["univ"]) if field == "univ" else re.sub(r"\s*\(.*$", "", m["campus"]).strip()
+        if label != name or (g is not None and gub != g):
+            continue
+        if cond(addr):
+            return (base, suf, name), None
+        return None, "%s: 주소 조건이 맞지 않아 매칭하지 않음(마커 주소: %s)" % (m["campus"], addr)
+    return None, None
+
+
 def find_one(prefix):
     hits = sorted(f for f in os.listdir(ROOT) if f.startswith(prefix) and f.lower().endswith(".xlsx"))
     if len(hits) != 1:
@@ -214,7 +241,7 @@ def main():
         link = row["연결캠퍼스명"] if row else None
         tag = TAG_RE.match(link.strip()) if link else None
         base = tag.group("name") if tag else m["univ"].strip()
-        k_rows = [k for k in by_addr.get((m.get("address") or "").strip(), []) if k["학교명"] == m["univ"]] if m.get("address") else []
+        k_rows = [k for k in by_addr.get((m.get("address") or "").strip(), []) if k["학교명"] == strip_paren(m["univ"])] if m.get("address") else []
         if len(k_rows) == 1 and KEDI_TAG_RE.match(k_rows[0]["본분교"]):
             kt = KEDI_TAG_RE.match(k_rows[0]["본분교"])
             gub, gsrc = (kt.group("kind"), kt.group("n")), "KEDI 주소 일치"
@@ -222,7 +249,8 @@ def main():
             gub, gsrc = (tag.group("kind"), tag.group("n")), "master 연결캠퍼스명"
         else:
             gub, gsrc = None, "구분 불가"
-        infos.append(dict(m=m, row=row, link=link, base=base, gub=gub, gsrc=gsrc, n_addr=len(k_rows)))
+        alias, alias_miss = find_alias(m, gub)
+        infos.append(dict(m=m, row=row, link=link, base=base, gub=gub, gsrc=gsrc, n_addr=len(k_rows), alias=alias, alias_miss=alias_miss))
     school_count = defaultdict(int)
     for i in infos:
         school_count[i["base"]] += 1
@@ -241,6 +269,11 @@ def main():
                 info[key] = "열이 하나로 정해지지 않음"
                 continue
             nm, school_level, why = match_marker(i["base"], i["gub"], idx)
+            if i["alias"]:   # 별칭 표(#1005-25 결정)가 있으면 그 xlsx 행으로만 매칭한다
+                ab, asuf, aname = i["alias"]
+                ah = [n_ for suf_, n_ in idx.get(ab, []) if suf_ == asuf]
+                nm, school_level = (ah[0] if len(ah) == 1 else None), False
+                why = "별칭 표(#1005-25 결정): %s -> xlsx %s" % (aname, ah[0] if len(ah) == 1 else "행을 찾지 못함")
             if nm is None:
                 info[key] = why
                 continue
@@ -316,6 +349,13 @@ def main():
     for i, info in both:
         rv.append("| %s | %s | %s |" % (i["m"]["campus"], typ(i["row"], i["m"]) or "master 행 없음", info["tuitionUndergradAnnual"].replace("|", "/")))
     rv += [""]
+    miss = [i["alias_miss"] for i in infos if i["alias_miss"]]
+    rv += ["## 별칭 표(#1005-25 결정) 중 주소 조건이 맞지 않아 매칭하지 않은 마커 (%d)" % len(miss), ""] + ["- %s" % x for x in miss] + [""]
+    for x in miss:
+        print("별칭 미적용:", x)
+    for i in infos:
+        if i["alias"]:
+            print("별칭 적용:", i["m"]["campus"], "->", i["alias"][0], i["alias"][1] or "")
     left_t = [nm for nm in ent_t if nm not in used_t]
     left_d = [nm for nm in ent_d if nm not in used_d]
     rv += ["## 매칭되지 않은 등록금 xlsx 항목 (%d / %d)" % (len(left_t), len(ent_t)), ""] + ["- %s (%s)" % (nm, ent_t[nm]["kind"]) for nm in left_t] + [""]
