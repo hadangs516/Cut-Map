@@ -1,0 +1,1711 @@
+{
+ "meta": {
+  "built_from": "data.json",
+  "asof": "2026-09-18",
+  "generator": "scripts/build_legacy_detail.py",
+  "note": "처음 버전(루트 index.html)의 학과별 상세 자료. 입결은 에듀진 등 기사 표에서 옮긴 값이고 대학 원문이 아니다.",
+  "prep_src": [
+   "snu28",
+   "ys28",
+   "va608317",
+   "adiga"
+  ]
+ },
+ "src": {
+  "adiga": {
+   "t": "대입정보포털 어디가 (한국대학교육협의회)",
+   "u": "https://www.adiga.kr",
+   "d": "대학별 공식 입시결과·모집요강 원자료. 학교별 주소 규칙을 확인하지 못해 첫 화면으로만 연결"
+  },
+  "e48879": {
+   "t": "에듀진 · 2026 대입시그널 컴퓨터/소프트/IT 학종 (2025.02.15)",
+   "u": "https://www.edujin.co.kr/news/articleView.html?idxno=48879",
+   "d": "2024학년도 학종 70%컷, 2026 모집인원, 2025 경쟁률"
+  },
+  "e49206": {
+   "t": "에듀진 · 2026 국민대 국민프런티어 전형 분석 (2025.03.17)",
+   "u": "https://www.edujin.co.kr/news/articleView.html?idxno=49206",
+   "d": "국민프런티어 전형 방법, 수능최저 미적용"
+  },
+  "e50394": {
+   "t": "에듀진 · 국민대 국민프런티어 경쟁률·등급컷 (2025.07.24)",
+   "u": "https://www.edujin.co.kr/news/articleView.html?idxno=50394",
+   "d": "2026 국민프런티어 소프트웨어학부 모집인원"
+  },
+  "e51422": {
+   "t": "에듀진 · [2026 수시분석] 컴퓨터공학과 교과전형 (2025.11.04)",
+   "u": "https://www.edujin.co.kr/news/articleView.html?idxno=51422",
+   "d": "2025학년도 교과 입결 (기사 공개 부분)"
+  },
+  "e54043": {
+   "t": "에듀진 · [지원전략] AI학과 학종 (2026.09.07)",
+   "u": "https://www.edujin.co.kr/news/articleView.html?idxno=54043",
+   "d": "AI 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+  },
+  "e54044": {
+   "t": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+   "u": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+   "d": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+  },
+  "e54094": {
+   "t": "에듀진 · [지원전략] 2027 컴퓨터공학과 교과 (2026.09.11)",
+   "u": "https://www.edujin.co.kr/news/articleView.html?idxno=54094",
+   "d": "2026학년도 교과 입결 (기사 공개 부분)"
+  },
+  "snu28": {
+   "t": "서울대 · 2028학년도 전공 연계 과목 선택 안내 (2025.07)",
+   "u": "https://www.snu.ac.kr/snunow/press?md=v&bbsidx=156226",
+   "d": "자연계열 권장 과목"
+  },
+  "va608317": {
+   "t": "베리타스알파 · 연세대 2028 전공연계과목 공개 (2026.05.04)",
+   "u": "https://www.veritas-a.com/news/articleView.html?idxno=608317",
+   "d": "컴퓨터과학과·인공지능학과의 과학 과목 자율 선택"
+  },
+  "ys28": {
+   "t": "연세대 · 2028학년도 전공연계과목 선택 가이드라인",
+   "u": "https://www2.yonsei.ac.kr/entrance/plan/2028_guide.pdf",
+   "d": "자연계열 권장 과목"
+  }
+ },
+ "schools": {
+  "서울대학교(서울)": {
+   "legacy_id": "snu",
+   "name": "서울대학교",
+   "short": "서울대",
+   "campus_label": null,
+   "region": "서울",
+   "loc": "관악구",
+   "type": "국립",
+   "homepage": "https://www.snu.ac.kr",
+   "women": false,
+   "match": {
+    "by": "이름과 좌표",
+    "distance_km": 0.73
+   },
+   "depts": [
+    {
+     "id": "snu-cs",
+     "name": "컴퓨터공학부",
+     "field": "cs",
+     "field_name": "컴퓨터",
+     "match": null,
+     "match_note": "별도 학과",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 일반",
+       "year": 2026,
+       "cut70": 1.32,
+       "cut70_2025": 1.39,
+       "recruit": 28,
+       "recruit_basis": "2026",
+       "comp": 4.31,
+       "comp_year": 2026,
+       "add": 1,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      },
+      {
+       "admission": "학종 지역균형",
+       "year": 2026,
+       "cut70": 1.1,
+       "cut70_2025": 1.11,
+       "recruit": 6,
+       "recruit_basis": "2026",
+       "comp": 2.33,
+       "comp_year": 2026,
+       "add": 2,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ]
+    }
+   ]
+  },
+  "고려대학교(서울)": {
+   "legacy_id": "korea",
+   "name": "고려대학교",
+   "short": "고려대",
+   "campus_label": null,
+   "region": "서울",
+   "loc": "성북구",
+   "type": "사립",
+   "homepage": "https://www.korea.ac.kr",
+   "women": false,
+   "match": {
+    "by": "이름과 좌표",
+    "distance_km": 0.39
+   },
+   "depts": [
+    {
+     "id": "ku-cs",
+     "name": "컴퓨터학과",
+     "field": "cs",
+     "field_name": "컴퓨터",
+     "match": null,
+     "match_note": "별도 학과",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 학업우수",
+       "year": 2026,
+       "cut70": 1.67,
+       "cut70_2025": 1.99,
+       "recruit": 26,
+       "recruit_basis": "2026",
+       "comp": 11,
+       "comp_year": 2026,
+       "add": 17,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      },
+      {
+       "admission": "학종 계열적합",
+       "year": null,
+       "cut70": null,
+       "cut70_2025": 3.29,
+       "recruit": 16,
+       "recruit_basis": "2026",
+       "comp": 12.14,
+       "comp_year": 2026,
+       "add": null,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ],
+     "gyo": {
+      "cut": 1.69,
+      "year": 2026,
+      "src": "e54094",
+      "src_title": "에듀진 · [지원전략] 2027 컴퓨터공학과 교과 (2026.09.11)",
+      "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54094",
+      "src_desc": "2026학년도 교과 입결 (기사 공개 부분)"
+     }
+    },
+    {
+     "id": "ku-ai",
+     "name": "인공지능학과",
+     "field": "ai",
+     "field_name": "인공지능",
+     "match": null,
+     "match_note": "별도 학과",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 학업우수",
+       "year": 2026,
+       "cut70": 1.56,
+       "cut70_2025": 2.0,
+       "recruit": 21,
+       "recruit_basis": "2026",
+       "comp": 14.19,
+       "comp_year": 2026,
+       "add": 17,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54043",
+       "src_title": "에듀진 · [지원전략] AI학과 학종 (2026.09.07)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54043",
+       "src_desc": "AI 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      },
+      {
+       "admission": "학종 계열적합",
+       "year": 2026,
+       "cut70": 2.17,
+       "cut70_2025": 3.58,
+       "recruit": 13,
+       "recruit_basis": "2026",
+       "comp": 13.62,
+       "comp_year": 2026,
+       "add": 21,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54043",
+       "src_title": "에듀진 · [지원전략] AI학과 학종 (2026.09.07)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54043",
+       "src_desc": "AI 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ]
+    }
+   ]
+  },
+  "서강대학교(서울)": {
+   "legacy_id": "sogang",
+   "name": "서강대학교",
+   "short": "서강대",
+   "campus_label": null,
+   "region": "서울",
+   "loc": "마포구",
+   "type": "사립",
+   "homepage": "https://www.sogang.ac.kr",
+   "women": false,
+   "match": {
+    "by": "이름과 좌표",
+    "distance_km": 0.16
+   },
+   "depts": [
+    {
+     "id": "sogang-cs",
+     "name": "컴퓨터공학과",
+     "field": "cs",
+     "field_name": "컴퓨터",
+     "match": "컴퓨터공학과",
+     "match_note": "대응",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 일반",
+       "year": 2026,
+       "cut70": 2.81,
+       "cut70_2025": 3.35,
+       "recruit": 33,
+       "recruit_basis": "2026",
+       "comp": 11.52,
+       "comp_year": 2026,
+       "add": 42,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ],
+     "gyo": {
+      "cut": 1.4,
+      "year": 2025,
+      "src": "e51422",
+      "src_title": "에듀진 · [2026 수시분석] 컴퓨터공학과 교과전형 (2025.11.04)",
+      "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=51422",
+      "src_desc": "2025학년도 교과 입결 (기사 공개 부분)"
+     }
+    },
+    {
+     "id": "sogang-ai",
+     "name": "인공지능학과",
+     "field": "ai",
+     "field_name": "인공지능",
+     "match": "인공지능학과",
+     "match_note": "대응",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 일반",
+       "year": 2026,
+       "cut70": 2.05,
+       "cut70_2025": 2.84,
+       "recruit": 12,
+       "recruit_basis": "2026",
+       "comp": 15.5,
+       "comp_year": 2026,
+       "add": 17,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54043",
+       "src_title": "에듀진 · [지원전략] AI학과 학종 (2026.09.07)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54043",
+       "src_desc": "AI 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ]
+    }
+   ]
+  },
+  "성균관대학교 (본교(제2캠퍼스))": {
+   "legacy_id": "skku",
+   "name": "성균관대학교",
+   "short": "성균관대",
+   "campus_label": "자연과학캠퍼스",
+   "region": "경기",
+   "loc": "수원시",
+   "type": "사립",
+   "homepage": "https://www.skku.edu",
+   "women": false,
+   "match": {
+    "by": "이름과 좌표",
+    "distance_km": 0.27
+   },
+   "depts": [
+    {
+     "id": "skku-sw",
+     "name": "소프트웨어학과",
+     "field": "sw",
+     "field_name": "소프트웨어",
+     "match": "소프트웨어학과",
+     "match_note": "대응",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 탐구형",
+       "year": 2024,
+       "cut70": 2.28,
+       "cut70_2025": null,
+       "recruit": 25,
+       "recruit_basis": "2026 계획",
+       "comp": 17.29,
+       "comp_year": 2025,
+       "add": 118,
+       "add_year": 2024,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e48879",
+       "src_title": "에듀진 · 2026 대입시그널 컴퓨터/소프트/IT 학종 (2025.02.15)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=48879",
+       "src_desc": "2024학년도 학종 70%컷, 2026 모집인원, 2025 경쟁률"
+      }
+     ]
+    }
+   ]
+  },
+  "한양대학교(서울)": {
+   "legacy_id": "hanyang",
+   "name": "한양대학교",
+   "short": "한양대",
+   "campus_label": "서울캠퍼스",
+   "region": "서울",
+   "loc": "성동구",
+   "type": "사립",
+   "homepage": "https://www.hanyang.ac.kr",
+   "women": false,
+   "match": {
+    "by": "이름과 좌표",
+    "distance_km": 0.26
+   },
+   "depts": [
+    {
+     "id": "hy-cs",
+     "name": "컴퓨터소프트웨어학부",
+     "field": "cs",
+     "field_name": "컴퓨터",
+     "match": "컴퓨터소프트웨어학부",
+     "match_note": "대응",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 서류형",
+       "year": 2026,
+       "cut70": 2.54,
+       "cut70_2025": 3.17,
+       "recruit": 13,
+       "recruit_basis": "2026",
+       "comp": 24.46,
+       "comp_year": 2026,
+       "add": 74,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      },
+      {
+       "admission": "학종 면접형",
+       "year": 2026,
+       "cut70": 4.86,
+       "cut70_2025": null,
+       "recruit": 13,
+       "recruit_basis": "2026",
+       "comp": 24.54,
+       "comp_year": 2026,
+       "add": 32,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      },
+      {
+       "admission": "추천형",
+       "year": 2026,
+       "cut70": 2.47,
+       "cut70_2025": 2.41,
+       "recruit": 11,
+       "recruit_basis": "2026",
+       "comp": 26.18,
+       "comp_year": 2026,
+       "add": 11,
+       "add_year": 2026,
+       "special": false,
+       "note": "에듀진 학종 표에 실린 전형. 교과·종합 구분은 모집요강으로 확인 필요",
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ],
+     "gyo": {
+      "cut": 1.8,
+      "year": 2026,
+      "src": "e54094",
+      "src_title": "에듀진 · [지원전략] 2027 컴퓨터공학과 교과 (2026.09.11)",
+      "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54094",
+      "src_desc": "2026학년도 교과 입결 (기사 공개 부분)"
+     }
+    }
+   ]
+  },
+  "한양대학교(에리카)": {
+   "legacy_id": "erica",
+   "name": "한양대학교 ERICA",
+   "short": "한양대 ERICA",
+   "campus_label": null,
+   "region": "경기",
+   "loc": "안산시",
+   "type": "사립",
+   "homepage": "https://www.hanyang.ac.kr",
+   "women": false,
+   "match": {
+    "by": "이름과 좌표",
+    "distance_km": 0.43
+   },
+   "depts": [
+    {
+     "id": "er-cs",
+     "name": "컴퓨터학부",
+     "field": "cs",
+     "field_name": "컴퓨터",
+     "match": "컴퓨터학부",
+     "match_note": "대응(이름 전체 일치)",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 서류형",
+       "year": 2026,
+       "cut70": 2.71,
+       "cut70_2025": 2.93,
+       "recruit": 5,
+       "recruit_basis": "2026",
+       "comp": 11.4,
+       "comp_year": 2026,
+       "add": 6,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ]
+    },
+    {
+     "id": "er-cm",
+     "name": "컴퓨터전공",
+     "field": "cs",
+     "field_name": "컴퓨터",
+     "match": "컴퓨터전공",
+     "match_note": "대응(이름 전체 일치)",
+     "note": "원자료에 컴퓨터학부와 별도 모집단위로 실려 있어요. 소속 구조는 모집요강으로 확인하세요.",
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 서류형",
+       "year": 2026,
+       "cut70": 2.65,
+       "cut70_2025": null,
+       "recruit": 6,
+       "recruit_basis": "2026",
+       "comp": 11.67,
+       "comp_year": 2026,
+       "add": 4,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ]
+    },
+    {
+     "id": "er-ai",
+     "name": "인공지능학과",
+     "field": "ai",
+     "field_name": "인공지능",
+     "match": "인공지능학과",
+     "match_note": "대응",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 서류형",
+       "year": 2026,
+       "cut70": 2.83,
+       "cut70_2025": 2.93,
+       "recruit": 5,
+       "recruit_basis": "2026",
+       "comp": 12.4,
+       "comp_year": 2026,
+       "add": 13,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54043",
+       "src_title": "에듀진 · [지원전략] AI학과 학종 (2026.09.07)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54043",
+       "src_desc": "AI 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ]
+    }
+   ]
+  },
+  "서울시립대학교(서울)": {
+   "legacy_id": "uos",
+   "name": "서울시립대학교",
+   "short": "서울시립대",
+   "campus_label": null,
+   "region": "서울",
+   "loc": "동대문구",
+   "type": "공립",
+   "homepage": "https://www.uos.ac.kr",
+   "women": false,
+   "match": {
+    "by": "이름과 좌표",
+    "distance_km": 0.03
+   },
+   "depts": [
+    {
+     "id": "uos-cs",
+     "name": "컴퓨터과학부",
+     "field": "cs",
+     "field_name": "컴퓨터",
+     "match": "컴퓨터과학부",
+     "match_note": "대응",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 면접형",
+       "year": 2026,
+       "cut70": 2.06,
+       "cut70_2025": 2.03,
+       "recruit": 12,
+       "recruit_basis": "2026",
+       "comp": 20.08,
+       "comp_year": 2026,
+       "add": 12,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ],
+     "gyo": {
+      "cut": 1.7,
+      "year": 2026,
+      "src": "e54094",
+      "src_title": "에듀진 · [지원전략] 2027 컴퓨터공학과 교과 (2026.09.11)",
+      "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54094",
+      "src_desc": "2026학년도 교과 입결 (기사 공개 부분)"
+     }
+    },
+    {
+     "id": "uos-ai",
+     "name": "인공지능학과",
+     "field": "ai",
+     "field_name": "인공지능",
+     "match": "인공지능학과",
+     "match_note": "대응",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 면접형",
+       "year": 2026,
+       "cut70": 2.18,
+       "cut70_2025": 2.18,
+       "recruit": 14,
+       "recruit_basis": "2026",
+       "comp": 23.43,
+       "comp_year": 2026,
+       "add": 4,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54043",
+       "src_title": "에듀진 · [지원전략] AI학과 학종 (2026.09.07)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54043",
+       "src_desc": "AI 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ]
+    }
+   ]
+  },
+  "중앙대학교(서울)": {
+   "legacy_id": "cau",
+   "name": "중앙대학교",
+   "short": "중앙대",
+   "campus_label": "서울캠퍼스",
+   "region": "서울",
+   "loc": "동작구",
+   "type": "사립",
+   "homepage": "https://www.cau.ac.kr",
+   "women": false,
+   "match": {
+    "by": "이름과 좌표",
+    "distance_km": 0.23
+   },
+   "depts": [
+    {
+     "id": "cau-sw",
+     "name": "소프트웨어학부",
+     "field": "sw",
+     "field_name": "소프트웨어",
+     "match": "소프트웨어학부",
+     "match_note": "대응",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 CAU탐구형인재",
+       "year": 2024,
+       "cut70": 2.3,
+       "cut70_2025": null,
+       "recruit": 20,
+       "recruit_basis": "2026 계획",
+       "comp": 26.6,
+       "comp_year": 2025,
+       "add": 57,
+       "add_year": 2024,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e48879",
+       "src_title": "에듀진 · 2026 대입시그널 컴퓨터/소프트/IT 학종 (2025.02.15)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=48879",
+       "src_desc": "2024학년도 학종 70%컷, 2026 모집인원, 2025 경쟁률"
+      },
+      {
+       "admission": "학종 CAU융합형인재",
+       "year": 2024,
+       "cut70": 1.81,
+       "cut70_2025": null,
+       "recruit": 12,
+       "recruit_basis": "2026 계획",
+       "comp": 31.58,
+       "comp_year": 2025,
+       "add": 17,
+       "add_year": 2024,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e48879",
+       "src_title": "에듀진 · 2026 대입시그널 컴퓨터/소프트/IT 학종 (2025.02.15)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=48879",
+       "src_desc": "2024학년도 학종 70%컷, 2026 모집인원, 2025 경쟁률"
+      }
+     ]
+    },
+    {
+     "id": "cau-ai",
+     "name": "AI학과",
+     "field": "ai",
+     "field_name": "인공지능",
+     "match": "AI학과",
+     "match_note": "대응",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 CAU탐구형인재",
+       "year": 2026,
+       "cut70": 2.54,
+       "cut70_2025": 3.42,
+       "recruit": 16,
+       "recruit_basis": "2026",
+       "comp": 21.81,
+       "comp_year": 2026,
+       "add": 12,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54043",
+       "src_title": "에듀진 · [지원전략] AI학과 학종 (2026.09.07)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54043",
+       "src_desc": "AI 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ]
+    }
+   ]
+  },
+  "경희대학교 (본교(제2캠퍼스))": {
+   "legacy_id": "khu",
+   "name": "경희대학교",
+   "short": "경희대(국제)",
+   "campus_label": "국제캠퍼스",
+   "region": "경기",
+   "loc": "용인시",
+   "type": "사립",
+   "homepage": "https://www.khu.ac.kr",
+   "women": false,
+   "match": {
+    "by": "이름과 좌표",
+    "distance_km": 0.84
+   },
+   "depts": [
+    {
+     "id": "khu-sw",
+     "name": "소프트웨어융합학과",
+     "field": "sw",
+     "field_name": "소프트웨어",
+     "match": "소프트웨어융합학과",
+     "match_note": "대응",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 네오르네상스",
+       "year": 2024,
+       "cut70": 2.19,
+       "cut70_2025": null,
+       "recruit": 9,
+       "recruit_basis": "2026 계획",
+       "comp": 26,
+       "comp_year": 2025,
+       "add": 13,
+       "add_year": 2024,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e48879",
+       "src_title": "에듀진 · 2026 대입시그널 컴퓨터/소프트/IT 학종 (2025.02.15)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=48879",
+       "src_desc": "2024학년도 학종 70%컷, 2026 모집인원, 2025 경쟁률"
+      }
+     ]
+    },
+    {
+     "id": "khu-cs",
+     "name": "컴퓨터공학과",
+     "field": "cs",
+     "field_name": "컴퓨터",
+     "match": null,
+     "match_note": "별도 학과",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 네오르네상스",
+       "year": 2026,
+       "cut70": 1.86,
+       "cut70_2025": 1.92,
+       "recruit": 7,
+       "recruit_basis": "2026",
+       "comp": 20.14,
+       "comp_year": 2026,
+       "add": 8,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ],
+     "gyo": {
+      "cut": 1.7,
+      "year": 2025,
+      "src": "e51422",
+      "src_title": "에듀진 · [2026 수시분석] 컴퓨터공학과 교과전형 (2025.11.04)",
+      "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=51422",
+      "src_desc": "2025학년도 교과 입결 (기사 공개 부분)"
+     }
+    },
+    {
+     "id": "khu-ai",
+     "name": "인공지능학과",
+     "field": "ai",
+     "field_name": "인공지능",
+     "match": null,
+     "match_note": "별도 학과",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 네오르네상스",
+       "year": 2026,
+       "cut70": 1.8,
+       "cut70_2025": 1.93,
+       "recruit": 4,
+       "recruit_basis": "2026",
+       "comp": 23.25,
+       "comp_year": 2026,
+       "add": 1,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54043",
+       "src_title": "에듀진 · [지원전략] AI학과 학종 (2026.09.07)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54043",
+       "src_desc": "AI 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ]
+    }
+   ]
+  },
+  "건국대학교(서울)": {
+   "legacy_id": "konkuk",
+   "name": "건국대학교",
+   "short": "건국대",
+   "campus_label": "서울캠퍼스",
+   "region": "서울",
+   "loc": "광진구",
+   "type": "사립",
+   "homepage": "https://www.konkuk.ac.kr",
+   "women": false,
+   "match": {
+    "by": "이름과 좌표",
+    "distance_km": 0.53
+   },
+   "depts": [
+    {
+     "id": "konkuk-cs",
+     "name": "컴퓨터공학부",
+     "field": "cs",
+     "field_name": "컴퓨터",
+     "match": "컴퓨터공학부",
+     "match_note": "대응",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 KU자기추천",
+       "year": 2026,
+       "cut70": 2.37,
+       "cut70_2025": 2.25,
+       "recruit": 34,
+       "recruit_basis": "2026",
+       "comp": 17.62,
+       "comp_year": 2026,
+       "add": 27,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ],
+     "gyo": {
+      "cut": 1.72,
+      "year": 2026,
+      "src": "e54094",
+      "src_title": "에듀진 · [지원전략] 2027 컴퓨터공학과 교과 (2026.09.11)",
+      "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54094",
+      "src_desc": "2026학년도 교과 입결 (기사 공개 부분)"
+     }
+    }
+   ]
+  },
+  "동국대학교(서울)": {
+   "legacy_id": "dongguk",
+   "name": "동국대학교",
+   "short": "동국대",
+   "campus_label": "서울캠퍼스",
+   "region": "서울",
+   "loc": "중구",
+   "type": "사립",
+   "homepage": "https://www.dongguk.edu",
+   "women": false,
+   "match": {
+    "by": "이름과 좌표",
+    "distance_km": 0.26
+   },
+   "depts": [
+    {
+     "id": "dg-cai",
+     "name": "컴퓨터·AI학부",
+     "field": "cs",
+     "field_name": "컴퓨터",
+     "match": "컴퓨터·AI학부",
+     "match_note": "대응",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 Do Dream",
+       "year": 2026,
+       "cut70": 1.75,
+       "cut70_2025": 2.3,
+       "recruit": 64,
+       "recruit_basis": "2026",
+       "comp": 13.03,
+       "comp_year": 2026,
+       "add": 27,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      },
+      {
+       "admission": "학종 불교추천인재",
+       "year": null,
+       "cut70": null,
+       "cut70_2025": null,
+       "recruit": 3,
+       "recruit_basis": "2026",
+       "comp": 10,
+       "comp_year": 2026,
+       "add": null,
+       "add_year": 2026,
+       "special": true,
+       "note": null,
+       "restricted": true,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ],
+     "gyo": {
+      "cut": 1.0,
+      "year": 2026,
+      "src": "e54094",
+      "src_title": "에듀진 · [지원전략] 2027 컴퓨터공학과 교과 (2026.09.11)",
+      "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54094",
+      "src_desc": "2026학년도 교과 입결 (기사 공개 부분)"
+     }
+    }
+   ]
+  },
+  "홍익대학교 (본교(제1캠퍼스))": {
+   "legacy_id": "hongik",
+   "name": "홍익대학교",
+   "short": "홍익대",
+   "campus_label": "서울캠퍼스",
+   "region": "서울",
+   "loc": "마포구",
+   "type": "사립",
+   "homepage": "https://www.hongik.ac.kr",
+   "women": false,
+   "match": {
+    "by": "이름과 좌표",
+    "distance_km": 0.2
+   },
+   "depts": [
+    {
+     "id": "hongik-cs",
+     "name": "컴퓨터공학과",
+     "field": "cs",
+     "field_name": "컴퓨터",
+     "match": "컴퓨터공학과",
+     "match_note": "대응",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 학교생활우수자",
+       "year": 2026,
+       "cut70": 2.3,
+       "cut70_2025": 2.17,
+       "recruit": 35,
+       "recruit_basis": "2026",
+       "comp": 9.94,
+       "comp_year": 2026,
+       "add": 33,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ],
+     "gyo": {
+      "cut": 1.8,
+      "year": 2026,
+      "src": "e54094",
+      "src_title": "에듀진 · [지원전략] 2027 컴퓨터공학과 교과 (2026.09.11)",
+      "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54094",
+      "src_desc": "2026학년도 교과 입결 (기사 공개 부분)"
+     }
+    }
+   ]
+  },
+  "국민대학교(서울)": {
+   "legacy_id": "kookmin",
+   "name": "국민대학교",
+   "short": "국민대",
+   "campus_label": null,
+   "region": "서울",
+   "loc": "성북구",
+   "type": "사립",
+   "homepage": "https://www.kookmin.ac.kr",
+   "women": false,
+   "match": {
+    "by": "이름과 좌표",
+    "distance_km": 0.16
+   },
+   "depts": [
+    {
+     "id": "km-sw",
+     "name": "소프트웨어학부",
+     "field": "sw",
+     "field_name": "소프트웨어",
+     "match": "소프트웨어학부",
+     "match_note": "대응",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 국민프런티어",
+       "year": 2024,
+       "cut70": 2.97,
+       "cut70_2025": null,
+       "recruit": 20,
+       "recruit_basis": "2026 계획",
+       "comp": 19.3,
+       "comp_year": 2025,
+       "add": 21,
+       "add_year": 2024,
+       "special": false,
+       "note": "2026 모집 20명은 에듀진 2025.07 기사 기준",
+       "restricted": false,
+       "src": "e48879",
+       "src_title": "에듀진 · 2026 대입시그널 컴퓨터/소프트/IT 학종 (2025.02.15)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=48879",
+       "src_desc": "2024학년도 학종 70%컷, 2026 모집인원, 2025 경쟁률"
+      }
+     ],
+     "method": {
+      "text": "1단계 서류 100%로 모집인원의 3배수 선발 → 2단계 1단계 성적 70% + 면접 30%. 수능최저 없음 (2026학년도 기준)",
+      "src": "e49206",
+      "src_title": "에듀진 · 2026 국민대 국민프런티어 전형 분석 (2025.03.17)",
+      "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=49206",
+      "src_desc": "국민프런티어 전형 방법, 수능최저 미적용"
+     },
+     "extra_src": [
+      {
+       "src": "e50394",
+       "src_title": "에듀진 · 국민대 국민프런티어 경쟁률·등급컷 (2025.07.24)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=50394",
+       "src_desc": "2026 국민프런티어 소프트웨어학부 모집인원"
+      }
+     ]
+    },
+    {
+     "id": "km-ai",
+     "name": "인공지능학부",
+     "field": "ai",
+     "field_name": "인공지능",
+     "match": "인공지능학부",
+     "match_note": "대응",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 국민프런티어",
+       "year": 2026,
+       "cut70": 2.92,
+       "cut70_2025": 2.78,
+       "recruit": 11,
+       "recruit_basis": "2026",
+       "comp": 13,
+       "comp_year": 2026,
+       "add": 6,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54043",
+       "src_title": "에듀진 · [지원전략] AI학과 학종 (2026.09.07)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54043",
+       "src_desc": "AI 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ],
+     "method": {
+      "text": "1단계 서류 100%로 모집인원의 3배수 선발 → 2단계 1단계 성적 70% + 면접 30%. 수능최저 없음 (2026학년도 기준)",
+      "src": "e49206",
+      "src_title": "에듀진 · 2026 국민대 국민프런티어 전형 분석 (2025.03.17)",
+      "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=49206",
+      "src_desc": "국민프런티어 전형 방법, 수능최저 미적용"
+     }
+    }
+   ]
+  },
+  "숭실대학교(서울)": {
+   "legacy_id": "ssu",
+   "name": "숭실대학교",
+   "short": "숭실대",
+   "campus_label": null,
+   "region": "서울",
+   "loc": "동작구",
+   "type": "사립",
+   "homepage": "https://ssu.ac.kr",
+   "women": false,
+   "match": {
+    "by": "이름과 좌표",
+    "distance_km": 0.27
+   },
+   "depts": [
+    {
+     "id": "ssu-cs",
+     "name": "컴퓨터학부",
+     "field": "cs",
+     "field_name": "컴퓨터",
+     "match": "컴퓨터학부",
+     "match_note": "대응",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 SSU미래인재",
+       "year": 2026,
+       "cut70": 2.43,
+       "cut70_2025": 2.35,
+       "recruit": 17,
+       "recruit_basis": "2026",
+       "comp": 11.76,
+       "comp_year": 2026,
+       "add": 18,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      },
+      {
+       "admission": "학종 SW우수자",
+       "year": 2026,
+       "cut70": 3.16,
+       "cut70_2025": null,
+       "recruit": 4,
+       "recruit_basis": "2026",
+       "comp": 15.75,
+       "comp_year": 2026,
+       "add": null,
+       "add_year": 2026,
+       "special": true,
+       "note": null,
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ]
+    },
+    {
+     "id": "ssu-ai",
+     "name": "AI소프트웨어학부",
+     "field": "sw",
+     "field_name": "소프트웨어",
+     "match": null,
+     "match_note": "별도 학과",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 SSU미래인재",
+       "year": 2026,
+       "cut70": 2.72,
+       "cut70_2025": 2.5,
+       "recruit": 30,
+       "recruit_basis": "2026",
+       "comp": 20.03,
+       "comp_year": 2026,
+       "add": 31,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54043",
+       "src_title": "에듀진 · [지원전략] AI학과 학종 (2026.09.07)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54043",
+       "src_desc": "AI 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      },
+      {
+       "admission": "학종 SW우수자",
+       "year": 2026,
+       "cut70": 3.54,
+       "cut70_2025": null,
+       "recruit": 9,
+       "recruit_basis": "2026",
+       "comp": 21,
+       "comp_year": 2026,
+       "add": 3,
+       "add_year": 2026,
+       "special": true,
+       "note": null,
+       "restricted": false,
+       "src": "e54043",
+       "src_title": "에듀진 · [지원전략] AI학과 학종 (2026.09.07)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54043",
+       "src_desc": "AI 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ]
+    }
+   ]
+  },
+  "세종대학교(서울)": {
+   "legacy_id": "sejong",
+   "name": "세종대학교",
+   "short": "세종대",
+   "campus_label": null,
+   "region": "서울",
+   "loc": "광진구",
+   "type": "사립",
+   "homepage": "https://www.sejong.ac.kr",
+   "women": false,
+   "match": {
+    "by": "이름과 좌표",
+    "distance_km": 0.28
+   },
+   "depts": [
+    {
+     "id": "sejong-cs",
+     "name": "컴퓨터공학과",
+     "field": "cs",
+     "field_name": "컴퓨터",
+     "match": "컴퓨터공학과",
+     "match_note": "대응",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 면접형",
+       "year": 2026,
+       "cut70": 2.73,
+       "cut70_2025": 2.89,
+       "recruit": 13,
+       "recruit_basis": "2026",
+       "comp": 17.23,
+       "comp_year": 2026,
+       "add": 15,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      },
+      {
+       "admission": "학종 서류형",
+       "year": 2026,
+       "cut70": 2.51,
+       "cut70_2025": 2.36,
+       "recruit": 7,
+       "recruit_basis": "2026",
+       "comp": 10.29,
+       "comp_year": 2026,
+       "add": 10,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ]
+    },
+    {
+     "id": "sejong-ds",
+     "name": "인공지능데이터사이언스학과",
+     "field": "ds",
+     "field_name": "데이터·AI",
+     "match": "인공지능데이터사이언스학과",
+     "match_note": "대응",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 면접형",
+       "year": 2026,
+       "cut70": 2.71,
+       "cut70_2025": 2.81,
+       "recruit": 16,
+       "recruit_basis": "2026",
+       "comp": 12.19,
+       "comp_year": 2026,
+       "add": 16,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54043",
+       "src_title": "에듀진 · [지원전략] AI학과 학종 (2026.09.07)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54043",
+       "src_desc": "AI 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      },
+      {
+       "admission": "학종 서류형",
+       "year": 2026,
+       "cut70": 2.59,
+       "cut70_2025": 2.62,
+       "recruit": 14,
+       "recruit_basis": "2026",
+       "comp": 8,
+       "comp_year": 2026,
+       "add": 16,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54043",
+       "src_title": "에듀진 · [지원전략] AI학과 학종 (2026.09.07)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54043",
+       "src_desc": "AI 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ]
+    }
+   ]
+  },
+  "광운대학교(서울)": {
+   "legacy_id": "kw",
+   "name": "광운대학교",
+   "short": "광운대",
+   "campus_label": null,
+   "region": "서울",
+   "loc": "노원구",
+   "type": "사립",
+   "homepage": "https://www.kw.ac.kr",
+   "women": false,
+   "match": {
+    "by": "이름과 좌표",
+    "distance_km": 0.1
+   },
+   "depts": [
+    {
+     "id": "kw-ce",
+     "name": "컴퓨터정보공학부",
+     "field": "cs",
+     "field_name": "컴퓨터",
+     "match": "컴퓨터정보공학부",
+     "match_note": "대응",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 서류형",
+       "year": 2026,
+       "cut70": 2.78,
+       "cut70_2025": 3.91,
+       "recruit": 10,
+       "recruit_basis": "2026",
+       "comp": 15.3,
+       "comp_year": 2026,
+       "add": 13,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      },
+      {
+       "admission": "학종 소프트웨어우수인재",
+       "year": 2026,
+       "cut70": 4.48,
+       "cut70_2025": 3.51,
+       "recruit": 22,
+       "recruit_basis": "2026",
+       "comp": 13.5,
+       "comp_year": 2026,
+       "add": 15,
+       "add_year": 2026,
+       "special": true,
+       "note": null,
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ]
+    }
+   ]
+  },
+  "서울과학기술대학교(서울)": {
+   "legacy_id": "seoultech",
+   "name": "서울과학기술대학교",
+   "short": "서울과기대",
+   "campus_label": null,
+   "region": "서울",
+   "loc": "노원구",
+   "type": "국립",
+   "homepage": "https://www.seoultech.ac.kr",
+   "women": false,
+   "match": {
+    "by": "이름과 좌표",
+    "distance_km": 0.4
+   },
+   "depts": [
+    {
+     "id": "st-cs",
+     "name": "컴퓨터공학과",
+     "field": "cs",
+     "field_name": "컴퓨터",
+     "match": "컴퓨터공학과",
+     "match_note": "대응",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 학교생활우수자",
+       "year": 2026,
+       "cut70": 2.75,
+       "cut70_2025": 2.98,
+       "recruit": 26,
+       "recruit_basis": "2026",
+       "comp": 18.73,
+       "comp_year": 2026,
+       "add": 31,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ]
+    },
+    {
+     "id": "st-ai",
+     "name": "인공지능응용학과",
+     "field": "ai",
+     "field_name": "인공지능",
+     "match": "인공지능응용학과",
+     "match_note": "대응",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 창의융합인재",
+       "year": 2026,
+       "cut70": 2.69,
+       "cut70_2025": 3.05,
+       "recruit": 20,
+       "recruit_basis": "2026",
+       "comp": 16.25,
+       "comp_year": 2026,
+       "add": 15,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54043",
+       "src_title": "에듀진 · [지원전략] AI학과 학종 (2026.09.07)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54043",
+       "src_desc": "AI 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ]
+    }
+   ]
+  },
+  "가톨릭대학교 (본교(제1캠퍼스))": {
+   "legacy_id": "catholic",
+   "name": "가톨릭대학교",
+   "short": "가톨릭대",
+   "campus_label": "성심교정",
+   "region": "경기",
+   "loc": "부천시",
+   "type": "사립",
+   "homepage": "https://www.catholic.ac.kr",
+   "women": false,
+   "match": {
+    "by": "이름과 좌표",
+    "distance_km": 0.25
+   },
+   "depts": [
+    {
+     "id": "cuk-cs",
+     "name": "컴퓨터정보공학부",
+     "field": "cs",
+     "field_name": "컴퓨터",
+     "match": "컴퓨터정보공학부",
+     "match_note": "대응",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 서류형",
+       "year": 2026,
+       "cut70": 3.23,
+       "cut70_2025": 3.5,
+       "recruit": 11,
+       "recruit_basis": "2026",
+       "comp": 15.09,
+       "comp_year": 2026,
+       "add": 11,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      },
+      {
+       "admission": "학종 면접형",
+       "year": 2026,
+       "cut70": 4.06,
+       "cut70_2025": null,
+       "recruit": 10,
+       "recruit_basis": "2026",
+       "comp": 17.9,
+       "comp_year": 2026,
+       "add": 12,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      },
+      {
+       "admission": "학종 가톨릭지도자추천",
+       "year": null,
+       "cut70": null,
+       "cut70_2025": null,
+       "recruit": 2,
+       "recruit_basis": "2026",
+       "comp": 14,
+       "comp_year": 2026,
+       "add": null,
+       "add_year": 2026,
+       "special": true,
+       "note": null,
+       "restricted": false,
+       "src": "e54044",
+       "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",
+       "src_desc": "컴퓨터공학 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ]
+    },
+    {
+     "id": "cuk-ai",
+     "name": "인공지능학과",
+     "field": "ai",
+     "field_name": "인공지능",
+     "match": "인공지능학과",
+     "match_note": "대응",
+     "note": null,
+     "sm": false,
+     "rows": [
+      {
+       "admission": "학종 서류형",
+       "year": 2026,
+       "cut70": 3.45,
+       "cut70_2025": 3.5,
+       "recruit": 6,
+       "recruit_basis": "2026",
+       "comp": 12.67,
+       "comp_year": 2026,
+       "add": 13,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54043",
+       "src_title": "에듀진 · [지원전략] AI학과 학종 (2026.09.07)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54043",
+       "src_desc": "AI 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      },
+      {
+       "admission": "학종 면접형",
+       "year": 2026,
+       "cut70": 3.54,
+       "cut70_2025": null,
+       "recruit": 6,
+       "recruit_basis": "2026",
+       "comp": 17.83,
+       "comp_year": 2026,
+       "add": 3,
+       "add_year": 2026,
+       "special": false,
+       "note": null,
+       "restricted": false,
+       "src": "e54043",
+       "src_title": "에듀진 · [지원전략] AI학과 학종 (2026.09.07)",
+       "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54043",
+       "src_desc": "AI 계열 2026·2025학년도 학종 입결, 2026 모집인원·경쟁률·추가합격"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
