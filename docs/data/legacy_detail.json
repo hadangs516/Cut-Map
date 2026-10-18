@@ -1647,7 +1647,7 @@
        "add_year": 2026,
        "special": true,
        "note": null,
-       "restricted": false,
+       "restricted": true,
        "src": "e54044",
        "src_title": "에듀진 · [지원전략] 컴퓨터공학 학종 (2026.09.08)",
        "src_url": "https://www.edujin.co.kr/news/articleView.html?idxno=54044",

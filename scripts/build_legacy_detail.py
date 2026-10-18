@@ -51,8 +51,8 @@ def nk(s):
 
 
 def core_name(adm):
-    """전형명에서 앞의 '학생부종합', '[학생부종합]', '학종'을 떼고 띄어쓰기·괄호를 없앤 이름."""
-    return nk(re.sub(r"^\s*(\[?학생부종합\]?|학종)\s*", "", adm or ""))
+    """전형명에서 앞의 '학생부종합', '[학생부종합]', '학종'과 끝의 '전형'을 떼고 띄어쓰기·괄호를 없앤 이름."""
+    return re.sub(r"전형$", "", nk(re.sub(r"^\s*(\[?학생부종합\]?|학종)\s*", "", adm or "")))
 
 
 def legacy_restricted(admission, marker):

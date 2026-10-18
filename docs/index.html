@@ -227,6 +227,7 @@ main{position:relative;flex:1;min-height:0}
 .erg dd{margin:1px 0 0;font-size:15px;font-weight:600;font-variant-numeric:tabular-nums}
 .ern{font-size:12.5px;color:var(--muted);margin:6px 0 0}
 .ern.why{color:var(--ink-2);font-size:13.5px}
+.ern.adn{font-size:11.5px;margin:2px 0 0}
 .box{margin:14px 0 0;padding:12px 14px;border-radius:12px;background:var(--surface-2);border:1px solid var(--line);font-size:13.5px}
 .box h4{margin:0 0 4px;font-size:13.5px}
 .box ul{margin:4px 0 0;padding-left:18px}
@@ -497,37 +498,61 @@ function sourceLink(d, label){
   return el('span', 'src na', where ? '원문: ' + where : '원문 링크 없음');
 }
 
-/* ---------- 기준 값: 대학 원문 cut70 먼저, 없으면 처음 버전(data.json) 70% 컷 ---------- */
+/* ---------- 기준 값: 대학 원문 cut70 > 대학어디가 환산등급 70% > 처음 버전(data.json) 70% 컷 ---------- */
 var LEG = {schools:{}, src:{}, meta:{}};   /* data/legacy_detail.json */
+var ADI = {schools:{}, meta:{}};           /* data/adiga.json: schools[마커] = {source_file, source_url, source_title, rows:[...]} */
+var ADI_LABEL = '대학어디가 기준';
+var ADI_NOTE = '어디가 환산등급은 대학별 환산 방식에 따른 값으로, 대학 원문 등급과 기준이 다를 수 있음';
 function srcName(r){ var t = r && r.src_title ? String(r.src_title) : ''; return t.split(' · ')[0] || '기사'; }
 function legacyEntry(m, r){
   return {department:m.name, admission:r.admission, year:r.year, cut70:r.cut70, note:r.note, other:[], restricted:r.restricted === true,
           ocr:false, source_url:r.src_url, source_file:r.src_title, _legacy:true, _label:srcName(r) + ' 기사 기준', _row:r};
 }
-/* 학과 하나의 모델: ipg(원문 최근 학년도 행), ipgAll(원문 전체 행), leg(처음 버전 학과), legRows(처음 버전 행),
-   basis(색·판정에 쓰는 행), legBasis(그중 처음 버전 값). 규칙:
+/* 대학어디가 행 -> 색·판정에 쓰는 항목. 값(cut70)은 환산등급 70% */
+function adigaEntry(m, r, sch){
+  return {department:m.name, admission:r.admission, year:r.year, cut70:r.grade70, note:null, other:[], restricted:r.restricted === true,
+          ocr:false, source_url:sch.source_url, source_file:sch.source_title, _adiga:true, _label:ADI_LABEL, _row:r};
+}
+/* 어디가 행 note 에서 '미제출 사유 ...' 조각만 꺼낸다(나머지는 '-' 칸 이름이라 화면에는 안 보인다) */
+function adigaWhy(r){
+  if(!r || typeof r.note !== 'string') return null;
+  var hit = r.note.split('; ').filter(function(t){ return t.indexOf('미제출') === 0; });
+  return hit.length ? hit.join(' · ') : null;
+}
+/* 학과 하나의 모델: ipg(원문 최근 학년도 행), ipgAll(원문 전체 행), adi(대학어디가 행), leg(처음 버전 학과), legRows(처음 버전 행),
+   basis(색·판정에 쓰는 행), adiBasis(그중 어디가 값), legBasis(그중 처음 버전 값). 규칙:
    1) 그 학과에 restricted 가 아닌 원문 cut70 이 있으면 원문 행(학과·전형마다 가장 최근 학년도)을 쓴다.
-   2) 하나도 없으면 처음 버전의 restricted 가 아닌 행 중 가장 최근 학년도 70% 컷을 쓴다. */
+   2) 없으면 restricted 가 아닌 어디가 환산등급 70% 가 있는 행을 쓴다.
+   3) 그것도 없으면 처음 버전의 restricted 가 아닌 행 중 가장 최근 학년도 70% 컷을 쓴다. */
 function deptModels(campus){
   var raw = Array.isArray(IPG[campus]) ? IPG[campus] : [];
   var all = raw.filter(function(d){ return d && d.department; });
   var latest = latestOnly(raw).filter(function(d){ return d && d.department; });
   var order = [], map = {};
   function get(key, name){
-    if(!map[key]){ map[key] = {key:key, name:name, ipgAll:[], ipg:[], leg:null, legRows:[], basis:[], legBasis:[]}; order.push(map[key]); }
+    if(!map[key]){ map[key] = {key:key, name:name, ipgAll:[], ipg:[], adi:[], leg:null, legRows:[], basis:[], adiBasis:[], legBasis:[]}; order.push(map[key]); }
     return map[key];
   }
   all.forEach(function(d){ get(d.department, d.department).ipgAll.push(d); });
   latest.forEach(function(d){ get(d.department, d.department).ipg.push(d); });
-  var L = LEG.schools && LEG.schools[campus];
+  var L = LEG.schools && LEG.schools[campus], legKey = {};
   if(L && Array.isArray(L.depts)) L.depts.forEach(function(ld){
     var m = ld.match ? get(ld.match, ld.match) : get('L:' + ld.id, ld.name);
     m.leg = ld;
     m.legRows = (ld.rows || []).map(function(r){ return legacyEntry(m, r); });
+    legKey[ld.id] = m.key;
+  });
+  var A = ADI.schools && ADI.schools[campus];
+  if(A && Array.isArray(A.rows)) A.rows.forEach(function(r){
+    var key = r.ipg_match || (r.legacy_id && legKey[r.legacy_id]) || ('A:' + r.match);
+    var m = get(key, r.ipg_match || r.department);
+    m.adi.push(adigaEntry(m, r, A));
   });
   order.forEach(function(m){
     var oc = m.ipg.filter(function(d){ return hasCut(d) && !isRestricted(d); });
     if(oc.length){ m.basis = oc; return; }
+    var ac = m.adi.filter(function(d){ return hasCut(d) && !isRestricted(d); });
+    if(ac.length){ m.adiBasis = ac; m.basis = ac; return; }
     var c = m.legRows.filter(function(d){ return hasCut(d) && !isRestricted(d); });
     if(!c.length) return;
     var y = Math.max.apply(null, c.map(function(d){ return yearNum(d.year); }));
@@ -535,6 +560,17 @@ function deptModels(campus){
     m.basis = m.legBasis;
   });
   return order;
+}
+/* 원문 cut70 도 어디가·처음 버전 70% 컷도 없는 학과: 눌러서 상세로 갈 수 있게 보여 줄 "자료 없음" 줄을 만든다 */
+function stubOf(m){
+  if(m.ipg.length || m.adiBasis.length || m.legBasis.length) return null;
+  var rows = m.adi.concat(m.legRows);
+  if(!rows.length) return null;
+  var srcs = [];
+  if(m.adi.length) srcs.push('대학어디가');
+  if(m.leg) srcs.push('기사');
+  var nr = rows.some(function(d){ return !isRestricted(d); });
+  return {restricted:!nr, d:{department:m.name, _stub:true, other:[], restricted:!nr, note:'70% 컷이 있는 학종 자료가 없어요(' + srcs.join('·') + ' 자료 기준)'}};
 }
 function schoolNotes(campus){
   return latestOnly(IPG[campus]).filter(function(d){ return noteOf(d) && !(d.department || d.admission || d.year != null); });
@@ -569,8 +605,8 @@ function deptRow(d, focus, m){
   var cutTxt = fmtCut(d.cut70), others = otherList(d);
   if(cutTxt){
     var dv = el('div', 'dv', cutTxt);
-    dv.appendChild(el('small', '', '70% 컷'));
-    if(d._legacy) dv.appendChild(el('small', 'lgl', d._label));
+    dv.appendChild(el('small', '', d._adiga ? '환산등급 70%' : '70% 컷'));
+    if(d._legacy || d._adiga) dv.appendChild(el('small', 'lgl', d._label));
     dc.appendChild(dv);
   } else if(others.length){
     /* 70% 컷이 없고 다른 기준 값이 있으면 원문 열 이름과 값을 그대로 보여 준다(색·판정에는 쓰지 않는다) */
@@ -584,24 +620,22 @@ function deptRow(d, focus, m){
   bd.appendChild(el('i'));
   bd.appendChild(document.createTextNode(lv.label));
   dc.appendChild(bd);
-  if(!d._stub) dc.appendChild(sourceLink(d, d._legacy ? '기사' : '원문'));
+  if(!d._stub) dc.appendChild(sourceLink(d, d._adiga ? '어디가' : d._legacy ? '기사' : '원문'));
   li.appendChild(dc);
   return li;
 }
 function focusOf(d, m){
   return (state.focusKey && state.focusKey === (d.department || '') + '|' + (d.admission || '')) || (state.focusDept && state.focusDept === m.key);
 }
-/* 학교 화면에 보일 학과 행: 원문 행 + 처음 버전 기준 행(원문 cut70 이 없는 학과) */
+/* 학교 화면에 보일 학과 행: 원문 행 + 어디가·처음 버전 기준 행(원문 cut70 이 없는 학과) */
 function schoolRows(e){
   var normal = [], restr = [];
   e.models.forEach(function(m){
     m.ipg.forEach(function(d){ (isRestricted(d) ? restr : normal).push({d:d, m:m}); });
+    m.adiBasis.forEach(function(d){ normal.push({d:d, m:m}); });
     m.legBasis.forEach(function(d){ normal.push({d:d, m:m}); });
-    if(m.leg && !m.ipg.length && !m.legBasis.length){
-      var nr = m.legRows.some(function(d){ return !isRestricted(d); });
-      (nr ? normal : restr).push({d:{department:m.name, _stub:true, other:[], restricted:!nr,
-        note:'70% 컷이 있는 학종 자료가 없어요(기사 자료 기준)'}, m:m});
-    }
+    var st = stubOf(m);
+    if(st) (st.restricted ? restr : normal).push({d:st.d, m:m});
   });
   return {normal:normal, restr:restr};
 }
@@ -615,10 +649,10 @@ function ipgyeolNode(e){
   /* 학과·전형·학년도가 모두 비어 있고 note 만 있는 항목(예: "입결 미공개")은 note 만 보여 준다 */
   e.notes.forEach(function(d){ frag.appendChild(el('div', 'one', noteOf(d))); });
   if(!e.models.length) return frag;
-  /* 처음 버전 자료가 없고 전부 70% 컷이 없고, note 가 같고, other 도 없으면 학과 목록 대신 한 줄로 보여 준다 */
+  /* 어디가·처음 버전 자료가 없고 전부 70% 컷이 없고, note 가 같고, other 도 없으면 학과 목록 대신 한 줄로 보여 준다 */
   var ipgRows = [];
   e.models.forEach(function(m){ m.ipg.forEach(function(d){ ipgRows.push(d); }); });
-  var anyLeg = e.models.some(function(m){ return !!m.leg; });
+  var anyLeg = e.models.some(function(m){ return !!m.leg || m.adi.length > 0; });
   var n0 = ipgRows.length ? (noteOf(ipgRows[0]) || '') : '';
   var allSame = !anyLeg && n0 && ipgRows.every(function(d){ return !hasCut(d) && noteOf(d) === n0 && !otherList(d).length; });
   if(allSame){
@@ -671,40 +705,53 @@ function levelBadge(d){
   bd.appendChild(document.createTextNode(lv.label));
   return bd;
 }
+function srcTag(d){ return d._adiga ? '대학어디가' : d._legacy ? d._label : '대학 원문'; }
 function entryCard(d, m){
   var restricted = isRestricted(d), isBasis = m.basis.indexOf(d) >= 0;
   var card = el('div', 'erow');
   var h = el('div', 'erh');
-  h.appendChild(el('span', 'ert', d.admission || '전형명 없음'));
-  h.appendChild(el('span', 'tag' + (d._legacy ? ' s' : ''), d._legacy ? d._label : '대학 원문'));
+  h.appendChild(el('span', 'ert', d._adiga ? admText(d) : (d.admission || '전형명 없음')));
+  h.appendChild(el('span', 'tag' + (d._legacy ? ' s' : ''), srcTag(d)));
   if(d._legacy && d._row.special) h.appendChild(el('span', 'tag s', '특별전형'));
-  if(restricted) h.appendChild(el('span', 'tag s', '지원 자격 제한'));
+  if(restricted && !d._adiga) h.appendChild(el('span', 'tag s', '지원 자격 제한'));
   if(isBasis) h.appendChild(levelBadge(d));
   card.appendChild(h);
   var dl = el('dl', 'erg');
-  var cutTxt = fmtCut(d.cut70);
-  var dd = kv(dl, '70% 컷 (' + (fmtYear(d.year) || '학년도 없음') + ')', cutTxt || '–');
-  if(d._legacy && cutTxt) dd.appendChild(el('small', 'lgl', d._label));
-  if(d._legacy){
-    var r = d._row;
-    kv(dl, '2025 입결', fmtCut(r.cut70_2025) || '–');
-    kv(dl, '모집 (' + r.recruit_basis + ')', typeof r.recruit === 'number' ? r.recruit + '명' : '–');
-    kv(dl, '경쟁률 (' + (r.comp_year || '') + ')', typeof r.comp === 'number' ? (Math.round(r.comp * 100) / 100) + ' : 1' : '–');
-    kv(dl, '추가합격 (' + (r.add_year || '') + ')', typeof r.add === 'number' ? r.add + '명' : '–');
+  if(d._adiga){
+    var a = d._row;
+    kv(dl, '모집인원 (최종)', typeof a.recruit_final === 'number' ? a.recruit_final + '명' : '–');
+    kv(dl, '경쟁률', typeof a.competition === 'number' ? (Math.round(a.competition * 100) / 100) + ' : 1' : '–');
+    kv(dl, '충원인원', typeof a.fill === 'number' ? a.fill + '명' : '–');
+    kv(dl, '환산등급 70%', fmtCut(a.grade70) || '–');
+    kv(dl, '환산등급 50%', fmtCut(a.grade50) || '–');
+    kv(dl, '환산점수 70%', fmtCut(a.score70) || '–');
+    kv(dl, '환산점수 50%', fmtCut(a.score50) || '–');
   } else {
-    otherList(d).forEach(function(o){ kv(dl, o.label, fmtCut(o.value)); });
+    var cutTxt = fmtCut(d.cut70);
+    var dd = kv(dl, '70% 컷 (' + (fmtYear(d.year) || '학년도 없음') + ')', cutTxt || '–');
+    if(d._legacy && cutTxt) dd.appendChild(el('small', 'lgl', d._label));
+    if(d._legacy){
+      var r = d._row;
+      kv(dl, '2025 입결', fmtCut(r.cut70_2025) || '–');
+      kv(dl, '모집 (' + r.recruit_basis + ')', typeof r.recruit === 'number' ? r.recruit + '명' : '–');
+      kv(dl, '경쟁률 (' + (r.comp_year || '') + ')', typeof r.comp === 'number' ? (Math.round(r.comp * 100) / 100) + ' : 1' : '–');
+      kv(dl, '추가합격 (' + (r.add_year || '') + ')', typeof r.add === 'number' ? r.add + '명' : '–');
+    } else {
+      otherList(d).forEach(function(o){ kv(dl, o.label, fmtCut(o.value)); });
+    }
   }
   card.appendChild(dl);
   if(isBasis){
     var vt = verdictText(d, grade);
     if(vt) card.appendChild(el('p', 'ern why', vt));
-  } else if(d._legacy && hasCut(d) && !restricted){
-    card.appendChild(el('p', 'ern', m.legBasis.length ? '색과 판정에는 가장 최근 학년도 값만 써요.' : '대학 원문 70% 컷이 있어 색과 판정에는 쓰지 않아요.'));
+  } else if((d._legacy || d._adiga) && hasCut(d) && !restricted){
+    card.appendChild(el('p', 'ern', d._legacy && m.legBasis.length ? '색과 판정에는 가장 최근 학년도 값만 써요.' :
+      (m.adiBasis.length ? '대학어디가 환산등급 70%가 있어 색과 판정에는 쓰지 않아요.' : '대학 원문 70% 컷이 있어 색과 판정에는 쓰지 않아요.')));
   }
-  var note = noteOf(d);
+  var note = d._adiga ? adigaWhy(d._row) : noteOf(d);
   if(note) card.appendChild(el('p', 'ern', note));
   if(d.ocr === true) card.appendChild(el('p', 'ern', 'OCR 값, 확인 필요'));
-  var lk = sourceLink(d, d._legacy ? '기사' : '원문');
+  var lk = sourceLink(d, d._adiga ? '어디가' : d._legacy ? '기사' : '원문');
   var lrow = el('div', 'ern');
   lrow.appendChild(lk);
   card.appendChild(lrow);
@@ -734,14 +781,16 @@ function boxNode(title, build){
 function admPanel(m){
   var p = el('div');
   var restrCards = [];
-  function section(title, list){
+  function section(title, list, after){
     if(!list.length) return;
     p.appendChild(el('h3', '', title));
     groupByAdmission(list).forEach(function(d){
       if(isRestricted(d)) restrCards.push(entryCard(d, m)); else p.appendChild(entryCard(d, m));
     });
+    if(after) p.appendChild(el('p', 'ern adn', after));
   }
   section('대학 원문(공개 자료)', m.ipgAll);
+  section('대학어디가 2026', m.adi, ADI_NOTE);
   section('에듀진 등 기사 자료(대학 원문이 아님)', m.legRows);
   if(restrCards.length){
     var wrap = el('div', 'rlist');
@@ -759,7 +808,7 @@ function admPanel(m){
     p.appendChild(tg);
     p.appendChild(wrap);
   }
-  if(!m.ipgAll.length && !m.legRows.length) p.appendChild(el('p', 'note', '이 학과의 입결 자료가 없어요.'));
+  if(!m.ipgAll.length && !m.adi.length && !m.legRows.length) p.appendChild(el('p', 'note', '이 학과의 입결 자료가 없어요.'));
   var g = m.leg && m.leg.gyo;
   if(g) p.appendChild(boxNode('학생부교과 (참고)', function(b){
     b.appendChild(document.createTextNode('교과 입결 '));
@@ -771,7 +820,7 @@ function admPanel(m){
   p.appendChild(boxNode('읽는 법', function(b){
     var ul = el('ul');
     ['입결 숫자는 9등급제예요.',
-     '대학이 공개한 원문 70% 컷을 먼저 쓰고, 없으면 에듀진 등 기사 자료를 써요. 기사 자료는 값 옆에 출처를 적었어요.',
+     '대학이 공개한 원문 70% 컷을 먼저 쓰고, 없으면 대학어디가 환산등급 70%, 그것도 없으면 에듀진 등 기사 자료를 써요. 어디가와 기사 자료는 값 옆에 출처를 적었어요.',
      '학교마다 공개 기준이 다를 수 있어요.',
      '지원 자격 제한 전형은 마커 색과 판정에서 빼요.',
      '학종은 등급만으로 합격이 정해지지 않아요.'].forEach(function(t){ ul.appendChild(el('li', '', t)); });
@@ -818,6 +867,9 @@ function srcPanel(m){
   }
   m.ipgAll.forEach(function(d){
     if(d.source_file) item(d.source_url, '대학 원문: ' + d.source_file + (typeof d.page === 'number' ? ' p.' + d.page : (d.page ? ' ' + d.page : '')), '대학이 공개한 자료에서 코드가 읽은 값');
+  });
+  m.adi.forEach(function(d){
+    item(d.source_url, '대학어디가: ' + (d.source_file || '평가기준 및 입시결과 > 학생부종합전형'), '대학어디가 화면의 표에서 코드가 열 이름으로 읽은 값(환산등급은 대학별 환산 방식에 따른 값)');
   });
   if(m.leg){
     m.leg.rows.forEach(function(r){ item(r.src_url, r.src_title || r.src, r.src_desc); });
@@ -1024,9 +1076,8 @@ function listRows(){
         if(isRestricted(d) || hasCut(d)) return;
         rows.push({e:e, d:d, m:m, cut:null});
       });
-      if(m.leg && !m.ipg.length && !m.legBasis.length && m.legRows.some(function(d){ return !isRestricted(d); })){
-        rows.push({e:e, m:m, cut:null, d:{department:m.name, _stub:true, other:[], note:'70% 컷이 있는 학종 자료가 없어요(기사 자료 기준)'}});
-      }
+      var st = stubOf(m);
+      if(st && !st.restricted) rows.push({e:e, m:m, cut:null, d:st.d});
     });
   });
   return rows;
@@ -1096,7 +1147,7 @@ function renderRank(){
     var rc = el('div', 'rc');
     if(r.cut !== null){
       rc.appendChild(el('span', 'rv', r.cut.toFixed(2)));
-      if(r.d._legacy) rc.appendChild(el('span', 'rsrc', r.d._label));
+      if(r.d._legacy || r.d._adiga) rc.appendChild(el('span', 'rsrc', r.d._label));
     } else if(oth.length){
       var ov = el('span', 'rv oth');
       oth.forEach(function(o){ ov.appendChild(el('div', '', o.label + ' ' + fmtCut(o.value))); });
@@ -1238,7 +1289,7 @@ document.addEventListener('keydown', function(ev){ if(ev.key === 'Escape' && she
 })();
 
 Promise.all([getJSON('data/markers.json'), getJSON('data/targets.json'), getJSON('data/geo_prov.json'), getJSON('data/geo_seoul.json'),
-             optional('data/ipgyeol.json', {}), optional('data/academyinfo.json', null), optional('data/legacy_detail.json', {})])
+             optional('data/ipgyeol.json', {}), optional('data/academyinfo.json', null), optional('data/legacy_detail.json', {}), optional('data/adiga.json', {})])
 .then(function(res){
   var markers = res[0].markers;
   var TARGET = {};
@@ -1246,6 +1297,7 @@ Promise.all([getJSON('data/markers.json'), getJSON('data/targets.json'), getJSON
   IPG = res[4] && typeof res[4] === 'object' ? res[4] : {};
   if(res[5] && Array.isArray(res[5].markers)) res[5].markers.forEach(function(a){ ACAD[a.campus] = a; });
   if(res[6] && res[6].schools) LEG = res[6];
+  if(res[7] && res[7].schools) ADI = res[7];
   initGrade();
   initMap(res[2], res[3]);
   var list = markers.filter(function(m){ return TARGET[m.campus]; });
@@ -1255,7 +1307,7 @@ Promise.all([getJSON('data/markers.json'), getJSON('data/targets.json'), getJSON
   if(missing) console.warn('targets.json 에 있으나 markers.json 에 없는 마커 ' + missing + '개');
   refreshMarkers();
   window.__cutmap = {total:total, entries:entries.length, nameZoom:NAME_ZOOM, shortNames:SHORT, fullNames:FULL,
-                     levelOf:levelOf, markerLevel:markerLevel, basisOf:function(c){ return byCampus[c] ? byCampus[c].basis.map(function(d){ return {dept:d.department, adm:d.admission, year:d.year, cut:d.cut70, legacy:!!d._legacy}; }) : null; }, deptLevel:deptLevel, verdictText:verdictText, parseGrade:parseGrade};
+                     levelOf:levelOf, markerLevel:markerLevel, basisOf:function(c){ return byCampus[c] ? byCampus[c].basis.map(function(d){ return {dept:d.department, adm:d.admission, year:d.year, cut:d.cut70, legacy:!!d._legacy, adiga:!!d._adiga, label:d._label || null}; }) : null; }, deptLevel:deptLevel, verdictText:verdictText, parseGrade:parseGrade};
 })
 .catch(function(e){
   console.error(e);
