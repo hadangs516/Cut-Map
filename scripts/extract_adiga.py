@@ -36,7 +36,7 @@ from html.parser import HTMLParser
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
-from extract_ipgyeol import is_restricted, norm_dept, exact_key, RESTRICT_OVERRIDE, RESTRICT_WORDS, NOSPACE_WORDS  # noqa: E402
+from extract_ipgyeol import is_restricted, norm_dept, exact_key, RESTRICT_OVERRIDE, RESTRICT_REASON, RESTRICT_WORDS, NOSPACE_WORDS  # noqa: E402
 from build_legacy_detail import core_name  # noqa: E402
 
 SRC_DIR = os.path.join(ROOT, "sources", "ipgyeol")
@@ -424,7 +424,11 @@ def review(results):
     L.append("- IT 학과 대응: markers.json 의 itDepts 와 모집단위 이름이 띄어쓰기, 괄호, 붙임표, 끝말(학과, 학부, 전공)만 빼고 같을 때만 맞춘다.")
     L.append("- restricted: 전형명에 다음 말 중 하나가 그대로 들어 있으면 true: " + ", ".join(RESTRICT_WORDS) + " (서해5도는 공백 무시). 사용자 결정 목록은 전형 이름(앞의 학생부종합 표기와 끝의 '전형'을 뗀 것)이 같은 표에 적용한다.")
     L.append("- 사용자 결정 목록에 '가톨릭지도자추천 = true'를 추가했다(100).")
-    L.append("- 전형명에 '지역'이 있는데 사용자 결정 목록과 이름이 같지 않고 말 목록에도 안 걸리는 행은 판정이 애매해서 넣지 않았다.\n")
+    L.append("- 사용자 결정(101)으로 다음 전형을 정했다. 근거: 사용자 고교 소재지 경북, 101 결정.")
+    for (mk_, adm_), val in RESTRICT_OVERRIDE.items():
+        if (mk_, adm_) in RESTRICT_REASON:
+            L.append("  - %s: %s = %s (근거: %s)" % (mk_, adm_, "true" if val else "false", RESTRICT_REASON[(mk_, adm_)]))
+    L.append("- 전형명에 '지역'이 있는데 사용자 결정 목록과 이름이 같지 않고 말 목록에도 안 걸리는 행은 판정이 애매해서 넣지 않는다(101 결정 이후 해당 행 없음이면 아래 표가 비어 있다).\n")
     L.append("## 학교별 요약\n")
     L.append("| 학교(마커) | 어디가 파일 | 읽은 표 | 정시 구분 행(읽지 않음) | 맞춘 학과 수 | 넣은 행 수 | 맞추지 못한 IT 학과 수 | 애매해서 뺀 행 수 |")
     L.append("|---|---|---|---|---|---|---|---|")
