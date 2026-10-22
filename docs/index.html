@@ -51,6 +51,8 @@ a{color:var(--accent)}
 .me{display:flex;flex-direction:column;align-items:flex-end;gap:1px;border:1px solid var(--line);background:var(--surface-2);border-radius:12px;padding:5px 11px 5px;flex:none;cursor:text}
 .me:focus-within{border-color:var(--accent)}
 .me-k{font-size:11px;color:var(--muted);line-height:1.3}
+.me-v{font-size:11px;color:var(--accent);line-height:1.3;font-variant-numeric:tabular-nums}
+.me-v[hidden]{display:none}
 .me input{width:76px;border:0;background:transparent;color:var(--ink);font:inherit;font-size:17px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.25;text-align:right;padding:0}
 .me input:focus{outline:none}
 .me input::placeholder{color:var(--muted);font-weight:500}
@@ -228,6 +230,11 @@ main{position:relative;flex:1;min-height:0}
 .ern{font-size:12.5px;color:var(--muted);margin:6px 0 0}
 .ern.why{color:var(--ink-2);font-size:13.5px}
 .ern.adn{font-size:11.5px;margin:2px 0 0}
+.box .cvh{margin:10px 0 4px;font-size:12.5px}
+.cv{border-collapse:collapse;font-size:12.5px;font-variant-numeric:tabular-nums;width:100%}
+.cv th,.cv td{border:1px solid var(--line);padding:3px 6px;text-align:center}
+.cv th{background:var(--surface);font-weight:600;text-align:left;white-space:nowrap}
+.box .cvn{margin:6px 0 0;font-size:12px;color:var(--muted)}
 .box{margin:14px 0 0;padding:12px 14px;border-radius:12px;background:var(--surface-2);border:1px solid var(--line);font-size:13.5px}
 .box h4{margin:0 0 4px;font-size:13.5px}
 .box ul{margin:4px 0 0;padding-left:18px}
@@ -250,11 +257,12 @@ main{position:relative;flex:1;min-height:0}
       <p>내 성적으로 보는 대학·학과 지도</p>
     </div>
     <label class="me" id="meBox" for="grade">
-      <span class="me-k">내 기준 · 9등급제 환산</span>
-      <input id="grade" type="text" inputmode="decimal" placeholder="예: 3.25" autocomplete="off" aria-describedby="gerr" aria-label="내 기준 등급, 9등급제 환산 1.00에서 9.00">
+      <span class="me-k">내 내신(5등급제)</span>
+      <input id="grade" type="text" inputmode="decimal" placeholder="예: 2.35" autocomplete="off" aria-describedby="gerr gconv" aria-label="내 내신 평균, 5등급제 1.00에서 5.00">
+      <span class="me-v" id="gconv" aria-live="polite" hidden></span>
     </label>
   </header>
-  <p id="gerr" role="alert" hidden>1.00~9.00 사이 숫자만 입력할 수 있습니다</p>
+  <p id="gerr" role="alert" hidden>1.00~5.00 사이 숫자만 입력할 수 있습니다</p>
   <nav class="views" role="tablist" aria-label="보기 전환">
     <button role="tab" type="button" data-view="map" aria-selected="true">지도</button>
     <button role="tab" type="button" data-view="rank" aria-selected="false">목록</button>
@@ -311,6 +319,7 @@ var LEVELS = {
   none: {label:'회색', cls:'g-none'}
 };
 var TH = 0.3, EPS = 1e-9;   /* 부동소수 오차 허용 */
+var VERDICT_TAIL = ' (9등급 환산 기준)';
 function levelOf(diff){
   if(diff >= TH - EPS) return 'safe';
   if(diff <= -TH + EPS) return 'hi';
@@ -353,13 +362,13 @@ function markerLevel(basis, g){
   });
   return best === null ? 'none' : levelOf(best);
 }
-/* 판정 문장: 차이 = cut70 - 내 등급 (0.01 단위). 등급이 없거나 cut70이 없거나 지원 자격 제한 전형이면 null */
+/* 판정 문장: 차이 = cut70 - 내 환산 9등급 (0.01 단위). 끝에 "(9등급 환산 기준)"을 붙인다. 등급이 없거나 cut70이 없거나 지원 자격 제한 전형이면 null */
 function verdictText(d, g){
   if(g == null || !hasCut(d) || isRestricted(d)) return null;
   var n = Math.round(d.cut70 * 100) - Math.round(g * 100);
-  if(n === 0) return '합격선과 같음';
+  if(n === 0) return '합격선과 같음' + VERDICT_TAIL;
   var s = (Math.abs(n) / 100).toFixed(2);
-  return n > 0 ? '합격선보다 ' + s + '등급 여유' : '합격선까지 ' + s + '등급 부족';
+  return (n > 0 ? '합격선보다 ' + s + '등급 여유' : '합격선까지 ' + s + '등급 부족') + VERDICT_TAIL;
 }
 
 var LABELS = [
@@ -388,19 +397,34 @@ function nk(s){ return String(s == null ? '' : s).replace(/\s+/g, '').toLowerCas
 var map, entries = [], byCampus = {}, total = 0;
 var IPG = {};      /* data/ipgyeol.json */
 var ACAD = {};     /* campus -> data/academyinfo.json 항목 */
-var grade = null;  /* 입력된 9등급제 환산 등급 (null = 비어 있거나 잘못된 값) */
+var grade = null;  /* 입력한 5등급제 내신을 환산표로 바꾼 9등급제 값. 색·판정·목록은 모두 이 값을 쓴다 (null = 비어 있거나 잘못된 값) */
 var state = {view:'map', sel:null, sort:null, noCut:false, focusKey:null, focusDept:null, dept:null, tab:'adm'};
 
-/* ---------- 내 기준(등급 입력) ---------- */
-/* 브라우저 localStorage 에 저장: 지금까지 쓰던 키를 그대로 이어서 읽는다(읽기·쓰기 모두 try/catch) */
-var GRADE_KEY = 'cutmap_grade_v1';
+/* ---------- 내 기준(등급 입력, 5등급제) ---------- */
+/* 환산표(106 결정): 5등급제 내신 평균 -> 9등급제 값. 다섯 점 사이는 직선으로 잇고, 결과는 소수 둘째 자리까지 반올림한다.
+   근거: 9등급 누적 비율 4·11·23·40·60·77·89·96%, 5등급 누적 비율 10·34·66·90%. 각 5등급 구간 학생이 9등급제였다면 받았을 평균 등급(구간 안 고른 분포 가정) */
+var GRADE_MAP = [[1, 1.60], [2, 3.42], [3, 5.00], [4, 6.58], [5, 8.40]];
+function toGrade9(g5){
+  if(typeof g5 !== 'number' || !isFinite(g5) || g5 < GRADE_MAP[0][0] || g5 > GRADE_MAP[GRADE_MAP.length - 1][0]) return null;
+  for(var i = 1; i < GRADE_MAP.length; i++){
+    var a = GRADE_MAP[i - 1], b = GRADE_MAP[i];
+    if(g5 <= b[0]){
+      var v = a[1] + (g5 - a[0]) * (b[1] - a[1]) / (b[0] - a[0]);
+      return Math.round(v * 100 + 1e-7) / 100;
+    }
+  }
+  return null;
+}
+/* 브라우저 localStorage 에 5등급 입력값을 새 키로 저장한다(읽기·쓰기 모두 try/catch). 예전 키(cutmap_grade_v1, 9등급 입력)는 읽지도 지우지도 않는다 */
+var GRADE_KEY = 'cutmap_grade5_v1';
+/* 입력 글자 -> {empty} | {invalid} | {value: 5등급 숫자, g9: 환산 9등급} */
 function parseGrade(raw){
   var s = String(raw == null ? '' : raw).trim();
   if(s === '') return {empty:true};
   if(!/^\d+(\.\d+)?$/.test(s)) return {invalid:true};
   var n = Number(s);
-  if(!isFinite(n) || n < 1 || n > 9) return {invalid:true};
-  return {value:n};
+  if(!isFinite(n) || n < 1 || n > 5) return {invalid:true};
+  return {value:n, g9:toGrade9(n)};
 }
 function loadGrade(){
   try {
@@ -820,11 +844,24 @@ function admPanel(m){
   p.appendChild(boxNode('읽는 법', function(b){
     var ul = el('ul');
     ['입결 숫자는 9등급제예요.',
+     '입력은 5등급제예요. 앱이 아래 환산표로 9등급제 값으로 바꿔서 입결과 비교해요.',
      '대학이 공개한 원문 70% 컷을 먼저 쓰고, 없으면 대학어디가 환산등급 70%, 그것도 없으면 에듀진 등 기사 자료를 써요. 어디가와 기사 자료는 값 옆에 출처를 적었어요.',
      '학교마다 공개 기준이 다를 수 있어요.',
      '지원 자격 제한 전형은 마커 색과 판정에서 빼요.',
      '학종은 등급만으로 합격이 정해지지 않아요.'].forEach(function(t){ ul.appendChild(el('li', '', t)); });
     b.appendChild(ul);
+    b.appendChild(el('h5', 'cvh', '5등급 → 9등급 환산표'));
+    var tb = el('table', 'cv');
+    var r1 = el('tr'), r2 = el('tr');
+    r1.appendChild(el('th', '', '5등급제 내신'));
+    r2.appendChild(el('th', '', '앱 환산 9등급'));
+    GRADE_MAP.forEach(function(x){ r1.appendChild(el('td', '', x[0].toFixed(2))); r2.appendChild(el('td', '', x[1].toFixed(2))); });
+    tb.appendChild(r1);
+    tb.appendChild(r2);
+    b.appendChild(tb);
+    b.appendChild(el('p', 'cvn', '표의 다섯 점 사이 값은 두 점 사이를 직선으로 이어 계산하고, 소수 둘째 자리까지 반올림해요.'));
+    b.appendChild(el('p', 'cvn', '환산 근거: 9등급 누적 비율 4·11·23·40·60·77·89·96%와 5등급 누적 비율 10·34·66·90%예요. 각 5등급 구간 학생이 9등급제였다면 받았을 평균 등급을 구간 안 고른 분포 가정으로 계산한 값이에요.'));
+    b.appendChild(el('p', 'cvn', '평균 내신을 이렇게 바꾸는 것은 근사이며 대학의 실제 비교 방식과 다를 수 있어요.'));
   }));
   return p;
 }
@@ -1184,19 +1221,23 @@ function goTo(campus, key){
 
 /* ---------- 등급 입력 ---------- */
 function initGrade(){
-  var inp = $('#grade'), err = $('#gerr'), box = $('#meBox');
-  function apply(){
-    var r = parseGrade(inp.value);
-    grade = r.value != null ? r.value : null;
+  var inp = $('#grade'), err = $('#gerr'), box = $('#meBox'), conv = $('#gconv');
+  function show(r){
+    grade = r.value != null ? r.g9 : null;
     err.hidden = !r.invalid;
     box.setAttribute('data-invalid', r.invalid ? 'true' : 'false');
     inp.setAttribute('aria-invalid', r.invalid ? 'true' : 'false');
+    conv.hidden = grade == null;
+    conv.textContent = grade == null ? '' : '앱 환산 9등급 ' + grade.toFixed(2) + '(추정)';
+  }
+  function apply(){
+    var r = parseGrade(inp.value);
+    show(r);
     saveGrade(r.value != null ? inp.value.trim() : '');
     if(map){ refreshMarkers(); renderSheet(); if(state.view === 'rank') renderRank(); }
   }
   inp.value = loadGrade();
-  var r0 = parseGrade(inp.value);
-  grade = r0.value != null ? r0.value : null;
+  show(parseGrade(inp.value));
   inp.addEventListener('input', apply);
 }
 
@@ -1307,7 +1348,7 @@ Promise.all([getJSON('data/markers.json'), getJSON('data/targets.json'), getJSON
   if(missing) console.warn('targets.json 에 있으나 markers.json 에 없는 마커 ' + missing + '개');
   refreshMarkers();
   window.__cutmap = {total:total, entries:entries.length, nameZoom:NAME_ZOOM, shortNames:SHORT, fullNames:FULL,
-                     levelOf:levelOf, markerLevel:markerLevel, basisOf:function(c){ return byCampus[c] ? byCampus[c].basis.map(function(d){ return {dept:d.department, adm:d.admission, year:d.year, cut:d.cut70, legacy:!!d._legacy, adiga:!!d._adiga, label:d._label || null}; }) : null; }, deptLevel:deptLevel, verdictText:verdictText, parseGrade:parseGrade};
+                     levelOf:levelOf, markerLevel:markerLevel, toGrade9:toGrade9, gradeMap:GRADE_MAP, basisOf:function(c){ return byCampus[c] ? byCampus[c].basis.map(function(d){ return {dept:d.department, adm:d.admission, year:d.year, cut:d.cut70, legacy:!!d._legacy, adiga:!!d._adiga, label:d._label || null}; }) : null; }, deptLevel:deptLevel, verdictText:verdictText, parseGrade:parseGrade};
 })
 .catch(function(e){
   console.error(e);
